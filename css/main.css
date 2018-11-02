@@ -1,6 +1,7 @@
 body{
 	font-size: 30%;
-	font-family: arial, sans-serif;
+	font-family: 'Shadows Into Light', cursive;
+	background-color: #E9E49D;
 }
 #pjm77Logo{
 	height: 33px;
@@ -17,12 +18,17 @@ body{
 	font-size: 5em;
 }
 .jumbotron{
+	padding: 2em;
 	background-color: #FA8334;
 }
 .carousel-inner img{
 	width: 100%;
-	max-height: 425px;
+	max-height: 85em;
 	margin: auto;
+}
+
+.navbar{
+	background-color: #2C3312;
 }
 /*.jumbotron {*/
 	/*background-color: #2E2D88;*/
