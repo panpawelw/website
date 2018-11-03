@@ -1,8 +1,11 @@
 body{
-	padding-top: 10em;
 	font-size: 30%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
+}
+.container{
+	/*margin: 0;*/
+	padding: 2em;
 }
 #pjm77Logo{
 	height: 33px;
@@ -19,7 +22,8 @@ body{
 	font-size: 5em;
 }
 .jumbotron{
-	padding: 2em;
+	margin-top: 11em;
+	padding: 3em;
 	background-color: #FA8334;
 	margin-bottom: 1em;
 }
