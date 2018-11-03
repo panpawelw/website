@@ -1,4 +1,5 @@
 body{
+	padding-top: 10em;
 	font-size: 30%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
@@ -28,27 +29,20 @@ body{
 }
 
 .navbar{
+	padding: 0.1em;
 	background-color: #2C3312;
 }
-/*.jumbotron {*/
-	/*background-color: #2E2D88;*/
-	/*color: white;*/
-/*}*/
-
-/*.tab-content {*/
-	/*border-left: 1px solid #ddd;*/
-	/*border-right: 1px solid #ddd;*/
-	/*border-bottom: 1px solid #ddd;*/
-	/*padding: 10px;*/
-/*}*/
-
-/*.nav-tabs {*/
-	/*margin-bottom: 0;*/
-/*}*/
-
-/*.btn-group-xs > .btn, .btn-xs {*/
-	/*padding: .5rem .4rem;*/
-	/*font-size: .875rem;*/
-	/*line-height: .5;*/
-	/*border-radius: .2rem;*/
-/*}*/
+.navbar-brand{
+	font-size:6em;
+	color: #FA8334;
+}
+.nav-link{
+	font-size: 4em;
+	color: #FA8334;
+}
+.navbar-brand:hover{
+	color: #E9E49D;
+}
+.nav-link:hover{
+	color: #E9E49D;
+}
