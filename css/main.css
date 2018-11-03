@@ -21,15 +21,15 @@ body{
 .jumbotron{
 	padding: 2em;
 	background-color: #FA8334;
+	margin-bottom: 1em;
 }
 .carousel-inner img{
 	width: 100%;
 	max-height: 85em;
 	margin: auto;
 }
-
 .navbar{
-	padding: 0.1em;
+	padding: 0.1em 2em;
 	background-color: #2C3312;
 }
 .navbar-brand{
@@ -45,4 +45,13 @@ body{
 }
 .nav-link:hover{
 	color: #E9E49D;
+}
+.dropdown-menu{
+	background-color: #2C3312;
+}
+.dropdown-item{
+	color: #FA8334;
+}
+.dropdown-divider{
+	border-top: 1px solid #FA8334;
 }
