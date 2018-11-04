@@ -4,8 +4,11 @@ body{
 	background-color: #E9E49D;
 }
 .container{
-	/*margin: 0;*/
-	padding: 2em;
+	padding: 0;
+}
+.row{
+	padding: 0;
+	margin: 0;
 }
 #pjm77Logo{
 	height: 33px;
@@ -26,11 +29,15 @@ body{
 	padding: 3em;
 	background-color: #FA8334;
 	margin-bottom: 1em;
+	margin-right: 0;
+}
+.carousel{
+	margin: 0;
+	padding: 0;
 }
 .carousel-inner img{
 	width: 100%;
 	max-height: 85em;
-	margin: auto;
 }
 .navbar{
 	padding: 0.1em 2em;
@@ -58,4 +65,10 @@ body{
 }
 .dropdown-divider{
 	border-top: 1px solid #FA8334;
+}
+.sidenav{
+	background-color: #617129;
+	padding-top: 1em;
+	padding-left: 1em;
+	font-size: 4em;
 }
