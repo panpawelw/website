@@ -1,5 +1,5 @@
 body{
-	font-size: 30%;
+	font-size: 25%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
 }
@@ -15,14 +15,14 @@ body{
 	width: 33px;
 }
 #websiteTitle{
-	font-size: 8em;
+	font-size: 10em;
 	vertical-align: middle;
 	font-family: "Pacifico", cursive;
-	padding-left: 15px;
+	padding-left: 1em;
 	color: #617129;
 }
 #websiteSlogan{
-	font-size: 5em;
+	font-size: 6em;
 }
 .jumbotron{
 	margin-top: 11em;
@@ -44,11 +44,11 @@ body{
 	background-color: #2C3312;
 }
 .navbar-brand{
-	font-size:6em;
+	font-size:7em;
 	color: #FA8334;
 }
 .nav-link{
-	font-size: 4em;
+	font-size: 5em;
 	color: #FA8334;
 }
 .navbar-brand:hover{
@@ -70,5 +70,25 @@ body{
 	background-color: #617129;
 	padding-top: 1em;
 	padding-left: 1em;
-	font-size: 4em;
+	font-size: 5em;
+}
+.sidenav-divider{
+	font-size: 1em;
+}
+.sidenav-text{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
+.sidenav-text:hover{
+	text-decoration: none;
+	color: #E9E49D;
+}
+.list-group-item{
+	background-color: #617129;
+}
+.list-group-item.active{
+	color: #FA8334;
+	background-color: #0b2e13;
+	border: none;
 }
