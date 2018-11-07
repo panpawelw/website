@@ -38,6 +38,9 @@ body{
 .dropdown-divider{
 	border-top: 1px solid #FA8334;
 }
+.transparent{
+	opacity: 0.75;
+}
 #pjm77Logo{
 	height: 33px;
 	width: 33px;
