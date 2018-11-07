@@ -2,6 +2,7 @@ body{
 	font-size: 25%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
+	/*line-height: 1.3;*/
 }
 .container{
 	padding: 0;
@@ -9,35 +10,6 @@ body{
 .row{
 	padding: 0;
 	margin: 0;
-}
-#pjm77Logo{
-	height: 33px;
-	width: 33px;
-}
-#websiteTitle{
-	font-size: 10em;
-	vertical-align: middle;
-	font-family: "Pacifico", cursive;
-	padding-left: 1em;
-	color: #617129;
-}
-#websiteSlogan{
-	font-size: 6em;
-}
-.jumbotron{
-	margin-top: 11em;
-	padding: 3em;
-	background-color: #FA8334;
-	margin-bottom: 1em;
-	margin-right: 0;
-}
-.carousel{
-	margin: 0;
-	padding: 0;
-}
-.carousel-inner img{
-	width: 100%;
-	max-height: 85em;
 }
 .navbar{
 	padding: 0.1em 2em;
@@ -66,6 +38,28 @@ body{
 .dropdown-divider{
 	border-top: 1px solid #FA8334;
 }
+#pjm77Logo{
+	height: 33px;
+	width: 33px;
+}
+#websiteTitle{
+	font-size: 10em;
+	vertical-align: middle;
+	font-family: "Pacifico", cursive;
+	padding-left: 0;
+	color: #617129;
+}
+#websiteSlogan{
+	font-size: 6em;
+	font-weight: bold;
+}
+.jumbotron{
+	margin-top: 15em;
+	padding: 3em;
+	background-color: #FA8334;
+	margin-bottom: 1em;
+	margin-right: 0;
+}
 .sidenav{
 	background-color: #617129;
 	padding-top: 1em;
@@ -91,4 +85,20 @@ body{
 	color: #FA8334;
 	background-color: #0b2e13;
 	border: none;
+}
+.carousel{
+	margin: 0;
+	padding: 0;
+}
+.carousel-inner img{
+	width: 100%;
+	height: 100%;
+}
+.main{
+	padding: 0;
+	margin: 0;
+}
+.page-footer{
+	background-color: #FA8334;
+	text-align: center;
 }
