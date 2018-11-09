@@ -7,11 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>My website</title>
 </head>
-<body>
+<body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
 <div class="container">
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-sm fixed-top">
@@ -20,38 +19,77 @@
 				aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<!--<form class="form-inline my-2 my-lg-0">-->
-			<!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-			<!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-		<!--</form>-->
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 				<li class="nav-item active">
-					<a class="nav-link" href="https://github.com/pjm77" target="_blank">GitHub<span class="sr-only">(current)</span></a>
+					<a class="nav-link nav-menu" href="https://github.com/pjm77" target="_blank">GitHub<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/" target="_blank">LinkedIn</a>
+					<a class="nav-link nav-menu" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/" target="_blank">LinkedIn</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
+					<a class="nav-link nav-menu" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
-					<div class="dropdown-menu dropdown-menu-right cv-menu">
+					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
+					<div class="dropdown-menu">
 						<a class="dropdown-item" href="download/cv.pdf" download>pdf</a>
 						<a class="dropdown-item" href="download/cv.docx" download>docx</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
-					<div class="dropdown-menu dropdown-menu-right about-menu">
-						<a class="dropdown-item" href="#">...stronie</a>
-						<a class="dropdown-item" href="#">...mnie</a>
+					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#pageModal">...stronie</a>
+						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#meModal">...mnie</a>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
+
+	<!-- about page Modal-->
+	<div id="pageModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Trochę o tej stronie</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- about me Modal-->
+	<div id="meModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Trochę o mnie</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
 	<!--Jumbotron-->
 	<div class="jumbotron">
 		<img src="images/logo.png" id="pjm77Logo" alt="My logo">
@@ -60,25 +98,25 @@
 	</div>
 	<div class="row">
 		<!--Sidebar-->
-		<div class="d-none d-lg-block d-xl-block col-lg-2 px-1 sidenav">
+		<div class="d-none d-lg-block d-xl-block col-lg-2 px-1 sticky-top rounded sidenav">
 			<div class="py-2 sticky-top flex-grow-1">
-				<div class="nav">
+				<div class="nav sidebarContent">
 					<ul class="nav list-group">
-						<li class="active list-group-item"><a class="sidenav-text" href="#Section0">Zacznij tutaj</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section1">O moich projektach</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section2">Workout Log</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section3">Social Network</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section4">Crime Empire</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section5">Book Catalog</a></li>
-						<li class="list-group-item"><a class="sidenav-text" href="#Section6">Programming School</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section0">Zacznij tutaj</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section1">O moich projektach</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section2">Workout Log</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section3">Social Network</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section4">Crime Empire</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section5">Book Catalog</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section6">Programming School</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!--Carousel-->
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 main">
-			<div class="carousel">
-				<a name="Section0"></a>
+			<div id="Section0" class="carousel">
+				<!--<a name="Section0"></a>-->
 				<div id="theCarousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
@@ -122,8 +160,8 @@
 				</div>
 			</div>
 			<!--Section 1-->
-			<div>
-				<h1><a name="Section1">Ogólnie o moich projektach</a></h1>
+			<div id="Section1">
+				<h1>Ogólnie o moich projektach</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -180,8 +218,8 @@
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
 			</div>
 			<!--Section 2-->
-			<div>
-				<h1><a name="Section2">Workout Log</a></h1>
+			<div id="Section2">
+				<h1>Workout Log</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -238,8 +276,8 @@
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
 			</div>
 			<!--Section 3-->
-			<div>
-				<h1><a name="Section3">Social Network</a></h1>
+			<div id="Section3">
+				<h1>Social Network</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -296,8 +334,8 @@
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
 			</div>
 			<!--Section 4-->
-			<div>
-				<h1><a name="Section4">Crime Empire</a></h1>
+			<div id="Section4">
+				<h1>Crime Empire</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -354,8 +392,8 @@
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
 			</div>
 			<!--Section 5-->
-			<div>
-				<h1><a name="Section5">Book Catalog</a></h1>
+			<div id="Section5">
+				<h1>Book Catalog</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -412,8 +450,8 @@
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
 			</div>
 			<!--Section 6-->
-			<div>
-				<h1><a name="Section6">Programming School</a></h1>
+			<div id="Section6">
+				<h1>Programming School</h1>
 				<p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
 					raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
 					Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
@@ -477,6 +515,7 @@
 </div>
 <!--Misc-->
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 </body>

@@ -2,10 +2,8 @@ body{
 	font-size: 25%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
+	position: relative;
 	/*line-height: 1.3;*/
-}
-.container{
-	padding: 0;
 }
 .row{
 	padding: 0;
@@ -19,14 +17,17 @@ body{
 	font-size:7em;
 	color: #FA8334;
 }
-.nav-link{
+.nav-menu{
 	font-size: 5em;
 	color: #FA8334;
+}
+.nav-link{
+	padding: 0;
 }
 .navbar-brand:hover{
 	color: #E9E49D;
 }
-.nav-link:hover{
+.nav-menu:hover{
 	color: #E9E49D;
 }
 .dropdown-menu{
@@ -39,7 +40,7 @@ body{
 	border-top: 1px solid #FA8334;
 }
 .transparent{
-	opacity: 0.75;
+	opacity: 0.9;
 }
 #pjm77Logo{
 	height: 33px;
@@ -69,9 +70,6 @@ body{
 	padding-left: 1em;
 	font-size: 5em;
 }
-.sidenav-divider{
-	font-size: 1em;
-}
 .sidenav-text{
 	text-decoration: none;
 	font-weight: bold;
@@ -89,6 +87,12 @@ body{
 	background-color: #0b2e13;
 	border: none;
 }
+.sidebarContent{
+	margin-top: 2.3em;
+}
+.nav-link.active{
+	color: #FA8334;
+}
 .carousel{
 	margin: 0;
 	padding: 0;
@@ -98,8 +102,9 @@ body{
 	height: 100%;
 }
 .main{
-	padding: 0;
 	margin: 0;
+	padding: 0 0 0 1em;
+	overflow: auto;
 }
 .page-footer{
 	background-color: #FA8334;
