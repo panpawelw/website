@@ -41,12 +41,29 @@
 					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#pageModal">...stronie</a>
-						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#meModal">...mnie</a>
+						<!--<a class="dropdown-item" href="#" data-toggle="modal" data-target="#meModal">...mnie</a>-->
+						<span onclick="openNav()">open</span>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
+
+	<!--Curtain-->
+	<div id="myNav" class="overlay">
+
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+		<!-- Overlay content -->
+		<div class="overlay-content">
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Clients</a>
+			<a href="#">Contact</a>
+		</div>
+
+	</div>
 
 	<!-- about page Modal-->
 	<div id="pageModal" class="modal fade" role="dialog">
