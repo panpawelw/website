@@ -8,6 +8,20 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		function openNav() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeNav() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+	</script>
 	<title>My website</title>
 </head>
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
@@ -41,8 +55,7 @@
 					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#pageModal">...stronie</a>
-						<!--<a class="dropdown-item" href="#" data-toggle="modal" data-target="#meModal">...mnie</a>-->
-						<span onclick="openNav()">open</span>
+						<a class="dropdown-item" href="javascript:void(0)" onclick="openNav();">...mnie</a>
 					</div>
 				</li>
 			</ul>
@@ -530,10 +543,5 @@
 		<h5>Copyright pjm77 2018</h5>
 	</div>
 </div>
-<!--Misc-->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
