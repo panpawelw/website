@@ -13,13 +13,24 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-		function openNav() {
-			document.getElementById("myNav").style.height = "100%";
+		/* Open "About page" curtain */
+		function openAboutPageCurtain() {
+			document.getElementById("aboutPageCurtain").style.height = "100%";
 		}
 
 		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeNav() {
-			document.getElementById("myNav").style.height = "0%";
+		function closeAboutPageCurtain() {
+			document.getElementById("aboutPageCurtain").style.height = "0%";
+		}
+
+		/* Open "About me" curtain */
+		function openAboutMeCurtain() {
+			document.getElementById("aboutMeCurtain").style.height = "100%";
+		}
+
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeAboutMeCurtain() {
+			document.getElementById("aboutMeCurtain").style.height = "0%";
 		}
 	</script>
 	<title>My website</title>
@@ -54,70 +65,44 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#pageModal">...stronie</a>
-						<a class="dropdown-item" href="javascript:void(0)" onclick="openNav();">...mnie</a>
+						<a class="dropdown-item" href="javascript:void(0)" onclick="openAboutPageCurtain();">...stronie</a>
+						<a class="dropdown-item" href="javascript:void(0)" onclick="openAboutMeCurtain();">...mnie</a>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
-	<!--Curtain-->
-	<div id="myNav" class="overlay">
+	<!--"About the page" curtain-->
+	<div id="aboutPageCurtain" class="overlay">
 
 		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeAboutPageCurtain()">&times;</a>
 
 		<!-- Overlay content -->
 		<div class="overlay-content">
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Clients</a>
-			<a href="#">Contact</a>
+			<a href="#">Here goes</a>
+			<a href="#">something</a>
+			<a href="#">about this</a>
+			<a href="#">webpage.</a>
 		</div>
 
 	</div>
 
-	<!-- about page Modal-->
-	<div id="pageModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
+	<!--"About me" curtain-->
+	<div id="aboutMeCurtain" class="overlay">
 
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Trochę o tej stronie</h4>
-				</div>
-				<div class="modal-body">
-					<p>Some text in the modal.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeAboutMeCurtain()">&times;</a>
 
+		<!-- Overlay content -->
+		<div class="overlay-content">
+			<a href="#">Here goes</a>
+			<a href="#">something</a>
+			<a href="#">about</a>
+			<a href="#">me.</a>
 		</div>
-	</div>
 
-	<!-- about me Modal-->
-	<div id="meModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Trochę o mnie</h4>
-				</div>
-				<div class="modal-body">
-					<p>Some text in the modal.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-
-		</div>
 	</div>
 
 	<!--Jumbotron-->
