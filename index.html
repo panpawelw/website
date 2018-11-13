@@ -8,31 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-3.3.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-		/* Open "About page" curtain */
-		function openAboutPageCurtain() {
-			document.getElementById("aboutPageCurtain").style.height = "100%";
-		}
-
-		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeAboutPageCurtain() {
-			document.getElementById("aboutPageCurtain").style.height = "0%";
-		}
-
-		/* Open "About me" curtain */
-		function openAboutMeCurtain() {
-			document.getElementById("aboutMeCurtain").style.height = "100%";
-		}
-
-		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeAboutMeCurtain() {
-			document.getElementById("aboutMeCurtain").style.height = "0%";
-		}
-	</script>
 	<title>My website</title>
 </head>
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
@@ -65,8 +44,8 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="javascript:void(0)" onclick="openAboutPageCurtain();">...stronie</a>
-						<a class="dropdown-item" href="javascript:void(0)" onclick="openAboutMeCurtain();">...mnie</a>
+						<a id="aboutPageCurtainOpenButton" class="dropdown-item" href="#">...stronie</a>
+						<a id="aboutMeCurtainOpenButton" class="dropdown-item" href="#">...mnie</a>
 					</div>
 				</li>
 			</ul>
@@ -77,7 +56,7 @@
 	<div id="aboutPageCurtain" class="overlay">
 
 		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn" onclick="closeAboutPageCurtain()">&times;</a>
+		<a id="aboutPageCurtainCloseButton" href="#" class="closebtn">&times;</a>
 
 		<!-- Overlay content -->
 		<div class="overlay-content">
@@ -93,7 +72,7 @@
 	<div id="aboutMeCurtain" class="overlay">
 
 		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn" onclick="closeAboutMeCurtain()">&times;</a>
+		<a id="aboutMeCurtainCloseButton" href="#" class="closebtn">&times;</a>
 
 		<!-- Overlay content -->
 		<div class="overlay-content">
@@ -142,25 +121,25 @@
 						<div class="carousel-item active">
 							<img class="d-block" src="images/1.png" alt="First slide">
 							<div class="carousel-caption">
-								<h1>About My Projects</h1>
-								<p>General Info About My Projects</p>
-								<p><a href="#" class="btn btn-primary btm-sm">Read All About It</a></p>
+								<h1>Ogólnie o moich projektach</h1>
+								<h4>Tutaj będzie krótko o tym co i jak piszę</h4>
+								<p><a href="#" class="btn btn-primary btm-sm">Więcej...</a></p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<img class="d-block" src="images/2.png" alt="Second slide">
 							<div class="carousel-caption">
-								<h1>About Project 1</h1>
-								<p>Crime Empire</p>
-								<p><a href="#" class="btn btn-primary btm-sm">Read All About It</a></p>
+								<h1>Workout Log</h1>
+								<h4>Tutaj krótkie podsumowanie projektu</h4>
+								<p><a href="#" class="btn btn-primary btm-sm">Więcej...</a></p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<img class="d-block" src="images/3.png" alt="Third slide">
 							<div class="carousel-caption">
-								<h1>About Project 2</h1>
-								<p>Twater</p>
-								<p><a href="#" class="btn btn-primary btm-sm">Read All About It</a></p>
+								<h1>Social Network</h1>
+								<h4>Tutaj krótkie podsumowanie projektu</h4>
+								<p><a href="#" class="btn btn-primary btm-sm">Więcej...</a></p>
 							</div>
 						</div>
 					</div>

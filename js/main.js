@@ -6,15 +6,23 @@ $(document).ready(function() {
 			$('.navbar').removeClass('transparent');
 		}
 	});
-	/* Open when someone clicks on the span element */
-	function openNav() {
-		document.getElementById("myNav").style.height = "100%";
-	}
+	/* Open "About page" curtain */
+	$('#aboutPageCurtainOpenButton').on('click', function() {
+		document.getElementById('aboutPageCurtain').style.height = "100%";
+	});
 
 	/* Close when someone clicks on the "x" symbol inside the overlay */
-	function closeNav() {
-		document.getElementById("myNav").style.height = "0%";
-	}
-	openNav();
-	closeNav();
+	$('#aboutPageCurtainCloseButton').on('click', function() {
+		document.getElementById('aboutPageCurtain').style.height = "0%";
+	});
+
+	/* Open "About me" curtain */
+	$('#aboutMeCurtainOpenButton').on('click', function() {
+		document.getElementById('aboutMeCurtain').style.height = "100%";
+	});
+
+	/* Close when someone clicks on the "x" symbol inside the overlay */
+	$('#aboutMeCurtainCloseButton').on('click', function() {
+		document.getElementById('aboutMeCurtain').style.height = "0%";
+	});
 });
