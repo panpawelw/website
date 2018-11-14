@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	/* Add transparency effect to navbar once user starts scrolling down the page */
 	$(window).scroll(function() {
-		if($(this).scrollTop() > 100) {
+		if($(this).scrollTop() > 80) {
 			$('.navbar').addClass('transparent');
 		} else {
 			$('.navbar').removeClass('transparent');

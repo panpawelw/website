@@ -46,7 +46,7 @@ body{
 /* The Overlay (background) */
 .overlay {
 	/* Height & width depends on how you want to reveal the overlay (see JS below) */
-	height: 0%;
+	height: 0;
 	width: 100%;
 	position: fixed; /* Stay in place */
 	z-index: 3; /* Sit on top */
@@ -100,27 +100,28 @@ body{
 	}
 }
 /* jumbotron layout */
-#pjm77Logo{
+#my-logo{
 	height: 33px;
 	width: 33px;
 }
-#websiteTitle{
+#website-title{
 	font-size: 10em;
 	vertical-align: middle;
 	font-family: "Pacifico", cursive;
 	padding-left: 0;
 	color: #617129;
 }
-#websiteSlogan{
+#website-slogan{
 	font-size: 6em;
 	font-weight: bold;
 }
 .jumbotron{
 	margin-top: 15em;
 	padding: 3em;
-	background-color: #FA8334;
+	/*background-color: #FA8334;*/
 	margin-bottom: 0.4em;
 	margin-right: 0;
+	background-image: url("../images/binaryclip.png");
 }
 
 /* main content and sidebar layout*/
@@ -128,7 +129,8 @@ body{
 	padding: 0;
 	margin: 0;
 }
-/* Sidebar layout*/
+
+/* sidebar layout*/
 .sidenav{
 	background-color: #617129;
 	padding-top: 1em;
@@ -155,7 +157,7 @@ body{
 	background-color: #0b2e13;
 	border: none;
 }
-.sidebarContent{
+.sidebar-content{
 	margin-top: 2.3em;
 }
 .nav-link.active{
@@ -165,6 +167,8 @@ body{
 	padding-top: 9em;
 	margin-top: -9em;
 }
+
+/* carousel layout */
 /*.carousel{*/
 	/*padding-top: 9em;*/
 	/*margin-top: -9em;*/
@@ -176,6 +180,11 @@ body{
 .carousel-indicators{
 	z-index: 1;
 }
+.carousel-buttons{
+	font-size: 5em;
+}
+
+/* main content space */
 .main{
 	margin: 0;
 	padding: 0 0 0 0.4em;
