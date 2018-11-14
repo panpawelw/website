@@ -16,9 +16,10 @@
 </head>
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
 <div class="container">
+	<div id="home"></div>
 	<!--Navbar-->
 	<nav class="navbar navbar-expand-sm fixed-top">
-		<a class="navbar-brand" href="#">Dom;)</a>
+		<a class="navbar-brand scrollto" href="#home">Dom;)</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
 				aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -44,8 +45,8 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link nav-menu dropdown-toggle" data-toggle="dropdown" href="#">Trochę o...</a>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a id="aboutPageCurtainOpenButton" class="dropdown-item" href="#">...stronie</a>
-						<a id="aboutMeCurtainOpenButton" class="dropdown-item" href="#">...mnie</a>
+						<a id="aboutPageCurtainOpenButton" class="dropdown-item" href="#!">...stronie</a>
+						<a id="aboutMeCurtainOpenButton" class="dropdown-item" href="#!">...mnie</a>
 					</div>
 				</li>
 			</ul>
@@ -56,7 +57,7 @@
 	<div id="aboutPageCurtain" class="overlay">
 
 		<!-- Button to close the overlay navigation -->
-		<a id="aboutPageCurtainCloseButton" href="#" class="closebtn">&times;</a>
+		<a id="aboutPageCurtainCloseButton" href="#!" class="closebtn">&times;</a>
 
 		<!-- Overlay content -->
 		<div class="overlay-content">
@@ -72,7 +73,7 @@
 	<div id="aboutMeCurtain" class="overlay">
 
 		<!-- Button to close the overlay navigation -->
-		<a id="aboutMeCurtainCloseButton" href="#" class="closebtn">&times;</a>
+		<a id="aboutMeCurtainCloseButton" href="#!" class="closebtn">&times;</a>
 
 		<!-- Overlay content -->
 		<div class="overlay-content">
@@ -96,13 +97,13 @@
 			<div class="py-2 sticky-top flex-grow-1">
 				<div class="nav sidebarContent">
 					<ul class="nav list-group">
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section0">Zacznij tutaj</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section1">O moich projektach</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section2">Workout Log</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section3">Social Network</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section4">Crime Empire</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section5">Book Catalog</a></li>
-						<li class="list-group-item"><a class="nav-link sidenav-text" href="#Section6">Programming School</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section0">Zacznij tutaj</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section1">O moich projektach</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section2">Workout Log</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section3">Social Network</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section4">Crime Empire</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section5">Book Catalog</a></li>
+						<li class="list-group-item"><a class="nav-link sidenav-text scrollto" href="#Section6">Programming School</a></li>
 					</ul>
 				</div>
 			</div>
@@ -110,7 +111,6 @@
 		<!--Carousel-->
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 main">
 			<div id="Section0" class="carousel">
-				<!--<a name="Section0"></a>-->
 				<div id="theCarousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#theCarousel" data-slide-to="0" class="active"></li>

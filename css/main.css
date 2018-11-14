@@ -128,6 +128,7 @@ body{
 	padding: 0;
 	margin: 0;
 }
+/* Sidebar layout*/
 .sidenav{
 	background-color: #617129;
 	padding-top: 1em;
@@ -163,12 +164,11 @@ body{
 :target{
 	padding-top: 9em;
 	margin-top: -9em;
-	/*display: inline-block;*/
 }
-.carousel{
-	margin: 0;
-	padding: 0;
-}
+/*.carousel{*/
+	/*padding-top: 9em;*/
+	/*margin-top: -9em;*/
+/*}*/
 .carousel-inner img{
 	width: 100%;
 	height: 100%;
