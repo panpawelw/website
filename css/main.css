@@ -1,5 +1,5 @@
 /* general properties */
-body{
+body {
 	font-size: 25%;
 	font-family: 'Shadows Into Light', cursive;
 	background-color: #E9E49D;
@@ -7,39 +7,64 @@ body{
 	/*line-height: 1.3;*/
 }
 
+a {
+	color: #FA8334;
+}
+ button:focus{
+	 outline: none;
+ }
+
 /* upper navbar layout */
-.navbar{
+.navbar-custom {
 	padding: 0.1em 2em;
 	background-color: #2C3312;
 	z-index: 2;
 }
-.navbar-brand{
-	font-size:7em;
+
+.navbar-brand {
+	font-size: 7em;
 	color: #FA8334;
 }
-.nav-menu{
+
+.nav-menu {
 	font-size: 5em;
 	color: #FA8334;
 }
-.nav-link{
+
+.nav-link {
 	padding: 0;
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
 	color: #E9E49D;
 }
-.nav-menu:hover{
+
+.nav-menu:hover {
 	color: #E9E49D;
 }
-.dropdown-menu{
+
+.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FA8334' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:active {
+	border: 2px #FA8334 solid;
+	border-radius: 5px;
+}
+
+.dropdown-menu {
 	background-color: #2C3312;
 }
-.dropdown-item{
+
+.dropdown-item {
 	color: #FA8334;
 }
-.dropdown-divider{
+
+.dropdown-divider {
 	border-top: 1px solid #FA8334;
 }
-.transparent{
+
+.transparent {
 	opacity: 0.9;
 }
 
@@ -52,8 +77,8 @@ body{
 	z-index: 3; /* Sit on top */
 	left: 0;
 	top: 0;
-	background-color: rgb(0,0,0); /* Black fallback color */
-	background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+	background-color: rgb(0, 0, 0); /* Black fallback color */
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
 	overflow-y: hidden; /* Disable horizontal scroll */
 	transition: 0.333s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -92,46 +117,53 @@ body{
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-	.overlay a {font-size: 20px}
+	.overlay a {
+		font-size: 20px
+	}
+
 	.overlay .closebtn {
 		font-size: 40px;
 		top: 15px;
 		right: 35px;
 	}
 }
+
 /* jumbotron layout */
-#my-logo{
+#my-logo {
 	height: 33px;
 	width: 33px;
 }
-#website-title{
+
+#website-title {
 	font-size: 10em;
 	vertical-align: middle;
 	font-family: "Pacifico", cursive;
 	padding-left: 0;
 	color: #617129;
 }
-#website-slogan{
+
+#website-slogan {
 	font-size: 6em;
 	font-weight: bold;
 }
-.jumbotron{
+
+.jumbotron {
 	margin-top: 15em;
 	padding: 3em;
-	/*background-color: #FA8334;*/
 	margin-bottom: 0.4em;
 	margin-right: 0;
 	background-image: url("../images/binaryclip.png");
+	background-color: #FA8334;
 }
 
 /* main content and sidebar layout*/
-.row{
+.row {
 	padding: 0;
 	margin: 0;
 }
 
 /* sidebar layout*/
-.sidenav{
+.sidenav {
 	background-color: #617129;
 	padding-top: 1em;
 	padding-left: 1em;
@@ -139,60 +171,70 @@ body{
 	z-index: 1;
 	/*margin-right: 0.1em;*/
 }
-.sidenav-text{
+
+.sidenav-text {
 	text-decoration: none;
 	font-weight: bold;
 	color: #000;
 }
-.sidenav-text:hover{
+
+.sidenav-text:hover {
 	text-decoration: none;
 	color: #E9E49D;
 }
-.list-group-item{
+
+.list-group-item {
 	background-color: #617129;
 	padding-left: 0.5em;
 }
-.list-group-item.active{
+
+.list-group-item.active {
 	color: #FA8334;
 	background-color: #0b2e13;
 	border: none;
 }
-.sidebar-content{
+
+.sidebar-content {
 	margin-top: 2.3em;
 }
-.nav-link.active{
+
+.nav-link.active {
 	color: #FA8334;
 }
-:target{
+
+:target {
 	padding-top: 9em;
 	margin-top: -9em;
 }
 
 /* carousel layout */
 /*.carousel{*/
-	/*padding-top: 9em;*/
-	/*margin-top: -9em;*/
+/*padding-top: 9em;*/
+/*margin-top: -9em;*/
 /*}*/
-.carousel-inner img{
+.carousel-inner img {
 	width: 100%;
 	height: 100%;
+	border-radius: 5px;
 }
-.carousel-indicators{
+
+.carousel-indicators {
 	z-index: 1;
 }
-.carousel-buttons{
+
+.carousel-buttons {
 	font-size: 5em;
 }
 
 /* main content space */
-.main{
+.main {
 	margin: 0;
 	padding: 0 0 0 0.4em;
 	overflow: auto;
 }
 
 /* footer layout */
-.page-footer{
+.page-footer {
 	background-color: #FA8334;
 	text-align: center;
 }
