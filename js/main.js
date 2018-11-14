@@ -10,29 +10,32 @@ $(document).ready(function() {
 	});
 
 	/* Add smooth scrolling effect to all navigation links (cross-browser solution */
-	$("a").on('click', function(event) {
+	$("a").on('click', function() {
 
 		// Make sure this.hash has a value before overriding default behavior
 		// Also skip links with #nocroll hash
 		if ($(this).hasClass('scrollto')) {
-			// Prevent default anchor click behavior
-			event.preventDefault();
 
-			// Store hash
-			let hash = this.hash;
+			$(window).scrollTo($(this).attr("href"),500,{offset:-53});
 
-			//Shift by offset
-			let targetOffset = $(hash).offset().top - 60;
-
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			$('html, body').animate({
-				scrollTop: targetOffset
-			}, 500, function(){
-
-				// Add hash (#) to URL when done scrolling (default click behavior)
-				window.location.hash = hash;
-			});
+			// // Prevent default anchor click behavior
+			// event.preventDefault();
+			//
+			// // Store hash
+			// let hash = this.hash;
+			//
+			// //Shift by offset
+			// let targetOffset = $(hash).offset().top - 60;
+			//
+			// // Using jQuery's animate() method to add smooth page scroll
+			// // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			// $('html, body').animate({
+			// 	scrollTop: targetOffset
+			// }, 500, function(){
+			//
+			// 	// Add hash (#) to URL when done scrolling (default click behavior)
+			// 	window.location.hash = hash;
+			// });
 		} // End if
 	});
 
