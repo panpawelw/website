@@ -17,7 +17,7 @@ $(document).ready(function() {
 		if ($(this).hasClass('scrollto')) {
 
 			/* Detect "home" link */
-			if(this.hash == "#Home"){
+			if(this.hash === "#Home"){
 				$(window).scrollTo(0,500);
 			}else{
 				$(window).scrollTo($(this.hash).offset().top - 53,500);

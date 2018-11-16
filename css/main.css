@@ -91,14 +91,51 @@ button:focus {
 	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-/* The navigation links inside the overlay */
-.overlay a {
-	padding: 8px;
+/* Text inside overlay */
+.overlay p {
 	text-decoration: none;
-	font-size: 36px;
-	color: #818181;
+	color: #E9E49D;
 	display: block; /* Display block instead of inline */
-	transition: 0.3s; /* Transition effects on hover (color) */
+	/*transition: 0.3s; !* Transition effects on hover (color) *!*/
+}
+
+@media screen and (max-width: 400px) {
+	.overlay p {
+		padding: 5px;
+		font-size: 4.5vw;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+	.overlay p {
+		padding: 5px;
+		font-size: 4vw;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+	.overlay p {
+		padding: 5px;
+		font-size: 3.5vw;
+	}
+}
+
+@media screen and (min-width:801px) and (max-width: 1200px) {
+	.overlay p {
+		padding: 5px;
+		font-size: 3vw;
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	.overlay p {
+		padding: 5px;
+		font-size: 2vw;
+	}
+}
+
+/* The navigation links inside the overlay */
+.overlay a{
+
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -109,7 +146,7 @@ button:focus {
 /* Position the close button (top right corner) */
 .overlay .closebtn {
 	position: absolute;
-	top: 20px;
+	top: 15px;
 	right: 45px;
 	font-size: 60px;
 }
@@ -151,8 +188,7 @@ button:focus {
 	padding: 3em;
 	margin-bottom: 0.4em;
 	margin-right: 0;
-	background-image: url("../images/jumboimg.jpg");
-	background-color: #FA8334;
+	background: #FA8334 url("../images/jumboimg.jpg");
 	box-shadow: 0 0 5px 5px #FA8334 inset;
 }
 
