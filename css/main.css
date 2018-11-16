@@ -151,8 +151,9 @@ button:focus {
 	padding: 3em;
 	margin-bottom: 0.4em;
 	margin-right: 0;
-	background-image: url("../images/binaryclip.png");
+	background-image: url("../images/jumboimg.jpg");
 	background-color: #FA8334;
+	box-shadow: 0 0 5px 5px #FA8334 inset;
 }
 
 /* main content and sidebar layout*/

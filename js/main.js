@@ -9,7 +9,7 @@ $(document).ready(function() {
 		}
 	});
 
-	/* Add smooth scrolling effect to all navigation links (cross-browser solution) */
+	/* Add smooth scrolling effect to selected navigation links (cross-browser solution) */
 
 	$("a").on('click', function() {
 
