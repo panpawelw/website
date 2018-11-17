@@ -13,6 +13,11 @@ button:focus {
 	outline: none;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: #617129 !important;
+	color: #E9E49D;
+}
+
 /* upper navbar layout */
 .navbar-custom {
 	padding: 0.1em 2em;
@@ -85,12 +90,17 @@ button:focus {
 /* Position the content inside the overlay */
 .overlay-content {
 	position: relative;
-	top: 25%; /* 25% from the top */
+	top: 20%; /* 25% from the top */
 	width: 100%; /* 100% width */
 	text-align: center; /* Centered text/links */
 	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
-
+/* Images inside overlay*/
+.logos{
+	height: 10%;
+	width: 10%;
+	margin: 5px;
+}
 /* Text inside overlay */
 .overlay p {
 	text-decoration: none;
@@ -135,7 +145,7 @@ button:focus {
 
 /* The navigation links inside the overlay */
 .overlay a{
-
+	text-decoration: none;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -166,8 +176,8 @@ button:focus {
 
 /* jumbotron layout */
 #my-logo {
-	height: 33px;
-	width: 33px;
+	height: 5%;
+	width: 5%;
 }
 
 #website-title {
@@ -244,11 +254,21 @@ button:focus {
 }
 
 .carousel-indicators {
+	color: #E9E49D;
+	z-index: 1;
+}
+
+.carousel-indicators .active{
+	background-color: #FA8334;
 	z-index: 1;
 }
 
 .carousel-buttons {
 	font-size: 5em;
+}
+
+.carousel-caption{
+	color: #E9E49D;
 }
 
 /* main content space */
