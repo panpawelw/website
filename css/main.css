@@ -95,7 +95,7 @@ button:focus {
 /* Position the content inside the overlay */
 .overlay-content {
 	position: relative;
-	top: 15%; /* 15% from the top */
+	top: 10%; /* 15% from the top */
 	width: 100%; /* 100% width */
 	text-align: center; /* Centered text/links */
 	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -118,36 +118,36 @@ button:focus {
 
 @media screen and (max-width: 400px) {
 	.overlay p {
-		padding: 5px;
+		padding: 3px;
 		font-size: 4.5vw;
 	}
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
 	.overlay p {
-		padding: 5px;
-		font-size: 4vw;
+		padding: 3px;
+		font-size: 3.75vw;
 	}
 }
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
 	.overlay p {
-		padding: 5px;
-		font-size: 3.5vw;
+		padding: 3px;
+		font-size: 3.0vw;
 	}
 }
 
 @media screen and (min-width: 801px) and (max-width: 1200px) {
 	.overlay p {
-		padding: 5px;
-		font-size: 3vw;
+		padding: 3px;
+		font-size: 2vw;
 	}
 }
 
 @media screen and (min-width: 1201px) {
 	.overlay p {
-		padding: 5px;
-		font-size: 2vw;
+		padding: 3px;
+		font-size: 1.5vw;
 	}
 }
 
@@ -164,8 +164,8 @@ button:focus {
 /* Position the close button (top right corner) */
 .overlay .closebtn {
 	position: absolute;
-	top: 15px;
-	right: 45px;
+	top: 0;
+	right: 30px;
 	font-size: 60px;
 }
 
@@ -182,12 +182,17 @@ button:focus {
 	}
 }
 
+.overlay-title{
+	margin-top: 0;
+	padding-top:0;
+	color: #FA8334;
+}
 .about-links * {
-	margin: 3px;
+	margin: 2px;
 }
 
 #photo{
-	height: 25vh;
+	height: 20vh;
 	width: auto;
 
 }
