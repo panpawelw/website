@@ -13,11 +13,12 @@ button:focus {
 	outline: none;
 }
 
-.btn-primary, .btn-primary:active, .btn-primary:visited  {
+.btn-primary, .btn-primary:active, .btn-primary:visited {
 	background-color: #617129 !important;
 	color: #E9E49D;
 	border-color: #617129;
 }
+
 .btn-primary:hover {
 	color: #FA8334;
 	border-color: #617129;
@@ -182,18 +183,21 @@ button:focus {
 	}
 }
 
-.overlay-title{
+.overlay-title {
 	margin-top: 0;
-	padding-top:0;
+	padding-top: 0;
 	color: #FA8334;
 }
+
 .about-links * {
 	margin: 2px;
 }
 
-#photo{
+#photo {
 	height: 20vh;
 	width: auto;
+	margin: 1em 1em 1em 2em;
+	float: left;
 
 }
 
