@@ -202,12 +202,13 @@ button:focus {
 }
 
 /* jumbotron layout */
-#my-logo {
-	height: 5%;
-	width: 5%;
-}
+/*#my-logo {*/
+	/*height: 5%;*/
+	/*width: 5%;*/
+/*}*/
 
 #website-title {
+	display: inline;
 	font-size: 10em;
 	vertical-align: middle;
 	font-family: "Pacifico", cursive;
@@ -309,4 +310,11 @@ button:focus {
 .page-footer {
 	background-color: #FA8334;
 	text-align: center;
+}
+
+/* magic button layout */
+.magic-button{
+	height: 37px;
+	width: 37px;
+	background: url("../images/logo.png") no-repeat;
 }
