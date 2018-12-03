@@ -203,8 +203,8 @@ button:focus {
 
 /* jumbotron layout */
 /*#my-logo {*/
-	/*height: 5%;*/
-	/*width: 5%;*/
+/*height: 5%;*/
+/*width: 5%;*/
 /*}*/
 
 #website-title {
@@ -238,16 +238,17 @@ button:focus {
 
 /* sidebar layout*/
 .sidenav {
-	background-color: #617129;
 	padding-top: 1em;
 	padding-left: 1em;
 	font-size: 5em;
 	z-index: 1;
+	background: #617129 url("../images/sidenav.png") repeat;
+	box-shadow: 0 0 3px 3px #617129 inset;
 }
 
 /*.stick {*/
-	/*position: sticky;*/
-	/*top: 0;*/
+/*position: sticky;*/
+/*top: 0;*/
 /*}*/
 
 .sidenav-text {
@@ -304,11 +305,26 @@ button:focus {
 	color: #E9E49D;
 }
 
+/* magic button layout */
+.magic-button {
+	height: 37px;
+	width: 37px;
+	background: url("../images/logo.png") no-repeat;
+}
+
 /* main content space */
 .main {
 	margin: 0;
 	padding: 0 0 0 0.4em;
 	overflow: auto;
+}
+
+/* individual project sections */
+.text-section {
+	font-size: 500%;
+	margin-top: 0.2em;
+	background-color: #E9E49D;
+	border-radius: 5px;
 }
 
 /* footer layout */
@@ -317,9 +333,3 @@ button:focus {
 	text-align: center;
 }
 
-/* magic button layout */
-.magic-button{
-	height: 37px;
-	width: 37px;
-	background: url("../images/logo.png") no-repeat;
-}
