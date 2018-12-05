@@ -338,6 +338,18 @@
 				<p>Jest to katalog książek, składający się z dwóch uzupełniających się logicznie części: napisanego przy
 					użyciu Javascriptu i JQuery front endu wysyłającego zapytania AJAX do napisanego w Javie serwera,
 					który wykonuje zgodne z tymi żądaniami operacje.</p>
+
+				<p>Interfejs użytkownika wysyła żądanie GET do serwera o uproszczoną listę książek, która zostaje
+					wyświetlona użytkownikowi. Ten ma możliwość wyświetlenia szczegółów każdej książki (GET), edycji
+					wszystkich jej danych (PUT), usunięcia jej z bazy (DELETE) oraz dodania nowej (POST). Dane książek
+					są przesyłane między front-endem a back-endem przy użyciu formatu JSON.</p>
+
+				<p>Back-end tego projektu to aplikacja Spring, która implementuje model CRUD. Kontroler odbiera żądania
+					z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za pośrednictwem wartstwy
+					serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w pamięci. Dzięki
+					zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie funkcjonalności o obsługę
+					prawdziwej bazy danych. Do obsługi formatu JSON została wykorzystana biblioteka Jackson, a
+					zależnościami zarządza Maven.</p>
 			</div>
 			<!--Section 6-->
 			<div id="Section6" class="text-section">
