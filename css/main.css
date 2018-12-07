@@ -202,10 +202,6 @@ button:focus {
 }
 
 /* jumbotron layout */
-/*#my-logo {*/
-/*height: 5%;*/
-/*width: 5%;*/
-/*}*/
 
 #website-title {
 	display: inline;
@@ -228,6 +224,7 @@ button:focus {
 	margin-right: 0;
 	background: #FA8334 url("../images/jumboimg.jpg");
 	box-shadow: 0 0 5px 5px #FA8334 inset;
+	border: groove #E9E49D;
 }
 
 /* main content and sidebar layout*/
@@ -244,12 +241,8 @@ button:focus {
 	z-index: 1;
 	background: #617129 url("../images/sidenav.png") repeat;
 	box-shadow: 0 0 3px 3px #617129 inset;
+	border: groove #E9E49D;
 }
-
-/*.stick {*/
-/*position: sticky;*/
-/*top: 0;*/
-/*}*/
 
 .sidenav-text {
 	text-decoration: none;
@@ -285,6 +278,7 @@ button:focus {
 	width: 100%;
 	height: 100%;
 	border-radius: 5px;
+	border: groove #E9E49D;
 }
 
 .carousel-indicators {
@@ -325,6 +319,22 @@ button:focus {
 	margin-top: 0.2em;
 	background-color: #E9E49D;
 	border-radius: 5px;
+	padding: 0.5em;
+	border: groove #E9E49D;
+}
+
+.project-title h1 {
+	display: inline-block;
+}
+
+.project-title a {
+	float: right;
+}
+
+.thumbnail {
+	max-width: 50%;
+	margin-left: 0.5em;
+	float: right;
 }
 
 /* footer layout */
