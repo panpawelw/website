@@ -239,7 +239,8 @@ button:focus {
 	padding-left: 1em;
 	font-size: 5em;
 	z-index: 1;
-	background: #617129 url("../images/sidenav.png") repeat;
+	/*background: #617129 url("../images/sidenav.png") repeat;*/
+	background-color: #617129;
 	box-shadow: 0 0 3px 3px #617129 inset;
 	border: groove #E9E49D;
 }
@@ -323,23 +324,23 @@ button:focus {
 	border: groove #E9E49D;
 }
 
-.project-title h1 {
-	display: inline-block;
-}
-
-.project-title a {
+.thumbnail-and-button {
+	max-width: 50%;
 	float: right;
+	margin-left: 0.5em;
+	text-align: center;
 }
 
 .thumbnail {
-	max-width: 50%;
-	margin-left: 0.5em;
-	float: right;
+	width: 100%;
+	border: groove #E9E49D;
+	margin-bottom: 0.5em;
 }
 
 /* footer layout */
 .page-footer {
 	background-color: #FA8334;
 	text-align: center;
+	border: groove #E9E49D;
 }
 
