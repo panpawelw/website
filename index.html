@@ -365,10 +365,18 @@
 
 				<p>Jest to napisany wspólne z kolegą projekt na zaliczenie bootcampu Coderslab. Jest to turowa gra
 					strategiczna w przeglądarce. Gracz jest bossem przestępczego półświatka, a jego zadaniem jest
-					przejęcie wszystkich punktów na mapie miasta.</p>
+					przejęcie wszystkich kluczowych punktów na mapie miasta.</p>
 
 				<p>Przechowywanie identyfikujących użytkownika oraz powiązanego z jego kontem stanu gry odbywa się za
 					pośrednictwem specyfikacji JPA zaimplementowanej poprzez framework Hibernate.</p>
+
+				<p>Wykorzystany w grze interfejs użytkownika oparty jest w sużym stopniu o pomysł innego kursanta
+					Coderslab - projekt GEOS Szymona Mikołajczaka.</p>
+				<ul>
+					<li>do sprawdzania poprawności danych użytkownika wykorzystany został walidator</li>
+					<li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt</li>
+					<li>zależnościami zarządza Maven</li>
+				</ul>
 
 				<p>Podstawowe w grze zasoby to:</p>
 				<ul>
@@ -379,10 +387,6 @@
 					<li>panie lekkich obyczajów i dilerzy - zarabiają dla ciebie pieniądze</li>
 				</ul>
 
-				<ul>
-					<li>walidator</li>
-					<li>JBCrypt</li>
-				</ul>
 			</div>
 
 			<!--Section 5-->
@@ -410,15 +414,20 @@
 					z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za pośrednictwem wartstwy
 					serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w pamięci. Dzięki
 					zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie funkcjonalności o obsługę
-					prawdziwej bazy danych. Do obsługi formatu JSON została wykorzystana biblioteka Jackson, a
-					zależnościami zarządza Maven.</p>
+					prawdziwej bazy danych.</p>
+
+				<ul>
+					<li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>
+					<li>zależnościami zarządza Maven</li>
+				</ul>
 			</div>
 
 			<!--Section 6-->
 			<div id="Section6" class="text-section">
 				<div class="thumbnail-and-button">
 					<a href="#"><img class="thumbnail" src="images/Programming_school.png" alt="Programming_school"></a>
-					<a href="http://localhost:8080/Workshop_3/" target="_blank" class="btn btn-primary btm-sm">Uruchom
+					<a href="http://localhost:8080/Workshop_3/" target="_blank"
+					   class="btn btn-primary btm-sm">Uruchom
 						projekt</a>
 				</div>
 

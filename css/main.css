@@ -1,16 +1,14 @@
 /* general properties */
+
 body {
 	font-size: 25%;
 	font-family: 'Shadows Into Light', cursive;
 	background: #E9E49D url("../images/background.png") repeat;
 }
 
+
 a {
 	color: #FA8334;
-}
-
-button:focus {
-	outline: none;
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:visited {
@@ -19,12 +17,23 @@ button:focus {
 	border-color: #617129;
 }
 
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+	border-color: #FA8334 !important ;
+	box-shadow: none !important;
+}
+
 .btn-primary:hover {
 	color: #FA8334;
 	border-color: #617129;
 }
 
 /* upper navbar layout */
+
 .navbar-custom {
 	padding: 0.1em 2em;
 	background-color: #2C3312;
@@ -70,6 +79,10 @@ button:focus {
 	color: #FA8334;
 }
 
+.dropdown-item:hover {
+	background-color: #E9E49D;
+}
+
 .dropdown-divider {
 	border-top: 1px solid #FA8334;
 }
@@ -79,6 +92,7 @@ button:focus {
 }
 
 /* The Overlay (background) */
+
 .overlay {
 	/* Height & width depends on how you want to reveal the overlay (see JS below) */
 	height: 0;
@@ -227,13 +241,14 @@ button:focus {
 	border: groove #E9E49D;
 }
 
-/* main content and sidebar layout*/
+/* main content and sidebar general*/
 .row {
 	padding: 0;
 	margin: 0;
 }
 
-/* sidebar layout*/
+/* sidebar layout */
+
 .sidenav {
 	padding-top: 1em;
 	padding-left: 1em;
@@ -275,6 +290,8 @@ button:focus {
 	color: #FA8334;
 }
 
+/* carousel layout */
+
 .carousel-inner img {
 	width: 100%;
 	height: 100%;
@@ -300,7 +317,34 @@ button:focus {
 	color: #E9E49D;
 }
 
+/* carousel previous and next button styling */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	height: 100px;
+	width: 100px;
+	outline: black;
+	background-size: 100%, 100%;
+	border-radius: 50%;
+	border: 1px solid black;
+	background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+	content: '>';
+	font-size: 55px;
+	color: #E9E49D;
+}
+
+.carousel-control-prev-icon:after {
+	content: '<';
+	font-size: 55px;
+	color: #E9E49D;
+}
+
 /* magic button layout */
+
 .magic-button {
 	height: 37px;
 	width: 37px;
@@ -308,13 +352,15 @@ button:focus {
 }
 
 /* main content space */
+
 .main {
 	margin: 0;
 	padding: 0 0 0 0.4em;
 	overflow: auto;
 }
 
-/* individual project sections */
+/* project sections */
+
 .text-section {
 	font-size: 500%;
 	margin-top: 0.2em;
@@ -338,6 +384,7 @@ button:focus {
 }
 
 /* footer layout */
+
 .page-footer {
 	background-color: #FA8334;
 	text-align: center;
