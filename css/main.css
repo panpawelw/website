@@ -219,7 +219,7 @@ a {
 
 #website-title {
 	display: inline;
-	font-size: 10em;
+	font-size: 12em;
 	vertical-align: middle;
 	font-family: "Pacifico", cursive;
 	padding-left: 0;
@@ -229,6 +229,7 @@ a {
 #website-slogan {
 	font-size: 6em;
 	font-weight: bold;
+	margin-bottom: 0;
 }
 
 .jumbotron {
@@ -239,6 +240,46 @@ a {
 	background: #FA8334 url("../images/jumboimg.jpg");
 	box-shadow: 0 0 5px 5px #FA8334 inset;
 	border: groove #E9E49D;
+}
+
+.magic-button {
+	background: #E9E49D;
+	background-image: -webkit-linear-gradient(top, #E9E49D, #617129);
+	background-image: -moz-linear-gradient(top, #E9E49D, #617129);
+	background-image: -ms-linear-gradient(top, #E9E49D, #617129);
+	background-image: -o-linear-gradient(top, #E9E49D, #617129);
+	background-image: linear-gradient(to bottom, #E9E49D, #617129);
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	height: 50px;
+	line-height: 50px;
+	color: #FFAE00;
+	font-family: 'Shadows Into Light', cursive;
+	width: 50px;
+	font-size: 25px;
+	font-weight: 900;
+	padding: 0;
+	box-shadow: 1px 1px 20px 0 #2C3312;
+	-webkit-box-shadow: 1px 1px 20px 0 #2C3312;
+	-moz-box-shadow: 1px 1px 20px 0 #2C3312;
+	text-shadow: 1px 1px 20px #000000;
+	border: solid #E9E49D 1px;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.magic-button:hover {
+	background: #617129;
+	background-image: -webkit-linear-gradient(top, #617129, #E9E49D);
+	background-image: -moz-linear-gradient(top, #617129, #E9E49D);
+	background-image: -ms-linear-gradient(top, #617129, #E9E49D);
+	background-image: -o-linear-gradient(top, #617129, #E9E49D);
+	background-image: linear-gradient(to bottom, #617129, #E9E49D);
+	text-decoration: none;
+	color: #FA8334;
 }
 
 /* main content and sidebar general*/
@@ -345,11 +386,11 @@ a {
 
 /* magic button layout */
 
-.magic-button {
-	height: 37px;
-	width: 37px;
-	background: url("../images/logo.png") no-repeat;
-}
+/*.magic-button {*/
+	/*height: 37px;*/
+	/*width: 37px;*/
+	/*background: url("../images/logo.png") no-repeat;*/
+/*}*/
 
 /* main content space */
 
