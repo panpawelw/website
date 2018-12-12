@@ -11,6 +11,8 @@ a {
 	color: #FA8334;
 }
 
+/* button effects */
+
 .btn-primary, .btn-primary:active, .btn-primary:visited {
 	background-color: #617129 !important;
 	color: #E9E49D;
@@ -295,6 +297,14 @@ a {
 	background-image: linear-gradient(to bottom, #617129, #E9E49D);
 	text-decoration: none;
 	color: #617129;
+}
+
+/* magic button pressed effect */
+
+.magic-button:active {
+	box-shadow: 1px 1px 3px 0 #2C3312;
+	-webkit-box-shadow: 1px 1px 3px 0 #2C3312;
+	-moz-box-shadow: 1px 1px 3px 0 #2C3312;
 }
 
 .char {
