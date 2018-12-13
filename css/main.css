@@ -6,7 +6,6 @@ body {
 	background: #E9E49D url("../images/background.png") repeat;
 }
 
-
 a {
 	color: #FA8334;
 }
@@ -25,7 +24,7 @@ a {
 .btn.focus:active,
 .btn:active:focus,
 .btn:focus {
-	border-color: #FA8334 !important ;
+	border-color: #FA8334 !important;
 	box-shadow: none !important;
 }
 
@@ -82,6 +81,7 @@ a {
 }
 
 .dropdown-item:hover {
+	color: #2C3312;
 	background-color: #E9E49D;
 }
 
@@ -128,6 +128,7 @@ a {
 #logo-container {
 	margin: 5em;
 }
+
 /* Text inside overlay */
 .overlay p {
 	text-decoration: none;
@@ -179,6 +180,14 @@ a {
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
 	color: #E9E49D;
+}
+
+.overlay .dropdown-menu {
+	background-color: black;
+}
+
+.overlay .dropdown-item:hover {
+	color: #2C3312;
 }
 
 /* Position the close button (top right corner) */
@@ -252,9 +261,11 @@ a {
 	margin-left: 0.5em;
 	margin-bottom: 0;
 }
+
 #magic-button-wrapper {
 	padding: 2em;
 }
+
 #jumbotron-content {
 	overflow: hidden;
 }
@@ -320,18 +331,53 @@ a {
 	transform-origin: bottom center;
 }
 
-.char1 { transform: rotate(30deg); }
-.char2 { transform: rotate(60deg); }
-.char3 { transform: rotate(90deg); }
-.char4 { transform: rotate(120deg); }
-.char5 { transform: rotate(150deg); }
-.char6 { transform: rotate(180deg); }
-.char7 { transform: rotate(210deg); }
-.char8 { transform: rotate(240deg); }
-.char9 { transform: rotate(270deg); }
-.char10 { transform: rotate(300deg); }
-.char11 { transform: rotate(330deg); }
-.char12 { transform: rotate(360deg); }
+.char1 {
+	transform: rotate(30deg);
+}
+
+.char2 {
+	transform: rotate(60deg);
+}
+
+.char3 {
+	transform: rotate(90deg);
+}
+
+.char4 {
+	transform: rotate(120deg);
+}
+
+.char5 {
+	transform: rotate(150deg);
+}
+
+.char6 {
+	transform: rotate(180deg);
+}
+
+.char7 {
+	transform: rotate(210deg);
+}
+
+.char8 {
+	transform: rotate(240deg);
+}
+
+.char9 {
+	transform: rotate(270deg);
+}
+
+.char10 {
+	transform: rotate(300deg);
+}
+
+.char11 {
+	transform: rotate(330deg);
+}
+
+.char12 {
+	transform: rotate(360deg);
+}
 
 /* main content and sidebar general*/
 .row {
@@ -425,8 +471,7 @@ a {
 	background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
 	content: '>';
 	font-size: 55px;
 	color: #E9E49D;
@@ -441,9 +486,9 @@ a {
 /* magic button layout */
 
 /*.magic-button {*/
-	/*height: 37px;*/
-	/*width: 37px;*/
-	/*background: url("../images/logo.png") no-repeat;*/
+/*height: 37px;*/
+/*width: 37px;*/
+/*background: url("../images/logo.png") no-repeat;*/
 /*}*/
 
 /* main content space */
