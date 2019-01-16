@@ -32,7 +32,7 @@ $(document).ready(function() {
 		document.getElementById('aboutPageCurtain').style.height = "100%";
 	});
 
-		/* Open "About me - short" curtain */
+	/* Open "About me - short" curtain */
 	$('.aboutMeShortCurtainOpenButton').on('click', function() {
 		document.getElementById('aboutPageCurtain').style.height = "0%";
 		document.getElementById('aboutMeCurtainFull').style.height = "0%";
@@ -52,4 +52,13 @@ $(document).ready(function() {
 		document.getElementById('aboutMeCurtainShort').style.height = "0%";
 		document.getElementById('aboutMeCurtainFull').style.height = "0%";
 	});
+
+	$('.section6ScreenshotsCurtainOpenButton').on('click', function() {
+		document.getElementById('section6ScreenshotsCurtain').style.height = "100%";
+	});
+
+	$('.section6ScreenshotsCurtainCloseButton').on('click', function() {
+		document.getElementById('section6ScreenshotsCurtain').style.height = "0%";
+	});
+
 });
