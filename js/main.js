@@ -53,6 +53,38 @@ $(document).ready(function() {
 		document.getElementById('aboutMeCurtainFull').style.height = "0%";
 	});
 
+	$('.section2ScreenshotsCurtainOpenButton').on('click', function() {
+		document.getElementById('section2ScreenshotsCurtain').style.height = "100%";
+	});
+
+	$('.section2ScreenshotsCurtainCloseButton').on('click', function() {
+		document.getElementById('section2ScreenshotsCurtain').style.height = "0%";
+	});
+
+	$('.section3ScreenshotsCurtainOpenButton').on('click', function() {
+		document.getElementById('section3ScreenshotsCurtain').style.height = "100%";
+	});
+
+	$('.section3ScreenshotsCurtainCloseButton').on('click', function() {
+		document.getElementById('section3ScreenshotsCurtain').style.height = "0%";
+	});
+
+	$('.section4ScreenshotsCurtainOpenButton').on('click', function() {
+		document.getElementById('section4ScreenshotsCurtain').style.height = "100%";
+	});
+
+	$('.section4ScreenshotsCurtainCloseButton').on('click', function() {
+		document.getElementById('section4ScreenshotsCurtain').style.height = "0%";
+	});
+
+	$('.section5ScreenshotsCurtainOpenButton').on('click', function() {
+		document.getElementById('section5ScreenshotsCurtain').style.height = "100%";
+	});
+
+	$('.section5ScreenshotsCurtainCloseButton').on('click', function() {
+		document.getElementById('section5ScreenshotsCurtain').style.height = "0%";
+	});
+
 	$('.section6ScreenshotsCurtainOpenButton').on('click', function() {
 		document.getElementById('section6ScreenshotsCurtain').style.height = "100%";
 	});
