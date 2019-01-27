@@ -93,4 +93,13 @@ $(document).ready(function() {
 		document.getElementById('section6ScreenshotsCurtain').style.height = "0%";
 	});
 
+	//TODO Fix warnings
+
+    $('.screenshotThumbnail').on('click', function() {
+        var expandImg = document.getElementById("screenshots-expandedImg");
+        var imgText = document.getElementById("screenshots-imgtext");
+        expandImg.src = this.src;
+        imgText.innerHTML = this.alt;
+        expandImg.parentElement.style.display = "block";
+    });
 });

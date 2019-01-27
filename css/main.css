@@ -335,55 +335,56 @@ a {
 	transform-origin: bottom center;
 }
 
-.char1 {
+.char-1 {
 	transform: rotate(30deg);
 }
 
-.char2 {
+.char-2 {
 	transform: rotate(60deg);
 }
 
-.char3 {
+.char-3 {
 	transform: rotate(90deg);
 }
 
-.char4 {
+.char-4 {
 	transform: rotate(120deg);
 }
 
-.char5 {
+.char-5 {
 	transform: rotate(150deg);
 }
 
-.char6 {
+.char-6 {
 	transform: rotate(180deg);
 }
 
-.char7 {
+.char-7 {
 	transform: rotate(210deg);
 }
 
-.char8 {
+.char-8 {
 	transform: rotate(240deg);
 }
 
-.char9 {
+.char-9 {
 	transform: rotate(270deg);
 }
 
-.char10 {
+.char-10 {
 	transform: rotate(300deg);
 }
 
-.char11 {
+.char-11 {
 	transform: rotate(330deg);
 }
 
-.char12 {
+.char-12 {
 	transform: rotate(360deg);
 }
 
 /* main content and sidebar general*/
+
 .row {
 	padding: 0;
 	margin: 0;
@@ -487,14 +488,6 @@ a {
 	color: #E9E49D;
 }
 
-/* magic button layout */
-
-/*.magic-button {*/
-/*height: 37px;*/
-/*width: 37px;*/
-/*background: url("../images/logo.png") no-repeat;*/
-/*}*/
-
 /* main content space */
 
 .main {
@@ -525,6 +518,51 @@ a {
 	width: 100%;
 	border: groove #E9E49D;
 	margin-bottom: 0.5em;
+}
+
+/* Project screenshot overlay styling section */
+
+.screenshots-column {
+    display: inline-block;
+    width: 15%;
+    padding: 5px;
+}
+
+/* Style the images inside the grid */
+.screenshots-column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.screenshots-column img:hover {
+    opacity: 1;
+}
+
+.screenshots-row {
+    text-align: center;
+}
+/* Clear floats after the columns */
+.screenshots-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.screenshots-container {
+    position: relative;
+    display: none;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Expanding image text */
+#screenshots-imgtext {
+    bottom: 5px;
+    color: #FA8334;
+    font-size: 20px;
+    margin: 0 auto;
 }
 
 /* footer layout */
