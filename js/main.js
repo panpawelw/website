@@ -87,6 +87,7 @@ $(document).ready(function() {
 
 	$('.section6ScreenshotsCurtainOpenButton').on('click', function() {
 		document.getElementById('section6ScreenshotsCurtain').style.height = "100%";
+		zoomScreenshot(document.getElementById('section6Initial'));
 	});
 
 	$('.section6ScreenshotsCurtainCloseButton').on('click', function() {
@@ -96,10 +97,14 @@ $(document).ready(function() {
 	//TODO Fix warnings
 
     $('.screenshotThumbnail').on('click', function() {
+       zoomScreenshot(this);
+    });
+
+    function zoomScreenshot(initialScreenshot){
         var expandImg = document.getElementById("screenshots-expandedImg");
         var imgText = document.getElementById("screenshots-imgtext");
-        expandImg.src = this.src;
-        imgText.innerHTML = this.alt;
+        expandImg.src = initialScreenshot.src;
+        imgText.innerHTML = initialScreenshot.alt;
         expandImg.parentElement.style.display = "block";
-    });
+    }
 });
