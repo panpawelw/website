@@ -79,6 +79,7 @@ $(document).ready(function() {
 
 	$('.section5ScreenshotsCurtainOpenButton').on('click', function() {
 		document.getElementById('section5ScreenshotsCurtain').style.height = "100%";
+		zoomScreenshot(document.getElementById('section5Initial'));
 	});
 
 	$('.section5ScreenshotsCurtainCloseButton').on('click', function() {
