@@ -101,11 +101,14 @@ $(document).ready(function() {
        zoomScreenshot(this);
     });
 
-    function zoomScreenshot(initialScreenshot){
-        var expandImg = document.getElementById("screenshots-expandedImg");
-        var imgText = document.getElementById("screenshots-imgtext");
+    function zoomScreenshot(initialScreenshot, sectionNumber){
+		var closestOverlay = initialScreenshot.closest(".overlay-content");
+		var closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
+		var expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
+        var imgText = closestScreenshotsContainer.getElementsByTagName("div")[0];
         expandImg.src = initialScreenshot.src;
         imgText.innerHTML = initialScreenshot.alt;
         expandImg.parentElement.style.display = "block";
+		// alert(temp2.className);
     }
 });
