@@ -119,6 +119,9 @@ a {
     max-height: 90%; /* 90% height */
     text-align: center; /* Centered text/links */
     margin: 0 auto;
+}
+
+.overlay-scrollable {
     overflow: auto;
 }
 
