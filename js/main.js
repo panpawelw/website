@@ -55,6 +55,7 @@ $(document).ready(function() {
 
     $('.section2ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section2ScreenshotsCurtain').style.height = "100%";
+        zoomScreenshot(document.getElementById('section2Initial'));
     });
 
     $('.section2ScreenshotsCurtainCloseButton').on('click', function() {
@@ -63,6 +64,7 @@ $(document).ready(function() {
 
     $('.section3ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section3ScreenshotsCurtain').style.height = "100%";
+        zoomScreenshot(document.getElementById('section3Initial'));
     });
 
     $('.section3ScreenshotsCurtainCloseButton').on('click', function() {
