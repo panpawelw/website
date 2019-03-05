@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="fonts/cyrulik-sharp/stylesheet.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="fonts/cyrulik-stencil/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="fonts/cyrulik-sharp/stylesheet.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="fonts/cyrulik-stencil/stylesheet.css" type="text/css" charset="utf-8"/>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min-1.14.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -168,7 +168,7 @@
             <p>Skończyłem psychologię na Uniwersytecie Wrocławskim. Już w trakcie studiów dorywczo pracowałem jako
                 tłumacz pisemny (polsko-angielski, między innymi dla firmy Techland). W trakcie studiów wyjeżdżałem do
                 Irlandii do pracy wakacyjnej. Po uzyskaniu tytułu perspektywa pracy w ośrodku dla trudnej młodzieży za
-                1200pln nie wydała się spełnieniem marzeń więc wyruszyłem w świat. Spędziłem niemal 10 lat w Irlandii
+                1200pln nie wydała się spełnieniem marzeń, więc wyruszyłem w świat. Spędziłem niemal 10 lat w Irlandii
                 Północnej. Początkowo pracowałem na budowach i w fabrykach (m.in. na polerni talerzy do dysków twardych
                 firmy Seagate). Potem ktoś się zorientował, że mój angielski jest obiecujący (miałem certyfikat CAE i
                 doświadczenie w tłumaczeniach) więc po odpowiednich szkoleniach zostałem tłumaczem sesyjnym. Z racji
@@ -177,7 +177,7 @@
                 sądowej, każdym posterunku czy więzieniu Irlandii Północnej. Oprócz tego zdarzały się zlecenia związane
                 z urzędami, służbą zdrowia, szkolnictwem, służbami socjalnymi lub dla firm prywatnych.</p>
 
-            <p>Nigdy nie chciałem zostawać za granicą na stałe. Po powrocie w roku 2015 miałem nadzieję na ciąg dalszy
+            <p>Nigdy nie chciałem zostawać za granicą na stałe. Po powrocie w roku miałem nadzieję na ciąg dalszy
                 kariery w tłumaczeniach. Niestety zorientowałem się, że opcje są dość ograniczone. Musiałbym zostać
                 tłumaczem przysięgłym i spędzić resztę moich dni tłukąc od sztampy opinie medyczne czy akty małżeństwa,
                 jedynie od święta mając szansę na cokolwiek interesującego, a wszystko to na bardzo konkurencyjnym rynku
@@ -312,7 +312,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block" src="images/6.png" alt="Sixth slide">
+                            <img class="d-block" src="images/7.png" alt="Sixth slide">
                             <div class="carousel-caption">
                                 <h1>Programming School</h1>
                                 <h4>Tutaj krótkie podsumowanie projektu</h4>
@@ -337,8 +337,8 @@
 
                 <br>
 
-                <p>Piszę głównie projekty Java Web przy pomocy frameworku Spring, zarówno w starszej jego wersji, jak i
-                    z użyciem konfiguratora Spring Boot. Umiem również posługiwać się technologią serwletów.</p>
+                <p>Piszę w Javie 8, głównie projekty Web przy pomocy frameworku Spring, zarówno w starszej jego wersji,
+                    jak i z użyciem konfiguratora Spring Boot. Umiem również posługiwać się technologią serwletów.</p>
 
                 <p>W kilku moich projektach użyłem komunikacji z bazą danych MySQL, zarówno za pośrednictwem interfejsu
                     JDBC jak i bibliotek mapowania obiektowo-relacyjnego Hibernate i specyfikacji JPA.</p>
@@ -350,9 +350,9 @@
                     mam opanowane na tyle, aby być w stanie stworzyć tą stronę oraz podstawowy interfejs użytkownika do
                     wszystkich moich projektów.</p>
 
-                <p>Zacząłem moją przygodę z Javą na Ubuntu 16.04 i Spring Tool Suite 5. Po kilku miesiącach przesiadłem
-                    się na Windows 10, a po kolejnych kilku zmieniłem IDE na Intellij. Jest to czysto kwestia
-                    preferencji, jestem w stanie poradzić sobie we wszystkich wymienionych scenariuszach.</p>
+                <p>Zacząłem moją przygodę z Javą na Ubuntu i Spring Tool Suite. Po kilku miesiącach przesiadłem się na
+                    Windows, a po kolejnych kilku zmieniłem IDE na Intellij. Jest to czysto kwestia preferencji, jestem
+                    w stanie poradzić sobie we wszystkich wymienionych scenariuszach.</p>
 
                 <p>Jako system kontroli wersji wybrałem GIT. Potrafię wykonać podstawowe operacje z poziomu konsoli,
                     obecnie częściej korzystam z wbudowanej w Intellij integracji z tą platformą, ewentualnie używam
@@ -393,7 +393,8 @@
                     uwag, notatek, notatek głosowych, zdjęć i filmów.</p>
 
                 <ul>
-                    <li>Do weryfikacji danych logowania użyłem modułu Spring Security</li>
+                    <li>do weryfikacji danych logowania użyłem modułu Spring Security</li>
+                    <li>jako warstwy widoku użyłem szablonów Thymeleaf</li>
                 </ul>
             </div>
 
@@ -458,10 +459,12 @@
                     brak w nim pliku web.xml.</p>
 
                 <ul>
-                    <li>Komunikacja z bazą danych odbywa się zgodnie ze specyfikacją JPA</li>
-                    <li>Użyłem frameworku Hibernate</li>
+                    <li>komunikacja z bazą danych odbywa się zgodnie ze specyfikacją JPA</li>
+                    <li>użyłem frameworku Hibernate</li>
+                    <li>za weryfikację poprawności danych użytkownika odpowiada walidator</li>
                     <li>biblioteka JBCrypt jest odpowiedzialna za haszowanie haseł</li>
-                    <li>Maven został wykorzystany do zarządzania zależnościami</li>
+                    <li>zależnościami zarządza Maven</li>
+                    <li>za warstę widoku odpowiadaja kontolery oraz technologia JSP z JSTL i EL</li>
                 </ul>
             </div>
 
@@ -532,7 +535,7 @@
 
                 <p>Podstawowe zasoby w grze to:</p>
                 <ul>
-                    <li>pieniądze - za nie można kupować inne zasoby</li>
+                    <li>pieniądze - za nie można kupować wszystko</li>
                     <li>żołnierze twojego gangu - zdobywają opanowane przez wroga kluczowe punkty miasta i bronią
                         twoich
                     </li>
@@ -543,6 +546,7 @@
                     <li>do sprawdzania poprawności danych użytkownika wykorzystany został walidator</li>
                     <li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt</li>
                     <li>zależnościami zarządza Maven</li>
+                    <li>za warstę widoku odpowiadaja technologia JSP z JSTL i EL</li>
                 </ul>
             </div>
 
