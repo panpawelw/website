@@ -449,8 +449,11 @@ a {
 }
 
 .carousel-indicators {
-    color: #E9E49D;
     z-index: 1;
+}
+
+.carousel-indicators li {
+    background-color: rgba(233, 228, 157, 0.5);
 }
 
 .carousel-indicators .active {
@@ -475,7 +478,6 @@ a {
     outline: black;
     background-size: 100%, 100%;
     border-radius: 50%;
-    border: 1px solid black;
     background-image: none;
 }
 
