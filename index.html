@@ -342,6 +342,9 @@
                 <p>W kilku moich projektach użyłem komunikacji z bazą danych MySQL, zarówno za pośrednictwem interfejsu
                     JDBC jak i bibliotek mapowania obiektowo-relacyjnego Hibernate i specyfikacji JPA.</p>
 
+                <p>Potrafię posługiwać się systemem szablonów Thymeleaf, technologią JSP, umiem stosować język EL oraz
+                    tagi JSTL.</p>
+
                 <p>Mam opanowaną w podstawowym stopniu architekturę JavaFX (w wersji 8.0) i umiem posługiwać się JavaFX
                     Scene Builderem.</p>
 
@@ -391,9 +394,17 @@
                     Chcę aby była, poza logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju
                     uwag, notatek, notatek głosowych, zdjęć i filmów.</p>
 
+                <p>Jeśli użytkownik ma również uprawnienia administratora, będzie miał także dostęp do panelu
+                    administracyjnego.</p>
+
                 <ul>
-                    <li>do weryfikacji danych logowania użyłem modułu Spring Security</li>
+                    <li>aplikacja jest zabezpieczona przy użyciu Spring Security</li>
+                    <li>jako password encoder zastosowałem bibliotekę JBCrypt</li>
+                    <li>użyłem własnych stron logowania</li>
+                    <li>za komunikację z bazą danych odpowiada Spring Data JPA zaimplementowane poprzez framework
+                        Hibernate</li>
                     <li>jako warstwy widoku użyłem szablonów Thymeleaf</li>
+                    <li>aplikacja jest w stanie wysłać wiadomość z potwierdzeniem rejestracji na podany adres email</li>
                 </ul>
             </div>
 
