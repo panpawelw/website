@@ -469,6 +469,16 @@ a {
     color: #E9E49D;
 }
 
+.carousel-caption.upper {
+    top: 0;
+    bottom: auto;
+}
+
+.carousel-caption.lower {
+    top: auto;
+    bottom: 0;
+}
+
 /* carousel previous and next button styling */
 
 .carousel-control-prev-icon,
