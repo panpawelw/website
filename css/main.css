@@ -435,6 +435,24 @@ a {
     color: #FA8334;
 }
 
+/* main content space */
+
+.main {
+    margin: 0;
+    padding: 0 0 0 0;
+    overflow: auto;
+}
+
+@media screen and (min-width: 801px) {
+
+    .main {
+        margin: 0;
+        padding: 0 0 0 1em;
+        overflow: auto;
+    }
+}
+
+
 /* carousel layout */
 
 #Section0 {
@@ -506,23 +524,14 @@ a {
     color: #E9E49D;
 }
 
-/* main content space */
-
-.main {
-    margin: 0;
-    padding: 0 0 0 1.5em;
-    overflow: auto;
-}
-
 /* project sections */
 
 .text-section {
     font-size: 500%;
     background-color: #E9E49D;
     border-radius: 5px;
-    padding: 0.5em;
-    margin-top: 0.5em;
-    /*margin-left: 0.5em;*/
+    padding: 0.75em;
+    margin-top: 0.35em;
 }
 
 .thumbnail-and-button {
@@ -589,7 +598,7 @@ a {
     text-align: center;
     border-radius: 5px;
     padding: 2em 2em 1em;
-    margin-top: 1.5em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
