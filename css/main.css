@@ -56,11 +56,14 @@ a {
 }
 
 .navbar-brand:hover {
+    transition: 0.333s;
     color: #E9E49D;
 }
 
 .menu-links:hover {
+    transition: 0.333s;
     color: #E9E49D;
+    text-decoration: underline;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -123,6 +126,17 @@ a {
 
 .overlay-scrollable {
     overflow: auto;
+}
+
+.overlay-scrollable::-webkit-scrollbar {
+    width: 6px;
+    background-color: #E9E49D;
+}
+
+.overlay-scrollable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FA8334;
 }
 
 /* Images inside overlay*/
@@ -201,8 +215,9 @@ a {
 .overlay .closebtn {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 20px;
     font-size: 60px;
+    font-weight: bold;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -245,6 +260,9 @@ a {
     margin-right: 0;
     background: #FA8334 url("../images/jumboimg.jpg");
     border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1);
+    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
 }
 
 #website-title {
@@ -307,6 +325,7 @@ a {
 }
 
 .magic-button:hover {
+    transition: 0.333s;
     background: #617129;
     background-image: -webkit-linear-gradient(top, #617129, #E9E49D);
     background-image: -moz-linear-gradient(top, #617129, #E9E49D);
@@ -412,7 +431,8 @@ a {
 }
 
 .sidenav-text:hover {
-    text-decoration: none;
+    transition: 0.333s;
+    text-decoration: underline;
     color: #E9E49D;
 }
 
@@ -482,10 +502,6 @@ a {
 .carousel-indicators .active {
     background-color: #FA8334;
     z-index: 1;
-}
-
-.carousel-buttons {
-    font-size: 5em;
 }
 
 .carousel-caption {
