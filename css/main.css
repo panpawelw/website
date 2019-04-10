@@ -24,11 +24,13 @@ a {
 .btn.focus:active,
 .btn:active:focus,
 .btn:focus {
+    transition: 0.333s;
     border-color: #FA8334 !important;
     box-shadow: none !important;
 }
 
 .btn-primary:hover {
+    transition: 0.333s;
     color: #FA8334;
     border-color: #617129;
 }
@@ -154,43 +156,9 @@ a {
 .overlay p {
     text-decoration: none;
     color: #E9E49D;
+    padding: 10px;
     display: block; /* Display block instead of inline */
     /*transition: 0.3s; !* Transition effects on hover (color) *!*/
-}
-
-@media screen and (max-width: 400px) {
-    .overlay p {
-        padding: 3px;
-        font-size: 4.25vw;
-    }
-}
-
-@media screen and (min-width: 401px) and (max-width: 600px) {
-    .overlay p {
-        padding: 3px;
-        font-size: 3.75vw;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 800px) {
-    .overlay p {
-        padding: 3px;
-        font-size: 3.0vw;
-    }
-}
-
-@media screen and (min-width: 801px) and (max-width: 1200px) {
-    .overlay p {
-        padding: 3px;
-        font-size: 2vw;
-    }
-}
-
-@media screen and (min-width: 1201px) {
-    .overlay p {
-        padding: 3px;
-        font-size: 1.25vw;
-    }
 }
 
 /* The navigation links inside the overlay */
@@ -220,19 +188,6 @@ a {
     font-weight: bold;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
-    }
-
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
 .overlay-title {
     margin-top: 0;
     padding-top: 0;
@@ -260,9 +215,9 @@ a {
     margin-right: 0;
     background: #FA8334 url("../images/jumboimg.jpg");
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1);
-    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1);
+    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
 }
 
 #website-title {
@@ -316,7 +271,7 @@ a {
     box-shadow: 1px 1px 20px 0 #2C3312;
     -webkit-box-shadow: 1px 1px 20px 0 #2C3312;
     -moz-box-shadow: 1px 1px 20px 0 #2C3312;
-    text-shadow: 1px 1px 20px #000000;
+    text-shadow: 1px 1px 10px #000000;
     border: solid #E9E49D 1px;
     text-decoration: none;
     text-align: center;
@@ -333,7 +288,7 @@ a {
     background-image: -o-linear-gradient(top, #617129, #E9E49D);
     background-image: linear-gradient(to bottom, #617129, #E9E49D);
     text-decoration: none;
-    color: #617129;
+    color: #617129 !important;
 }
 
 /* magic button pressed effect */
@@ -346,7 +301,6 @@ a {
 
 .char {
     /*font: 26px Monaco, MonoSpace;*/
-    font-family: 'Shadows Into Light', cursive;
     font-size: 25px;
     font-weight: 900;
     height: 28px;
@@ -358,51 +312,54 @@ a {
 }
 
 .char-1 {
-    transform: rotate(30deg);
-}
-
-.char-2 {
-    transform: rotate(60deg);
-}
-
-.char-3 {
-    transform: rotate(90deg);
-}
-
-.char-4 {
-    transform: rotate(120deg);
-}
-
-.char-5 {
-    transform: rotate(150deg);
-}
-
-.char-6 {
     transform: rotate(180deg);
 }
 
-.char-7 {
+.char-1:hover {
+    color: #617129;
+}
+
+.char-2 {
     transform: rotate(210deg);
 }
 
-.char-8 {
+.char-3 {
     transform: rotate(240deg);
 }
 
-.char-9 {
+.char-4 {
     transform: rotate(270deg);
 }
 
-.char-10 {
+.char-5 {
     transform: rotate(300deg);
 }
-
-.char-11 {
+.char-6 {
     transform: rotate(330deg);
 }
 
-.char-12 {
+.char-7 {
     transform: rotate(360deg);
+}
+
+.char-8 {
+    transform: rotate(30deg);
+}
+
+.char-9 {
+    transform: rotate(60deg);
+}
+
+.char-10 {
+    transform: rotate(90deg);
+}
+
+.char-11 {
+    transform: rotate(120deg);
+}
+
+.char-12 {
+    transform: rotate(150deg);
 }
 
 /* main content and sidebar general*/
@@ -610,7 +567,7 @@ a {
     margin: 0 auto;
 }
 
-/* footer layout */
+/* Footer layout */
 .page-footer {
     background-color: #FA8334;
     text-align: center;
@@ -624,4 +581,92 @@ a {
     -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
+}
+
+/* Screen size dependent elements scaling */
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* Font sizing, headings and carousel indicators for smallest screens */
+@media screen and (max-width: 400px) {
+
+    body {
+        font-size: 20%;
+    }
+
+    h1 {
+        font-size: 1.57em;
+    }
+
+    .overlay p {
+        padding: 1px;
+        font-size: 4.25vw;
+    }
+
+    .overlay a {
+        font-size: 5vw;
+    }
+
+    .carousel-caption.upper h2{
+        font-size: 7em;
+        margin: 0;
+    }
+
+    .carousel-caption.upper h5{
+        font-size: 4em;
+    }
+
+    .carousel-caption.lower {
+        bottom: 0;
+        padding: 0;
+    }
+
+    .carousel-caption.lower a {
+        margin: 0.1em;
+        padding: 0.25em;
+    }
+
+    .carousel-indicators {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+
+    h1 {
+        font-size: 1.65em;
+    }
+
+    .overlay p {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .overlay p {
+        font-size: 3.0vw;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .overlay p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .overlay p {
+        font-size: 1.25vw;
+    }
 }
