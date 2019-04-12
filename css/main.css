@@ -116,6 +116,10 @@ a {
     overflow: hidden; /* Disable scroll */
     transition: 0.333s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
+    /*reduce space betweeen paragraphs in overlay content*/
+.overlay p {
+
+}
 
 /* Position the content inside the overlay */
 .overlay-content {
@@ -156,7 +160,6 @@ a {
 .overlay p {
     text-decoration: none;
     color: #E9E49D;
-    padding: 10px;
     display: block; /* Display block instead of inline */
     /*transition: 0.3s; !* Transition effects on hover (color) *!*/
 }
@@ -194,14 +197,18 @@ a {
     color: #FA8334;
 }
 
-.about-links * {
-    margin: 2px;
+.about-links {
+    margin-top: 3vw;
+}
+
+.about-links a {
+    margin: 0.5vw;
 }
 
 .photo {
     height: 20vh;
     width: auto;
-    margin: 1em 1em 1em 2em;
+    margin: 2em 2em 2em 1em;
     float: left;
 
 }
@@ -421,16 +428,6 @@ a {
     padding: 0 0 0 0;
     overflow: auto;
 }
-
-@media screen and (min-width: 801px) {
-
-    .main {
-        margin: 0;
-        padding: 0 0 0 1em;
-        overflow: auto;
-    }
-}
-
 
 /* carousel layout */
 
@@ -693,6 +690,15 @@ a {
 
     .overlay .closebtn {
         font-size: 6vw;
+    }
+}
+
+@media screen and (min-width: 991px) {
+
+    .main {
+        margin: 0;
+        padding: 0 0 0 1em;
+        overflow: auto;
     }
 }
 
