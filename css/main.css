@@ -515,8 +515,8 @@ a {
 
 .thumbnail {
     width: 100%;
-    border: groove #E9E49D;
     margin-bottom: 0.5em;
+    border-radius: 5px;
 }
 
 /* Project screenshot overlay styling section */
@@ -588,6 +588,18 @@ a {
 
     /* When the animation is finished, start again */
     animation-iteration-count: infinite;
+}
+
+.myshadow {
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+.myshadow:active {
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
 }
 
 @keyframes shake {
