@@ -46,7 +46,7 @@ $(document).ready(function() {
         document.getElementById('aboutMeCurtainFull').style.height = "100%";
     });
 
-    /* Close when someone clicks on the "x" symbol inside the overlay */
+    /* Close when someone clicks on the "back" symbol inside the overlay */
     $('.curtainCloseButton').on('click', function() {
         document.getElementById('aboutPageCurtain').style.height = "0%";
         document.getElementById('aboutMeCurtainShort').style.height = "0%";
@@ -54,8 +54,7 @@ $(document).ready(function() {
     });
 
     $('.section2ScreenshotsCurtainOpenButton').on('click', function() {
-        document.getElementById('section2ScreenshotsCurtain').style.height = "100%";
-        zoomScreenshot(document.getElementById('section2Initial'));
+        $('#section2ScreenshotsCurtain').css('height', '100%');
     });
 
     $('.section2ScreenshotsCurtainCloseButton').on('click', function() {
@@ -64,7 +63,6 @@ $(document).ready(function() {
 
     $('.section3ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section3ScreenshotsCurtain').style.height = "100%";
-        zoomScreenshot(document.getElementById('section3Initial'));
     });
 
     $('.section3ScreenshotsCurtainCloseButton').on('click', function() {
@@ -73,7 +71,6 @@ $(document).ready(function() {
 
     $('.section4ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section4ScreenshotsCurtain').style.height = "100%";
-        zoomScreenshot(document.getElementById('section4Initial'));
     });
 
     $('.section4ScreenshotsCurtainCloseButton').on('click', function() {
@@ -82,7 +79,6 @@ $(document).ready(function() {
 
     $('.section5ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section5ScreenshotsCurtain').style.height = "100%";
-        zoomScreenshot(document.getElementById('section5Initial'));
     });
 
     $('.section5ScreenshotsCurtainCloseButton').on('click', function() {
@@ -91,7 +87,6 @@ $(document).ready(function() {
 
     $('.section6ScreenshotsCurtainOpenButton').on('click', function() {
         document.getElementById('section6ScreenshotsCurtain').style.height = "100%";
-        zoomScreenshot(document.getElementById('section6Initial'));
     });
 
     $('.section6ScreenshotsCurtainCloseButton').on('click', function() {
@@ -102,13 +97,12 @@ $(document).ready(function() {
         zoomScreenshot(this);
     });
 
-    function zoomScreenshot(initialScreenshot){
-        var closestOverlay = initialScreenshot.closest(".overlay-content");
+    function zoomScreenshot(screenshot){
+        var closestOverlay = screenshot.closest(".overlay-content");
         var closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
         var expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
         var imgText = closestScreenshotsContainer.getElementsByClassName("screenshots-imgtext")[0];
-        expandImg.src = initialScreenshot.src;
-        imgText.innerText = initialScreenshot.alt;
-        expandImg.parentElement.style.display = "block";
+        expandImg.src = screenshot.src;
+        imgText.innerText = screenshot.alt;
     }
 });
