@@ -6,12 +6,17 @@ body {
     background: #E9E49D url("../images/background.png") repeat;
 }
 
+
+/*general link properties*/
 a {
     color: #FA8334;
 }
 
-/* button effects */
+a:focus {
+    outline-color: #FA8334;
+}
 
+/* general button effects */
 .btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: #617129 !important;
     color: #E9E49D;
@@ -25,8 +30,16 @@ a {
 .btn:active:focus,
 .btn:focus {
     transition: 0.333s;
+    border-color: #FA8334;
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+}
+
+.btn:active {
+    transition: 0.333s;
     border-color: #FA8334 !important;
-    box-shadow: none !important;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5) !important;
 }
 
 .btn-primary:hover {
@@ -36,7 +49,6 @@ a {
 }
 
 /* upper navbar layout */
-
 .navbar-custom {
     padding: 0.1em 2em;
     background-color: #2C3312;
@@ -99,7 +111,6 @@ a {
 }
 
 /* The Overlay (background) */
-
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
     display: flex;
@@ -116,11 +127,6 @@ a {
     overflow: hidden; /* Disable scroll */
     transition: 0.333s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
-    /*reduce space betweeen paragraphs in overlay content*/
-.overlay p {
-
-}
-
 /* Position the content inside the overlay */
 .overlay-content {
     /*top: 5%; !* 5% from the top *!*/
@@ -214,7 +220,6 @@ a {
 }
 
 /* jumbotron layout */
-
 #jumbotron {
     margin-top: 15em;
     padding: 1em;
@@ -258,7 +263,6 @@ a {
 }
 
 /* magic button layout */
-
 .magic-button {
     float: left;
     color: #E9E49D;
@@ -299,7 +303,6 @@ a {
 }
 
 /* magic button pressed effect */
-
 .magic-button:active {
     box-shadow: 1px 1px 3px 0 #2C3312;
     -webkit-box-shadow: 1px 1px 3px 0 #2C3312;
@@ -590,6 +593,10 @@ a {
     animation-iteration-count: infinite;
 }
 
+.shaky:active {
+    animation: paused;
+}
+
 .myshadow {
     -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
     -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
@@ -597,9 +604,9 @@ a {
 }
 
 .myshadow:active {
-    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
-    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(1,1,1,0.5);
+    -moz-box-shadow: 1px 1px 1px 0 rgba(1,1,1,1.5);
+    box-shadow: 1px 1px 1px 0 rgba(1,1,1,0.5);
 }
 
 .text-shadow {
