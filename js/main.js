@@ -27,30 +27,20 @@ $(document).ready(function() {
 
     /* Open "About page" curtain */
     $('.aboutPageCurtainOpenButton').on('click', function() {
-        document.getElementById('aboutMeCurtainShort').style.height = "0%";
-        document.getElementById('aboutMeCurtainFull').style.height = "0%";
+        document.getElementById('aboutMeCurtain').style.height = "0%";
         document.getElementById('aboutPageCurtain').style.height = "100%";
     });
 
-    /* Open "About me - short" curtain */
+    /* Open "About me" curtain */
     $('.aboutMeShortCurtainOpenButton').on('click', function() {
         document.getElementById('aboutPageCurtain').style.height = "0%";
-        document.getElementById('aboutMeCurtainFull').style.height = "0%";
-        document.getElementById('aboutMeCurtainShort').style.height = "100%";
-    });
-
-    /* Open "About me - full" curtain */
-    $('.aboutMeFullCurtainOpenButton').on('click', function() {
-        document.getElementById('aboutPageCurtain').style.height = "0%";
-        document.getElementById('aboutMeCurtainShort').style.height = "0%";
-        document.getElementById('aboutMeCurtainFull').style.height = "100%";
+        document.getElementById('aboutMeCurtain').style.height = "100%";
     });
 
     /* Close when someone clicks on the "back" symbol inside the overlay */
     $('.curtainCloseButton').on('click', function() {
         document.getElementById('aboutPageCurtain').style.height = "0%";
-        document.getElementById('aboutMeCurtainShort').style.height = "0%";
-        document.getElementById('aboutMeCurtainFull').style.height = "0%";
+        document.getElementById('aboutMeCurtain').style.height = "0%";
     });
 
     $('.section2ScreenshotsCurtainOpenButton').on('click', function() {
