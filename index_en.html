@@ -578,24 +578,22 @@
 
                 <br>
 
-                <p>Jest to katalog książek, składający się z dwóch uzupełniających się logicznie części: napisanego przy
-                    użyciu Javascriptu i JQuery front endu wysyłającego zapytania AJAX do napisanego w Javie serwera,
-                    który wykonuje zgodne z tymi żądaniami operacje.</p>
+                <p>This project is a book catalog and consists of two complementary that complement each other: jQuery
+                    front-end sending AJAX calls to Java server that performs database operations.</p>
 
-                <p>Interfejs użytkownika wysyła żądanie GET do serwera o uproszczoną listę książek, która zostaje
-                    wyświetlona użytkownikowi. Ten ma możliwość wyświetlenia szczegółów każdej książki (GET), edycji
-                    wszystkich jej danych (PUT), usunięcia jej z bazy (DELETE) oraz dodania nowej (POST). Dane książek
-                    są przesyłane między front-endem a back-endem przy użyciu formatu JSON.</p>
+                <p>User interface sends a GET call to the server and receives the list of books that is displayed on the
+                    webpage. The user can display every book's details (GET call), edit them (PUT), delete this book
+                    from the list (DELETE) or add a new one (POST). Book data is sent and received using JSON format.
+                </p>
 
-                <p>Back-end tego projektu to aplikacja Spring, która implementuje model CRUD. Kontroler odbiera żądania
-                    z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za pośrednictwem wartstwy
-                    serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w pamięci. Dzięki
-                    zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie funkcjonalności o obsługę
-                    prawdziwej bazy danych.</p>
+                <p>Back-end of this project is a Spring Web Application implementing CRUD model. The controller receives
+                    AJAX request and then performs database operations via service layer. Mock-up database is a hashlist
+                    of Book objects stored in memory, but since interface has been used - implementing real database
+                    should be a simple matter.</p>
 
                 <ul>
-                    <li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>
-                    <li>zależnościami zarządza Maven</li>
+                    <li>JSON format is implemented using Jackson library</li>
+                    <li>dependencies are managed using Maven</li>
                 </ul>
             </div>
 
@@ -653,7 +651,7 @@
 
                 <br>
 
-                <p>This project was written as a part of my boot camp, to learn how to connect Java Web app to MySQL
+                <p>This project was completed as a part of the boot camp, to learn how to connect Java Web app to MySQL
                     database using JDBC interface. This application is an example of MVC architectural pattern. It
                     simulates programming school management with users belonging to user groups being given certain
                     exercises they can submit solutions to.
