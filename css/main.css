@@ -613,7 +613,7 @@ a:focus {
     bottom: 5px;
     color: #FA8334;
     font-size: 20px;
-    margin: 0 auto;
+    margin: 0.5em auto 0;
 }
 
 /* footer layout */
