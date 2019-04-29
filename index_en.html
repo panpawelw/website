@@ -339,31 +339,30 @@
 
                 <br>
 
-                <p>Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik treningów. Celem jest duża
+                <p>Recently I've been working on Spring Boot Application. I'd like to be able to use this application as
+                    my own powerlifting and Olympic Weightlifting workout log.
+
+
+                    Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik treningów. Celem jest duża
                     elastyczność struktury danych, dzięki czemu w prosty sposób można dostosować ją do różnych
                     dyscyplin, jeśli tylko trening opiera się o serie, powtórzenia czy elementy wykonywane na czas. Chcę
-                    pojedynczy trening traktować jako obiekt, który będzie później serializowany do bazy danych.
-                    Osobiście używam tej aplikacji do logowania sesji dwubojowych i trójbojowych.</p>
+                    pojedynczy trening traktować jako obiekt, który będzie później serializowany do bazy danych.</p>
 
-                <p>Bez logowania dostępny ma być ekran podstawowych kalkulacji - maksymalnego powtórzenia wedle różnych
-                    dostępnych wzorówi oraz procentów maksymalnego powtórzenia (może też przelicznik współczynnika
-                    Wilksa i trójbowy total). Po zalogowaniu użytkownik uzyska dostęp do pełnej funkcjonalności -
-                    dziennika treningowego z możliwością wglądu i edycji dawnych treningów oraz dodania nowego treningu.
-                    Chcę aby była, poza logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju
-                    uwag, notatek, notatek głosowych, zdjęć i filmów.</p>
+                <p>Basic calculators are available without logging in - one repetition max, percentages, powerlifting
+                    and weightlifting totals, maybe also Wilks score. After logging in user will be able to access
+                    workout log with two main functionalities - viewing or editing past workouts and adding a new one.
+                    I'd like to include adding all sorts of notes, voice notes, pictures, photos and videos.
 
-                <p>Jeśli użytkownik ma również uprawnienia administratora, będzie miał także dostęp do panelu
-                    administracyjnego.</p>
+                <p>If user has administrator privileges as well, admin panel will be available.
 
                 <ul>
-                    <li>aplikacja jest zabezpieczona przy użyciu Spring Security</li>
-                    <li>jako password encoder zastosowałem bibliotekę JBCrypt</li>
-                    <li>użyłem własnych stron logowania</li>
-                    <li>za komunikację z bazą danych odpowiada Spring Data JPA zaimplementowane poprzez framework
-                        Hibernate
+                    <li>this application is secured using Spring Security</li>
+                    <li>login and logout pages are custom made</li>
+                    <li>JBCrypt library is used as the password encoder</li>
+                    <li>Spring Data JPA implemented via Hibernate framework is responsible for database communication
                     </li>
-                    <li>jako warstwy widoku użyłem szablonów Thymeleaf</li>
-                    <li>aplikacja jest w stanie wysłać wiadomość z potwierdzeniem rejestracji na podany adres email</li>
+                    <li>Thymeleaf templates and controllers are responsible for view layer</li>
+                    <li>application is able to send registration email to an email provided by user</li>
                 </ul>
             </div>
 
