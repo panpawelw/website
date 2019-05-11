@@ -430,12 +430,17 @@ a:focus {
     font-family: 'cyrulikstencil', serif;
     text-decoration: none;
     color: #000;
+    text-shadow: 5px 5px 5px #181c0a;
 }
 
 .sidenav-text:hover {
     transition: 0.333s;
-    text-decoration: underline;
     color: #E9E49D;
+}
+
+.sidenav-text.active {
+    transition-duration: 0.333s;
+    text-shadow: 1px 1px 5px #181c0a;
 }
 
 .list-group-item {
