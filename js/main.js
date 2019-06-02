@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    $(function() {
+        $('body').removeClass('fade-out');
+    });
+
     /* Add transparency effect to navbar once user starts scrolling down the page */
     $(window).scroll(function() {
         if($(this).scrollTop() > 80) {
