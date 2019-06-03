@@ -29,64 +29,6 @@ $(document).ready(function () {
         }
     });
 
-    /* Open "About page" curtain */
-    $('.aboutPageCurtainOpenButton').on('click', function () {
-        document.getElementById('aboutMeCurtain').style.height = "0%";
-        document.getElementById('aboutPageCurtain').style.height = "100%";
-    });
-
-    /* Open "About me" curtain */
-    $('.aboutMeCurtainOpenButton').on('click', function () {
-        document.getElementById('aboutPageCurtain').style.height = "0%";
-        document.getElementById('aboutMeCurtain').style.height = "100%";
-    });
-
-    /* Close when someone clicks on the "back" symbol inside the overlay */
-    $('.curtainCloseButton').on('click', function () {
-        document.getElementById('aboutPageCurtain').style.height = "0%";
-        document.getElementById('aboutMeCurtain').style.height = "0%";
-    });
-
-    $('.section2ScreenshotsCurtainOpenButton').on('click', function () {
-        $('#section2ScreenshotsCurtain').css('height', '100%');
-    });
-
-    $('.section2ScreenshotsCurtainCloseButton').on('click', function () {
-        document.getElementById('section2ScreenshotsCurtain').style.height = "0%";
-    });
-
-    $('.section3ScreenshotsCurtainOpenButton').on('click', function () {
-        document.getElementById('section3ScreenshotsCurtain').style.height = "100%";
-    });
-
-    $('.section3ScreenshotsCurtainCloseButton').on('click', function () {
-        document.getElementById('section3ScreenshotsCurtain').style.height = "0%";
-    });
-
-    $('.section4ScreenshotsCurtainOpenButton').on('click', function () {
-        document.getElementById('section4ScreenshotsCurtain').style.height = "100%";
-    });
-
-    $('.section4ScreenshotsCurtainCloseButton').on('click', function () {
-        document.getElementById('section4ScreenshotsCurtain').style.height = "0%";
-    });
-
-    $('.section5ScreenshotsCurtainOpenButton').on('click', function () {
-        document.getElementById('section5ScreenshotsCurtain').style.height = "100%";
-    });
-
-    $('.section5ScreenshotsCurtainCloseButton').on('click', function () {
-        document.getElementById('section5ScreenshotsCurtain').style.height = "0%";
-    });
-
-    $('.section6ScreenshotsCurtainOpenButton').on('click', function () {
-        document.getElementById('section6ScreenshotsCurtain').style.height = "100%";
-    });
-
-    $('.section6ScreenshotsCurtainCloseButton').on('click', function () {
-        document.getElementById('section6ScreenshotsCurtain').style.height = "0%";
-    });
-
     $('.screenshotThumbnail').on('click', function () {
         zoomScreenshot(this);
     });
@@ -101,10 +43,12 @@ function zoomScreenshot(screenshot) {
     imgText.innerText = screenshot.alt;
 }
 
+/* Open overlay */
 function openCurtain(curtainId) {
     document.getElementById(curtainId).style.height = "100%";
 }
 
+/* Close overlay */
 function closeCurtain(curtainId) {
     document.getElementById(curtainId).style.height = "0%";
 }
