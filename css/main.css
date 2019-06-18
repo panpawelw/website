@@ -730,12 +730,12 @@ a:focus {
         font-size: 10vw;
     }
 
-    .carousel-caption.upper h2{
+    .carousel-caption.upper h2 {
         font-size: 6em;
         margin: 0;
     }
 
-    .carousel-caption.upper h5{
+    .carousel-caption.upper h5 {
         font-size: 4em;
     }
 
@@ -752,6 +752,10 @@ a:focus {
 
     .carousel-indicators {
         margin: 0;
+    }
+
+    #section1photo {
+        max-width: 35%;
     }
 }
 
@@ -792,6 +796,10 @@ a:focus {
 
     .carousel-indicators {
         margin: 0.5em;
+    }
+
+    #section1photo {
+        max-width: 30%;
     }
 }
 
