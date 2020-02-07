@@ -1,9 +1,13 @@
 /* general properties */
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 56px;
+}
 
 body {
+    scroll-padding: 56px;
     font-size: 25%;
     font-family: 'Averia Gruesa Libre', cursive;
-    background: url("../images/background.png") repeat fixed;
     height: 100%;
     opacity: 1;
     transition: 1s opacity;
@@ -12,7 +16,6 @@ body {
 body.fade-out {
     font-size: 25%;
     font-family: 'Averia Gruesa Libre', cursive;
-    background: #E9E49D fixed;
     height: 100%;
     opacity: 0;
     transition: none;
@@ -25,7 +28,7 @@ body.fade-out {
     z-index: -100;
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(circle, transparent 75%, black 125%) fixed;
+    background: radial-gradient(circle, transparent 75%, black 125%), #E9E49D url("../images/background.png") repeat fixed;
     will-change: transform;
 }
 
@@ -582,7 +585,7 @@ a:focus {
 .text-section {
     font-size: 500%;
     text-shadow: 2px 3px 3px #999;
-    /*border-radius: 5px;*/
+    /*filter: drop-shadow(3px 3px 3px #999);*/
     padding: 0.75em;
     margin-top: 0.35em;
 }
