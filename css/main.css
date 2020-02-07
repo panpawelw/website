@@ -3,7 +3,7 @@
 body {
     font-size: 25%;
     font-family: 'Averia Gruesa Libre', cursive;
-    background: #E9E49D url("../images/background.png") repeat fixed;
+    background: url("../images/background.png") repeat fixed;
     height: 100%;
     opacity: 1;
     transition: 1s opacity;
@@ -12,7 +12,7 @@ body {
 body.fade-out {
     font-size: 25%;
     font-family: 'Averia Gruesa Libre', cursive;
-    background: #E9E49D url("../images/background.png") repeat fixed;
+    background: #E9E49D fixed;
     height: 100%;
     opacity: 0;
     transition: none;
@@ -26,6 +26,7 @@ body.fade-out {
     height: 100vh;
     width: 100vw;
     background: radial-gradient(circle, transparent 75%, black 125%) fixed;
+    will-change: transform;
 }
 
 /*general link properties*/
@@ -74,6 +75,7 @@ a:focus {
     padding: 0.1em 2em;
     background-color: #2C3312;
     z-index: 2;
+    will-change: transform;
 }
 
 .navbar-brand {
@@ -443,8 +445,6 @@ a:focus {
     padding-left: 1em;
     font-size: 5em;
     z-index: 1;
-    /*background: #617129 url("../images/sidenav.png") repeat;*/
-    background-color: #617129;
     border-radius: 5px;
 }
 
@@ -467,7 +467,7 @@ a:focus {
 }
 
 .list-group-item {
-    background-color: #617129;
+    background-color: rgba(0, 0, 0, 0);
     padding-left: 0.5em;
 }
 
@@ -581,9 +581,7 @@ a:focus {
 /* text sections */
 .text-section {
     font-size: 500%;
-    /*font-weight: bold;*/
-    /*background-color: rgba(233, 228, 157, 0);*/
-    /*text-shadow: 2px 3px 3px #AAAAAA;*/
+    text-shadow: 2px 3px 3px #999;
     /*border-radius: 5px;*/
     padding: 0.75em;
     margin-top: 0.35em;
@@ -691,16 +689,16 @@ a:focus {
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -1px) rotate(-1deg); }
-    20% { transform: translate(-1px, 0px) rotate(1deg); }
+    10% { transform: translate(-1px, -1px) rotate(-0.01deg); }
+    20% { transform: translate(-1px, 0px) rotate(0.01deg); }
     30% { transform: translate(1px, 1px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 1px) rotate(-1deg); }
+    40% { transform: translate(1px, -1px) rotate(0.01deg); }
+    50% { transform: translate(-1px, 1px) rotate(-0.01deg); }
     60% { transform: translate(-1px, 1px) rotate(0deg); }
-    70% { transform: translate(1px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    70% { transform: translate(1px, 1px) rotate(-0.01deg); }
+    80% { transform: translate(-1px, -1px) rotate(0.01deg); }
     90% { transform: translate(1px, 1px) rotate(0deg); }
-    100% { transform: translate(1px, -1px) rotate(-1deg); }
+    100% { transform: translate(1px, -1px) rotate(-0.01deg); }
 }
 
 /* shadow effect */
