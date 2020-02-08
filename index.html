@@ -7,32 +7,38 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre&display=swap&subset=latin-ext"
-            rel="stylesheet" type="text/css">
+          rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          rel="stylesheet" crossorigin="anonymous">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min-1.14.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
-<!--    <script src="js/jquery.scrollTo.min-2.10.js"></script>-->
     <script src="js/main.js"></script>
+
     <title>My website</title>
 </head>
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
 
 <!--Fade-in effect script-->
 <script>document.body.className += ' fade-out';</script>
+
 <div class="vignette"></div>
 <div class="container">
     <div id="Home"></div>
     <!--Navbar-->
     <nav class="navbar navbar-expand-sm fixed-top navbar-custom">
-        <a class="navbar-brand scrollto" href="#Home">&nbsp;&#129081;</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler"
+        <a class="navbar-brand" href="#Home"><i class="fa fa-home"></i></a>
+        <button class="navbar-toggler custom-toggler icon" type="button" data-toggle="collapse"
+                data-target="#navbar-toggler"
                 aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa fa-navicon"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbar-toggler">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline" data-toggle="dropdown"
+                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline"
+                       data-toggle="dropdown"
                        href="#">CV</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="download/CV.pdf" download>pdf</a>
@@ -40,12 +46,14 @@
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link nav-menu menu-links animated-underline" href="https://github.com/pjm77"
+                    <a class="nav-link nav-menu menu-links animated-underline"
+                       href="https://github.com/pjm77"
                        target="_blank">GitHub</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-menu menu-links animated-underline"
-                       href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/" target="_blank">LinkedIn</a>
+                       href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                       target="_blank">LinkedIn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-menu menu-links animated-underline"
@@ -53,15 +61,19 @@
                        target="_blank">GoldenLine</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline" data-toggle="dropdown"
+                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline"
+                       data-toggle="dropdown"
                        href="#">About...</a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="javascript:openCurtain('aboutPageCurtain');">...this page</a>
-                        <a class="dropdown-item" href="javascript:openCurtain('aboutMeCurtain');">...me</a>
+                        <a class="dropdown-item" href="javascript:openCurtain('aboutPageCurtain');">
+                            ...this page</a>
+                        <a class="dropdown-item" href="javascript:openCurtain('aboutMeCurtain');">
+                            ...me</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-menu menu-links animated-underline" href="index_pl.html">PL</a>
+                    <a class="nav-link nav-menu menu-links animated-underline" href="index_pl.html">
+                        PL</a>
                 </li>
             </ul>
 
@@ -72,7 +84,8 @@
     <div id="aboutPageCurtain" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain')">&#10554;</a>
+        <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain')">
+            <i class="fa fa-close"></i></a>
 
         <!-- Overlay content -->
         <div class="overlay-content overlay-scrollable">
@@ -82,24 +95,32 @@
                 <img class="logos" src="images/logo-jQuery.png" alt="jQuery logo">
                 <img class="logos" src="images/logo-bootstrap.jpg" alt="Bootstrap logo">
             </div>
-            <p>This website has been created using JS (ECMAScript 6), JQuery 3.3 and Bootstrap 4.1.</p>
-            <p>It's responsive - the layout and font sizes are adjusted according to the size of screen it's being
+            <p>This website has been created using JS (ECMAScript 6), JQuery 3.3 and Bootstrap
+                4.1.</p>
+            <p>It's responsive - the layout and font sizes are adjusted according to the size of
+                screen it's being
                 displayed on.</p>
-            <p>Smooth scrolling effect after clicking navigation links was achieved using ScrollTo plugin by Ariel
+            <p>Smooth scrolling effect after clicking navigation links was achieved using ScrollTo
+                plugin by Ariel
                 Flesler.</p>
             <div class="about-links">
 				<span class="dropup">
 					<a class="menu-links dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
 					<span class="dropdown-menu dropup-menu">
-						<a class="dropdown-item curtain-dropup-item" href="download/CV.pdf" download>pdf</a>
-						<a class="dropdown-item curtain-dropup-item" href="download/CV.docx" download>docx</a>
+						<a class="dropdown-item curtain-dropup-item" href="download/CV.pdf"
+                           download>pdf</a>
+						<a class="dropdown-item curtain-dropup-item" href="download/CV.docx"
+                           download>docx</a>
 					</span>
 				</span>
                 <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub</a>
-                <a class="menu-links" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                <a class="menu-links"
+                   href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
                    target="_blank">LinkedIn</a>
-                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
-                <a class="menu-links" href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">
+                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/"
+                   target="_blank">GoldenLine</a>
+                <a class="menu-links"
+                   href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">
                     About me</a>
             </div>
         </div>
@@ -110,7 +131,8 @@
     <div id="aboutMeCurtain" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');">&#10554;</a>
+        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');">
+            <i class="fa fa-close"></i></a>
 
         <!-- Overlay content -->
         <div class="overlay-content overlay-scrollable">
@@ -119,16 +141,25 @@
                 <img class="photo" src="images/CVphoto.jpg" alt="My photo">
             </div>
 
-            <p>My interest in IT dates back as long as I can remember. I've done a fair share of programming in my teens
-                - Basic, Turbo Pascal and Assembler, all of it self- taught. Later on my life went in another direction
+            <p>My interest in IT dates back as long as I can remember. I've done a fair share of
+                programming in my teens
+                - Basic, Turbo Pascal and Assembler, all of it self- taught. Later on my life went
+                in another direction
                 but my passion never dwindled.</p>
-            <p>I earned my Master's Degree in Psychology from University Of Wrocław. Later on I emigrated to Northern
-                Ireland where I spent best part of my 10 years there as a sessional interpreter in justice system.</p>
-            <p>Coming back to Poland seems like a perfect excuse to change careers. Intepreting was nicely profitable
-                and a great choice at the time, but I never had real interest in the profession itself.</p>
-            <p>After realizing the demand in IT industry is very high, I've decided to take a Coders Lab Back-end
-                bootcamp (Java Web). I took some time to sort my things out, but I kept programming as much as I could
-                to keep my newly learned skills and improve. Eventually, I'd like to become a full - stack
+            <p>I earned my Master's Degree in Psychology from University Of Wrocław. Later on I
+                emigrated to Northern
+                Ireland where I spent best part of my 10 years there as a sessional interpreter in
+                justice system.</p>
+            <p>Coming back to Poland seems like a perfect excuse to change careers. Intepreting was
+                nicely profitable
+                and a great choice at the time, but I never had real interest in the profession
+                itself.</p>
+            <p>After realizing the demand in IT industry is very high, I've decided to take a Coders
+                Lab Back-end
+                bootcamp (Java Web). I took some time to sort my things out, but I kept programming
+                as much as I could
+                to keep my newly learned skills and improve. Eventually, I'd like to become a full -
+                stack
                 developer.</p>
 
             <div class="about-links">
@@ -139,11 +170,15 @@
 						<a class="dropdown-item" href="download/CV.docx" download>docx</a>
 					</span>
 				</span>
-                <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub<span class="sr-only">(current)</span></a>
-                <a class="menu-links" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub<span
+                        class="sr-only">(current)</span></a>
+                <a class="menu-links"
+                   href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
                    target="_blank">LinkedIn</a>
-                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
-                <a class="menu-links" href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">
+                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/"
+                   target="_blank">GoldenLine</a>
+                <a class="menu-links"
+                   href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">
                     About page</a>
             </div>
         </div>
@@ -181,19 +216,26 @@
             <div class="py-2 sticky-top flex-grow-1">
                 <div class="nav sidebar-content">
                     <ul class="nav list-group">
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section0">Start
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section0">Start
                             here</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section1">About my
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section1">About my
                             projects</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section2">Workout
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section2">Workout
                             Log</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section3">Social
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section3">Social
                             Network</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section4">Crime
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section4">Crime
                             Empire</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section5">Book
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section5">Book
                             Catalog</a></li>
-                        <li class="list-group-item"><a class="nav-link sidenav-text" href="#Section6">Programming
+                        <li class="list-group-item"><a class="nav-link sidenav-text"
+                                                       href="#Section6">Programming
                             School</a></li>
                     </ul>
                 </div>
@@ -204,7 +246,8 @@
             <div id="Section0" class="carousel-section indented">
                 <div id="theCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#theCarousel" data-slide-to="0" class="myshadow active"></li>
+                        <li data-target="#theCarousel" data-slide-to="0"
+                            class="myshadow active"></li>
                         <li data-target="#theCarousel" data-slide-to="1" class="myshadow"></li>
                         <li data-target="#theCarousel" data-slide-to="2" class="myshadow"></li>
                         <li data-target="#theCarousel" data-slide-to="3" class="myshadow"></li>
@@ -227,7 +270,8 @@
                             <img class="d-block" src="images/2.png" alt="Second slide">
                             <div class="carousel-caption upper">
                                 <h2 class="text-shadow">Workout Log</h2>
-                                <h5 class="text-shadow">Spring Boot + Data + Security + Thymeleaf</h5>
+                                <h5 class="text-shadow">Spring Boot + Data + Security +
+                                    Thymeleaf</h5>
                             </div>
                             <div class="carousel-caption lower">
                                 <p><a href="#Section2"
@@ -279,11 +323,13 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#theCarousel" role="button"
+                       data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#theCarousel" role="button"
+                       data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only text-shadow">Next</span>
                     </a>
@@ -294,8 +340,10 @@
             <div id="Section1" class="text-section">
                 <div id="section1photo">
                     <a id="main-photo" href="javascript:openCurtain('aboutMeCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/CVphoto.jpg" alt="About me"></a>
-                    <a class="btn btn-primary btm-sm shaky myshadow" href="javascript:openCurtain('aboutMeCurtain');">
+                        <img class="thumbnail shaky myshadow" src="images/CVphoto.jpg"
+                             alt="About me"></a>
+                    <a class="btn btn-primary btm-sm shaky myshadow"
+                       href="javascript:openCurtain('aboutMeCurtain');">
                         About me...</a>
                 </div>
 
@@ -303,40 +351,56 @@
 
                 <br>
 
-                <p>My programming language of choice is Java 8. Most of my projects are Web Applications based on Spring
-                    Framework, both the older version and the newer Spring Boot configurator. I'm also familiar with
+                <p>My programming language of choice is Java 8. Most of my projects are Web
+                    Applications based on Spring
+                    Framework, both the older version and the newer Spring Boot configurator. I'm
+                    also familiar with
                     with Java Servlet technology.</p>
 
-                <p>Most of my Web Applications are connected with a MySQL Database, both using simple and plain JDBC
-                    interface, but also Hibernate ORM framework or combination of the latter with Spring Data JPA
+                <p>Most of my Web Applications are connected with a MySQL Database, both using
+                    simple and plain JDBC
+                    interface, but also Hibernate ORM framework or combination of the latter with
+                    Spring Data JPA
                     specification.</p>
 
-                <p>I'm familiar with Thymeleaf templates, JSP technology, I know the basics of EL language and JSTL
+                <p>I'm familiar with Thymeleaf templates, JSP technology, I know the basics of EL
+                    language and JSTL
                     expressions. </p>
 
-                <p>I have a basic knowledge of JavaFX (8.0) architecture and I have some experience using JavaFX Scene
+                <p>I have a basic knowledge of JavaFX (8.0) architecture and I have some experience
+                    using JavaFX Scene
                     Builder.</p>
 
-                <p>In terms of front-end skills - my HLTM, CSS, Bootstrap, plain Javascript and Jquery were enough to
-                    create basic user interface to all my projects and then got slightly improved while creating this
+                <p>In terms of front-end skills - my HLTM, CSS, Bootstrap, plain Javascript and
+                    Jquery were enough to
+                    create basic user interface to all my projects and then got slightly improved
+                    while creating this
                     website.</p>
 
-                <p>My Java programming adventure began on Ubuntu and Spring Tool Suite. After several months I've
-                    switched my operating system to Windows and later on my IDE to Intellij. It's purely a matter of
+                <p>My Java programming adventure began on Ubuntu and Spring Tool Suite. After
+                    several months I've
+                    switched my operating system to Windows and later on my IDE to Intellij. It's
+                    purely a matter of
                     preferences, I can deal with all of the aforementioned scenarios.</p>
 
-                <p>My preferred version control system is Git. I can perform most important operations using console,
+                <p>My preferred version control system is Git. I can perform most important
+                    operations using console,
                     but nowadays I mostly use Intellij's integration with this platform.</p>
 
-                <p>Creating this portfolio was a chance for me to gain some basic experience with deploying Java Web
+                <p>Creating this portfolio was a chance for me to gain some basic experience with
+                    deploying Java Web
                     Applications to Amazon Web Services and Google Cloud Platform.</p>
 
-                <p>At this particular moment my focus is on learning JUnit testing and applying Test Driven Development
-                    principles. I'm also trying to work on my code becoming well structured, with adequate commentary
-                    and Javadoc documentation. When I get tired with all this perfectionism I'm reading about design
+                <p>At this particular moment my focus is on learning JUnit testing and applying Test
+                    Driven Development
+                    principles. I'm also trying to work on my code becoming well structured, with
+                    adequate commentary
+                    and Javadoc documentation. When I get tired with all this perfectionism I'm
+                    reading about design
                     patterns to get a general picture of it and to unwind a bit.</p>
 
-                <p>Apart from what's here on this website, you can find several extra little projects on my GitHub
+                <p>Apart from what's here on this website, you can find several extra little
+                    projects on my GitHub
                     account.</p>
             </div>
 
@@ -344,8 +408,10 @@
             <div id="Section2" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section2ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/under_construction.jpg" alt="Workout_log"></a>
-                    <a href="http://weightliftinglog-env.wucjxqxkma.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/under_construction.jpg"
+                             alt="Workout_log"></a>
+                    <a href="http://weightliftinglog-env.wucjxqxkma.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">
                         Launch the app</a>
                 </div>
@@ -354,17 +420,26 @@
 
                 <br>
 
-                <p>My most recent project is a workout log Spring Boot Application. The main goal is maximal possible
-                    flexibility of data structure. If workouts of the sports you practice can be broken down to actions
-                    of some difficulty performed number of times in (optionally) certain period of time - they should be
-                    possible to record in my application. Any training that's aimed at increasing some type of
-                    measurable performance (as opposed to the type that relies on style) should be possible to capture
+                <p>My most recent project is a workout log Spring Boot Application. The main goal is
+                    maximal possible
+                    flexibility of data structure. If workouts of the sports you practice can be
+                    broken down to actions
+                    of some difficulty performed number of times in (optionally) certain period of
+                    time - they should be
+                    possible to record in my application. Any training that's aimed at increasing
+                    some type of
+                    measurable performance (as opposed to the type that relies on style) should be
+                    possible to capture
                     in such data structure.</p>
 
-                <p>Basic calculators are available without logging in - one repetition max, percentages, powerlifting
-                    and weightlifting totals, maybe also Wilks score. After logging in user will be able to access
-                    workout log with two main functionalities - viewing or editing past workouts and adding a new one.
-                    I'd like to include adding all sorts of notes, voice notes, pictures, photos and videos.
+                <p>Basic calculators are available without logging in - one repetition max,
+                    percentages, powerlifting
+                    and weightlifting totals, maybe also Wilks score. After logging in user will be
+                    able to access
+                    workout log with two main functionalities - viewing or editing past workouts and
+                    adding a new one.
+                    I'd like to include adding all sorts of notes, voice notes, pictures, photos and
+                    videos.
 
                 <p>If user has administrator privileges as well, admin panel will be available.
 
@@ -372,10 +447,13 @@
                     <li>this application is secured using Spring Security</li>
                     <li>login and logout pages are custom made</li>
                     <li>JBCrypt library is used as the password encoder</li>
-                    <li>Spring Data JPA implemented via Hibernate framework is responsible for database communication
+                    <li>Spring Data JPA implemented via Hibernate framework is responsible for
+                        database communication
                     </li>
                     <li>Thymeleaf templates and controllers are responsible for view layer</li>
-                    <li>application is able to send registration email to an email provided by user</li>
+                    <li>application is able to send registration email to an email provided by
+                        user
+                    </li>
                 </ul>
             </div>
 
@@ -383,13 +461,15 @@
             <div id="section2ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');">&#10554;</a>
+                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section2Initial"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section2Initial"
                                                               src="images/under_construction.jpg"
                                                               alt="Patience, please..."
                                                               style="width:100%"></a>
@@ -415,7 +495,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/under_construction.jpg" alt=""
+                        <img class="screenshots-expandedImg" src="images/under_construction.jpg"
+                             alt=""
                              style="width: 70%">
                         <div class="screenshots-imgtext">Patience, please...</div>
                     </div>
@@ -427,8 +508,10 @@
             <div id="Section3" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section3ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Social_network - 2.png" alt="Social_network"></a>
-                    <a href="http://socialnetwork-env.dquhf6fr9u.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Social_network - 2.png"
+                             alt="Social_network"></a>
+                    <a href="http://socialnetwork-env.dquhf6fr9u.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Launch the app</a>
                     <p>login: test, password: test</p>
                 </div>
@@ -437,20 +520,28 @@
 
                 <br>
 
-                <p>This project is a simple social network app. You can create an account and after logging in possible
-                    to view posts of all other users, add your own post or leave a comment to any post. It's also
-                    possible to send and receive private messages to/from other users. Unread private messages are
+                <p>This project is a simple social network app. You can create an account and after
+                    logging in possible
+                    to view posts of all other users, add your own post or leave a comment to any
+                    post. It's also
+                    possible to send and receive private messages to/from other users. Unread
+                    private messages are
                     marked as such.</p>
 
-                <p>I wanted to try something different this time and this project is fully annotation - based. There is
+                <p>I wanted to try something different this time and this project is fully
+                    annotation - based. There is
                     no web.xml file.</p>
 
                 <ul>
-                    <li>database communication is according to JPA specification via Hibernate framework</li>
+                    <li>database communication is according to JPA specification via Hibernate
+                        framework
+                    </li>
                     <li>validator is used to verify user account data</li>
                     <li>user passwords are hashed using JBCrypt library</li>
                     <li>dependencies are managed using Maven</li>
-                    <li>view layer consists of controllers and JSP files with JSTL expressions and EL language</li>
+                    <li>view layer consists of controllers and JSP files with JSTL expressions and
+                        EL language
+                    </li>
                 </ul>
             </div>
 
@@ -458,20 +549,23 @@
             <div id="section3ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');">&#10554;</a>
+                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section3Initial"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section3Initial"
                                                               src="images/Social_network - 1.png"
                                                               alt="Registration screen validation"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Social_network - 2.png" alt="Main screen"
+                                                              src="images/Social_network - 2.png"
+                                                              alt="Main screen"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -489,7 +583,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Social_network - 1.png" alt=""
+                        <img class="screenshots-expandedImg" src="images/Social_network - 1.png"
+                             alt=""
                              style="width: 70%">
                         <div class="screenshots-imgtext">Registration screen validation</div>
                     </div>
@@ -501,8 +596,10 @@
             <div id="Section4" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section4ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Crime_empire - 1.jpg" alt="Crime_empire"></a>
-                    <a href="http://crimeempire-env.gu3axbmcv4.eu-central-1.elasticbeanstalk.com/login" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Crime_empire - 1.jpg"
+                             alt="Crime_empire"></a>
+                    <a href="http://crimeempire-env.gu3axbmcv4.eu-central-1.elasticbeanstalk.com/login"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Launch the app</a>
                     <p>login: test, password: test</p>
                 </div>
@@ -511,14 +608,18 @@
 
                 <br>
 
-                <p>This project was the final coursework for Coders Lab bootcamp written together with a colleague. It's
-                    a turn based browser strategy game. The player is an aspiring crime boss of Whateverville city and
+                <p>This project was the final coursework for Coders Lab bootcamp written together
+                    with a colleague. It's
+                    a turn based browser strategy game. The player is an aspiring crime boss of
+                    Whateverville city and
                     the main goal is to take control over all of the points on the city map.</p>
 
-                <p>User data and the game state related to his account are stored in MySQL database using JPA
+                <p>User data and the game state related to his account are stored in MySQL database
+                    using JPA
                     specification and Hibernate framework.</p>
 
-                <p>Game's user interface is based to a large extent on the GEOS project by another Coders Lab bootcamp
+                <p>Game's user interface is based to a large extent on the GEOS project by another
+                    Coders Lab bootcamp
                     participant - Szymon Mikołajczak.</p>
 
                 <p>Managing your resources is crucial:</p>
@@ -532,7 +633,9 @@
                     <li>validator is been used to verify user account data</li>
                     <li>user passwords are hashed using JBCrypt library</li>
                     <li>dependencies are managed using Maven</li>
-                    <li>view layer consists of controllers and JSP files with JSTL expressions and EL language</li>
+                    <li>view layer consists of controllers and JSP files with JSTL expressions and
+                        EL language
+                    </li>
                 </ul>
             </div>
 
@@ -540,24 +643,29 @@
             <div id="section4ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');">&#10554;</a>
+                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section4Initial"
-                                                              src="images/Crime_empire - 2.jpg" alt="Tutorial"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section4Initial"
+                                                              src="images/Crime_empire - 2.jpg"
+                                                              alt="Tutorial"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Crime_empire - 3.jpg" alt="Main map"
+                                                              src="images/Crime_empire - 3.jpg"
+                                                              alt="Main map"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Crime_empire - 4.jpg" alt="End of turn"
+                                                              src="images/Crime_empire - 4.jpg"
+                                                              alt="End of turn"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -569,7 +677,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Crime_empire - 2.jpg" alt="" style="width:70%">
+                        <img class="screenshots-expandedImg" src="images/Crime_empire - 2.jpg"
+                             alt="" style="width:70%">
                         <div class="screenshots-imgtext">Tutorial</div>
                     </div>
                 </div>
@@ -581,8 +690,10 @@
             <div id="Section5" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section5ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Book_catalog - 1.png" alt="Book_catalog"></a>
-                    <a href="http://bookcatalog-env.nz59rat9x5.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Book_catalog - 1.png"
+                             alt="Book_catalog"></a>
+                    <a href="http://bookcatalog-env.nz59rat9x5.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Launch the app</a>
                 </div>
 
@@ -590,17 +701,25 @@
 
                 <br>
 
-                <p>This project is a book catalog and consists of two complementary that complement each other: jQuery
-                    front-end sending AJAX calls to Java server that performs database operations.</p>
+                <p>This project is a book catalog and consists of two complementary that complement
+                    each other: jQuery
+                    front-end sending AJAX calls to Java server that performs database
+                    operations.</p>
 
-                <p>User interface sends a GET call to the server and receives the list of books that is displayed on the
-                    webpage. The user can display every book's details (GET call), edit them (PUT), delete this book
-                    from the list (DELETE) or add a new one (POST). Book data is sent and received using JSON format.
+                <p>User interface sends a GET call to the server and receives the list of books that
+                    is displayed on the
+                    webpage. The user can display every book's details (GET call), edit them (PUT),
+                    delete this book
+                    from the list (DELETE) or add a new one (POST). Book data is sent and received
+                    using JSON format.
                 </p>
 
-                <p>Back-end of this project is a Spring Web Application implementing CRUD model. The controller receives
-                    AJAX request and then performs database operations via service layer. Mock-up database is a hashlist
-                    of Book objects stored in memory, but since interface has been used - implementing real database
+                <p>Back-end of this project is a Spring Web Application implementing CRUD model. The
+                    controller receives
+                    AJAX request and then performs database operations via service layer. Mock-up
+                    database is a hashlist
+                    of Book objects stored in memory, but since interface has been used -
+                    implementing real database
                     should be a simple matter.</p>
 
                 <ul>
@@ -613,24 +732,29 @@
             <div id="section5ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');">&#10554;</a>
+                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section5Initial"
-                                                              src="images/Book_catalog - 1.png" alt="Main screen"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section5Initial"
+                                                              src="images/Book_catalog - 1.png"
+                                                              alt="Main screen"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Book_catalog - 2.png" alt="Book details"
+                                                              src="images/Book_catalog - 2.png"
+                                                              alt="Book details"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Book_catalog - 3.png" alt="Add book"
+                                                              src="images/Book_catalog - 3.png"
+                                                              alt="Add book"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -642,7 +766,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Book_catalog - 1.png" alt="" style="width:70%">
+                        <img class="screenshots-expandedImg" src="images/Book_catalog - 1.png"
+                             alt="" style="width:70%">
                         <div class="screenshots-imgtext">Main screen</div>
                     </div>
                 </div>
@@ -653,9 +778,11 @@
             <div id="Section6" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section6ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Programming_school - 1.png"
+                        <img class="thumbnail shaky myshadow"
+                             src="images/Programming_school - 1.png"
                              alt="Programming_school"></a>
-                    <a href="http://programmingschool-env.mmpawuepbg.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                    <a href="http://programmingschool-env.mmpawuepbg.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Launch the app</a>
                 </div>
 
@@ -663,15 +790,20 @@
 
                 <br>
 
-                <p>This project was completed as a part of the boot camp, to learn how to connect Java Web app to MySQL
-                    database using JDBC interface. This application is an example of MVC architectural pattern. It
-                    simulates programming school management with users belonging to user groups being given certain
+                <p>This project was completed as a part of the boot camp, to learn how to connect
+                    Java Web app to MySQL
+                    database using JDBC interface. This application is an example of MVC
+                    architectural pattern. It
+                    simulates programming school management with users belonging to user groups
+                    being given certain
                     exercises they can submit solutions to.
 
-                <p>The title screen shows last several solutions. User groups can be displayed and public user details
+                <p>The title screen shows last several solutions. User groups can be displayed and
+                    public user details
                     and their submitted solutions can be viewed.</p>
 
-                <p>Admin panel is also available. Everything can be viewed, added, edited or deleted: users, groups,
+                <p>Admin panel is also available. Everything can be viewed, added, edited or
+                    deleted: users, groups,
                     exercies and solutions.</p>
 
                 <ul>
@@ -687,14 +819,18 @@
             <div id="section6ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section6ScreenshotsCurtain');">&#10554;</a>
+                <a class="closebtn"
+                   href="javascript:closeCurtain('section6ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section6Initial"
-                                                              src="images/Programming_school - 1.png" alt="Main screen"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section6Initial"
+                                                              src="images/Programming_school - 1.png"
+                                                              alt="Main screen"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -718,7 +854,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Programming_school - 1.png" alt=""
+                        <img class="screenshots-expandedImg" src="images/Programming_school - 1.png"
+                             alt=""
                              style="width:70%">
                         <div class="screenshots-imgtext">Main screen</div>
                     </div>

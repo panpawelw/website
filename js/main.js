@@ -1,13 +1,15 @@
 $(document).ready(function () {
 
+    let win = $(window);
+
     /* Fade-in effect */
     $(function () {
         $('body').removeClass('fade-out');
     });
 
     /* Add transparency effect to navbar once user starts scrolling down the page */
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 80) {
+    win.scroll(function () {
+        if (win.scrollTop() > 80) {
             $('.navbar').addClass('transparent');
         } else {
             $('.navbar').removeClass('transparent');

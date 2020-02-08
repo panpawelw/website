@@ -81,9 +81,14 @@ a:focus {
     will-change: transform;
 }
 
-.navbar-brand {
+.fa {
+    /*background-image: url("../images/home.svg");*/
     font-size: 7em;
     color: #FA8334;
+}
+
+.fa-home {
+    margin-left: 0.25em;
 }
 
 .menu-links {
@@ -251,7 +256,7 @@ a:focus {
     position: absolute;
     top: 0;
     left: 0.33em;
-    font-size: 5vw;
+    font-size: 2vw;
     font-weight: bold;
 }
 
