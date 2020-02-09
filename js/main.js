@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let win = $(window);
+    const win = $(window);
 
     /* Fade-in effect */
     $(function () {

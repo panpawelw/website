@@ -453,7 +453,7 @@ a:focus {
     padding-left: 1em;
     font-size: 5em;
     z-index: 1;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 .sidenav-text {
@@ -461,7 +461,7 @@ a:focus {
     font-weight: bold;
     text-decoration: none;
     color: #000;
-    text-shadow: 5px 5px 5px #181c0a;
+    text-shadow: 2px 3px 3px #181c0a;
 }
 
 .sidenav-text:hover {
@@ -476,7 +476,9 @@ a:focus {
 
 .list-group-item {
     background-color: rgba(0, 0, 0, 0);
-    padding-left: 0.5em;
+    border: none;
+    padding: 0;
+    text-align: center;
 }
 
 .list-group-item.active {
@@ -587,6 +589,19 @@ a:focus {
 }
 
 /* text sections */
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
+    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    /*box-shadow: 3px 3px 3px;*/
+}
+
 .text-section {
     font-size: 500%;
     text-shadow: 2px 3px 3px #999;
