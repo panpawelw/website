@@ -28,8 +28,8 @@ body.fade-out {
     z-index: -100;
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(circle, #E9E49D 50%, transparent 75%), radial-gradient(circle, transparent 75%, black 125%),
-        #E9E49D url("../images/background.png") repeat fixed; /* url("../images/background.png") repeat */
+    background: radial-gradient(circle, rgba(233,228,157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
+        #E9E49D url("../images/background.png") repeat fixed;
     will-change: transform;
 }
 
@@ -462,7 +462,7 @@ a:focus {
     font-weight: bold;
     text-decoration: none;
     color: #000;
-    text-shadow: 2px 3px 3px #181c0a;
+    text-shadow: 3px 3px 3px #999;
 }
 
 .sidenav-text:hover {
@@ -605,7 +605,7 @@ hr {
 
 .text-section {
     font-size: 500%;
-    text-shadow: 2px 3px 3px #999;
+    text-shadow: 1px 1px 1px #999;
     /*filter: drop-shadow(3px 3px 3px #999);*/
     padding: 0.75em;
     margin-top: 0.35em;
