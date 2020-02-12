@@ -83,13 +83,16 @@ a:focus {
 }
 
 .fa {
-    /*background-image: url("../images/home.svg");*/
     font-size: 7em;
     color: #FA8334;
 }
 
 .fa-home {
     margin-left: 0.25em;
+}
+
+.fa-home:active, .fa-home:hover {
+    color: #E9E49D;
 }
 
 .menu-links {
@@ -461,30 +464,26 @@ a:focus {
     font-weight: bold;
     text-decoration: none;
     color: #000;
-    text-shadow: 3px 3px 3px #999;
-}
-
-.sidenav-text:hover {
-    transition: 0.333s;
-    color: #E9E49D;
-}
-
-.sidenav-text.active {
+    text-shadow: 3px 3px 5px #999;
     transition-duration: 0.333s;
-    text-shadow: 1px 1px 5px #181c0a;
+}
+
+.sidenav-text:hover, .sidenav-text.hover {
+    transition-duration: 0.333s;
+    text-shadow: 1px 1px 2px #000000;
+    color: #FA8334;;
+}
+
+.sidenav-text:active, .sidenav-text.active {
+    transition-duration: 0.333s;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .list-group-item {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     border: none;
     padding: 0;
     text-align: center;
-}
-
-.list-group-item.active {
-    color: #FA8334;
-    background-color: #0b2e13;
-    border: none;
 }
 
 .sidebar-content {
@@ -621,6 +620,11 @@ hr.shadow {
     text-shadow: 1px 1px 1px #999;
     padding: 0.75em;
     margin-top: 0.35em;
+}
+
+.text-section > h1 {
+    text-shadow: 1px 1px 2px #000000;
+    color: #FA8334;
 }
 
 #section1photo {
