@@ -5,7 +5,6 @@ html {
 }
 
 body {
-    scroll-padding: 56px;
     font-size: 25%;
     font-family: 'Averia Gruesa Libre', cursive;
     height: 100%;
@@ -33,14 +32,14 @@ body.fade-out {
     will-change: transform;
 }
 
-/*general link properties*/
-a {
-    color: #FA8334;
-}
+/*!*general link properties*!*/
+/*a {*/
+/*    color: #FA8334;*/
+/*}*/
 
-a:focus {
-    outline-color: #FA8334;
-}
+/*a:focus {*/
+/*    outline-color: #FA8334;*/
+/*}*/
 
 /* general button effects */
 .btn-primary, .btn-primary:active, .btn-primary:visited {
@@ -288,17 +287,25 @@ a:focus {
 }
 
 /* jumbotron layout */
-#jumbotron {
-    margin-top: 15em;
-    padding: 1em;
-    margin-bottom: 1em;
-    margin-right: 0;
-    background: #FA8334 url("../images/jumboimg.jpg");
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1);
-    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
+.jumbotron {
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    height: 33vh;
+    background: transparent;
 }
+/*#jumbotron {*/
+/*    margin-top: 15em;*/
+/*    padding: 1em;*/
+/*    margin-bottom: 1em;*/
+/*    margin-right: 0;*/
+/*    background: #FA8334 url("../images/jumboimg.jpg");*/
+/*    border-radius: 5px;*/
+/*    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1);*/
+/*    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
+/*    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
+/*}*/
 
 #website-title {
     float: left;
@@ -378,14 +385,11 @@ a:focus {
 }
 
 .char {
-    /*font: 26px Monaco, MonoSpace;*/
     font-size: 25px;
     font-weight: 900;
     height: 28px;
     position: absolute;
     width: 0;
-    /*left: 50%;*/
-    /*top: 25%;*/
     transform-origin: bottom center;
 }
 
