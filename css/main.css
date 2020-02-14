@@ -1,4 +1,22 @@
 /* general properties */
+
+/*@font-face {*/
+/*    font-family: 'my_fontregular';*/
+/*    src: url('../fonts/agl-custom/agl-custom-webfont.eot');*/
+/*    src: url('../fonts/agl-custom/agl-custom-webfont.eot?#iefix') format('embedded-opentype'),*/
+/*    url('../fonts/agl-custom/agl-custom-webfont.woff2') format('woff2'),*/
+/*    url('../fonts/agl-custom/agl-custom-webfont.woff') format('woff'),*/
+/*    url('../fonts/agl-custom/agl-custom-webfont.ttf') format('truetype'),*/
+/*    url('../fonts/agl-custom/agl-custom-webfont.svg#my_fontregular') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
+@font-face {
+    font-family: 'my_fontregular';
+    src: url("../fonts/agl-custom/agl-custom.otf") format("opentype");
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding: 56px;
@@ -6,7 +24,7 @@ html {
 
 body {
     font-size: 25%;
-    font-family: 'Averia Gruesa Libre', cursive;
+    font-family: 'my_fontregular', sans-serif;
     height: 100%;
     opacity: 1;
     transition: 1s opacity;
@@ -14,7 +32,7 @@ body {
 
 body.fade-out {
     font-size: 25%;
-    font-family: 'Averia Gruesa Libre', cursive;
+    font-family: 'my_fontregular', sans-serif;
     height: 100%;
     opacity: 0;
     transition: none;
@@ -27,19 +45,10 @@ body.fade-out {
     z-index: -100;
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(circle, rgba(233,228,157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
-        #E9E49D url("../images/background.png") repeat fixed;
+    background: radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
+    #E9E49D url("../images/background.png") repeat fixed;
     will-change: transform;
 }
-
-/*!*general link properties*!*/
-/*a {*/
-/*    color: #FA8334;*/
-/*}*/
-
-/*a:focus {*/
-/*    outline-color: #FA8334;*/
-/*}*/
 
 /* general button effects */
 .btn-primary, .btn-primary:active, .btn-primary:visited {
@@ -56,15 +65,15 @@ body.fade-out {
 .btn:focus {
     transition: 0.333s;
     border-color: #FA8334;
-    -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-    -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
     transition: 0.333s;
     border-color: #FA8334 !important;
-    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5) !important;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5) !important;
 }
 
 .btn-primary:hover {
@@ -193,6 +202,7 @@ body.fade-out {
     overflow: hidden; /* Disable scroll */
     transition: 0.2s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
+
 /* position the content inside overlays */
 .overlay-content {
     /*top: 5%; !* 5% from the top *!*/
@@ -213,7 +223,7 @@ body.fade-out {
 
 .overlay-scrollable::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #FA8334;
 }
 
@@ -288,24 +298,28 @@ body.fade-out {
 
 /* jumbotron layout */
 .jumbotron {
+    margin-top: 15em;
+    margin-bottom: 3em;
+    padding: 0;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
     -o-background-size: 100% 100%;
-    height: 33vh;
+    /*height: 33vh;*/
     background: transparent;
 }
-/*#jumbotron {*/
-/*    margin-top: 15em;*/
-/*    padding: 1em;*/
-/*    margin-bottom: 1em;*/
-/*    margin-right: 0;*/
-/*    background: #FA8334 url("../images/jumboimg.jpg");*/
-/*    border-radius: 5px;*/
-/*    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1);*/
-/*    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
-/*    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52,1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
-/*}*/
+
+#jumbotron {
+    /*margin-top: 15em;*/
+    padding: 1em;
+    /*margin-bottom: 1em;*/
+    margin-right: 0;
+    background: #FA8334 url("../images/jumboimg.jpg");
+    border-radius: 5px;
+    /*-webkit-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52, 1);*/
+    /*-moz-box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52, 1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
+    /*box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.75), inset 0 0 5px 10px rgba(250, 131, 52, 1), inset 0 0 6px 3px rgba(0, 0, 0, 0.75);*/
+}
 
 #website-title {
     float: left;
@@ -416,6 +430,7 @@ body.fade-out {
 .char-5 {
     transform: rotate(300deg);
 }
+
 .char-6 {
     transform: rotate(330deg);
 }
@@ -508,10 +523,6 @@ body.fade-out {
 }
 
 /* carousel layout */
-#Section0 {
-    border-radius: 5px;
-    padding: 0.5em;
-}
 
 .carousel-section {
     background-color: #E9E49D;
@@ -573,22 +584,20 @@ body.fade-out {
     content: ">";
     font-size: 50px;
     color: #E9E49D;
-    text-shadow:
-            -2px -2px 0 #2C3312,
-            2px -2px 0 #2C3312,
-            -2px 2px 0 #2C3312,
-            2px 2px 0 #2C3312;
+    text-shadow: -2px -2px 0 #2C3312,
+    2px -2px 0 #2C3312,
+    -2px 2px 0 #2C3312,
+    2px 2px 0 #2C3312;
 }
 
 .carousel-control-prev-icon:after {
     content: "<";
     font-size: 50px;
     color: #E9E49D;
-    text-shadow:
-            -2px -2px 0 #2C3312,
-            2px -2px 0 #2C3312,
-            -2px 2px 0 #2C3312,
-            2px 2px 0 #2C3312;
+    text-shadow: -2px -2px 0 #2C3312,
+    2px -2px 0 #2C3312,
+    -2px 2px 0 #2C3312,
+    2px 2px 0 #2C3312;
 }
 
 /* text sections */
@@ -597,37 +606,42 @@ hr {
     border: 0;
     height: 1px;
     background: #333;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(0, 0%, 0%, 0)), color-stop(50%, hsla(0, 0%, 0%, .75)), color-stop(100%, hsla(0, 0%, 0%, 0)));
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -ms-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    z-index: 2;
+    /*position: absolute;*/
+    /*box-shadow: 0 0 5px 1px #AAA;*/
 }
 
 hr.shadow {
-    margin-top: 3px;
+    margin-top: 0;
     border: 0;
-    height: 1px;
-    background: #333;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.25)), color-stop(100%,hsla(0,0%,0%,0)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    filter: blur(1px);
+    height: 3px;
+    background: #000;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(0, 0%, 0%, 0)), color-stop(50%, hsla(0, 0%, 0%, .25)), color-stop(100%, hsla(0, 0%, 0%, 0)));
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -ms-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    filter: blur(3px);
+    /*position: absolute;*/
+    z-index: 1;
 }
 
 .text-section {
     font-size: 500%;
-    text-shadow: 1px 1px 1px #999;
+    text-shadow: 0 0 5px 5px #999;
     padding: 0.75em;
     margin-top: 0.35em;
 }
 
 .text-section > h1 {
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 0 0 2px #000;
     color: #FA8334;
 }
 
@@ -677,6 +691,7 @@ hr.shadow {
 .screenshots-row {
     text-align: center;
 }
+
 /* clear floats after the columns */
 .screenshots-row:after {
     content: "";
@@ -732,34 +747,56 @@ hr.shadow {
 }
 
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -1px) rotate(-0.01deg); }
-    20% { transform: translate(-1px, 0px) rotate(0.01deg); }
-    30% { transform: translate(1px, 1px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(0.01deg); }
-    50% { transform: translate(-1px, 1px) rotate(-0.01deg); }
-    60% { transform: translate(-1px, 1px) rotate(0deg); }
-    70% { transform: translate(1px, 1px) rotate(-0.01deg); }
-    80% { transform: translate(-1px, -1px) rotate(0.01deg); }
-    90% { transform: translate(1px, 1px) rotate(0deg); }
-    100% { transform: translate(1px, -1px) rotate(-0.01deg); }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -1px) rotate(-0.01deg);
+    }
+    20% {
+        transform: translate(-1px, 0px) rotate(0.01deg);
+    }
+    30% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(0.01deg);
+    }
+    50% {
+        transform: translate(-1px, 1px) rotate(-0.01deg);
+    }
+    60% {
+        transform: translate(-1px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(1px, 1px) rotate(-0.01deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(0.01deg);
+    }
+    90% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -1px) rotate(-0.01deg);
+    }
 }
 
 /* shadow effect */
-.myshadow {
-    -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-    -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
+.my-shadow {
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
-.myshadow:active {
-    -webkit-box-shadow: 1px 1px 1px 0 rgba(1,1,1,0.5);
-    -moz-box-shadow: 1px 1px 1px 0 rgba(1,1,1,1.5);
-    box-shadow: 1px 1px 1px 0 rgba(1,1,1,0.5);
+.my-shadow:active {
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(1, 1, 1, 0.5);
+    -moz-box-shadow: 1px 1px 1px 0 rgba(1, 1, 1, 1.5);
+    box-shadow: 1px 1px 1px 0 rgba(1, 1, 1, 0.5);
 }
 
 .text-shadow {
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -831,12 +868,12 @@ hr.shadow {
         font-size: 7.5vw;
     }
 
-    .carousel-caption.upper h2{
+    .carousel-caption.upper h2 {
         font-size: 7em;
         margin: 0;
     }
 
-    .carousel-caption.upper h5{
+    .carousel-caption.upper h5 {
         font-size: 4em;
     }
 
@@ -870,6 +907,7 @@ hr.shadow {
         font-size: 6vw;
     }
 }
+
 /* prevent main content shift when sidebar is not displayed */
 @media screen and (min-width: 991px) {
 

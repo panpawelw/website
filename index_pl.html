@@ -23,97 +23,142 @@
 <script>document.body.className += ' fade-out';</script>
 
 <div class="vignette"></div>
-<div class="container">
-    <div id="Home"></div>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-sm fixed-top navbar-custom">
-        <a class="navbar-brand" href="#Home"><i class="fa fa-home"></i></a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler"
-                aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-navicon"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-toggler">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline" data-toggle="dropdown"
-                       href="#">CV</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="download/CV.pdf" download>pdf</a>
-                        <a class="dropdown-item" href="download/CV.docx" download>docx</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link nav-menu menu-links animated-underline" href="https://github.com/pjm77"
-                       target="_blank">GitHub</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-menu menu-links animated-underline"
-                       href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/" target="_blank">LinkedIn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-menu menu-links animated-underline"
-                       href="https://www.goldenline.pl/pawel-wojtun2/"
-                       target="_blank">GoldenLine</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline" data-toggle="dropdown"
-                       href="#">Słowo
-                        o...</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="javascript:openCurtain('aboutPageCurtain');">...stronie</a>
-                        <a class="dropdown-item" href="javascript:openCurtain('aboutMeCurtain');">...mnie</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-menu menu-links animated-underline" href="index.html">EN</a>
-                </li>
-            </ul>
+<div id="Home"></div>
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm fixed-top navbar-custom">
+    <a class="navbar-brand" href="#Home"><i class="fa fa-home"></i></a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbar-toggler"
+            aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-navicon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-toggler">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline"
+                   data-toggle="dropdown"
+                   href="#">CV</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="download/CV.pdf" download>pdf</a>
+                    <a class="dropdown-item" href="download/CV.docx" download>docx</a>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link nav-menu menu-links animated-underline"
+                   href="https://github.com/pjm77"
+                   target="_blank">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-menu menu-links animated-underline"
+                   href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                   target="_blank">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-menu menu-links animated-underline"
+                   href="https://www.goldenline.pl/pawel-wojtun2/"
+                   target="_blank">GoldenLine</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link nav-menu menu-links dropdown-toggle animated-underline"
+                   data-toggle="dropdown"
+                   href="#">Słowo
+                    o...</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript:openCurtain('aboutPageCurtain');">...stronie</a>
+                    <a class="dropdown-item" href="javascript:openCurtain('aboutMeCurtain');">...mnie</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-menu menu-links animated-underline" href="index.html">EN</a>
+            </li>
+        </ul>
 
-        </div>
-    </nav>
+    </div>
+</nav>
 
-    <!--"About this webpage" curtain-->
-    <div id="aboutPageCurtain" class="overlay">
-
-        <!-- Button to close the overlay navigation -->
-        <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain');"><i class="fa fa-close"></i></a>
-
-        <!-- Overlay content -->
-        <div class="overlay-content overlay-scrollable">
-            <h2 class="overlay-title">O stronie</h2>
-            <div id="logo-container">
-                <img class="logos" src="images/logo-javascript.png" alt="Javascript logo">
-                <img class="logos" src="images/logo-jQuery.png" alt="jQuery logo">
-                <img class="logos" src="images/logo-bootstrap.jpg" alt="Bootstrap logo">
+<div class="jumbotron">
+    <div class="container">
+        <!-- Jumbotron-->
+        <div id="jumbotron" class="my-shadow">
+            <div id="jumbotron-content">
+                <div id="magic-button-wrapper">
+                    <a class="magic-button shaky"
+                       href="javascript:openCurtain('aboutPageCurtain');">
+                        <h3>
+                            <span class="char-1 char">?</span>
+                            <span class="char-2 char">?</span>
+                            <span class="char-3 char">?</span>
+                            <span class="char-4 char">?</span>
+                            <span class="char-5 char">?</span>
+                            <span class="char-6 char">?</span>
+                            <span class="char-7 char">?</span>
+                            <span class="char-8 char">?</span>
+                            <span class="char-9 char">?</span>
+                            <span class="char-10 char">?</span>
+                            <span class="char-11 char">?</span>
+                            <span class="char-12 char">?</span>
+                        </h3>
+                    </a>
+                </div>
+                <span id="website-title">Hello!</span>
             </div>
-            <p>Przy tworzeniu tej strony użyłem JS (ECMAScript 6), JQuery 3.3 i Bootstrapa 4.1.</p>
-            <p>Strona jest responsywna, jej układ i wielkość fontów<br/>zmieniają się w zależności od wielkości ekranu
-                urządzenia.</p>
-            <p>Do osiągnięcia płynnego przewijania po kliknięciu linków<br/>nawigacyjnych użyłem wtyczki ScrollTo
-                autorstwa Ariela Fleslera.</p>
-            <div class="about-links">
+            <p id="website-slogan">...welcome to my corner of the Internet!</p>
+        </div>
+    </div>
+</div>
+
+<!--"About this webpage" curtain-->
+<div id="aboutPageCurtain" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain');"><i
+            class="fa fa-close"></i></a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content overlay-scrollable">
+        <h2 class="overlay-title">O stronie</h2>
+        <div id="logo-container">
+            <img class="logos" src="images/logo-javascript.png" alt="Javascript logo">
+            <img class="logos" src="images/logo-jQuery.png" alt="jQuery logo">
+            <img class="logos" src="images/logo-bootstrap.jpg" alt="Bootstrap logo">
+        </div>
+        <p>Przy tworzeniu tej strony użyłem JS (ECMAScript 6), JQuery 3.3 i Bootstrapa 4.1.</p>
+        <p>Strona jest responsywna, jej układ i wielkość fontów<br/>zmieniają się w zależności od
+            wielkości ekranu
+            urządzenia.</p>
+        <p>Do osiągnięcia płynnego przewijania po kliknięciu linków<br/>nawigacyjnych użyłem wtyczki
+            ScrollTo
+            autorstwa Ariela Fleslera.</p>
+        <div class="about-links">
 				<span class="dropup">
 					<a class="menu-links dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
 					<span class="dropdown-menu dropup-menu">
-						<a class="dropdown-item curtain-dropup-item" href="download/CV.pdf" download>pdf</a>
-						<a class="dropdown-item curtain-dropup-item" href="download/CV.docx" download>docx</a>
+						<a class="dropdown-item curtain-dropup-item" href="download/CV.pdf"
+                           download>pdf</a>
+						<a class="dropdown-item curtain-dropup-item" href="download/CV.docx"
+                           download>docx</a>
 					</span>
 				</span>
-                <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub</a>
-                <a class="menu-links" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
-                   target="_blank">LinkedIn</a>
-                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
-                <a class="menu-links" href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">O mnie</a>
-            </div>
+            <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub</a>
+            <a class="menu-links"
+               href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+               target="_blank">LinkedIn</a>
+            <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
+            <a class="menu-links"
+               href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">O
+                mnie</a>
         </div>
-
     </div>
 
+</div>
+
+<div class="container">
     <!--"About me" curtain-->
     <div id="aboutMeCurtain" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');"><i class="fa fa-close"></i></a>
+        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');"><i
+                class="fa fa-close"></i></a>
 
         <!-- Overlay content -->
         <div class="overlay-content overlay-scrollable">
@@ -122,16 +167,29 @@
                 <img class="photo" src="images/CVphoto.jpg" alt="My photo">
             </div>
 
-            <p>Informatyką interesuję się od kiedy pamiętam. Sporo programowałem w młodości - Basic, Turbo Pascal,
-                Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym kierunku, jednak zamiłowanie nigdy
+            <p>Informatyką interesuję się od kiedy pamiętam. Sporo programowałem w młodości - Basic,
+                Turbo Pascal,
+                Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym kierunku,
+                jednak
+                zamiłowanie nigdy
                 nie zgasło.</p>
-            <p>Ukończyłem psychologię na Uniwersytecie Wrocławskim. Po studiach emigrowałem na niemal 10 lat do Irlandii
-                Północnej, gdzie większość czasu pracowałem jako tłumacz sesyjny w wymiarze sprawiedliwości.</p>
-            <p>Powrót do kraju to znakomity pretekst do zmiany kariery, która choć intratna i dobrze trafiona w tamtym
+            <p>Ukończyłem psychologię na Uniwersytecie Wrocławskim. Po studiach emigrowałem na
+                niemal 10
+                lat do Irlandii
+                Północnej, gdzie większość czasu pracowałem jako tłumacz sesyjny w wymiarze
+                sprawiedliwości.</p>
+            <p>Powrót do kraju to znakomity pretekst do zmiany kariery, która choć intratna i dobrze
+                trafiona w tamtym
                 momencie, nigdy tak naprawdę mnie nie pasjonowała.</p>
-            <p>Gdy zorientowałem się, że zapotrzebowanie w branży IT jest duże zdecydowałem się na kurs Back - endu
-                (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy, programując jednocześnie na tyle, na ile
-                czas pozwalał, aby wiedza z kursu pozostała świeża i rozwijając ją w miarę możliwości. Docelowo
+            <p>Gdy zorientowałem się, że zapotrzebowanie w branży IT jest duże zdecydowałem się na
+                kurs
+                Back - endu
+                (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy, programując
+                jednocześnie
+                na tyle, na ile
+                czas pozwalał, aby wiedza z kursu pozostała świeża i rozwijając ją w miarę
+                możliwości.
+                Docelowo
                 chciałbym zostać full - stack developerem.</p>
 
             <div class="about-links">
@@ -142,41 +200,22 @@
 						<a class="dropdown-item" href="download/CV.docx" download>docx</a>
 					</span>
 				</span>
-                <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub<span class="sr-only">(current)</span></a>
-                <a class="menu-links" href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                <a class="menu-links" href="https://github.com/pjm77" target="_blank">GitHub<span
+                        class="sr-only">(current)</span></a>
+                <a class="menu-links"
+                   href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
                    target="_blank">LinkedIn</a>
-                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
-                <a class="menu-links" href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">O stronie</a>
+                <a class="menu-links" href="https://www.goldenline.pl/pawel-wojtun2/"
+                   target="_blank">GoldenLine</a>
+                <a class="menu-links"
+                   href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">O
+                    stronie</a>
             </div>
         </div>
 
     </div>
 
-    <!--Jumbotron-->
-    <div id="jumbotron">
-        <div id="jumbotron-content">
-            <div id="magic-button-wrapper">
-                <a class="magic-button shaky" href="javascript:openCurtain('aboutPageCurtain');">
-                    <h3>
-                        <span class="char-1 char">?</span>
-                        <span class="char-2 char">?</span>
-                        <span class="char-3 char">?</span>
-                        <span class="char-4 char">?</span>
-                        <span class="char-5 char">?</span>
-                        <span class="char-6 char">?</span>
-                        <span class="char-7 char">?</span>
-                        <span class="char-8 char">?</span>
-                        <span class="char-9 char">?</span>
-                        <span class="char-10 char">?</span>
-                        <span class="char-11 char">?</span>
-                        <span class="char-12 char">?</span>
-                    </h3>
-                </a>
-            </div>
-            <span id="website-title">Witam!</span>
-        </div>
-        <p id="website-slogan">...oto mój kawałek internetu...</p>
-    </div>
+
     <div class="row">
         <!--Sidebar-->
         <div class="d-none d-lg-block d-xl-block col-lg-2 col-xl-2 px-1 sidenav">
@@ -184,17 +223,35 @@
                 <div class="nav sidebar-content">
                     <ul class="nav list-group">
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section0">Zacznij tutaj</a><hr><hr class="shadow"></li>
+                                                       href="#theCarousel">Zacznij tutaj</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section1">Ogólnie</a><hr><hr class="shadow"></li>
+                                                       href="#Section1">Ogólnie</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section2">Workout Log</a><hr><hr class="shadow"></li>
+                                                       href="#Section2">Workout Log</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section3">Social Network</a><hr><hr class="shadow"></li>
+                                                       href="#Section3">Social Network</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section4">Crime Empire</a><hr><hr class="shadow"></li>
+                                                       href="#Section4">Crime Empire</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
-                                                       href="#Section5">Book Catalog</a><hr><hr class="shadow"></li>
+                                                       href="#Section5">Book Catalog</a>
+                            <hr>
+                            <hr class="shadow">
+                        </li>
                         <li class="list-group-item"><a class="nav-link sidenav-text"
                                                        href="#Section6">Programming School</a></li>
                     </ul>
@@ -203,102 +260,114 @@
         </div>
         <!--Carousel-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 main">
-            <div id="Section0" class="carousel-section indented">
-                <div id="theCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#theCarousel" data-slide-to="0" class="myshadow active"></li>
-                        <li data-target="#theCarousel" data-slide-to="1" class="myshadow"></li>
-                        <li data-target="#theCarousel" data-slide-to="2" class="myshadow"></li>
-                        <li data-target="#theCarousel" data-slide-to="3" class="myshadow"></li>
-                        <li data-target="#theCarousel" data-slide-to="4" class="myshadow"></li>
-                        <li data-target="#theCarousel" data-slide-to="5" class="myshadow"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block indented" src="images/1.png" alt="First slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Ogólnie</h2>
-                                <h5 class="text-shadow">...co i jak piszę...</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section1"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
+            <div id="theCarousel" class="carousel slide carousel-fade my-shadow"
+                 data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#theCarousel" data-slide-to="0"
+                        class="myshadow active"></li>
+                    <li data-target="#theCarousel" data-slide-to="1" class="myshadow"></li>
+                    <li data-target="#theCarousel" data-slide-to="2" class="myshadow"></li>
+                    <li data-target="#theCarousel" data-slide-to="3" class="myshadow"></li>
+                    <li data-target="#theCarousel" data-slide-to="4" class="myshadow"></li>
+                    <li data-target="#theCarousel" data-slide-to="5" class="myshadow"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block indented" src="images/1.png" alt="First slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Ogólnie</h2>
+                            <h5 class="text-shadow">...co i jak piszę...</h5>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="images/2.png" alt="Second slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Workout Log</h2>
-                                <h5 class="text-shadow">Spring Boot + Data + Security + Thymeleaf</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section2"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="images/3.png" alt="Third slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Social Network</h2>
-                                <h5 class="text-shadow">Spring + Hibernate</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section3"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="images/4.png" alt="Fourth slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Crime Empire</h2>
-                                <h5 class="text-shadow">Spring + Hibernate</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section4"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="images/5.png" alt="Fifth slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Book Catalog</h2>
-                                <h5 class="text-shadow">Spring + REST + JQuery + AJAX</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section5"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="images/6.png" alt="Sixth slide">
-                            <div class="carousel-caption upper">
-                                <h2 class="text-shadow">Programming School</h2>
-                                <h5 class="text-shadow">serwlety + JSP + MySQL</h5>
-                            </div>
-                            <div class="carousel-caption lower">
-                                <p><a href="#Section6"
-                                      class="btn btn-primary btm-sm shaky myshadow">Więcej...</a></p>
-                            </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section1"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only text-shadow">Next</span>
-                    </a>
+                    <div class="carousel-item">
+                        <img class="d-block" src="images/2.png" alt="Second slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Workout Log</h2>
+                            <h5 class="text-shadow">Spring Boot + Data + Security +
+                                Thymeleaf</h5>
+                        </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section2"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" src="images/3.png" alt="Third slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Social Network</h2>
+                            <h5 class="text-shadow">Spring + Hibernate</h5>
+                        </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section3"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" src="images/4.png" alt="Fourth slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Crime Empire</h2>
+                            <h5 class="text-shadow">Spring + Hibernate</h5>
+                        </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section4"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" src="images/5.png" alt="Fifth slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Book Catalog</h2>
+                            <h5 class="text-shadow">Spring + REST + JQuery + AJAX</h5>
+                        </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section5"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block" src="images/6.png" alt="Sixth slide">
+                        <div class="carousel-caption upper">
+                            <h2 class="text-shadow">Programming School</h2>
+                            <h5 class="text-shadow">serwlety + JSP + MySQL</h5>
+                        </div>
+                        <div class="carousel-caption lower">
+                            <p><a href="#Section6"
+                                  class="btn btn-primary btm-sm shaky myshadow">Więcej...</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <a class="carousel-control-prev" href="#theCarousel" role="button"
+                   data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#theCarousel" role="button"
+                   data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only text-shadow">Next</span>
+                </a>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 1-->
             <div id="Section1" class="text-section">
                 <div id="section1photo">
                     <a id="main-photo" href="javascript:openCurtain('aboutMeCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/CVphoto.jpg" alt="About me"></a>
-                    <a class="btn btn-primary btm-sm shaky myshadow" href="javascript:openCurtain('aboutMeCurtain');">
+                        <img class="thumbnail shaky myshadow" src="images/CVphoto.jpg"
+                             alt="About me"></a>
+                    <a class="btn btn-primary btm-sm shaky myshadow"
+                       href="javascript:openCurtain('aboutMeCurtain');">
                         O mnie...</a>
                 </div>
 
@@ -306,44 +375,62 @@
 
                 <br>
 
-                <p>Piszę w Javie 8, głównie projekty Web przy pomocy frameworku Spring, zarówno w starszej jego wersji,
-                    jak i z użyciem konfiguratora Spring Boot. Umiem również posługiwać się technologią serwletów.</p>
+                <p>Piszę w Javie 8, głównie projekty Web przy pomocy frameworku Spring, zarówno w
+                    starszej jego wersji,
+                    jak i z użyciem konfiguratora Spring Boot. Umiem również posługiwać się
+                    technologią serwletów.</p>
 
-                <p>W kilku moich projektach użyłem komunikacji z bazą danych MySQL, zarówno za pośrednictwem interfejsu
-                    JDBC jak i bibliotek mapowania obiektowo-relacyjnego Hibernate i specyfikacji JPA.</p>
+                <p>W kilku moich projektach użyłem komunikacji z bazą danych MySQL, zarówno za
+                    pośrednictwem interfejsu
+                    JDBC jak i bibliotek mapowania obiektowo-relacyjnego Hibernate i specyfikacji
+                    JPA.</p>
 
-                <p>Potrafię posługiwać się systemem szablonów Thymeleaf, technologią JSP, umiem stosować język EL oraz
+                <p>Potrafię posługiwać się systemem szablonów Thymeleaf, technologią JSP, umiem
+                    stosować język EL oraz
                     tagi JSTL.</p>
 
-                <p>Mam opanowaną w podstawowym stopniu architekturę JavaFX (w wersji 8.0) i umiem posługiwać się JavaFX
+                <p>Mam opanowaną w podstawowym stopniu architekturę JavaFX (w wersji 8.0) i umiem
+                    posługiwać się JavaFX
                     Scene Builderem.</p>
 
-                <p>Jeśli chodzi o front-end - HTML, CSS, Bootstrap, Javascript i JQuery (włącznie z zapytaniami AJAX)
-                    mam opanowane na tyle, aby być w stanie stworzyć tą stronę oraz podstawowy interfejs użytkownika do
+                <p>Jeśli chodzi o front-end - HTML, CSS, Bootstrap, Javascript i JQuery (włącznie z
+                    zapytaniami AJAX)
+                    mam opanowane na tyle, aby być w stanie stworzyć tą stronę oraz podstawowy
+                    interfejs użytkownika do
                     wszystkich moich projektów.</p>
 
-                <p>Zacząłem moją przygodę z Javą na Ubuntu i Spring Tool Suite. Po kilku miesiącach przesiadłem się na
-                    Windows, a po kolejnych kilku zmieniłem IDE na Intellij. Jest to czysto kwestia preferencji, jestem
+                <p>Zacząłem moją przygodę z Javą na Ubuntu i Spring Tool Suite. Po kilku miesiącach
+                    przesiadłem się na
+                    Windows, a po kolejnych kilku zmieniłem IDE na Intellij. Jest to czysto kwestia
+                    preferencji, jestem
                     w stanie poradzić sobie we wszystkich wymienionych scenariuszach.</p>
 
-                <p>Jako system kontroli wersji wybrałem GIT. Potrafię wykonać podstawowe operacje z poziomu konsoli,
-                    obecnie częściej korzystam z wbudowanej w Intellij integracji z tą platformą.</p>
+                <p>Jako system kontroli wersji wybrałem GIT. Potrafię wykonać podstawowe operacje z
+                    poziomu konsoli,
+                    obecnie częściej korzystam z wbudowanej w Intellij integracji z tą
+                    platformą.</p>
 
-                <p>Aktualnie koncentruję się na opanowaniu pisania testów przy użyciu JUnit, umiejętności pisania
-                    klarownego i dobrze ustrukturalizowanego kodu ze stosownymi komentarzami i dokumentacją oraz
+                <p>Aktualnie koncentruję się na opanowaniu pisania testów przy użyciu JUnit,
+                    umiejętności pisania
+                    klarownego i dobrze ustrukturalizowanego kodu ze stosownymi komentarzami i
+                    dokumentacją oraz
                     rozszerzeniu mojej wiedzy odnośnie wzorców projektowych.</p>
 
-                <p>Na moim GitHubie można jeszcze znaleźć kilka drobnych projektów, poza tymi które przedstawiłem
+                <p>Na moim GitHubie można jeszcze znaleźć kilka drobnych projektów, poza tymi które
+                    przedstawiłem
                     poniżej.</p>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 2-->
             <div id="Section2" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section2ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/under_construction.jpg" alt="Workout_log"></a>
-                    <a href="http://weightliftinglog-env.wucjxqxkma.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/under_construction.jpg"
+                             alt="Workout_log"></a>
+                    <a href="http://weightliftinglog-env.wucjxqxkma.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">
                         Uruchom projekt</a>
                 </div>
@@ -352,69 +439,91 @@
 
                 <br>
 
-                <p>Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik treningów. Głównym celem,
-                    który chcę osiągnąć jest maksymalna możliwa elastyczność struktury danych. Jeśli tylko trening danej
-                    dyscypliny da się zapisać przy pomocy czynności o jakimś stopniu trudności wykonanej pewną ilość
-                    razy w (opcjonalnie) określonym czasie - powinno dać się to zapisać w moim programie. Wszelki
-                    trening, którego celem jest podnoszenie jakiegoś rodzaju wydajności (w przeciwieństwie do takiego
+                <p>Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik
+                    treningów. Głównym celem,
+                    który chcę osiągnąć jest maksymalna możliwa elastyczność struktury danych. Jeśli
+                    tylko trening danej
+                    dyscypliny da się zapisać przy pomocy czynności o jakimś stopniu trudności
+                    wykonanej pewną ilość
+                    razy w (opcjonalnie) określonym czasie - powinno dać się to zapisać w moim
+                    programie. Wszelki
+                    trening, którego celem jest podnoszenie jakiegoś rodzaju wydajności (w
+                    przeciwieństwie do takiego
                     gdzie kluczowym elementem jest styl) powinien dać się ująć w taką strukturę.</p>
 
-                <p>Bez logowania dostępny ma być ekran podstawowych kalkulacji - maksymalnego powtórzenia wedle różnych
-                    dostępnych wzorówi oraz jego procentów (może też przelicznik współczynnika Wilksa i trójbowy total).
-                    Po zalogowaniu użytkownik uzyska dostęp do pełnej funkcjonalności - dziennika treningowego z
-                    możliwością wglądu i edycji dawnych treningów oraz dodania nowego treningu. Chcę aby była, poza
-                    logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju uwag, notatek, notatek
+                <p>Bez logowania dostępny ma być ekran podstawowych kalkulacji - maksymalnego
+                    powtórzenia wedle różnych
+                    dostępnych wzorówi oraz jego procentów (może też przelicznik współczynnika
+                    Wilksa i trójbowy total).
+                    Po zalogowaniu użytkownik uzyska dostęp do pełnej funkcjonalności - dziennika
+                    treningowego z
+                    możliwością wglądu i edycji dawnych treningów oraz dodania nowego treningu. Chcę
+                    aby była, poza
+                    logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju
+                    uwag, notatek, notatek
                     głosowych, zdjęć i filmów.</p>
 
-                <p>Jeśli użytkownik ma również uprawnienia administratora, będzie miał także dostęp do odpowiedniego
+                <p>Jeśli użytkownik ma również uprawnienia administratora, będzie miał także dostęp
+                    do odpowiedniego
                     panelu.</p>
 
                 <ul>
                     <li>aplikacja jest zabezpieczona przy użyciu Spring Security</li>
                     <li>jako password encoder zastosowałem bibliotekę JBCrypt</li>
                     <li>użyłem własnych stron logowania</li>
-                    <li>za komunikację z bazą danych odpowiada Spring Data JPA zaimplementowane poprzez framework
+                    <li>za komunikację z bazą danych odpowiada Spring Data JPA zaimplementowane
+                        poprzez framework
                         Hibernate
                     </li>
                     <li>jako warstwy widoku użyłem szablonów Thymeleaf</li>
-                    <li>aplikacja jest w stanie wysłać wiadomość z potwierdzeniem rejestracji na podany adres email</li>
+                    <li>aplikacja jest w stanie wysłać wiadomość z potwierdzeniem rejestracji na
+                        podany adres email
+                    </li>
                 </ul>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 2 screenshots curtain overlay-->
             <div id="section2ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');"><i class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section2Initial"
-                                                              src="images/under_construction.jpg" alt="Cierpliwości..."
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section2Initial"
+                                                              src="images/under_construction.jpg"
+                                                              alt="Cierpliwości..."
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/under_construction.jpg" alt="Cierpliwości..."
+                                                              src="images/under_construction.jpg"
+                                                              alt="Cierpliwości..."
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/under_construction.jpg" alt="Cierpliwości..."
+                                                              src="images/under_construction.jpg"
+                                                              alt="Cierpliwości..."
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/under_construction.jpg" alt="Cierpliwości..."
+                                                              src="images/under_construction.jpg"
+                                                              alt="Cierpliwości..."
                                                               style="width:100%"></a>
                         </div>
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/under_construction.jpg" alt=""
+                        <img class="screenshots-expandedImg" src="images/under_construction.jpg"
+                             alt=""
                              style="width: 70%">
                         <div class="screenshots-imgtext">Cierpliwości...</div>
                     </div>
@@ -426,8 +535,10 @@
             <div id="Section3" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section3ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Social_network - 2.png" alt="Social_network"></a>
-                    <a href="http://socialnetwork-env.dquhf6fr9u.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Social_network - 2.png"
+                             alt="Social_network"></a>
+                    <a href="http://socialnetwork-env.dquhf6fr9u.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Uruchom projekt</a>
                     <p>login: test, hasło: test</p>
                 </div>
@@ -436,12 +547,17 @@
 
                 <br>
 
-                <p>Ten projekt to uproszczona aplikacja społecznościowa. Użytkownik może utworzyć konto, po zalogowaniu
-                    do którego ma możliwość obejrzenia wszystkich wysłanych przez innych użytkowników komunikatów,
-                    dodania swojego komunikatu, dodania komentarza do swojego lub cudzego komunikatu. Może też wysyłać i
-                    odbierać prywatne wiadomości do/od innych użytkowników. Wiadomości nieprzeczytane są wyróżnione.</p>
+                <p>Ten projekt to uproszczona aplikacja społecznościowa. Użytkownik może utworzyć
+                    konto, po zalogowaniu
+                    do którego ma możliwość obejrzenia wszystkich wysłanych przez innych
+                    użytkowników komunikatów,
+                    dodania swojego komunikatu, dodania komentarza do swojego lub cudzego
+                    komunikatu. Może też wysyłać i
+                    odbierać prywatne wiadomości do/od innych użytkowników. Wiadomości
+                    nieprzeczytane są wyróżnione.</p>
 
-                <p>W tym projekcie z ciekawości postanowiłem spróbować konfiguracji w całości opartej o annotacje, stąd
+                <p>W tym projekcie z ciekawości postanowiłem spróbować konfiguracji w całości
+                    opartej o annotacje, stąd
                     brak w nim pliku web.xml.</p>
 
                 <ul>
@@ -450,29 +566,34 @@
                     <li>za weryfikację poprawności danych użytkownika odpowiada walidator</li>
                     <li>biblioteka JBCrypt jest odpowiedzialna za haszowanie haseł</li>
                     <li>zależnościami zarządza Maven</li>
-                    <li>za warstwę widoku odpowiadaja kontolery oraz technologia JSP z JSTL i EL</li>
+                    <li>za warstwę widoku odpowiadaja kontolery oraz technologia JSP z JSTL i EL
+                    </li>
                 </ul>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 3 screenshots curtain overlay-->
             <div id="section3ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');"><i class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section3Initial"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section3Initial"
                                                               src="images/Social_network - 1.png"
                                                               alt="Ekran rejestracji z walidatorem"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Social_network - 2.png" alt="Ekran główny"
+                                                              src="images/Social_network - 2.png"
+                                                              alt="Ekran główny"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -490,7 +611,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Social_network - 1.png" alt=""
+                        <img class="screenshots-expandedImg" src="images/Social_network - 1.png"
+                             alt=""
                              style="width: 70%">
                         <div class="screenshots-imgtext">Ekran rejestracji z walidatorem</div>
                     </div>
@@ -502,8 +624,10 @@
             <div id="Section4" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section4ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Crime_empire - 1.jpg" alt="Crime_empire"></a>
-                    <a href="http://crimeempire-env.gu3axbmcv4.eu-central-1.elasticbeanstalk.com/login" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Crime_empire - 1.jpg"
+                             alt="Crime_empire"></a>
+                    <a href="http://crimeempire-env.gu3axbmcv4.eu-central-1.elasticbeanstalk.com/login"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Uruchom projekt</a>
                     <p>login: test, hasło: test</p>
                 </div>
@@ -512,56 +636,71 @@
 
                 <br>
 
-                <p>Jest to napisany wspólne z kolegą projekt na zaliczenie bootcampu Coderslab. Jest to turowa gra
-                    strategiczna w przeglądarce. Gracz jest bossem przestępczego półświatka, a jego zadaniem jest
+                <p>Jest to napisany wspólne z kolegą projekt na zaliczenie bootcampu Coderslab. Jest
+                    to turowa gra
+                    strategiczna w przeglądarce. Gracz jest bossem przestępczego półświatka, a jego
+                    zadaniem jest
                     przejęcie wszystkich kluczowych punktów na mapie miasta.</p>
 
-                <p>Przechowywanie danych identyfikujących użytkownika oraz powiązanego z jego kontem stanu gry odbywa
-                    się za pośrednictwem specyfikacji JPA zaimplementowanej poprzez framework Hibernate.</p>
+                <p>Przechowywanie danych identyfikujących użytkownika oraz powiązanego z jego kontem
+                    stanu gry odbywa
+                    się za pośrednictwem specyfikacji JPA zaimplementowanej poprzez framework
+                    Hibernate.</p>
 
-                <p>Wykorzystany w grze interfejs użytkownika oparty jest w dużym stopniu o pomysł innego kursanta
+                <p>Wykorzystany w grze interfejs użytkownika oparty jest w dużym stopniu o pomysł
+                    innego kursanta
                     Coderslab - projekt GEOS Szymona Mikołajczaka.</p>
 
                 <p>Podstawowe zasoby w grze to:</p>
                 <ul>
                     <li>pieniądze - każdy ma swoją cenę...</li>
-                    <li>żołnierze twojego gangu - zdobywają opanowane przez wroga kluczowe punkty miasta i bronią
+                    <li>żołnierze twojego gangu - zdobywają opanowane przez wroga kluczowe punkty
+                        miasta i bronią
                         twoich
                     </li>
                     <li>panie lekkich obyczajów i dilerzy - zarabiają dla ciebie pieniądze</li>
                 </ul>
 
                 <ul>
-                    <li>do sprawdzania poprawności danych użytkownika wykorzystany został walidator</li>
-                    <li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt</li>
+                    <li>do sprawdzania poprawności danych użytkownika wykorzystany został
+                        walidator
+                    </li>
+                    <li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt
+                    </li>
                     <li>zależnościami zarządza Maven</li>
                     <li>za warstę widoku odpowiadaja pliki JSP z JSTL i EL</li>
                 </ul>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 4 screenshots curtain overlay-->
             <div id="section4ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');"><i class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section4Initial"
-                                                              src="images/Crime_empire - 2.jpg" alt="Krótki opis"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section4Initial"
+                                                              src="images/Crime_empire - 2.jpg"
+                                                              alt="Krótki opis"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Crime_empire - 3.jpg" alt="Mapa główna"
+                                                              src="images/Crime_empire - 3.jpg"
+                                                              alt="Mapa główna"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Crime_empire - 4.jpg" alt="Koniec tury"
+                                                              src="images/Crime_empire - 4.jpg"
+                                                              alt="Koniec tury"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -573,7 +712,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Crime_empire - 2.jpg" alt="" style="width:70%">
+                        <img class="screenshots-expandedImg" src="images/Crime_empire - 2.jpg"
+                             alt="" style="width:70%">
                         <div class="screenshots-imgtext">Krótki opis</div>
                     </div>
                 </div>
@@ -585,8 +725,10 @@
             <div id="Section5" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section5ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Book_catalog - 1.png" alt="Book_catalog"></a>
-                    <a href="http://bookcatalog-env.nz59rat9x5.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                        <img class="thumbnail shaky myshadow" src="images/Book_catalog - 1.png"
+                             alt="Book_catalog"></a>
+                    <a href="http://bookcatalog-env.nz59rat9x5.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Uruchom projekt</a>
                 </div>
 
@@ -594,19 +736,28 @@
 
                 <br>
 
-                <p>Jest to katalog książek, składający się z dwóch uzupełniających się logicznie części: napisanego przy
-                    użyciu jQuery front endu wysyłającego zapytania AJAX do napisanego w Javie serwera, który wykonuje
+                <p>Jest to katalog książek, składający się z dwóch uzupełniających się logicznie
+                    części: napisanego przy
+                    użyciu jQuery front endu wysyłającego zapytania AJAX do napisanego w Javie
+                    serwera, który wykonuje
                     zgodne z tymi żądaniami operacje na bazie.</p>
 
-                <p>Interfejs użytkownika wysyła żądanie GET do serwera o uproszczoną listę książek, która zostaje
-                    wyświetlona na stronie. Użytkownik ma możliwość wyświetlenia szczegółów każdej książki (GET), edycji
-                    wszystkich jej danych (PUT), usunięcia jej z bazy (DELETE) oraz dodania nowej (POST). Dane książek
+                <p>Interfejs użytkownika wysyła żądanie GET do serwera o uproszczoną listę książek,
+                    która zostaje
+                    wyświetlona na stronie. Użytkownik ma możliwość wyświetlenia szczegółów każdej
+                    książki (GET), edycji
+                    wszystkich jej danych (PUT), usunięcia jej z bazy (DELETE) oraz dodania nowej
+                    (POST). Dane książek
                     są przesyłane między front-endem a back-endem przy użyciu formatu JSON.</p>
 
-                <p>Back-end tego projektu to aplikacja Spring, która implementuje model CRUD. Kontroler odbiera żądania
-                    z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za pośrednictwem wartstwy
-                    serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w pamięci. Dzięki
-                    zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie funkcjonalności o obsługę
+                <p>Back-end tego projektu to aplikacja Spring, która implementuje model CRUD.
+                    Kontroler odbiera żądania
+                    z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za
+                    pośrednictwem wartstwy
+                    serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w
+                    pamięci. Dzięki
+                    zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie
+                    funkcjonalności o obsługę
                     prawdziwej bazy danych.</p>
 
                 <ul>
@@ -614,30 +765,36 @@
                     <li>zależnościami zarządza Maven</li>
                 </ul>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 5 screenshots curtain overlay-->
             <div id="section5ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');"><i class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section5Initial"
-                                                              src="images/Book_catalog - 1.png" alt="Ekran główny"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section5Initial"
+                                                              src="images/Book_catalog - 1.png"
+                                                              alt="Ekran główny"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Book_catalog - 2.png" alt="Pełne dane książki"
+                                                              src="images/Book_catalog - 2.png"
+                                                              alt="Pełne dane książki"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
                             <a href="javascript:void(0)"><img class="screenshotThumbnail"
-                                                              src="images/Book_catalog - 3.png" alt="Dodawanie książki"
+                                                              src="images/Book_catalog - 3.png"
+                                                              alt="Dodawanie książki"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -649,7 +806,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Book_catalog - 1.png" alt="" style="width:70%">
+                        <img class="screenshots-expandedImg" src="images/Book_catalog - 1.png"
+                             alt="" style="width:70%">
                         <div class="screenshots-imgtext">Ekran główny</div>
                     </div>
                 </div>
@@ -660,9 +818,11 @@
             <div id="Section6" class="text-section">
                 <div class="thumbnail-and-button">
                     <a href="javascript:openCurtain('section6ScreenshotsCurtain');">
-                        <img class="thumbnail shaky myshadow" src="images/Programming_school - 1.png"
+                        <img class="thumbnail shaky myshadow"
+                             src="images/Programming_school - 1.png"
                              alt="Programming_school"></a>
-                    <a href="http://programmingschool-env.mmpawuepbg.eu-central-1.elasticbeanstalk.com/" target="_blank"
+                    <a href="http://programmingschool-env.mmpawuepbg.eu-central-1.elasticbeanstalk.com/"
+                       target="_blank"
                        class="btn btn-primary btm-sm shaky myshadow">Uruchom projekt</a>
                 </div>
 
@@ -670,41 +830,57 @@
 
                 <br>
 
-                <p>Ten projekt napisałem w ramach bootcampu aby nauczyć się współpracy między aplikacją Java Web a bazą
-                    danych MySQL za pośrednictwem interfejsu JDBC. Jest to, napisana zgodnie ze wzorcem MVC, aplikacja
-                    zarządzania szkołą programowania, gdzie poszczególni użytkownicy należą do grup i mają zadania, do
+                <p>Ten projekt napisałem w ramach bootcampu aby nauczyć się współpracy między
+                    aplikacją Java Web a bazą
+                    danych MySQL za pośrednictwem interfejsu JDBC. Jest to, napisana zgodnie ze
+                    wzorcem MVC, aplikacja
+                    zarządzania szkołą programowania, gdzie poszczególni użytkownicy należą do grup
+                    i mają zadania, do
                     których mogą dodawać rozwiązania.</p>
 
-                <p>Aplikacja posiada stronę tytułową, na której wyświetlonych jest kilka ostatnich dodanych do bazy
-                    rozwiązań. Jest dostępny podgląd listy grup użytkowników, z poziomu którego można uzyskać dostęp do
+                <p>Aplikacja posiada stronę tytułową, na której wyświetlonych jest kilka ostatnich
+                    dodanych do bazy
+                    rozwiązań. Jest dostępny podgląd listy grup użytkowników, z poziomu którego
+                    można uzyskać dostęp do
                     części danych użytkowników i ich list rozwiązań.</p>
 
-                <p>Ponadto jest dostępny panel administratora, przy użyciu którego jest możliwy podgląd, edycja,
-                    dodawanie i kasowanie wszystkich możliwych danych - grup użytkowników, użytkowników, zadań oraz
+                <p>Ponadto jest dostępny panel administratora, przy użyciu którego jest możliwy
+                    podgląd, edycja,
+                    dodawanie i kasowanie wszystkich możliwych danych - grup użytkowników,
+                    użytkowników, zadań oraz
                     rozwiązań.</p>
 
                 <ul>
-                    <li>użyłem osobnych klas do reprezentacji modelu struktury danych, klas DAO oraz kontrolerów</li>
+                    <li>użyłem osobnych klas do reprezentacji modelu struktury danych, klas DAO oraz
+                        kontrolerów
+                    </li>
                     <li>interfejs oparty jest o serwlety oraz strony JSP</li>
                     <li>na stronach JSP są użyte wyrażenia JSTL oraz EL</li>
-                    <li>połączenie z bazą MySQL jest realizowane za pomocą zewnętrznej biblioteki MySQL Connector/J</li>
-                    <li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt</li>
+                    <li>połączenie z bazą MySQL jest realizowane za pomocą zewnętrznej biblioteki
+                        MySQL Connector/J
+                    </li>
+                    <li>hasła użytkowników są haszowane przy pomocy zewnętrznej biblioteki JBCrypt
+                    </li>
                 </ul>
             </div>
-            <hr><hr class="shadow">
+            <hr>
+            <hr class="shadow">
 
             <!--Section 6 screenshots curtain overlay-->
             <div id="section6ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section6ScreenshotsCurtain');"><i class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section6ScreenshotsCurtain');"><i
+                        class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
                     <div class="screenshots-row">
                         <div class="screenshots-column">
-                            <a href="javascript:void(0)"><img class="screenshotThumbnail" id="section6Initial"
-                                                              src="images/Programming_school - 1.png" alt="Ekran główny"
+                            <a href="javascript:void(0)"><img class="screenshotThumbnail"
+                                                              id="section6Initial"
+                                                              src="images/Programming_school - 1.png"
+                                                              alt="Ekran główny"
                                                               style="width:100%"></a>
                         </div>
                         <div class="screenshots-column">
@@ -728,7 +904,8 @@
                     </div>
 
                     <div class="screenshots-container">
-                        <img class="screenshots-expandedImg" src="images/Programming_school - 1.png" alt=""
+                        <img class="screenshots-expandedImg" src="images/Programming_school - 1.png"
+                             alt=""
                              style="width:70%">
                         <div class="screenshots-imgtext">Ekran główny</div>
                     </div>
