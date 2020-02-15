@@ -7,7 +7,7 @@ html {
 body {
     background-color: #E9E49D;
     font-size: 25%;
-    font-family: 'Averia Gruesa Libre', cursive;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     height: 100%;
     opacity: 1;
     transition: 1s opacity;
@@ -306,7 +306,7 @@ body.fade-out {
     display: inline;
     font-size: 12em;
     vertical-align: middle;
-    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Asar', sans-serif;
     padding-left: 0.2em;
     color: #2C3312;
     position: relative;
@@ -459,7 +459,7 @@ body.fade-out {
 }
 
 .sidenav-text {
-    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Asar', sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: #000;
@@ -627,7 +627,7 @@ hr.shadow {
 }
 
 .text-section > h1 {
-    font-family: "Averia Serif Libre Libre", serif;
+    font-family: 'Asar', sans-serif;
     text-shadow: 0 0 3px #000;
     color: #FA8334;
 }
