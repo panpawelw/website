@@ -65,14 +65,15 @@ body.fade-out {
 /* upper navbar layout */
 .navbar-custom {
     padding: 0.1em 2em;
-    background-color: #2C3312;
+    background-color: rgba(44, 51, 18, 0);
     z-index: 2;
     will-change: transform;
+    margin-bottom: 2em;
 }
 
 .fa {
     font-size: 7em;
-    color: #FA8334;
+    color: #000;
 }
 
 .fa-home {
@@ -80,12 +81,12 @@ body.fade-out {
 }
 
 .fa-home:active, .fa-home:hover {
-    color: #E9E49D;
+    color: #FA8334;
 }
 
 .menu-links {
     font-size: 5em;
-    color: #FA8334;
+    color: #000;
 }
 
 .nav-link {
@@ -94,12 +95,12 @@ body.fade-out {
 
 .navbar-brand:hover {
     transition: 0.333s;
-    color: #E9E49D;
+    color: #FA8334;
 }
 
 .menu-links:hover {
     transition: 0.333s;
-    color: #E9E49D;
+    color: #FA8334;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -128,21 +129,21 @@ body.fade-out {
     border-top: 1px solid #FA8334;
 }
 
-.transparent {
-    opacity: 0.9;
+.separated {
+    background-color: rgba(44, 51, 18, 0.8);
 }
 
 /* Animated underline effect */
 .animated-underline {
     position: relative;
-    color: #FA8334;
+    color: #000;
     text-decoration: none;
 }
 
 .animated-underline:hover {
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-    color: #E9E49D;
+    color: #FA8334;
 }
 
 .animated-underline:before {
@@ -152,7 +153,7 @@ body.fade-out {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #E9E49D;
+    background-color: #FA8334;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -307,6 +308,7 @@ body.fade-out {
     font-size: 12em;
     vertical-align: middle;
     font-family: 'Asar', sans-serif;
+    font-weight: bold;
     padding-left: 0.2em;
     color: #2C3312;
     position: relative;
@@ -460,22 +462,22 @@ body.fade-out {
 
 .sidenav-text {
     font-family: 'Asar', sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-decoration: none;
     color: #000;
-    text-shadow: 3px 3px 5px #999;
+    text-shadow: 3px 3px 5px #666;
     transition-duration: 0.333s;
 }
 
 .sidenav-text:hover, .sidenav-text.hover {
     transition-duration: 0.333s;
-    text-shadow: 1px 1px 2px #000000;
-    color: #FA8334;;
+    text-shadow: 1px 1px 3px #000000;
+    color: #FA8334;
 }
 
 .sidenav-text:active, .sidenav-text.active {
     transition-duration: 0.333s;
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 1px 1px 3px #000000;
 }
 
 .list-group-item {

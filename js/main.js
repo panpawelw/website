@@ -9,10 +9,10 @@ $(document).ready(function () {
 
     /* Add transparency effect to navbar once user starts scrolling down the page */
     win.scroll(function () {
-        if (win.scrollTop() > 80) {
-            $('.navbar').addClass('transparent');
+        if (win.scrollTop() > 200) {
+            $('.navbar').addClass('separated fixed-top');
         } else {
-            $('.navbar').removeClass('transparent');
+            $('.navbar').removeClass('separated fixed-top');
         }
     });
 
