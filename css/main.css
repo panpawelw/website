@@ -71,36 +71,26 @@ body.fade-out {
     margin-bottom: 2em;
 }
 
-.fa {
-    font-size: 7em;
-    color: #000;
-}
-
-.fa-home {
+.navbar-brand {
     margin-left: 0.25em;
+    color: #000;
+    font-size: 7em;
 }
 
-.fa-home:active, .fa-home:hover {
+.navbar-brand:active, .navbar-brand:hover {
     color: #FA8334;
+    transition: 0.333s;
 }
 
-.menu-links {
+.menu-link {
     font-size: 5em;
+    margin: 0.25em;
     color: #000;
 }
 
-.nav-link {
-    padding: 0;
-}
-
-.navbar-brand:hover {
-    transition: 0.333s;
-    color: #FA8334;
-}
-
-.menu-links:hover {
-    transition: 0.333s;
-    color: #FA8334;
+.menu-link:hover, .menu-link:active {
+    /*transition: 0.333s;*/
+    color: #E9E49D;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -131,6 +121,7 @@ body.fade-out {
 
 .separated {
     background-color: rgba(44, 51, 18, 0.8);
+    margin-top: 1em;
 }
 
 /* Animated underline effect */
@@ -229,11 +220,15 @@ body.fade-out {
 
 /* navigation links inside the overlays */
 .overlay a {
+    font-size: 5em;
+    margin: 0.25em;
+    color: #FA8334;
     text-decoration: none;
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover {
+    transition: 0.333s;
     color: #E9E49D;
 }
 
@@ -241,8 +236,14 @@ body.fade-out {
     background-color: black;
 }
 
+.overlay .dropdown-item {
+    font-size: 1em;
+}
+
 .overlay .dropdown-item:hover {
-    color: #2C3312;
+    transition: 0.333s;
+    color: #000;
+    background-color: #E9E49D;
 }
 
 /* position the close button (top left corner) */
@@ -260,13 +261,13 @@ body.fade-out {
     color: #FA8334;
 }
 
-.about-links {
-    margin-top: 3vw;
-}
+/*.about-links {*/
+/*    margin-top: 3vw;*/
+/*}*/
 
-.about-links a {
-    margin: 0.5vw;
-}
+/*.about-links a {*/
+/*    margin: 0.5vw;*/
+/*}*/
 
 /* photo in about me overlay */
 .photo {
@@ -461,6 +462,7 @@ body.fade-out {
 }
 
 .sidenav-text {
+    padding: 0;
     font-family: 'Asar', sans-serif;
     /*font-weight: bold;*/
     text-decoration: none;
