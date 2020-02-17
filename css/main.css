@@ -1,7 +1,7 @@
 /* general properties */
 html {
     scroll-behavior: smooth;
-    scroll-padding: 56px;
+    scroll-padding: 5em;
 }
 
 body {
@@ -18,6 +18,7 @@ body.fade-out {
     transition: none;
 }
 
+/* Website background */
 .vignette {
     position: fixed;
     top: 0;
@@ -62,103 +63,8 @@ body.fade-out {
     border-color: #617129;
 }
 
-/* upper navbar layout */
-.navbar-custom {
-    padding: 0.1em 2em;
-    background-color: rgba(44, 51, 18, 0);
-    z-index: 2;
-    will-change: transform;
-    margin-bottom: 2em;
-}
 
-.navbar-brand {
-    margin-left: 0.25em;
-    color: #000;
-    font-size: 7em;
-}
-
-.navbar-brand:active, .navbar-brand:hover {
-    color: #FA8334;
-    transition: 0.333s;
-}
-
-.menu-link {
-    font-size: 5em;
-    margin: 0.25em;
-    color: #000;
-}
-
-.menu-link:hover, .menu-link:active {
-    /*transition: 0.333s;*/
-    color: #E9E49D;
-}
-
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FA8334' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler .navbar-toggler-icon:active {
-    border: 2px #FA8334 solid;
-    border-radius: 5px;
-}
-
-.dropdown-menu {
-    background-color: #2C3312;
-}
-
-.dropdown-item {
-    color: #FA8334;
-}
-
-.dropdown-item:hover {
-    color: #2C3312;
-    background-color: #E9E49D;
-}
-
-.dropdown-divider {
-    border-top: 1px solid #FA8334;
-}
-
-.separated {
-    background-color: rgba(44, 51, 18, 0.8);
-    margin-top: 1em;
-}
-
-/* Animated underline effect */
-.animated-underline {
-    position: relative;
-    color: #000;
-    text-decoration: none;
-}
-
-.animated-underline:hover {
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    color: #FA8334;
-}
-
-.animated-underline:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #FA8334;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.animated-underline:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-/* overlays (background) */
+/* overlays */
 .overlay {
     display: flex;
     align-items: center;
@@ -175,7 +81,6 @@ body.fade-out {
     transition: 0.2s; /* transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-/* position the content inside overlays */
 .overlay-content {
     /*top: 5%; !* 5% from the top *!*/
     max-width: 90%; /* 90% width */
@@ -199,7 +104,6 @@ body.fade-out {
     background-color: #FA8334;
 }
 
-/* images inside overlays*/
 .logos {
     height: 10%;
     width: 10%;
@@ -210,7 +114,6 @@ body.fade-out {
     margin: 5em;
 }
 
-/* text inside overlays */
 .overlay p {
     text-decoration: none;
     color: #E9E49D;
@@ -218,7 +121,6 @@ body.fade-out {
     /*transition: 0.3s; !* Transition effects on hover (color) *!*/
 }
 
-/* navigation links inside the overlays */
 .overlay a {
     font-size: 5em;
     margin: 0.25em;
@@ -226,7 +128,6 @@ body.fade-out {
     text-decoration: none;
 }
 
-/* When you mouse over the navigation links, change their color */
 .overlay a:hover {
     transition: 0.333s;
     color: #E9E49D;
@@ -246,7 +147,6 @@ body.fade-out {
     background-color: #E9E49D;
 }
 
-/* position the close button (top left corner) */
 .overlay .closebtn {
     position: absolute;
     top: 0;
@@ -269,13 +169,11 @@ body.fade-out {
 /*    margin: 0.5vw;*/
 /*}*/
 
-/* photo in about me overlay */
 .photo {
     height: 20vh;
     width: auto;
     margin: 2em 2em 2em 1em;
     float: left;
-
 }
 
 /* jumbotron layout */
@@ -726,51 +624,30 @@ hr.shadow {
 
 /* shake effect */
 .shaky:hover {
-    /* start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 0.5s;
-
-    /* when the animation is finished, start again */
-    animation-iteration-count: infinite;
+    -webkit-animation: shake 0.3s linear infinite both;
+    animation: shake 0.3s linear infinite both;
 }
 
 .shaky:active {
     animation: paused;
 }
 
+@-webkit-keyframes shake {
+    0% {-webkit-transform: translate(0);}
+    20% {-webkit-transform: translate(-1px, 1px);}
+    40% {-webkit-transform: translate(-1px, -1px);}
+    60% {-webkit-transform: translate(1px, 1px);}
+    80% {-webkit-transform: translate(1px, -1px);}
+    100% {-webkit-transform: translate(0);}
+}
+
 @keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    10% {
-        transform: translate(-1px, -1px) rotate(-0.01deg);
-    }
-    20% {
-        transform: translate(-1px, 0px) rotate(0.01deg);
-    }
-    30% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    40% {
-        transform: translate(1px, -1px) rotate(0.01deg);
-    }
-    50% {
-        transform: translate(-1px, 1px) rotate(-0.01deg);
-    }
-    60% {
-        transform: translate(-1px, 1px) rotate(0deg);
-    }
-    70% {
-        transform: translate(1px, 1px) rotate(-0.01deg);
-    }
-    80% {
-        transform: translate(-1px, -1px) rotate(0.01deg);
-    }
-    90% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-    100% {
-        transform: translate(1px, -1px) rotate(-0.01deg);
-    }
+    0% {transform: translate(0);}
+    20% {transform: translate(-1px, 1px);}
+    40% {transform: translate(-1px, -1px);}
+    60% {transform: translate(1px, 1px);}
+    80% {transform: translate(1px, -1px);}
+    100% {transform: translate(0);}
 }
 
 /* shadow effect */

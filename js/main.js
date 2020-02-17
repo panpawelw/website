@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    const win = $(window);
+    // const win = $(window);
 
     /* Fade-in effect */
     $(function () {
@@ -8,13 +8,17 @@ $(document).ready(function () {
     });
 
     /* Add transparency effect to navbar once user starts scrolling down the page */
-    win.scroll(function () {
-        if (win.scrollTop() > 200) {
-            $('.navbar').addClass('separated fixed-top');
-        } else {
-            $('.navbar').removeClass('separated fixed-top');
-        }
-    });
+    // win.scroll(function () {
+    //     if (win.scrollTop() > 200) {
+    //         $('.navbar').addClass('separated border rounded fixed-top');
+    //         $('.navbar-brand').addClass('tan');
+    //         $('a.animated-underline').addClass('tan');
+    //     } else {
+    //         $('.navbar').removeClass('separated border rounded fixed-top');
+    //         $('.navbar-brand').removeClass('tan');
+    //         $('a.animated-underline').removeClass('tan');
+    //     }
+    // });
 
     $('.screenshotThumbnail').on('click', function () {
         zoomScreenshot(this);
