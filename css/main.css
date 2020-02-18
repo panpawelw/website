@@ -31,6 +31,76 @@ body.fade-out {
     will-change: transform;
 }
 
+/* Navbar */
+
+.navbar {
+    width: 75%;
+    background-color: transparent;
+    margin: auto;
+}
+
+.embedded {
+    animation-name: embed-navbar;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes embed-navbar {
+    from {width: 60%;
+        margin: 1em auto 0 auto;
+        background-color: #617129;
+        box-shadow: inset 0 0 5px 0 #3A4318;
+    }
+    to {
+        width: 75%;
+        margin:auto;
+        background-color: transparent;
+    }
+
+}
+
+.separated {
+    animation-name: separate-navbar;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes separate-navbar {
+    from {
+        width: 75%;
+        margin:auto;
+        background-color: transparent;
+    }
+    to {width: 60%;
+        margin: 1em auto 0 auto;
+        background-color: #617129;
+        box-shadow: inset 0 0 5px 0 #3A4318;
+    }
+}
+
+.border {
+    border-width: 2px !important;
+    border-color: #808D53 !important;
+    border-radius: 5px !important;
+}
+
+.tan {
+    color: #E9E49D;
+}
+
+.navbar a {
+    color: #000;
+    font-size: 5em;
+    font-family: Asar, serif;
+    font-weight: bold;
+}
+
+.navbar a:hover, .navbar a:active {
+    color: #FA8334;
+}
+
 /* general button effects */
 .btn-primary, .btn-primary:active, .btn-primary:visited {
     background-color: #617129 !important;
@@ -125,7 +195,6 @@ body.fade-out {
     font-size: 5em;
     margin: 0.25em;
     color: #FA8334;
-    text-decoration: none;
 }
 
 .overlay a:hover {
@@ -345,7 +414,7 @@ body.fade-out {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0;
+    margin: 2em 0 0 0;
 }
 
 /* sidebar layout */
@@ -362,7 +431,6 @@ body.fade-out {
 .sidenav-text {
     padding: 0;
     font-family: 'Asar', sans-serif;
-    /*font-weight: bold;*/
     text-decoration: none;
     color: #000;
     text-shadow: 3px 3px 5px #666;
@@ -372,6 +440,7 @@ body.fade-out {
 .sidenav-text:hover, .sidenav-text.hover {
     transition-duration: 0.333s;
     text-shadow: 1px 1px 3px #000000;
+    text-decoration: none;
     color: #FA8334;
 }
 
@@ -388,13 +457,9 @@ body.fade-out {
 }
 
 .sidebar-content {
-    margin-top: 2.3em;
+    margin-top: 4.3em;
     margin-left: 3px;
     margin-right: 3px;
-}
-
-.nav-link.active {
-    color: #FA8334;
 }
 
 /* main content space */
@@ -410,11 +475,38 @@ body.fade-out {
     border-radius: 5px;
     margin-right: 5px;
     margin-bottom: 7em;
+    /*width: 75%;*/
+    /*margin-left: auto;*/
 }
 
-.carousel-inner {
-    background: #000;
-    border-radius: 5px;
+.tilt-in-fwd-br {
+    -webkit-animation: tilt-in-fwd-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: tilt-in-fwd-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes tilt-in-fwd-br {
+    0% {
+        -webkit-transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px) skew(35deg, -10deg);
+        transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
+}
+@keyframes tilt-in-fwd-br {
+    0% {
+        -webkit-transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px) skew(35deg, -10deg);
+        transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
 }
 
 .carousel-inner img {
@@ -498,12 +590,12 @@ hr {
     border: 0;
     height: 1px;
     background: #333;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
-    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(0, 0%, 0%, 0)), color-stop(50%, hsla(0, 0%, 0%, .75)), color-stop(100%, hsla(0, 0%, 0%, 0)));
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -ms-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
 }
 
 hr.shadow {
@@ -512,12 +604,12 @@ hr.shadow {
     border: 0;
     height: 2px;
     background: #333;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,hsla(0,0%,0%,0)), color-stop(50%,hsla(0,0%,0%,.25)), color-stop(100%,hsla(0,0%,0%,0)));
-    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:    -moz-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:     -ms-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:      -o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
-    background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.25) 50%, hsla(0,0%,0%,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(0, 0%, 0%, 0)), color-stop(50%, hsla(0, 0%, 0%, .25)), color-stop(100%, hsla(0, 0%, 0%, 0)));
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -ms-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
     filter: blur(1px);
 }
 
@@ -605,23 +697,6 @@ hr.shadow {
     margin: 0.5em auto 0;
 }
 
-/* footer layout */
-.page-footer {
-    background-color: #FA8334;
-    text-align: center;
-    border-radius: 5px;
-    padding: 2em 2em 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-/* indentation effect */
-.indented {
-    -webkit-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0 0 6px 3px rgba(0, 0, 0, 0.75);
-}
-
 /* shake effect */
 .shaky:hover {
     -webkit-animation: shake 0.3s linear infinite both;
@@ -633,21 +708,45 @@ hr.shadow {
 }
 
 @-webkit-keyframes shake {
-    0% {-webkit-transform: translate(0);}
-    20% {-webkit-transform: translate(-1px, 1px);}
-    40% {-webkit-transform: translate(-1px, -1px);}
-    60% {-webkit-transform: translate(1px, 1px);}
-    80% {-webkit-transform: translate(1px, -1px);}
-    100% {-webkit-transform: translate(0);}
+    0% {
+        -webkit-transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(-1px, 1px);
+    }
+    40% {
+        -webkit-transform: translate(-1px, -1px);
+    }
+    60% {
+        -webkit-transform: translate(1px, 1px);
+    }
+    80% {
+        -webkit-transform: translate(1px, -1px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+    }
 }
 
 @keyframes shake {
-    0% {transform: translate(0);}
-    20% {transform: translate(-1px, 1px);}
-    40% {transform: translate(-1px, -1px);}
-    60% {transform: translate(1px, 1px);}
-    80% {transform: translate(1px, -1px);}
-    100% {transform: translate(0);}
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-1px, 1px);
+    }
+    40% {
+        transform: translate(-1px, -1px);
+    }
+    60% {
+        transform: translate(1px, 1px);
+    }
+    80% {
+        transform: translate(1px, -1px);
+    }
+    100% {
+        transform: translate(0);
+    }
 }
 
 /* shadow effect */
