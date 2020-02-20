@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Asar&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Asar&subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
           rel="stylesheet" crossorigin="anonymous">
@@ -20,7 +22,9 @@
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="100">
 
 <!--Fade-in effect script-->
-<script>document.body.className += ' fade-out';</script>
+<script>
+    document.body.className += ' fade-out';
+</script>
 
 <div id="Home"></div>
 <div class="vignette"></div>
@@ -56,29 +60,64 @@
     </div>
 </div>
 
-<!--"About this webpage" curtain-->
-<div id="aboutPageCurtain" class="overlay">
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm">
+    <a class="navbar-brand mr-auto" href="#Home"><i class="fa fa-home"></i></a>
+    <a class="navbar-toggler custom-toggler icon" type="button"
+       data-target="#toggleable" data-toggle="collapse" aria-controls="navbar-toggler"
+       aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-navicon"></i>
+    </a>
 
-    <!-- Button to close the overlay navigation -->
-    <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain');"><i
-            class="fa fa-close"></i></a>
+    <div class="collapse navbar-collapse" id="toggleable">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Overlay content -->
-    <div class="overlay-content overlay-scrollable">
-        <h2 class="overlay-title">O stronie</h2>
-        <div id="logo-container">
-            <img class="logos" src="images/logo-javascript.png" alt="Javascript logo">
-            <img class="logos" src="images/logo-jQuery.png" alt="jQuery logo">
-            <img class="logos" src="images/logo-bootstrap.jpg" alt="Bootstrap logo">
-        </div>
-        <p>Przy tworzeniu tej strony użyłem JS (ECMAScript 6), JQuery 3.3 i Bootstrapa 4.1.</p>
-        <p>Strona jest responsywna, jej układ i wielkość fontów<br/>zmieniają się w zależności od
-            wielkości ekranu
-            urządzenia.</p>
-        <p>Do osiągnięcia płynnego przewijania po kliknięciu linków<br/>nawigacyjnych użyłem wtyczki
-            ScrollTo
-            autorstwa Ariela Fleslera.</p>
-        <div>
+<div class="container">
+    <!--"About this webpage" curtain-->
+    <div id="aboutPageCurtain" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a class="closebtn" href="javascript:closeCurtain('aboutPageCurtain');">
+            <i class="fa fa-close"></i></a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content overlay-scrollable">
+            <h2 class="overlay-title">O stronie</h2>
+            <div id="logo-container">
+                <img class="logos" src="images/logo-javascript.png" alt="Javascript logo">
+                <img class="logos" src="images/logo-jQuery.png" alt="jQuery logo">
+                <img class="logos" src="images/logo-bootstrap.jpg" alt="Bootstrap logo">
+            </div>
+            <p>Przy tworzeniu tej strony użyłem JS (ECMAScript 6), JQuery 3.3 i Bootstrapa 4.1.</p>
+            <p>Strona jest responsywna, jej układ i wielkość fontów<br/>zmieniają się w zależności
+                od wielkości ekranu urządzenia.</p>
+            <p>Do osiągnięcia płynnego przewijania po kliknięciu linków<br/>nawigacyjnych użyłem
+                wtyczki ScrollTo autorstwa Ariela Fleslera.</p>
+            <div>
 				<span class="dropup">
 					<a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
 					<span class="dropdown-menu dropup-menu">
@@ -88,26 +127,24 @@
                            download>docx</a>
 					</span>
 				</span>
-            <a href="https://github.com/pjm77" target="_blank">GitHub</a>
-            <a
-               href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
-               target="_blank">LinkedIn</a>
-            <a href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
-            <a
-               href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">O
-                mnie</a>
+                <a href="https://github.com/pjm77" target="_blank">GitHub</a>
+                <a
+                        href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                        target="_blank">LinkedIn</a>
+                <a href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
+                <a href="javascript:closeCurtain('aboutPageCurtain');openCurtain('aboutMeCurtain');">
+                    O mnie</a>
+            </div>
         </div>
+
     </div>
 
-</div>
-
-<div class="container">
     <!--"About me" curtain-->
     <div id="aboutMeCurtain" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');"><i
-                class="fa fa-close"></i></a>
+        <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');">
+            <i class="fa fa-close"></i></a>
 
         <!-- Overlay content -->
         <div class="overlay-content overlay-scrollable">
@@ -115,32 +152,19 @@
             <div>
                 <img class="photo" src="images/CVphoto.jpg" alt="My photo">
             </div>
-
             <p>Informatyką interesuję się od kiedy pamiętam. Sporo programowałem w młodości - Basic,
-                Turbo Pascal,
-                Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym kierunku,
-                jednak
-                zamiłowanie nigdy
-                nie zgasło.</p>
+                Turbo Pascal, Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym
+                kierunku, jednak zamiłowanie nigdy nie zgasło.</p>
             <p>Ukończyłem psychologię na Uniwersytecie Wrocławskim. Po studiach emigrowałem na
-                niemal 10
-                lat do Irlandii
-                Północnej, gdzie większość czasu pracowałem jako tłumacz sesyjny w wymiarze
-                sprawiedliwości.</p>
+                niemal 10 lat do Irlandii Północnej, gdzie większość czasu pracowałem jako tłumacz
+                sesyjny w wymiarze sprawiedliwości.</p>
             <p>Powrót do kraju to znakomity pretekst do zmiany kariery, która choć intratna i dobrze
-                trafiona w tamtym
-                momencie, nigdy tak naprawdę mnie nie pasjonowała.</p>
+                trafiona w tamtym momencie, nigdy tak naprawdę mnie nie pasjonowała.</p>
             <p>Gdy zorientowałem się, że zapotrzebowanie w branży IT jest duże zdecydowałem się na
-                kurs
-                Back - endu
-                (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy, programując
-                jednocześnie
-                na tyle, na ile
-                czas pozwalał, aby wiedza z kursu pozostała świeża i rozwijając ją w miarę
-                możliwości.
-                Docelowo
-                chciałbym zostać full - stack developerem.</p>
-
+                kurs Back - endu (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy,
+                programując jednocześnie na tyle, na ile czas pozwalał, aby wiedza z kursu pozostała
+                świeża i rozwijając ją w miarę możliwości. Docelowo chciałbym zostać full - stack
+                developerem.</p>
             <div>
 				<span class="dropup">
 					<a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
@@ -155,13 +179,12 @@
                    target="_blank">LinkedIn</a>
                 <a href="https://www.goldenline.pl/pawel-wojtun2/"
                    target="_blank">GoldenLine</a>
-                <a href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">O
-                    stronie</a>
+                <a href="javascript:closeCurtain('aboutMeCurtain');openCurtain('aboutPageCurtain');">
+                    O stronie</a>
             </div>
         </div>
 
     </div>
-
 
     <div class="row">
         <!--Sidebar-->

@@ -143,7 +143,6 @@ body.fade-out {
     color: #FA8334;
 }
 
-
 /* overlays */
 .overlay {
     display: flex;
@@ -471,6 +470,10 @@ body.fade-out {
     margin-top: 4.3em;
     margin-left: 3px;
     margin-right: 3px;
+}
+
+.nav-link.active {
+    color: #FA8334;
 }
 
 /* main content space */
