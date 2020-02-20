@@ -71,27 +71,40 @@
 
     <div class="collapse navbar-collapse" id="toggleable">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CV</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="/download/CV-pl.pdf" download>pdf - PL</a>
+                    <a class="dropdown-item" href="/download/CV-pl.docx" download>docx - PL</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/download/CV-en.pdf" download>pdf - EN</a>
+                    <a class="dropdown-item" href="/download/CV-en.docx" download>docx - EN</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+            <li class="nav-item active">
+                <a class="nav-link"
+                   href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                   target="_blank">LinkedIn<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/pjm77" target="_blank">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.goldenline.pl/pawel-wojtun2/"
+                   target="_blank">GoldenLine</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Słowo o...</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="javascript:openCurtain('aboutPageCurtain');">
+                        ...tej stronie</a>
+                    <a class="dropdown-item" href="javascript:openCurtain('aboutMeCurtain');">
+                        ...mnie</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">EN</a></li>
         </ul>
     </div>
 </nav>
@@ -118,15 +131,16 @@
             <p>Do osiągnięcia płynnego przewijania po kliknięciu linków<br/>nawigacyjnych użyłem
                 wtyczki ScrollTo autorstwa Ariela Fleslera.</p>
             <div>
-				<span class="dropup">
+				<div class="dropup">
 					<a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
-					<span class="dropdown-menu dropup-menu">
-						<a class="dropdown-item" href="download/CV-pl.pdf"
-                           download>pdf</a>
-						<a class="dropdown-item" href="download/CV-pl.docx"
-                           download>docx</a>
-					</span>
-				</span>
+					<div class="dropdown-menu dropup-menu">
+						<a class="dropdown-item" href="/download/CV-pl.pdf" download>pdf - PL</a>
+                        <a class="dropdown-item" href="/download/CV-pl.docx" download>docx - PL</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/download/CV-en.pdf" download>pdf - EN</a>
+                        <a class="dropdown-item" href="/download/CV-en.docx" download>docx - EN</a>
+					</div>
+				</div>
                 <a href="https://github.com/pjm77" target="_blank">GitHub</a>
                 <a
                         href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
@@ -166,13 +180,16 @@
                 świeża i rozwijając ją w miarę możliwości. Docelowo chciałbym zostać full - stack
                 developerem.</p>
             <div>
-				<span class="dropup">
+				<div class="dropup">
 					<a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
-					<span class="dropdown-menu">
-						<a class="dropdown-item" href="download/CV-pl.pdf" download>pdf</a>
-						<a class="dropdown-item" href="download/CV-pl.docx" download>docx</a>
-					</span>
-				</span>
+					<div class="dropdown-menu dropup-menu">
+						<a class="dropdown-item" href="/download/CV-pl.pdf" download>pdf - PL</a>
+                        <a class="dropdown-item" href="/download/CV-pl.docx" download>docx - PL</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/download/CV-en.pdf" download>pdf - EN</a>
+                        <a class="dropdown-item" href="/download/CV-en.docx" download>docx - EN</a>
+					</div>
+				</div>
                 <a href="https://github.com/pjm77" target="_blank">GitHub<span
                         class="sr-only">(current)</span></a>
                 <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"

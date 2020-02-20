@@ -220,6 +220,10 @@ body.fade-out {
     font-size: 1em;
 }
 
+.overlay .dropdown-divider {
+    border-top: 1px solid #FA8334;
+}
+
 .overlay .dropdown-item:hover {
     transition: 0.333s;
     color: #000;
@@ -238,6 +242,10 @@ body.fade-out {
     margin-top: 0;
     padding-top: 0;
     color: #FA8334;
+}
+
+.dropup {
+    display: inline;
 }
 
 /*.about-links {*/
