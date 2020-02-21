@@ -648,6 +648,10 @@ hr.shadow {
     color: #FA8334;
 }
 
+.left {
+    text-align: right;
+}
+
 #section1photo {
     max-width: 20%;
     float: right;
@@ -661,10 +665,17 @@ hr.shadow {
     border-radius: 5px;
 }
 
-.thumbnail-and-button {
+.thumbnail-and-button-right {
     max-width: 50%;
     float: right;
     margin-left: 0.5em;
+    text-align: center;
+}
+
+.thumbnail-and-button-left {
+    max-width: 50%;
+    float: left;
+    margin-right: 2em;
     text-align: center;
 }
 
