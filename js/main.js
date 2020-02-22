@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     const win = $(window);
-    const navbar = $('.navbar');
+    const navbar = document.getElementById('navbar');
+    const mainContent = document.getElementById('row');
 
     /* Fade-in effect */
     $(function () {
@@ -9,17 +10,18 @@ $(document).ready(function () {
         document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
     });
 
-    /* Add transparency effect to navbar once user starts scrolling down the page */
+    /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
         if (win.scrollTop() > 200) {
-            navbar.removeClass('embedded');
-            navbar.addClass('separated border rounded fixed-top');
+            navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
+            navbar.classList.remove('embedded');
+            navbar.classList.add('separated', 'border', 'rounded', 'fixed-top');
             $('a.nav-link').addClass('tan');
         } else {
-            if (navbar.hasClass('separated')) {
-            navbar.addClass('embedded');
-        }
-            navbar.removeClass('separated border rounded fixed-top');
+            if (navbar.classList.contains('separated')) {
+                navbar.classList.add('embedded');
+            }
+            navbar.classList.remove('separated', 'border', 'rounded', 'fixed-top');
             $('a.nav-link').removeClass('tan');
         }
     });

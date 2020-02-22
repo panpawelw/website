@@ -33,12 +33,13 @@ body.fade-out {
 
 /* Navbar */
 
-.navbar {
-    width: 75%;
+#navbar {
+    --navbarLong: 95%;
+    --navbarShort: 800px;
+    width: 95%;
     background-color: transparent;
     margin: auto;
     will-change: transform;
-
 }
 
 .embedded {
@@ -47,17 +48,17 @@ body.fade-out {
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
     will-change: transform;
-
 }
 
 @keyframes embed-navbar {
-    from {width: 60%;
+    from {
+        width: var(--navbarShort);
         margin: 1em auto 0 auto;
         background-color: #617129;
         box-shadow: inset 0 0 5px 0 #3A4318;
     }
     to {
-        width: 75%;
+        width: var(--navbarLong);
         margin:auto;
         background-color: transparent;
     }
@@ -70,16 +71,16 @@ body.fade-out {
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
     will-change: transform;
-
 }
 
 @keyframes separate-navbar {
     from {
-        width: 75%;
+        width: var(--navbarLong);
         margin:auto;
         background-color: transparent;
     }
-    to {width: 60%;
+    to {
+        width: var(--navbarShort);
         margin: 1em auto 0 auto;
         background-color: #617129;
         box-shadow: inset 0 0 5px 0 #3A4318;
@@ -428,7 +429,7 @@ body.fade-out {
 }
 
 /* main content and sidebar general*/
-.row {
+#row {
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -666,14 +667,14 @@ hr.shadow {
 }
 
 .thumbnail-and-button-right {
-    max-width: 50%;
+    max-width: 40%;
     float: right;
     margin-left: 0.5em;
     text-align: center;
 }
 
 .thumbnail-and-button-left {
-    max-width: 50%;
+    max-width: 40%;
     float: left;
     margin-right: 2em;
     text-align: center;
@@ -808,7 +809,7 @@ hr.shadow {
     }
 
     h1 {
-        font-size: 1.57em;
+        font-size: 1.37em;
     }
 
     .overlay p {
@@ -857,7 +858,7 @@ hr.shadow {
 @media screen and (min-width: 401px) and (max-width: 600px) {
 
     h1 {
-        font-size: 1.65em;
+        font-size: 1.47em;
     }
 
     .overlay p {
