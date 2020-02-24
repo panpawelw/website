@@ -31,8 +31,7 @@ body.fade-out {
     will-change: transform;
 }
 
-/* Navbar */
-
+/* Top navbar */
 #navbar {
     --navbarLong: 95%;
     --navbarShort: 800px;
@@ -103,6 +102,23 @@ body.fade-out {
     font-family: Asar, serif;
     font-weight: bold;
 }
+
+.navbar .dropdown-item {
+    font-size: 1em;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #E9E49D;
+}
+
+.navbar .dropdown-divider {
+    border-top: 1px solid #FA8334;
+}
+
+.dropdown-menu {
+    background-color: #617129;
+}
+
 
 .navbar a:hover, .navbar a:active {
     color: #FA8334;
@@ -217,12 +233,12 @@ body.fade-out {
     background-color: black;
 }
 
-.overlay .dropdown-item {
+overlay .dropdown-item {
     font-size: 1em;
 }
 
 .overlay .dropdown-divider {
-    border-top: 1px solid #FA8334;
+
 }
 
 .overlay .dropdown-item:hover {
