@@ -723,29 +723,16 @@
 
                 <br>
 
-                <p>Jest to katalog książek, składający się z dwóch uzupełniających się logicznie
-                    części: napisanego przy
-                    użyciu jQuery front endu wysyłającego zapytania AJAX do napisanego w Javie
-                    serwera, który wykonuje
-                    zgodne z tymi żądaniami operacje na bazie.</p>
+                <p>Ta aplikacja to katalog książek, składająca się ze stworzonego przy użyciu JS i
+                    jQuery front-endu oraz napisanego w Javie serwera.</p>
 
-                <p>Interfejs użytkownika wysyła żądanie GET do serwera o uproszczoną listę książek,
-                    która zostaje
-                    wyświetlona na stronie. Użytkownik ma możliwość wyświetlenia szczegółów każdej
-                    książki (GET), edycji
-                    wszystkich jej danych (PUT), usunięcia jej z bazy (DELETE) oraz dodania nowej
-                    (POST). Dane książek
-                    są przesyłane między front-endem a back-endem przy użyciu formatu JSON.</p>
-
-                <p>Back-end tego projektu to aplikacja Spring, która implementuje model CRUD.
-                    Kontroler odbiera żądania
-                    z front-endu a następnie wykonuje odpowiednie operacje na "bazie danych" za
-                    pośrednictwem wartstwy
-                    serwisowej. "Bazę danych" udaje hashlista obiektów klasy Book przechowywana w
-                    pamięci. Dzięki
-                    zastosowaniu interfejsu możliwe jest stosunkowo proste rozszerzenie
-                    funkcjonalności o obsługę
-                    prawdziwej bazy danych.</p>
+                <p>Użytkownik może wykonać na książkach wszystkie operacje zgodne z modelem CRUD
+                    is są one kierowane do serwera poprzez zapytania AJAX używające medtod HTTP
+                    - GET, POST, PUT i DELETE. Kontroler odbiera żądania a następnie wykonuje
+                    odpowiednie operacje na bazie danych za pośrednictwem wartstwy serwisowej.
+                    Odpowiedzi są przekazywane w formacie JSON. W tym przypadku bazę danych udaje
+                    hashlista obiektów klasy Book przechowywana w pamięci, jednak dzięki
+                    zastosowaniu interfejsu można łatwo zaimplementować obsługę prawdziwej.</p>
 
                 <ul>
                     <li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>

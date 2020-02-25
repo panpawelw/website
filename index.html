@@ -714,21 +714,16 @@
 
                 <br>
 
-                <p>This project is a book catalog and consists of two projects that complement
-                    each other: jQuery front-end sending AJAX calls to Java server that performs
-                    database operations.</p>
+                <p>This web app is a book catalog and made up of JS / jQuery front-end and Java
+                    server.</p>
 
-                <p>User interface sends a GET call to the server and receives the list of books that
-                    is displayed on the webpage. The user can display every book's details
-                    (GET call), edit them (PUT), delete this book from the list (DELETE) or add a
-                    new one (POST). Book data is sent and received using JSON format.
-                </p>
-
-                <p>Back-end of this project is a Spring Web Application implementing CRUD model. The
-                    controller receives AJAX request and then performs database operations via
-                    service layer. Mock-up database is a hashlist of Book objects stored in memory,
-                    but since interface has been used - implementing real database should be a
-                    simple matter.</p>
+                <p>User is able to perform all basic CRUD operations, which are sent to the server
+                    via AJAX calls using GET, POST, PUT and delete HTML methods. The controller
+                    receives these calls and performs relevant database operations using service
+                    layer. Responses are sent in JSON format. In this particular case database is
+                    mocked by hashlist of Book objects stored in memory but using real database
+                    real is just a matter of implementing relevant interface.
+                   </p>
 
                 <ul>
                     <li>JSON format is implemented using Jackson library</li>
