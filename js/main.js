@@ -15,13 +15,13 @@ $(document).ready(function () {
         if (win.scrollTop() > 200) {
             navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded');
-            navbar.classList.add('separated', 'border', 'rounded', 'fixed-top');
+            navbar.classList.add('separated', 'fixed-top');
             $('a.nav-link').addClass('tan');
         } else {
             if (navbar.classList.contains('separated')) {
                 navbar.classList.add('embedded');
             }
-            navbar.classList.remove('separated', 'border', 'rounded', 'fixed-top');
+            navbar.classList.remove('separated', 'fixed-top');
             $('a.nav-link').removeClass('tan');
         }
     });
