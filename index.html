@@ -72,7 +72,7 @@
                target="_blank">LinkedIn</a>
             <a href="https://www.goldenline.pl/pawel-wojtun2/"
                target="_blank">GoldenLine</a>
-         </div>
+        </div>
     </div>
 
 </div>
@@ -116,11 +116,10 @@
        aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-navicon"></i>
     </a>
-
     <div class="collapse navbar-collapse" id="toggleable">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button"
+                <a class="nav-link dropdown-toggle animated-underline" href="#" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CV</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./download/CV-en.pdf" download>pdf - EN</a>
@@ -131,18 +130,19 @@
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link"
+                <a class="nav-link animated-underline"
                    href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
                    target="_blank">LinkedIn<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/pjm77" target="_blank">GitHub</a>
+            <li class="nav-item"><a class="nav-link animated-underline"
+                                    href="https://github.com/pjm77" target="_blank">GitHub</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://www.goldenline.pl/pawel-wojtun2/"
-                   target="_blank">GoldenLine</a>
+                <a class="nav-link animated-underline"
+                   href="https://www.goldenline.pl/pawel-wojtun2/" target="_blank">GoldenLine</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="index_pl.html">PL</a></li>
+            <li class="nav-item"><a class="nav-link animated-underline"
+                                    href="index_pl.html">PL</a></li>
         </ul>
     </div>
 </nav>
@@ -416,8 +416,8 @@
             <div id="section2ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -472,31 +472,17 @@
                 </div>
 
                 <h1>Social Network</h1>
-
                 <br>
-
-                <p>This project is a simple social network app. You can create an account and after
-                    logging in possible
-                    to view posts of all other users, add your own post or leave a comment to any
-                    post. It's also
-                    possible to send and receive private messages to/from other users. Unread
-                    private messages are
-                    marked as such.</p>
-
-                <p>I wanted to try something different this time and this project is fully
-                    annotation - based. There is
-                    no web.xml file.</p>
-
+                <p>This project is a simple social network app. After creating an account and
+                    logging in it's possible to view all posts, add your own post or leave
+                    comments. There's a user panel available and you can edit user details there.
+                    User details are subject to validation both during registration and edition.
+                    It's also possible to send and receive private messages to/from other users.
+                    Unread private messages are marked as such. </p>
+                <p>As before - this is a Maven Web App and combination of MySQL, JPA and
+                    Hibernate was used as persistence layer.</p>
                 <ul>
-                    <li>database communication is according to JPA specification via Hibernate
-                        framework
-                    </li>
-                    <li>validator is used to verify user account data</li>
-                    <li>user passwords are hashed using JBCrypt library</li>
-                    <li>dependencies are managed using Maven</li>
-                    <li>view layer consists of controllers and JSP files with JSTL expressions and
-                        EL language
-                    </li>
+                    <li>this project is fully annotation - based, so there is no web.xml file</li>
                 </ul>
             </div>
             <hr>
@@ -506,8 +492,8 @@
             <div id="section3ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -560,23 +546,18 @@
                        class="btn btm-sm shaky my-shadow">Launch the app</a>
                     <p>login: test, password: test</p>
                 </div>
-
                 <h1 class="left">Crime Empire</h1>
-
                 <br>
-
                 <p>This is a turn based browser strategy game. You are a gang leader trying to take
                     over all important spots in Whateverville city. You need to manage your
                     resources, which are money, thugs, working ladies and dealers. Each turn you
                     can attack an enemy point transfer resources between your points and the
                     main resource pool and recruit people. During enemy turn your points get
                     attacked and random events occur.</p>
-
                 <p>This application is a Maven project created with a colleague as the final
                     coursework for Coders Lab bootcamp. User interface was based to a large extent
                     on another's bootcamp participant's work - GEOS Project by Szymon
                     Mikolajczak, which we adapted to our needs.</p>
-
                 <ul>
                     <li>validator has been used to verify user account data</li>
                     <li>MySQL database communication is implemented according to JPA
@@ -591,8 +572,8 @@
             <div id="section4ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -644,14 +625,10 @@
                        target="_blank"
                        class="btn btm-sm shaky my-shadow">Launch the app</a>
                 </div>
-
                 <h1>Book Catalog</h1>
-
                 <br>
-
                 <p>This web app is a book catalog and made up of JS / jQuery front-end and Java
                     server.</p>
-
                 <p>User is able to perform all basic CRUD operations, which are sent to the server
                     via AJAX calls using GET, POST, PUT and DELETE HTML methods. The controller
                     receives these calls and performs relevant database operations using service
@@ -659,7 +636,6 @@
                     mocked by hashlist of Book objects stored in memory but using real database
                     real is just a matter of implementing the relevant interface.
                 </p>
-
                 <ul>
                     <li>JSON format is implemented using Jackson library</li>
                     <li>dependencies are managed using Maven</li>
@@ -671,8 +647,8 @@
             <div id="section5ScreenshotsCurtain" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -724,21 +700,16 @@
                        target="_blank"
                        class="btn btm-sm shaky my-shadow">Launch the app</a>
                 </div>
-
                 <h1 class="left">Programming School</h1>
-
                 <br>
-
                 <p>I created this project while learning how to connect Java Web app to MySQL
                     database using JDBC interface. This application is an example of MVC
                     architectural pattern and it's purpose is programming school management with
                     users belonging to user groups submitting solutions to exercies the were given.
-
                 <p>The title screen shows last several solutions. User groups can be displayed and
                     public user details and their submitted solutions can be viewed. There's also
                     admin panel where all CRUD operations can be performed on users, groups,
                     exercises and solutions.</p>
-
                 <ul>
                     <li>separate packets have been used for model, DAO and controllers</li>
                     <li>user inteface consists of JSP pages and servlets</li>
@@ -754,8 +725,8 @@
 
                 <!-- Button to close the overlay navigation -->
                 <a class="closebtn"
-                   href="javascript:closeCurtain('section6ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                   href="javascript:closeCurtain('section6ScreenshotsCurtain');">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -794,7 +765,6 @@
                         <div class="screenshots-imgtext">Main screen</div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

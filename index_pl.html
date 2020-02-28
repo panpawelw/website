@@ -477,30 +477,20 @@
                 </div>
 
                 <h1>Social Network</h1>
-
                 <br>
-
-                <p>Ten projekt to uproszczona aplikacja społecznościowa. Użytkownik może utworzyć
-                    konto, po zalogowaniu
-                    do którego ma możliwość obejrzenia wszystkich wysłanych przez innych
-                    użytkowników komunikatów,
-                    dodania swojego komunikatu, dodania komentarza do swojego lub cudzego
-                    komunikatu. Może też wysyłać i
-                    odbierać prywatne wiadomości do/od innych użytkowników. Wiadomości
-                    nieprzeczytane są wyróżnione.</p>
-
-                <p>W tym projekcie z ciekawości postanowiłem spróbować konfiguracji w całości
-                    opartej o annotacje, stąd
-                    brak w nim pliku web.xml.</p>
-
+                <p>Ten projekt to uproszczona aplikacja społecznościowa. Po utworzeniu konta i
+                    zalogowaniu można przeglądać wszytkie posty, dodawać własne oraz zostawiać
+                    komentarze. Jest dostępny panel użytkownika i możliwa jest edycja danych
+                    osobistych. Dane te podlegają walidacji zarówno podczas rejestracji jak i
+                    edycji. Możliwe jest również wysyłanie i otrzymywanie prywatnych wiadomości
+                    do/od innych użytkowników. Wiadomości jeszcze nie przeczytane są odpowiednio
+                    oznaczone.
+                <p>Tak jak wcześniej - jest to projekt Mavena, a przechowywanie danych jest
+                    rozwiązane przy użyciu kombinacji bazy MySQL, specyfikacji JPA i frameworku
+                    Hibernate.</p>
                 <ul>
-                    <li>komunikacja z bazą danych odbywa się zgodnie ze specyfikacją JPA</li>
-                    <li>użyłem frameworku Hibernate</li>
-                    <li>za weryfikację poprawności danych użytkownika odpowiada walidator</li>
-                    <li>biblioteka JBCrypt jest odpowiedzialna za haszowanie haseł</li>
-                    <li>zależnościami zarządza Maven</li>
-                    <li>za warstwę widoku odpowiadaja kontolery oraz technologia JSP z JSTL i EL
-                    </li>
+                    <li>ten projekt jest skonfigurowany wyłącznie w oparciu o annotacje - nie
+                        ma pliku web.xml</li>
                 </ul>
             </div>
             <hr>

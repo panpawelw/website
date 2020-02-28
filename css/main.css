@@ -33,12 +33,11 @@ body.fade-out {
 
 /* Top navbar */
 #navbar {
-    --navbarLong: 95%;
+    --navbarLong: 90%;
     --navbarShort: 800px;
-    width: 95%;
+    width: 90%;
     background-color: transparent;
     margin: auto;
-    will-change: transform;
 }
 
 .embedded {
@@ -46,7 +45,6 @@ body.fade-out {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
-    will-change: transform;
 }
 
 @keyframes embed-navbar {
@@ -134,7 +132,6 @@ body.fade-out {
     box-shadow: inset 0 0 5px 0 #3A4318;
 }
 
-
 .navbar a:hover, .navbar a:active {
     color: #FA8334;
 }
@@ -180,7 +177,7 @@ body.fade-out {
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
+    z-index: 9999; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0, 0, 0); /* Black fallback color */
@@ -518,7 +515,6 @@ body.fade-out {
 /* carousel layout */
 
 #theCarousel {
-    z-index: -1;
     border-radius: 5px;
     margin-right: 5px;
     margin-bottom: 7em;
