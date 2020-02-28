@@ -107,9 +107,12 @@ body.fade-out {
 }
 
 .navbar a {
-    color: #000;
     font-size: 5em;
     font-family: 'Asar', serif;
+    text-shadow: 0 3px 5px #333;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    color: #000;
 }
 
 .navbar .dropdown-item {
@@ -133,8 +136,78 @@ body.fade-out {
 }
 
 .navbar a:hover, .navbar a:active {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
     color: #FA8334;
 }
+
+.nav-link {
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+}
+
+/* Animated underline effect */
+.animated-underline {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+.animated-underline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0.2em;
+    left: 0;
+    background: #FA8334;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(24, 95%, 59%, 0.25)), color-stop(50%, hsla(24, 95%, 59%, 1)), color-stop(100%, hsla(24, 95%, 59%, 0.25)));
+    background: -webkit-linear-gradient(left, hsla(24, 95%, 59%, 0.25) 0%, hsla(24, 95%, 59%, 1) 50%, hsla(24, 95%, 59%, 0.25) 100%);
+    background: -moz-linear-gradient(left, hsla(24, 95%, 59%, 0.25) 0%, hsla(24, 95%, 59%, 1) 50%, hsla(24, 95%, 59%, 0.25) 100%);
+    background: -ms-linear-gradient(left, hsla(24, 95%, 59%, 0.25) 0%, hsla(24, 95%, 59%, 1) 50%, hsla(24, 95%, 59%, 0.25) 100%);
+    background: -o-linear-gradient(left, hsla(24, 95%, 59%, 0.25) 0%, hsla(24, 95%, 59%, 1) 50%, hsla(24, 95%, 59%, 0.25) 100%);
+    background: linear-gradient(left, hsla(24, 95%, 59%, 0.25) 0%, hsla(24, 95%, 59%, 1) 50%, hsla(24, 95%, 59%, 0.25) 100%);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.animated-underline:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.animated-underline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #333;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, hsla(0, 0%, 0%, 0)), color-stop(50%, hsla(0, 0%, 0%, .25)), color-stop(100%, hsla(0, 0%, 0%, 0)));
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -moz-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -ms-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: -o-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .25) 50%, hsla(0, 0%, 0%, 0) 100%);
+    filter: blur(1px);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.animated-underline:hover:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 
 /* general button effects */
 .btn, .btn:visited {
@@ -247,7 +320,7 @@ body.fade-out {
 }
 
 .overlay .dropdown-divider {
-
+    border-top: 1px solid #FA8334;
 }
 
 .overlay .dropdown-item:hover {
