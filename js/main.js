@@ -12,6 +12,10 @@ $(document).ready(function () {
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("my-bar").style.width = scrolled + "%";
         if (win.scrollTop() > 200) {
             navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded');
