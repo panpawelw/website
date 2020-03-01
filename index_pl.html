@@ -371,10 +371,11 @@
                        class="btn btm-sm shaky my-shadow">
                         Uruchom projekt</a>
                 </div>
-
                 <h1 class="left">Workout Log</h1>
-
                 <br>
+                <p>Główny cel - maksymalna elastyczność struktury danych - w tym celu
+                    wykorzystałem serializację (aby uniknąć skomplikowanej struktury bazy
+                    danych)</p>
 
                 <p>Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik
                     treningów. Głównym celem,
@@ -398,24 +399,20 @@
                     aby była, poza
                     logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju
                     uwag, notatek, notatek
-                    głosowych, zdjęć i filmów.</p>
-
-                <p>Jeśli użytkownik ma również uprawnienia administratora, będzie miał także dostęp
-                    do odpowiedniego
-                    panelu.</p>
+                    głosowych, zdjęć i filmów.Jeśli użytkownik ma również uprawnienia
+                    administratora, będzie miał także dostęp do odpowiedniego panelu.</p>
 
                 <ul>
-                    <li>aplikacja jest zabezpieczona przy użyciu Spring Security</li>
-                    <li>jako password encoder zastosowałem bibliotekę JBCrypt</li>
-                    <li>użyłem własnych stron logowania</li>
-                    <li>za komunikację z bazą danych odpowiada Spring Data JPA zaimplementowane
-                        poprzez framework
-                        Hibernate
-                    </li>
-                    <li>jako warstwy widoku użyłem szablonów Thymeleaf</li>
-                    <li>aplikacja jest w stanie wysłać wiadomość z potwierdzeniem rejestracji na
-                        podany adres email
-                    </li>
+                    <li>jest to aplikacja Spring Boot</li>
+                    <li>jest zabezpieczona przy użyciu Spring Security z użyciem własnych stron
+                        logowania</li>
+                    <li>korzysta z modułu Spring Cloud przy zapisywaniu plików medialnych do
+                        Amazon S3</li>
+                    <li>korzysta z modułu Spring Mail i wysyła maile aktywacyjne do
+                        rejestrujących się użytkowników</li>
+                    <li>używa application eventów i listenerów</li>
+                    <li>w warstwie widoku zastosowałem szablony Thymeleaf, JS, jQuery oraz
+                        Bootstrap 4</li>
                 </ul>
             </div>
             <hr>
