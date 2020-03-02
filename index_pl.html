@@ -373,35 +373,21 @@
                 </div>
                 <h1 class="left">Workout Log</h1>
                 <br>
-                <p>Główny cel - maksymalna elastyczność struktury danych - w tym celu
-                    wykorzystałem serializację (aby uniknąć skomplikowanej struktury bazy
-                    danych)</p>
-
-                <p>Obecnie pracuję nad aplikacją Spring Boot, która ma służyć jako dziennik
-                    treningów. Głównym celem,
-                    który chcę osiągnąć jest maksymalna możliwa elastyczność struktury danych. Jeśli
-                    tylko trening danej
-                    dyscypliny da się zapisać przy pomocy czynności o jakimś stopniu trudności
-                    wykonanej pewną ilość
-                    razy w (opcjonalnie) określonym czasie - powinno dać się to zapisać w moim
-                    programie. Wszelki
-                    trening, którego celem jest podnoszenie jakiegoś rodzaju wydajności (w
-                    przeciwieństwie do takiego
-                    gdzie kluczowym elementem jest styl) powinien dać się ująć w taką strukturę.</p>
-
-                <p>Bez logowania dostępny ma być ekran podstawowych kalkulacji - maksymalnego
-                    powtórzenia wedle różnych
-                    dostępnych wzorówi oraz jego procentów (może też przelicznik współczynnika
-                    Wilksa i trójbowy total).
+                <p>Obecnie pracuję nad aplikacją, która ma służyć jako dziennik treningów.
+                    Bardziej ogólnym celem, który mi przyświecał było osiągnięcie maksymalnej
+                    możliwej elastyczności struktury danych. Każdy trening składa się z potencjalnie
+                    nieograniczonej liczby ćwiczeń, każde składające się z dowolnej liczby serii.
+                    W każdym miesjcu można dołączyć jakąkolwiek liczbę notatek tekstowych bądź
+                    plików medialnych. W tym celu wykorzystałem serializację obiektów do bazy
+                    danych, natomiast pliki medialne przechowywane są w chmurze.
+                    </p>
+                <p>Bez logowania dostępne ma być kilka ekranów podstawowych kalkulacji - ogólnej
+                    siły, maksymalnego powtórzenia i jego procentów, w przyszłości możliwe że
+                    również współczynnika Wilksa oraz dwubojowego i trójbojowego totalu.
                     Po zalogowaniu użytkownik uzyska dostęp do pełnej funkcjonalności - dziennika
-                    treningowego z
-                    możliwością wglądu i edycji dawnych treningów oraz dodania nowego treningu. Chcę
-                    aby była, poza
-                    logowaniem samych danych trenigowych, możliwość dodawania wszelkiego rodzaju
-                    uwag, notatek, notatek
-                    głosowych, zdjęć i filmów.Jeśli użytkownik ma również uprawnienia
-                    administratora, będzie miał także dostęp do odpowiedniego panelu.</p>
-
+                    treningowego z możliwością wglądu i edycji dawnych treningów oraz dodania nowego
+                    treningu. W przyszłości użytkownik z uprawnieniami admina będzie miał
+                    również dostęp do stosownego panelu.</p>
                 <ul>
                     <li>jest to aplikacja Spring Boot</li>
                     <li>jest zabezpieczona przy użyciu Spring Security z użyciem własnych stron
@@ -573,7 +559,6 @@
                     Coders Lab. Interfejs użytkownika został przez nas w dużej mierze oparty o
                     pomysł innego kursanta - Szymona Mikołajczaka i jego projekt GEOS, który
                     zaadaptowaliśmy do swoich potrzeb.
-
                 <ul>
                     <li>do sprawdzania poprawności danych użytkownika wykorzystany został
                         walidator
@@ -658,7 +643,6 @@
                     Odpowiedzi są przekazywane w formacie JSON. W tym przypadku bazę danych udaje
                     hashlista obiektów klasy Book przechowywana w pamięci, jednak dzięki
                     zastosowaniu interfejsu można łatwo zaimplementować obsługę prawdziwej.</p>
-
                 <ul>
                     <li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>
                     <li>zależnościami zarządza Maven</li>
@@ -739,7 +723,6 @@
                     można uzyskać dostęp do wybranych danych użytkowników i ich list rozwiązań. Jest
                     też jest panel administratora, gdzie możliwe są wszystkie operacje (CRUD) na
                     grupach, użytkownikach, zadaniach i rozwiązaniach.</p>
-
                 <ul>
                     <li>osobnych pakiety do reprezentacji modelu struktury danych, klas DAO oraz
                         kontrolerów

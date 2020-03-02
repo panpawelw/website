@@ -371,41 +371,27 @@
                        class="btn btm-sm shaky my-shadow">
                         Launch the app</a>
                 </div>
-
                 <h1 class="left">Workout Log</h1>
-
                 <br>
-
-                <p>My most recent project is a workout log Spring Boot Application. The main goal is
-                    maximal possible
-                    flexibility of data structure. If workouts of the sports you practice can be
-                    broken down to actions
-                    of some difficulty performed number of times in (optionally) certain period of
-                    time - they should be
-                    possible to record in my application. Any training that's aimed at increasing
-                    some type of
-                    measurable performance (as opposed to the type that relies on style) should be
-                    possible to capture
-                    in such data structure.</p>
-
-                <p>Basic calculators are available without logging in - one repetition max,
-                    percentages, powerlifting
-                    and weightlifting totals, maybe also Wilks score. After logging in user will be
-                    able to access
-                    workout log with two main functionalities - viewing or editing past workouts and
-                    adding a new one.
-                    I'd like to include adding all sorts of notes, voice notes, pictures, photos and
-                    videos.
-
-                <p>If user has administrator privileges as well, admin panel will be available.
-
+                <p>My most recent project is a workout log. A general idea behind this
+                    application was maximal possible flexibility of data structure. Workout
+                    consists of any number of exercises, each of these with any number of sets.
+                    In addition to this, user can attach any number of text notes or media files
+                    to every workout element. To achieve it I've decided to serialize workout
+                    objects to database and media files are stored in the cloud.</p>
+                <p>Basic calculators like general strength, maximum rep and it's percentages and
+                    other (like Wilks score or powerlifting and weightlifting totals in the future)
+                    are available right away. After logging in user can access the main
+                    logging functionality and will be able to create new workouts and edit or
+                    delete old ones. Later on I plan to include administrator panel for users
+                    with relevant privileges.</p>
                 <ul>
-                <li>a Spring Boot application</li>
-                <li>is't been secured with Spring Security using custom login page</li>
-                <li>Spring Cloud module is used to store media files in Amazon S3</li>
-                <li>Spring Mail module is used to activation emails to users who register</li>
-                <li>uses application events and listeners</li>
-                <li>view layer consists of Thymeleaf templates, JS, jQuery and Bootstrap 4</li>
+                    <li>it's a Spring Boot application</li>
+                    <li>is't been secured with Spring Security using custom login page</li>
+                    <li>Spring Cloud module is used to store media files in Amazon S3</li>
+                    <li>Spring Mail module is used to activation emails to users who register</li>
+                    <li>uses application events and listeners</li>
+                    <li>view layer consists of Thymeleaf templates, JS, jQuery and Bootstrap 4</li>
                 </ul>
             </div>
             <hr>
