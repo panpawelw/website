@@ -111,7 +111,8 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-sm" id="navbar">
     <div class="progress-container">
-        <div class="progress-bar" id="my-bar"></div>
+        <label for="my-bar"></label>
+        <input type="range" id="my-bar" min="0" max="1000" step="1">
     </div>
     <a class="navbar-brand mr-auto" href="#Home"><i class="fa fa-home"></i></a>
     <a class="navbar-toggler custom-toggler icon" type="button"
@@ -724,7 +725,7 @@
                     też jest panel administratora, gdzie możliwe są wszystkie operacje (CRUD) na
                     grupach, użytkownikach, zadaniach i rozwiązaniach.</p>
                 <ul>
-                    <li>osobnych pakiety do reprezentacji modelu struktury danych, klas DAO oraz
+                    <li>osobne pakiety do reprezentacji modelu struktury danych, klas DAO oraz
                         kontrolerów
                     </li>
                     <li>interfejs oparty jest o serwlety oraz strony JSP</li>
