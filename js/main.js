@@ -1,13 +1,11 @@
 import jump from "./jump/jump.js"
 import easeInOutQuad from "./jump/easing.js";
 
+const win = $(window);
+const navbar = document.getElementById('navbar');
+const mainContent = document.getElementById('row');
+
 $(document).ready(function () {
-
-
-    const win = $(window);
-    const navbar = document.getElementById('navbar');
-    const mainContent = document.getElementById('row');
-    document.querySelector("#my-bar").addEventListener("input", scrollPage);
 
     /* Fade-in effect */
     $(function () {
@@ -15,19 +13,29 @@ $(document).ready(function () {
         document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
     });
 
+    document.getElementById("sidebar-0")
+        .addEventListener("click", function(){scroll("#theCarousel")});
+    document.getElementById("sidebar-1")
+        .addEventListener("click", function(){scroll("#Section1")});
+    document.getElementById("sidebar-2")
+        .addEventListener("click", function(){scroll("#Section2")});
+    document.getElementById("sidebar-3")
+        .addEventListener("click", function(){scroll("#Section3")});
+    document.getElementById("sidebar-4")
+        .addEventListener("click", function(){scroll("#Section4")});
+    document.getElementById("sidebar-5")
+        .addEventListener("click", function(){scroll("#Section5")});
+    document.getElementById("sidebar-6")
+        .addEventListener("click", function(){scroll("#Section6")});
+    document.getElementById("sidebar-7")
+        .addEventListener("click", function(){scroll("#Section7")});
+
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        const sliderPosition = document.getElementById("my-bar").value;
-        // let howToCallThisDamnVariable = Math.trunc((sliderPosition / 10000) * websiteHeight);
-        let scrollTolerance = (sliderPosition / 10000) / (scrollPosition / websiteHeight);
-        console.log(sliderPosition, scrollTolerance);
-        if(scrollTolerance < 1.1 && scrollTolerance > 0.9) {
-            document.getElementById("my-bar").value = (scrollPosition / websiteHeight) * 10000;
-        }
         if (scrollPosition > 200 && navbar.classList.contains('embedded')) {
             navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded');
@@ -47,17 +55,16 @@ $(document).ready(function () {
     });
 });
 
-function scrollPage() {
-    const currentPosition = document.body.scrollTop || document.documentElement.scrollTop;
-    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let sliderPosition = document.getElementById("my-bar").value;
-    let endScrollPosition = Math.trunc((sliderPosition / 10000) * totalHeight);
-    let jumpValue = endScrollPosition - currentPosition;
-    jump(jumpValue, {
-        duration: 0,
-        offset: 0,
+function scroll(target) {
+    let offset = -90;
+    if(navbar.classList.contains('embedded')) {
+        offset = -160;
+    }
+    jump(target, {
+        duration: 500,
+        offset: offset,
         callback: undefined,
-        easing: undefined,
+        easing: easeInOutQuad,
         a11y: false
     });
 }
