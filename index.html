@@ -16,7 +16,8 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min-1.14.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/jump/jump.js"></script>
+    <script type="module" src="js/main.js"></script>
     <title>My website</title>
 </head>
 <body class="p-x-0" data-spy="scroll" data-target=".sidenav" data-offset="400">
@@ -66,6 +67,7 @@
                     <a class="dropdown-item" href="./download/CV-pl.docx" download>docx - PL</a>
                 </div>
             </div>
+
             <a href="https://github.com/pjm77" target="_blank">GitHub<span
                     class="sr-only">(current)</span></a>
             <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
@@ -109,10 +111,9 @@
 </div>
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-sm" id="navbar">
+<nav class="navbar navbar-expand-sm embedded" id="navbar">
     <div class="progress-container">
-        <label for="my-bar"></label>
-        <input type="range" id="my-bar" min="0" max="1000" step="1">
+        <div class="progress-bar" id="my-bar"></div>
     </div>
     <a class="navbar-brand mr-auto" href="#Home"><i class="fa fa-home"></i></a>
     <a class="navbar-toggler custom-toggler icon" type="button"
