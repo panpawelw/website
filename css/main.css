@@ -797,6 +797,10 @@ hr.shadow {
     border-radius: 5px;
 }
 
+.thumbnail:hover {
+    border: 1px #FA8334 solid;
+}
+
 /* project screenshot overlay layout */
 .screenshots-column {
     display: inline-block;

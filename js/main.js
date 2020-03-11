@@ -8,27 +8,20 @@ const mainContent = document.getElementById('row');
 $(document).ready(function () {
 
     /* Fade-in effect */
-    $(function () {
-        $('body').removeClass('fade-out');
-        document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
+    $('body').removeClass('fade-out');
+
+    /* Initial animations */
+    document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
+
+    /* Event listeners for side navigation links */
+    $('.sidenav-text').on('click', function(){
+       scroll(this.getAttribute('href'));
     });
 
-    document.getElementById("sidebar-0")
-        .addEventListener("click", function(){scroll("#theCarousel")});
-    document.getElementById("sidebar-1")
-        .addEventListener("click", function(){scroll("#Section1")});
-    document.getElementById("sidebar-2")
-        .addEventListener("click", function(){scroll("#Section2")});
-    document.getElementById("sidebar-3")
-        .addEventListener("click", function(){scroll("#Section3")});
-    document.getElementById("sidebar-4")
-        .addEventListener("click", function(){scroll("#Section4")});
-    document.getElementById("sidebar-5")
-        .addEventListener("click", function(){scroll("#Section5")});
-    document.getElementById("sidebar-6")
-        .addEventListener("click", function(){scroll("#Section6")});
-    document.getElementById("sidebar-7")
-        .addEventListener("click", function(){scroll("#Section7")});
+    /* Event listeners for thumbnails */
+    $('.screenshotThumbnail').on('click', function() {
+        zoomScreenshot(this);
+    });
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
@@ -49,12 +42,9 @@ $(document).ready(function () {
             // $('a.nav-link').removeClass('tan');
         }
     });
-
-    $('.screenshotThumbnail').on('click', function () {
-        zoomScreenshot(this);
-    });
 });
 
+/* Scroll the page adjusting for navbar height if necessary */
 function scroll(target) {
     let offset = -90;
     if(navbar.classList.contains('embedded')) {
@@ -69,15 +59,6 @@ function scroll(target) {
     });
 }
 
-function zoomScreenshot(screenshot) {
-    const closestOverlay = screenshot.closest(".overlay-content");
-    const closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
-    const expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
-    const imgText = closestScreenshotsContainer.getElementsByClassName("screenshots-imgtext")[0];
-    expandImg.src = screenshot.src;
-    imgText.innerText = screenshot.alt;
-}
-
 /* Open overlay */
 function openCurtain(curtainId) {
     document.getElementById(curtainId).style.height = "100%";
@@ -86,4 +67,14 @@ function openCurtain(curtainId) {
 /* Close overlay */
 function closeCurtain(curtainId) {
     document.getElementById(curtainId).style.height = "0%";
+}
+
+/* Zoom screenshot in overlay */
+function zoomScreenshot(screenshot) {
+    const closestOverlay = screenshot.closest(".overlay-content");
+    const closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
+    const expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
+    const imgText = closestScreenshotsContainer.getElementsByClassName("screenshots-imgtext")[0];
+    expandImg.src = screenshot.src;
+    imgText.innerText = screenshot.alt;
 }
