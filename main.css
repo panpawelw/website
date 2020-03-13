@@ -27,7 +27,7 @@ body.fade-out {
     height: 100vh;
     width: 100vw;
     background: radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
-    #E9E49D url("../images/background.png") repeat fixed;
+    #E9E49D url("./images/background.png") repeat fixed;
     will-change: transform;
 }
 
@@ -396,7 +396,7 @@ body.fade-out {
 #jumbotron {
     padding: 1em;
     margin-right: 0;
-    background: #FA8334 url("../images/jumboimg.jpg");
+    background: #FA8334 url("images/jumboimg.jpg");
     border-radius: 5px;
 }
 

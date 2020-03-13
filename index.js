@@ -1,11 +1,14 @@
-import jump from "./jump/jump.js"
-import easeInOutQuad from "./jump/easing.js";
-
-const win = $(window);
-const navbar = document.getElementById('navbar');
-const mainContent = document.getElementById('row');
+import 'bootstrap';
+import $ from 'jquery';
+import 'popper.js';
+import jump from 'jump.js';
+import './main.css';
 
 $(document).ready(function () {
+
+    const win = $(window);
+    const navbar = document.getElementById('navbar');
+    const mainContent = document.getElementById('row');
 
     /* Fade-in effect */
     $('body').removeClass('fade-out');
@@ -47,7 +50,7 @@ $(document).ready(function () {
 /* Scroll the page adjusting for navbar height if necessary */
 function scroll(target) {
     let offset = -90;
-    if(navbar.classList.contains('embedded')) {
+    if(document.getElementById('navbar').classList.contains('embedded')) {
         offset = -160;
     }
     jump(target, {
@@ -58,6 +61,14 @@ function scroll(target) {
         a11y: false
     });
 }
+
+/* Scroll easing function by Robert Penner */
+const easeInOutQuad = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+};
 
 /* Open overlay */
 function openCurtain(curtainId) {
