@@ -26,6 +26,18 @@ $(document).ready(function () {
         zoomScreenshot(this);
     });
 
+    /* Event listeners for elements that trigger overlay show*/
+    $('.open-overlay').on('click', function(){
+        console.log(this.dataset.overlay);
+        openOverlay(this.dataset.overlay);
+    });
+
+    /* Event listeners for elements that trigger overlay hide*/
+    $('.close-overlay').on('click', function(){
+        console.log(this.dataset.overlay);
+        closeOverlay(this.dataset.overlay);
+    });
+
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
@@ -71,12 +83,12 @@ const easeInOutQuad = (t, b, c, d) => {
 };
 
 /* Open overlay */
-function openCurtain(curtainId) {
+function openOverlay(curtainId) {
     document.getElementById(curtainId).style.height = "100%";
 }
 
 /* Close overlay */
-function closeCurtain(curtainId) {
+function closeOverlay(curtainId) {
     document.getElementById(curtainId).style.height = "0%";
 }
 
