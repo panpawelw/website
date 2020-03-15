@@ -10,20 +10,10 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
           rel="stylesheet" crossorigin="anonymous">
-<!--    <link rel="stylesheet" type="text/css" href="css/main.css">-->
     <link href='http://fonts.googleapis.com/css?family=Asar&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&subset=latin,latin-ext'
           rel='stylesheet' type='text/css'>
-<!--    <script defer="defer" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"-->
-<!--            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"-->
-<!--            crossorigin="anonymous"></script>-->
-<!--    <script defer="defer" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
-<!--            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
-<!--            crossorigin="anonymous"></script>-->
-<!--    <script defer="defer" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
-<!--            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"-->
-<!--            crossorigin="anonymous"></script>-->
     <script src="bundle.js"></script>
     <title>My website</title>
 </head>
@@ -36,55 +26,6 @@
 
 <div id="Home"></div>
 <div class="vignette"></div>
-
-<!--"About me" curtain-->
-<div id="aboutMeOverlay" class="overlay">
-
-    <!-- Button to close the overlay navigation -->
-    <a class="closebtn close-overlay" data-overlay="aboutMeOverlay">
-        <i class="fa fa-close"></i></a>
-
-    <!-- Overlay content -->
-    <div class="overlay-content overlay-scrollable">
-        <h2 class="overlay-title">About me...</h2>
-        <div>
-            <img class="photo" src="images/CVphoto.jpg" alt="My photo">
-        </div>
-        <p>My interest in IT dates back as long as I can remember. I've done a fair share of
-            programming in my teens - Basic, Turbo Pascal and Assembler, all of it self- taught.
-            Later on my life went in another direction but my passion never dwindled.</p>
-        <p>I earned my Master's Degree in Psychology from University Of Wrocław. Later on I
-            emigrated to Northern Ireland where I spent best part of my 10 years there as a
-            sessional interpreter in justice system.</p>
-        <p>Coming back to Poland seems like a perfect excuse to change careers. Intepreting was
-            nicely profitable and a great choice at the time, but I never had real interest in
-            the profession itself.</p>
-        <p>After realizing the demand in IT industry is very high, I've decided to take a Coders
-            Lab Back-end bootcamp (Java Web). I took some time to sort my things out, but I kept
-            programming as much as I could to keep my newly learned skills and improve.
-            Eventually, I'd like to become a full - stack developer.</p>
-        <div>
-            <div class="dropup">
-                <a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./download/CV-en.pdf" download>pdf - EN</a>
-                    <a class="dropdown-item" href="./download/CV-en.docx" download>docx - EN</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./download/CV-pl.pdf" download>pdf - PL</a>
-                    <a class="dropdown-item" href="./download/CV-pl.docx" download>docx - PL</a>
-                </div>
-            </div>
-
-            <a href="https://github.com/pjm77" target="_blank">GitHub<span
-                    class="sr-only">(current)</span></a>
-            <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
-               target="_blank">LinkedIn</a>
-            <a href="https://www.goldenline.pl/pawel-wojtun2/"
-               target="_blank">GoldenLine</a>
-        </div>
-    </div>
-
-</div>
 
 <!-- Jumbotron-->
 <div class="jumbotron">
@@ -337,6 +278,53 @@
             <hr>
             <hr class="shadow">
 
+            <!--Section 1 overlay-->
+            <div id="aboutMeOverlay" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a class="closebtn close-overlay" data-overlay="aboutMeOverlay">
+                    <i class="fa fa-close"></i></a>
+
+                <!-- Overlay content -->
+                <div class="overlay-content overlay-scrollable">
+                    <h2 class="overlay-title">About me...</h2>
+                    <div>
+                        <img class="photo" src="images/CVphoto.jpg" alt="My photo">
+                    </div>
+                    <p>My interest in IT dates back as long as I can remember. I've done a fair share of
+                        programming in my teens - Basic, Turbo Pascal and Assembler, all of it self- taught.
+                        Later on my life went in another direction but my passion never dwindled.</p>
+                    <p>I earned my Master's Degree in Psychology from University Of Wrocław. Later on I
+                        emigrated to Northern Ireland where I spent best part of my 10 years there as a
+                        sessional interpreter in justice system.</p>
+                    <p>Coming back to Poland seems like a perfect excuse to change careers. Intepreting was
+                        nicely profitable and a great choice at the time, but I never had real interest in
+                        the profession itself.</p>
+                    <p>After realizing the demand in IT industry is very high, I've decided to take a Coders
+                        Lab Back-end bootcamp (Java Web). I took some time to sort my things out, but I kept
+                        programming as much as I could to keep my newly learned skills and improve.
+                        Eventually, I'd like to become a full - stack developer.</p>
+                    <div>
+                        <div class="dropup">
+                            <a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./download/CV-en.pdf" download>pdf - EN</a>
+                                <a class="dropdown-item" href="./download/CV-en.docx" download>docx - EN</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./download/CV-pl.pdf" download>pdf - PL</a>
+                                <a class="dropdown-item" href="./download/CV-pl.docx" download>docx - PL</a>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                           target="_blank">LinkedIn</a>
+                        <a href="https://www.goldenline.pl/pawel-wojtun2/"
+                           target="_blank">GoldenLine</a>
+                        <a href="https://github.com/pjm77" target="_blank">GitHub<span
+                                class="sr-only">(current)</span></a>
+                    </div>
+                </div>
+            </div>
+
             <!--Section 2-->
             <div id="Section2" class="text-section">
                 <div class="thumbnail-and-button-left">
@@ -372,7 +360,7 @@
             <hr>
             <hr class="shadow">
 
-            <!--Section 2 screenshots curtain overlay-->
+            <!--Section 2 screenshots overlay-->
             <div id="section2Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
@@ -725,8 +713,8 @@
                     and intuitive interfaces for my projects, not even mentioning the aesthetic
                     aspect.</p>
                 <ul>
-                    <li>it was a great opportunity to improve my workflow - ie using npm and
-                        Javascript ES6 modules
+                    <li>it was a great opportunity to improve my workflow - using Javascript ES6
+                        modules, npm and webpack
                     </li>
                     <li>I got familiar with basic Bootstrap 4 concepts - grid, responsive design,
                         fluid layout and I learned how to use common elements like navbar,

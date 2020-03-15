@@ -28,13 +28,11 @@ $(document).ready(function () {
 
     /* Event listeners for elements that trigger overlay show*/
     $('.open-overlay').on('click', function(){
-        console.log(this.dataset.overlay);
         openOverlay(this.dataset.overlay);
     });
 
     /* Event listeners for elements that trigger overlay hide*/
     $('.close-overlay').on('click', function(){
-        console.log(this.dataset.overlay);
         closeOverlay(this.dataset.overlay);
     });
 

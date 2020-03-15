@@ -10,7 +10,6 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
           rel="stylesheet" crossorigin="anonymous">
-<!--    <link rel="stylesheet" type="text/css" href="css/main.css">-->
     <link href='http://fonts.googleapis.com/css?family=Asar&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&subset=latin,latin-ext'
@@ -27,54 +26,6 @@
 
 <div id="Home"></div>
 <div class="vignette"></div>
-
-<!--"About me" curtain-->
-<div id="aboutMeCurtain" class="overlay">
-
-    <!-- Button to close the overlay navigation -->
-    <a class="closebtn" href="javascript:closeCurtain('aboutMeCurtain');">
-        <i class="fa fa-close"></i></a>
-
-    <!-- Overlay content -->
-    <div class="overlay-content overlay-scrollable">
-        <h2 class="overlay-title">O mnie</h2>
-        <div>
-            <img class="photo" src="images/CVphoto.jpg" alt="My photo">
-        </div>
-        <p>Informatyką interesuję się od kiedy pamiętam. Sporo programowałem w młodości - Basic,
-            Turbo Pascal, Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym
-            kierunku, jednak zamiłowanie nigdy nie zgasło.</p>
-        <p>Ukończyłem psychologię na Uniwersytecie Wrocławskim. Po studiach emigrowałem na
-            niemal 10 lat do Irlandii Północnej, gdzie większość czasu pracowałem jako tłumacz
-            sesyjny w wymiarze sprawiedliwości.</p>
-        <p>Powrót do kraju to znakomity pretekst do zmiany kariery, która choć intratna i dobrze
-            trafiona w tamtym momencie, nigdy tak naprawdę mnie nie pasjonowała.</p>
-        <p>Gdy zorientowałem się, że zapotrzebowanie w branży IT jest duże zdecydowałem się na
-            kurs Back - endu (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy,
-            programując jednocześnie na tyle, na ile czas pozwalał, aby wiedza z kursu pozostała
-            świeża i rozwijając ją w miarę możliwości. Docelowo chciałbym zostać full - stack
-            developerem.</p>
-        <div>
-            <div class="dropup">
-                <a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
-                <div class="dropdown-menu dropup-menu">
-                    <a class="dropdown-item" href="/download/CV-pl.pdf" download>pdf - PL</a>
-                    <a class="dropdown-item" href="/download/CV-pl.docx" download>docx - PL</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/download/CV-en.pdf" download>pdf - EN</a>
-                    <a class="dropdown-item" href="/download/CV-en.docx" download>docx - EN</a>
-                </div>
-            </div>
-            <a href="https://github.com/pjm77" target="_blank">GitHub<span
-                    class="sr-only">(current)</span></a>
-            <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
-               target="_blank">LinkedIn</a>
-            <a href="https://www.goldenline.pl/pawel-wojtun2/"
-               target="_blank">GoldenLine</a>
-        </div>
-    </div>
-
-</div>
 
 <!-- Jumbotron-->
 <div class="jumbotron">
@@ -304,12 +255,10 @@
             <!--Section 1-->
             <div id="Section1" class="text-section">
                 <div id="section1photo">
-                    <a id="main-photo" href="javascript:openCurtain('aboutMeCurtain');">
-                        <img class="thumbnail shaky my-shadow" src="images/CVphoto.jpg"
-                             alt="About me"></a>
-                    <a class="btn btm-sm shaky my-shadow"
-                       href="javascript:openCurtain('aboutMeCurtain');">
-                        O mnie...</a>
+                    <img id="main-photo" class="thumbnail shaky my-shadow open-overlay"
+                         data-overlay="aboutMeOverlay" src="images/CVphoto.jpg" alt="O mnie">
+                    <button class="btn btm-sm shaky my-shadow open-overlay"
+                            data-overlay="aboutMeOverlay">O mnie...</button>
                 </div>
                 <h1>Ogólnie o moich projektach</h1>
                 <br>
@@ -337,16 +286,61 @@
             <hr>
             <hr class="shadow">
 
+            <!--Section 1 overlay-->
+            <div id="aboutMeOverlay" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a class="closebtn close-overlay" data-overlay="aboutMeOverlay">
+                    <i class="fa fa-close"></i></a>
+
+                <!-- Overlay content -->
+                <div class="overlay-content overlay-scrollable">
+                    <h2 class="overlay-title">O mnie...</h2>
+                    <div>
+                        <img class="photo" src="images/CVphoto.jpg" alt="My photo">
+                    </div>
+                    <p>Informatyką interesuję się od kiedy pamiętam. Sporo programowałem w młodości - Basic,
+                        Turbo Pascal, Asembler. Wszystkiego udzłem się sam. Później życie skręciło w innym
+                        kierunku, jednak zamiłowanie nigdy nie zgasło.</p>
+                    <p>Ukończyłem psychologię na Uniwersytecie Wrocławskim. Po studiach emigrowałem na
+                        niemal 10 lat do Irlandii Północnej, gdzie większość czasu pracowałem jako tłumacz
+                        sesyjny w wymiarze sprawiedliwości.</p>
+                    <p>Powrót do kraju to znakomity pretekst do zmiany kariery, która choć intratna i dobrze
+                        trafiona w tamtym momencie, nigdy tak naprawdę mnie nie pasjonowała.</p>
+                    <p>Gdy zorientowałem się, że zapotrzebowanie w branży IT jest duże zdecydowałem się na
+                        kurs Back - endu (Java Web) w Coderslab. Po kursie uporządkowałem swoje sprawy,
+                        programując jednocześnie na tyle, na ile czas pozwalał, aby wiedza z kursu pozostała
+                        świeża i rozwijając ją w miarę możliwości. Docelowo chciałbym zostać full - stack
+                        developerem.</p>
+                    <div>
+                        <div class="dropup">
+                            <a class="about-link dropdown-toggle" data-toggle="dropdown" href="#">CV</a>
+                            <div class="dropdown-menu dropup-menu">
+                                <a class="dropdown-item" href="/download/CV-pl.pdf" download>pdf - PL</a>
+                                <a class="dropdown-item" href="/download/CV-pl.docx" download>docx - PL</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/download/CV-en.pdf" download>pdf - EN</a>
+                                <a class="dropdown-item" href="/download/CV-en.docx" download>docx - EN</a>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/in/pawe%C5%82-wojtu%C5%84-18a991163/"
+                           target="_blank">LinkedIn</a>
+                        <a href="https://www.goldenline.pl/pawel-wojtun2/"
+                           target="_blank">GoldenLine</a>
+                        <a href="https://github.com/pjm77" target="_blank">GitHub<span
+                                class="sr-only">(current)</span></a>
+                    </div>
+                </div>
+            </div>
+
             <!--Section 2-->
             <div id="Section2" class="text-section">
                 <div class="thumbnail-and-button-left">
-                    <a href="javascript:openCurtain('section2ScreenshotsCurtain');">
-                        <img class="thumbnail shaky my-shadow" src="images/under_construction.jpg"
-                             alt="Workout_log"></a>
+                    <img class="thumbnail shaky my-shadow open-overlay" alt="Workout Log"
+                         data-overlay="section2Overlay" src="images/under_construction.jpg">
                     <a href="http://weightliftinglog-env.wucjxqxkma.eu-central-1.elasticbeanstalk.com/"
-                       target="_blank"
-                       class="btn btm-sm shaky my-shadow">
-                        Uruchom projekt</a>
+                       target="_blank" class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
+                    <p>login: test, password: test</p>
                 </div>
                 <h1 class="left">Workout Log</h1>
                 <br>
@@ -386,11 +380,11 @@
             <hr class="shadow">
 
             <!--Section 2 screenshots curtain overlay-->
-            <div id="section2ScreenshotsCurtain" class="overlay">
+            <div id="section2Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section2ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn close-overlay" data-overlay="section2Overlay">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -433,15 +427,14 @@
             </div>
 
             <!--Section 3-->
+            <!--Section 3-->
             <div id="Section3" class="text-section">
                 <div class="thumbnail-and-button-right">
-                    <a href="javascript:openCurtain('section3ScreenshotsCurtain');">
-                        <img class="thumbnail shaky my-shadow" src="images/Social_network - 2.png"
-                             alt="Social_network"></a>
+                    <img class="thumbnail shaky my-shadow open-overlay" alt="Social Network"
+                         data-overlay="section3Overlay" src="images/Social_network - 2.png">
                     <a href="http://socialnetwork-env.dquhf6fr9u.eu-central-1.elasticbeanstalk.com/"
-                       target="_blank"
-                       class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
-                    <p>login: test, hasło: test</p>
+                       target="_blank" class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
+                    <p>login: test, password: test</p>
                 </div>
 
                 <h1>Social Network</h1>
@@ -466,11 +459,11 @@
             <hr class="shadow">
 
             <!--Section 3 screenshots curtain overlay-->
-            <div id="section3ScreenshotsCurtain" class="overlay">
+            <div id="section3Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section3ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn close-overlay" data-overlay="section3Overlay">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -515,13 +508,11 @@
             <!--Section 4-->
             <div id="Section4" class="text-section">
                 <div class="thumbnail-and-button-left">
-                    <a href="javascript:openCurtain('section4ScreenshotsCurtain');">
-                        <img class="thumbnail shaky my-shadow" src="images/Crime_empire - 1.jpg"
-                             alt="Crime_empire"></a>
+                    <img class="thumbnail shaky my-shadow open-overlay" alt="Crime Empire"
+                         data-overlay="section4Overlay" src="images/Crime_empire - 1.jpg">
                     <a href="http://crimeempire-env.gu3axbmcv4.eu-central-1.elasticbeanstalk.com/login"
-                       target="_blank"
-                       class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
-                    <p>login: test, hasło: test</p>
+                       target="_blank" class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
+                    <p>login: test, password: test</p>
                 </div>
                 <h1 class="left">Crime Empire</h1>
                 <br>
@@ -549,11 +540,11 @@
             <hr class="shadow">
 
             <!--Section 4 screenshots curtain overlay-->
-            <div id="section4ScreenshotsCurtain" class="overlay">
+            <div id="section4Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section4ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn close-overlay" data-overlay="section4Overlay">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -598,12 +589,10 @@
             <!--Section 5-->
             <div id="Section5" class="text-section">
                 <div class="thumbnail-and-button-right">
-                    <a href="javascript:openCurtain('section5ScreenshotsCurtain');">
-                        <img class="thumbnail shaky my-shadow" src="images/Book_catalog - 1.png"
-                             alt="Book_catalog"></a>
+                    <img class="thumbnail shaky my-shadow open-overlay" alt="Book Catalog"
+                         data-overlay="section5Overlay" src="images/Book_catalog - 1.png">
                     <a href="http://bookcatalog-env.nz59rat9x5.eu-central-1.elasticbeanstalk.com/"
-                       target="_blank"
-                       class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
+                       target="_blank" class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
                 </div>
                 <h1>Book Catalog</h1>
                 <br>
@@ -625,11 +614,11 @@
             <hr class="shadow">
 
             <!--Section 5 screenshots curtain overlay-->
-            <div id="section5ScreenshotsCurtain" class="overlay">
+            <div id="section5Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section5ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn close-overlay" data-overlay="section5Overlay">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -673,13 +662,10 @@
             <!--Section 6-->
             <div id="Section6" class="text-section">
                 <div class="thumbnail-and-button-left">
-                    <a href="javascript:openCurtain('section6ScreenshotsCurtain');">
-                        <img class="thumbnail shaky my-shadow"
-                             src="images/Programming_school - 1.png"
-                             alt="Programming_school"></a>
+                    <img class="thumbnail shaky my-shadow open-overlay" alt="Programming School"
+                         data-overlay="section6Overlay" src="images/Programming_school - 1.png">
                     <a href="http://programmingschool-env.mmpawuepbg.eu-central-1.elasticbeanstalk.com/"
-                       target="_blank"
-                       class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
+                       target="_blank" class="btn btm-sm shaky my-shadow">Uruchom projekt</a>
                 </div>
                 <h1 class="left">Programming School</h1>
                 <br>
@@ -705,11 +691,11 @@
             <hr class="shadow">
 
             <!--Section 6 screenshots curtain overlay-->
-            <div id="section6ScreenshotsCurtain" class="overlay">
+            <div id="section6Overlay" class="overlay">
 
                 <!-- Button to close the overlay navigation -->
-                <a class="closebtn" href="javascript:closeCurtain('section6ScreenshotsCurtain');"><i
-                        class="fa fa-close"></i></a>
+                <a class="closebtn close-overlay" data-overlay="section6Overlay">
+                    <i class="fa fa-close"></i></a>
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
@@ -761,7 +747,7 @@
                     estetyce nawet nie wspominając.
                 <ul>
                     <li>była to dobra okazja do usprawnienia metodologii mojej pracy - np.
-                        korzystanie z npm czy modułów ES6 jeśli chodzi o Javascript
+                        korzystanie z modułów ES6, npm czy webpacka jeśli chodzi o Javascript
                     </li>
                     <li>zapoznałem się również z podstawowymi koncepcjami frameworku Bootstrap 4 -
                         siatka (grid), responsywność, fluid layout i nauczyłem się stosować
