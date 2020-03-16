@@ -330,11 +330,14 @@ body.fade-out {
 }
 
 .overlay .dropdown-menu {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: #FA8334 1px solid;
+    border-radius: 5px;
 }
 
 .overlay .dropdown-item {
     font-size: 1em;
+    margin: 0;
 }
 
 .overlay .dropdown-divider {

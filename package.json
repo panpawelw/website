@@ -4,7 +4,9 @@
   "description": "my portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/webpack index.js --mode=development"
+    "test": "webpack --progress --mode=development",
+    "watch": "webpack --progress --watch --mode=development",
+    "server": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
