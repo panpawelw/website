@@ -10,7 +10,7 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     height: 100%;
     opacity: 1;
-    transition: 1s opacity;
+    transition: 2.5s opacity ease-in-out;
 }
 
 body.fade-out {
@@ -631,8 +631,7 @@ body.fade-out {
     border-radius: 5px;
     margin-right: 5px;
     margin-bottom: 7em;
-    /*width: 75%;*/
-    /*margin-left: auto;*/
+    overflow: hidden;
 }
 
 .tilt-in-fwd-br {
@@ -665,77 +664,10 @@ body.fade-out {
     }
 }
 
-.carousel-inner img {
-    object-fit: scale-down;
-    max-height: 90vh;
-    max-width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
+#sb-wrapper {
+    width: 100%;
     margin: auto;
-}
-
-.carousel-indicators {
-    z-index: 1;
-}
-
-.carousel-indicators li {
-    background-color: rgba(233, 228, 157, 0.5);
-}
-
-.carousel-indicators .active {
-    background-color: #FA8334;
-    z-index: 1;
-}
-
-.carousel-caption {
-    color: #E9E49D;
-}
-
-.carousel-caption.upper {
-    top: 0;
-    bottom: auto;
-}
-
-.carousel-caption.lower {
-    top: auto;
-    bottom: 2em;
-}
-
-/* carousel previous and next button styling */
-
-/*.carousel-control-prev,*/
-/*.carousel-control-next {*/
-/*    color: #fff;*/
-/*}*/
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    outline: black;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    background-image: none;
-}
-
-.carousel-control-next-icon:after {
-    content: ">";
-    font-size: 50px;
-    color: #E9E49D;
-    text-shadow: -2px -2px 0 #2C3312,
-    2px -2px 0 #2C3312,
-    -2px 2px 0 #2C3312,
-    2px 2px 0 #2C3312;
-}
-
-.carousel-control-prev-icon:after {
-    content: "<";
-    font-size: 50px;
-    color: #E9E49D;
-    text-shadow: -2px -2px 0 #2C3312,
-    2px -2px 0 #2C3312,
-    -2px 2px 0 #2C3312,
-    2px 2px 0 #2C3312;
+    padding: 10em 20em 0 20em;
 }
 
 /* text sections */
@@ -754,7 +686,7 @@ hr {
     background: linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, .75) 50%, hsla(0, 0%, 0%, 0) 100%);
 }
 
-hr.shadow {
+hr.hr-shadow {
     margin-top: 3px;
     margin-bottom: 0.5em;
     border: 0;

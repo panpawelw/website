@@ -6,6 +6,7 @@ import jump from 'jump.js';
 import './main.css';
 
 $(document).ready(function () {
+
     $(function() {
 
         var Page = (function() {
@@ -56,15 +57,15 @@ $(document).ready(function () {
 
     });
 
-    const win = $(window);
-    const navbar = document.getElementById('navbar');
-    const mainContent = document.getElementById('row');
-
     /* Fade-in effect */
     $('body').removeClass('fade-out');
 
     /* Initial animations */
     document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
+
+    const win = $(window);
+    const navbar = document.getElementById('navbar');
+    const mainContent = document.getElementById('row');
 
     /* Event listeners for side navigation links */
     $('.sidenav-text').on('click', function(){

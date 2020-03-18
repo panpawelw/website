@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Volkhov:400italic,700);
 
-#theCarousel *,
-#theCarousel *:after,
-#theCarousel *:before {
+*,
+*:after,
+*:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -11,17 +11,18 @@
 }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-#theCarousel .clearfix:after {
+.clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
 /* General Demo Style */
-#theCarousel a {
-	color: #000;
-	text-decoration: none;
-}
+
+/*a {*/
+/*	color: #000;*/
+/*	text-decoration: none;*/
+/*}*/
 
 #theCarousel h1, h2, h5 {
 	margin: 20px 20px 30px 20px;
@@ -43,7 +44,7 @@
 }
 
 /* Header Style */
-#theCarousel .codrops-top {
+.codrops-top {
 	line-height: 24px;
 	font-size: 11px;
 	background: #fff;
@@ -55,35 +56,35 @@
 	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
 }
 
-#theCarousel .codrops-top a {
+.codrops-top a {
 	padding: 0px 10px;
 	letter-spacing: 1px;
 	color: #333;
 	display: inline-block;
 }
 
-#theCarousel .codrops-top a:hover {
+.codrops-top a:hover {
 	background: rgba(255,255,255,0.6);
 }
 
-#theCarousel .codrops-top span.right {
+.codrops-top span.right {
 	float: right;
 }
 
-#theCarousel .codrops-top span.right a {
+.codrops-top span.right a {
 	float: left;
 	display: block;
 }
 
 /* More examples buttons */
 
-#theCarousel .more {
+.more {
 	position: relative;
 	clear: both;
 	padding: 20px;
 }
 
-#theCarousel .more:before {
+.more:before {
 	content: "";
 	position: absolute;
 	background-color: #ddd1b6;
@@ -95,25 +96,25 @@
 	top: -10px;
 }
 
-#theCarousel .more ul {
+.more ul {
 	display: block;
 	height: 32px;
 	text-align: center;
 }
 
-#theCarousel .more ul li {
+.more ul li {
 	display: inline-block;
 	line-height: 24px;
 }
 
-#theCarousel .more ul li.selected a,
-#theCarousel .more ul li.selected a:hover {
+.more ul li.selected a,
+.more ul li.selected a:hover {
 	background: #ae997a;
 	color: #fff;
 	text-shadow: none;
 }
 
-#theCarousel .more ul li a {
+.more ul li a {
 	text-shadow: 1px 1px 1px #fff;
 	color: #555;
 	background: #fbf9f5;
@@ -124,13 +125,13 @@
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-#theCarousel .more ul li a:hover {
+.more ul li a:hover {
 	background: #8c795d;
 	color: #fff;
 	text-shadow: none;
 }
 
-#theCarousel p.info {
+p.info {
 	font-family: "Volkhov", serif;
 	font-style: italic;
 	color: #997f5a;
@@ -140,6 +141,6 @@
 	clear: both;
 	text-align: center;
 	width: 100%;
-	max-width: 440px;
+	max-wdith: 440px;
 	margin: 0 auto;
 }
