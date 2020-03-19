@@ -22,7 +22,7 @@
 	* Copyright 2011 @louis_remi
 	* Licensed under the MIT license.
 	*/
-	let $event = $.event,
+	var $event = $.event,
 	$special,
 	resizeTimeout;
 
@@ -35,7 +35,7 @@
 		},
 		handler: function( event, execAsap ) {
 			// Save the context
-			let context = this,
+			var context = this,
 				args = arguments,
 				dispatch = function() {
 					// set correct event type
@@ -68,10 +68,10 @@
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
 	// blank image data-uri bypasses webkit log warning (thx doug jones)
-	let BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+	var BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
 	$.fn.imagesLoaded = function( callback ) {
-		let $this = this,
+		var $this = this,
 			deferred = $.isFunction($.Deferred) ? $.Deferred() : 0,
 			hasNotify = $.isFunction(deferred.notify),
 			$images = $this.find('img').add( $this.filter('img') ),
@@ -91,7 +91,7 @@
 		}
 
 		function doneLoading() {
-			let $proper = $(proper),
+			var $proper = $(proper),
 				$broken = $(broken);
 
 			if ( deferred ) {
@@ -146,11 +146,11 @@
 				// trigger imgLoaded
 				imgLoaded( event.target, event.type === 'error' );
 			}).each( function( i, el ) {
-				let src = el.src;
+				var src = el.src;
 
 				// find out if this image has been already checked for status
 				// if it was, and src has not changed, call imgLoaded on it
-				let cached = $.data( el, 'imagesLoaded' );
+				var cached = $.data( el, 'imagesLoaded' );
 				if ( cached && cached.src === src ) {
 					imgLoaded( el, cached.isBroken );
 					return;
@@ -177,7 +177,7 @@
 	};
 
 	// global
-	let $window = $( window ),
+	var $window = $( window ),
 		Modernizr = window.Modernizr;
 
 	$.Slicebox = function( options, element ) {
@@ -222,7 +222,9 @@
 		// callbacks
 		onBeforeChange : function( position ) { return false; },
 		onAfterChange : function( position ) { return false; },
-		onReady : function() { return false; }
+		onReady : function() { return false; },
+		//reverse direction of rotation
+		reverse : false,
 	};
 
 	$.Slicebox.prototype = {
@@ -244,7 +246,7 @@
 
 				return false;
 
-			}
+			};
 
 			// suport for css 3d transforms and css transitions
 			this.support = Modernizr.csstransitions && Modernizr.csstransforms3d;
@@ -259,14 +261,14 @@
 			this.isReady = false;
 			
 			// preload the images
-			let self = this;
+			var self = this;
 			this.$el.imagesLoaded( function() {
 
 				// we need to hide the items except first one (current default value)
-				let $current = self.$items.eq( self.current ).css( 'display', 'block' ).addClass( 'sb-current' );
+				var $current = self.$items.eq( self.current ).css( 'display', 'block' ).addClass( 'sb-current' );
 
 				// get real size of image
-				let i = new Image();
+				var i = new Image();
 				i.src = $current.find( 'img' ).attr( 'src' );
 				self.realWidth = i.width;
 
@@ -336,7 +338,7 @@
 		},
 		_setSize : function() {
 
-			let $visible = this.$items.eq( this.current ).find( 'img' );
+			var $visible = this.$items.eq( this.current ).find( 'img' );
 
 			this.size = {
 				width	: $visible.width(),
@@ -354,7 +356,7 @@
 		},
 		_initEvents : function() {
 
-			let self = this;
+			var self = this;
 
 			$window.on( 'debouncedresize.slicebox', function( event ) {
 
@@ -366,7 +368,7 @@
 		},
 		_startSlideshow: function() {
 
-			let self = this;
+			var self = this;
 
 			this.slideshow = setTimeout( function() {
 
@@ -441,7 +443,7 @@
 		},
 		_fade : function( dir ) {
 
-			let self = this,
+			var self = this,
 				$visible = this.$items.eq( this.prev ),
 				h = $visible.find( 'img' ).height();
 
@@ -477,7 +479,7 @@
 			//   ...	number of slices defined in options
 			// </div>
 
-			let orientation = this.options.orientation;
+			var orientation = this.options.orientation;
 
 			if( orientation === 'r' ) {
 
@@ -493,7 +495,7 @@
 			
 			this._validate();
 			
-			let boxStyle = {
+			var boxStyle = {
 					'width' : this.size.width,
 					'height' : this.size.height,
 					'perspective' : this.options.perspective + 'px'
@@ -514,9 +516,9 @@
 
 			this.$el.css( 'overflow', 'visible' );
 
-			for( let i = 0; i < this.options.cuboidsCount; ++i ) {
+			for( var i = 0; i < this.options.cuboidsCount; ++i ) {
 
-				let cuboid = new $.Cuboid( config, i );
+				var cuboid = new $.Cuboid( config, i );
 				
 				this.$box.append( cuboid.getEl() );
 
@@ -530,9 +532,9 @@
 			// hide current item
 			this.$items.eq( this.prev ).removeClass( 'sb-current' ).hide();
 
-			for( let i = 0; i < this.options.cuboidsCount; ++i ) {
+			for( var i = 0; i < this.options.cuboidsCount; ++i ) {
 
-				let cuboid = this.cuboids[ i ],
+				var cuboid = this.cuboids[ i ],
 					self = this;
 
 				cuboid.rotate( function( pos ) {
@@ -542,7 +544,7 @@
 						self.$el.css( 'overflow', 'hidden' );
 						self.isAnimating = false;
 						self.$box.remove();
-						let $current = self.$items.eq( self.current );
+						var $current = self.$items.eq( self.current );
 						$current.css( 'display', 'block' ); // show() makes it inline style
 						setTimeout(function() {
 							$current.addClass( 'sb-current' );
@@ -671,7 +673,7 @@
 
 			// style for the cuboid element
 			// set z-indexes based on the cuboid's position
-			let middlepos = Math.ceil( this.config.cuboidsCount / 2 ),
+			var middlepos = Math.ceil( this.config.cuboidsCount / 2 ),
 				positionStyle = this.pos < middlepos ? {
 					zIndex : ( this.pos + 1 ) * 100,
 					left : ( this.config.o === 'v' ) ? this.size.width * this.pos : 0,
@@ -693,14 +695,17 @@
 				'transition' : 'transform ' + this.config.speed + 'ms ' + this.config.easing
 			}, positionStyle, this.size );
 
+			var rotationDirection = this.config.reverse ? '' : '-'; //default negative
+			var oppositeRotationDirection = this.config.reverse ? '-' : ''; //default positive
+
 			this.animationStyles = {
 				side1 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px )' },
-				side2 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -90deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -90deg )' },
-				side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -180deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -180deg )' },
-				side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -270deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -270deg )' }
+				side2 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '90deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '90deg )' },
+				side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '180deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '180deg )' },
+				side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '270deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '270deg )' }
 			};
 
-			let measure = ( this.config.o === 'v' ) ? this.size.height : this.size.width;
+			var measure = ( this.config.o === 'v' ) ? this.size.height : this.size.width;
 
 			this.sidesStyles = {
 				frontSideStyle : {
@@ -713,35 +718,35 @@
 					width : this.size.width,
 					height : this.size.height,
 					backgroundColor : this.config.colorHiddenSides,
-					transform : 'rotate3d( 0, 1, 0, 180deg ) translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( 180deg )'
+					transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '180deg ) translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( ' + oppositeRotationDirection + '180deg )'
 				},
 				rightSideStyle : {
 					width : measure,
 					height : ( this.config.o === 'v' ) ? this.size.height : this.size.height + this.extra,
 					left : ( this.config.o === 'v' ) ? this.size.width / 2 - this.size.height / 2 : 0,
 					backgroundColor : this.config.colorHiddenSides,
-					transform : 'rotate3d( 0, 1, 0, 90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
+					transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
 				},
 				leftSideStyle : {
 					width : measure,
 					height : ( this.config.o === 'v' ) ? this.size.height : this.size.height + this.extra,
 					left : ( this.config.o === 'v' ) ? this.size.width / 2 - this.size.height / 2  : 0,
 					backgroundColor : this.config.colorHiddenSides,
-					transform : 'rotate3d( 0, 1, 0, -90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
+					transform : 'rotate3d( 0, 1, 0, ' + rotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
 				},
 				topSideStyle : {
 					width : ( this.config.o === 'v' ) ? this.size.width + this.extra : this.size.width,
 					height : measure,
 					top : ( this.config.o === 'v' ) ? 0 : this.size.height / 2 - this.size.width / 2,
 					backgroundColor : this.config.colorHiddenSides,
-					transform : 'rotate3d( 1, 0, 0, 90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
+					transform : 'rotate3d( 1, 0, 0, ' + oppositeRotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
 				},
 				bottomSideStyle : {
 					width : ( this.config.o === 'v' ) ? this.size.width + this.extra : this.size.width,
 					height : measure,
 					top : ( this.config.o === 'v' ) ? 0 : this.size.height / 2 - this.size.width / 2,
 					backgroundColor : this.config.colorHiddenSides,
-					transform : 'rotate3d( 1, 0, 0, -90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
+					transform : 'rotate3d( 1, 0, 0, ' + rotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
 				}
 			};
 
@@ -764,7 +769,7 @@
 		},
 		_showImage : function( imgPos ) {
 
-			let sideIdx,
+			var sideIdx,
 				$item = this.config.items.eq( imgPos ),
 				imgParam = {
 					'background-size' : this.config.size.width + 'px ' + this.config.size.height + 'px'
@@ -779,7 +784,7 @@
 				case 3 : sideIdx = 1; break;
 				case 4 : sideIdx = ( this.config.o === 'v' ) ? 5 : 3; break;
 
-			}
+			};
 
 			imgParam.backgroundPosition = ( this.config.o === 'v' ) ? - ( this.pos * this.size.width ) + 'px 0px' : '0px -' + ( this.pos * this.size.height ) + 'px';
 			this.$el.children().eq( sideIdx ).css( imgParam );
@@ -787,7 +792,7 @@
 		},
 		rotate : function( callback ) {
 
-			let self = this, animationStyle;
+			var self = this, animationStyle;
 
 			setTimeout(function() {
 
@@ -798,7 +803,7 @@
 						case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
 						case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
 						case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
-					}
+					};
 				
 				}
 				else {
@@ -808,13 +813,13 @@
 						case 2 : animationStyle = self.animationStyles.side1; self.side = 1; break;
 						case 3 : animationStyle = self.animationStyles.side2; self.side = 2; break;
 						case 4 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-					}
+					};
 
 				}
 				
 				self._showImage( self.config.current );
 				
-				let animateOut 	= {}, animateIn	= {};
+				var animateOut 	= {}, animateIn	= {};
 				
 				if( self.config.o === 'v' ) {
 
@@ -845,7 +850,7 @@
 
 	};
 	
-	let logError = function( message ) {
+	var logError = function( message ) {
 
 		if ( window.console ) {
 
@@ -857,11 +862,11 @@
 	
 	$.fn.slicebox = function( options ) {
 
-		let self = $.data( this, 'slicebox' );
+		var self = $.data( this, 'slicebox' );
 		
 		if ( typeof options === 'string' ) {
 			
-			let args = Array.prototype.slice.call( arguments, 1 );
+			var args = Array.prototype.slice.call( arguments, 1 );
 			
 			this.each(function() {
 			

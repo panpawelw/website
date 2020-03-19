@@ -9,11 +9,11 @@ $(document).ready(function () {
 
     $(function() {
 
-        var Page = (function() {
+        let Page = (function() {
 
-            var $navArrows = $( '#nav-arrows' ).hide(),
+            let $navArrows = $( '#nav-arrows' ).hide(),
                 $shadow = $( '#shadow' ).hide(),
-                slicebox = $( '#sb-slider' ).slicebox( {
+                slicebox = $( '#sb-slider' ).slicebox({
                     onReady : function() {
 
                         $navArrows.show();
@@ -22,31 +22,26 @@ $(document).ready(function () {
                     },
                     orientation : 'r',
                     cuboidsRandom : true,
-                    disperseFactor : 30
-                } ),
+                    disperseFactor : 20,
+                    reverse : true
+                }),
 
                 init = function() {
 
-                    initEvents();
+                        // add navigation events
+                        $navArrows.children( ':first' ).on( 'click', function() {
 
-                },
-                initEvents = function() {
+                            slicebox.next();
+                            return false;
 
-                    // add navigation events
-                    $navArrows.children( ':first' ).on( 'click', function() {
+                        } );
 
-                        slicebox.next();
-                        return false;
+                        $navArrows.children( ':last' ).on( 'click', function() {
 
-                    } );
+                            slicebox.previous();
+                            return false;
 
-                    $navArrows.children( ':last' ).on( 'click', function() {
-
-                        slicebox.previous();
-                        return false;
-
-                    } );
-
+                        } );
                 };
 
             return { init : init };
@@ -375,7 +370,9 @@ function zoomScreenshot(screenshot) {
         // callbacks
         onBeforeChange : function( position ) { return false; },
         onAfterChange : function( position ) { return false; },
-        onReady : function() { return false; }
+        onReady : function() { return false; },
+        //reverse direction of rotation
+        reverse : false,
     };
 
     $.Slicebox.prototype = {
@@ -846,11 +843,14 @@ function zoomScreenshot(screenshot) {
                 'transition' : 'transform ' + this.config.speed + 'ms ' + this.config.easing
             }, positionStyle, this.size );
 
+            let rotationDirection = this.config.reverse ? '' : '-'; //default negative
+            let oppositeRotationDirection = this.config.reverse ? '-' : ''; //default positive
+
             this.animationStyles = {
                 side1 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px )' },
-                side2 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -90deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -90deg )' },
-                side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -180deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -180deg )' },
-                side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, -270deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, -270deg )' }
+                side2 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '90deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '90deg )' },
+                side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '180deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '180deg )' },
+                side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '270deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '270deg )' }
             };
 
             let measure = ( this.config.o === 'v' ) ? this.size.height : this.size.width;
@@ -866,35 +866,35 @@ function zoomScreenshot(screenshot) {
                     width : this.size.width,
                     height : this.size.height,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 0, 1, 0, 180deg ) translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( 180deg )'
+                    transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '180deg ) translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( ' + oppositeRotationDirection + '180deg )'
                 },
                 rightSideStyle : {
                     width : measure,
                     height : ( this.config.o === 'v' ) ? this.size.height : this.size.height + this.extra,
                     left : ( this.config.o === 'v' ) ? this.size.width / 2 - this.size.height / 2 : 0,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 0, 1, 0, 90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
+                    transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
                 },
                 leftSideStyle : {
                     width : measure,
                     height : ( this.config.o === 'v' ) ? this.size.height : this.size.height + this.extra,
                     left : ( this.config.o === 'v' ) ? this.size.width / 2 - this.size.height / 2  : 0,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 0, 1, 0, -90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
+                    transform : 'rotate3d( 0, 1, 0, ' + rotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.width / 2 ) + 'px )'
                 },
                 topSideStyle : {
                     width : ( this.config.o === 'v' ) ? this.size.width + this.extra : this.size.width,
                     height : measure,
                     top : ( this.config.o === 'v' ) ? 0 : this.size.height / 2 - this.size.width / 2,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 1, 0, 0, 90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
+                    transform : 'rotate3d( 1, 0, 0, ' + oppositeRotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
                 },
                 bottomSideStyle : {
                     width : ( this.config.o === 'v' ) ? this.size.width + this.extra : this.size.width,
                     height : measure,
                     top : ( this.config.o === 'v' ) ? 0 : this.size.height / 2 - this.size.width / 2,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 1, 0, 0, -90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
+                    transform : 'rotate3d( 1, 0, 0, ' + rotationDirection + '90deg ) translate3d( 0, 0, ' + ( this.size.height / 2 ) + 'px )'
                 }
             };
 
@@ -944,25 +944,32 @@ function zoomScreenshot(screenshot) {
 
             setTimeout(function() {
 
-                if( self.config.direction === 'next' ) {
+                // if( self.config.direction === 'next' ) {
+                //
+                //     switch( self.side ) {
+                //         case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
+                //         case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
+                //         case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
+                //         case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
+                //     }
+                //
+                // }
+                // else {
+                //
+                //     switch( self.side ) {
+                //         case 1 : animationStyle = self.animationStyles.side4; self.side = 4; break;
+                //         case 2 : animationStyle = self.animationStyles.side1; self.side = 1; break;
+                //         case 3 : animationStyle = self.animationStyles.side2; self.side = 2; break;
+                //         case 4 : animationStyle = self.animationStyles.side3; self.side = 3; break;
+                //     }
+                //
+                // }
 
-                    switch( self.side ) {
-                        case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
-                        case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-                        case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
-                        case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
-                    }
-
-                }
-                else {
-
-                    switch( self.side ) {
-                        case 1 : animationStyle = self.animationStyles.side4; self.side = 4; break;
-                        case 2 : animationStyle = self.animationStyles.side1; self.side = 1; break;
-                        case 3 : animationStyle = self.animationStyles.side2; self.side = 2; break;
-                        case 4 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-                    }
-
+                switch( self.side ) {
+                    case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
+                    case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
+                    case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
+                    case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
                 }
 
                 self._showImage( self.config.current );
