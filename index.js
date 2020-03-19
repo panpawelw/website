@@ -23,7 +23,6 @@ $(document).ready(function () {
                     orientation : 'r',
                     cuboidsRandom : true,
                     disperseFactor : 20,
-                    reverse : true
                 }),
 
                 init = function() {
@@ -637,7 +636,7 @@ function zoomScreenshot(screenshot) {
 
             if( this.options.cuboidsRandom ) {
 
-                this.options.cuboidsCount = Math.floor( Math.random() * this.options.maxCuboidsCount + 1 );
+                this.options.cuboidsCount = Math.floor((Math.random() * 3) + 1) * 2 + 1;
 
             }
 
@@ -729,6 +728,7 @@ function zoomScreenshot(screenshot) {
         // public method: shows next image
         next : function() {
 
+            this.options.reverse = true;
             this._stopSlideshow();
             this._navigate( 'next' );
 
@@ -736,6 +736,7 @@ function zoomScreenshot(screenshot) {
         // public method: shows previous image
         previous : function() {
 
+            this.options.reverse = false;
             this._stopSlideshow();
             this._navigate( 'prev' );
 
@@ -944,32 +945,11 @@ function zoomScreenshot(screenshot) {
 
             setTimeout(function() {
 
-                // if( self.config.direction === 'next' ) {
-                //
-                //     switch( self.side ) {
-                //         case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
-                //         case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-                //         case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
-                //         case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
-                //     }
-                //
-                // }
-                // else {
-                //
-                //     switch( self.side ) {
-                //         case 1 : animationStyle = self.animationStyles.side4; self.side = 4; break;
-                //         case 2 : animationStyle = self.animationStyles.side1; self.side = 1; break;
-                //         case 3 : animationStyle = self.animationStyles.side2; self.side = 2; break;
-                //         case 4 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-                //     }
-                //
-                // }
-
                 switch( self.side ) {
-                    case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
-                    case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
-                    case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
-                    case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
+                   case 1 : animationStyle = self.animationStyles.side2; self.side = 2; break;
+                   case 2 : animationStyle = self.animationStyles.side3; self.side = 3; break;
+                   case 3 : animationStyle = self.animationStyles.side4; self.side = 4; break;
+                   case 4 : animationStyle = self.animationStyles.side1; self.side = 1; break;
                 }
 
                 self._showImage( self.config.current );
