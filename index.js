@@ -62,7 +62,7 @@ $(document).ready(function () {
     const mainContent = document.getElementById('row');
 
     /* Event listeners for side navigation links */
-    $('.sidenav-text').on('click', function(){
+    $('.anchor').on('click', function(){
        scroll(this.getAttribute('href'));
     });
 
@@ -107,6 +107,10 @@ function scroll(target) {
     let offset = -90;
     if(document.getElementById('navbar').classList.contains('embedded')) {
         offset = -160;
+    }
+    if(target==='#theCarousel') {
+        console.log('karuzela!');
+        offset = -65;
     }
     jump(target, {
         duration: 500,

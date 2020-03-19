@@ -10,7 +10,7 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     height: 100%;
     opacity: 1;
-    transition: 2.5s opacity ease-in-out;
+    transition: 2s opacity ease-in;
 }
 
 body.fade-out {
@@ -626,7 +626,7 @@ body.fade-out {
 /* main content space */
 .main {
     margin: 0;
-    padding: 0 0 0 0;
+    padding: 0 0 0 1.5em;
     overflow: auto;
 }
 
@@ -983,15 +983,15 @@ hr.hr-shadow {
     }
 }
 
-/* prevent main content shift when sidebar is not displayed */
-@media screen and (min-width: 991px) {
+/*!* prevent main content shift when sidebar is not displayed *!*/
+/*@media screen and (min-width: 991px) {*/
 
-    .main {
-        margin: 0;
-        padding: 0 0 0 1em;
-        overflow: auto;
-    }
-}
+/*    .main {*/
+/*        margin: 0;*/
+/*        padding: 0 0 0 1em;*/
+/*        overflow: auto;*/
+/*    }*/
+/*}*/
 
 /* text sizing for large screens */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
