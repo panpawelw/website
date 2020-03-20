@@ -3,7 +3,11 @@ import $ from 'jquery';
 import jQuery from 'jquery';
 import 'popper.js';
 import jump from 'jump.js';
+import './slicebox/js/modernizr.js';
 import './main.css';
+import './slicebox/css/slicebox.css'
+import './slicebox/css/demo.css'
+import './slicebox/css/custom.css'
 
 $(document).ready(function () {
 
@@ -107,10 +111,6 @@ function scroll(target) {
     let offset = -90;
     if(document.getElementById('navbar').classList.contains('embedded')) {
         offset = -160;
-    }
-    if(target==='#theCarousel') {
-        console.log('karuzela!');
-        offset = -65;
     }
     jump(target, {
         duration: 500,
