@@ -2,6 +2,7 @@ import 'bootstrap';
 import $ from 'jquery';
 import 'popper.js';
 import jump from 'jump.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import './slicebox/css/slicebox.css'
 import './slicebox/css/demo.css'
@@ -63,7 +64,7 @@ $(document).ready(function () {
 
     const win = $(window);
     const navbar = document.getElementById('navbar');
-    const mainContent = document.getElementById('row');
+    const row = document.getElementById('row');
 
     /* Event listeners for carousel and side navigation links */
     $('.anchor').on('click', function(){
@@ -91,15 +92,18 @@ $(document).ready(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 200 && navbar.classList.contains('embedded')) {
-            navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
+        if (scrollPosition > 150 && navbar.classList.contains('embedded')) {
+            navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded');
             navbar.classList.add('separated', 'fixed-top');
+            row.style.paddingTop = '60px';
+
         }
-        if (scrollPosition <= 200 && navbar.classList.contains('separated')) {
-            navbar.style.setProperty('--navbarShort', mainContent.offsetWidth.toString() + 'px');
+        if (scrollPosition <= 150 && navbar.classList.contains('separated')) {
+            navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.add('embedded');
             navbar.classList.remove('separated', 'fixed-top');
+            row.style.paddingTop = '0';
         }
     });
 });
@@ -107,8 +111,8 @@ $(document).ready(function () {
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
     let offset = -90;
-    if(document.getElementById('navbar').classList.contains('embedded')) {
-        offset = -160;
+    if(target==='#start-here') {
+        offset = -40;
     }
     jump(target, {
         duration: 500,
