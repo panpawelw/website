@@ -17,13 +17,18 @@ $(document).ready(function () {
         let Page = (function() {
 
             let $navArrows = $( '#nav-arrows' ).hide(),
+                $navDots = $( '#nav-dots' ).hide(),
+                $nav = $navDots.children( 'span' ),
                 $shadow = $( '#shadow' ).hide(),
                 slicebox = $( '#sb-slider' ).slicebox({
                     onReady : function() {
-
                         $navArrows.show();
+                        $navDots.show();
                         $shadow.show();
-
+                    },
+                    onBeforeChange : function( pos ) {
+                        $nav.removeClass( 'nav-dot-current' );
+                        $nav.eq( pos ).addClass( 'nav-dot-current' );
                     },
                     orientation : 'r',
                     cuboidsRandom : true,
@@ -47,6 +52,26 @@ $(document).ready(function () {
 
                     } );
                 };
+
+            $nav.each( function( i ) {
+
+                $( this ).on( 'click', function( event ) {
+
+                    var $dot = $( this );
+
+                    if( !slicebox.isActive() ) {
+
+                        $nav.removeClass( 'nav-dot-current' );
+                        $dot.addClass( 'nav-dot-current' );
+
+                    }
+
+                    slicebox.jump( i + 1 );
+                    return false;
+
+                } );
+
+            } );
 
             return { init : init };
 
@@ -92,9 +117,9 @@ $(document).ready(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 150 && navbar.classList.contains('embedded')) {
+        if (scrollPosition > 150 && navbar.classList.contains('embedded')) { //* 2
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.remove('embedded');
+            navbar.classList.remove('embedded'); //*
             navbar.classList.add('separated', 'fixed-top');
             row.style.paddingTop = '60px';
 
