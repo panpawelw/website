@@ -23,31 +23,54 @@
 	display: none;
 }
 
-.nav-arrows a {
-	width: 42px;
-	height: 42px;
-	background: #cbbfae url(../images/nav.png) no-repeat top left;
+.arrow {
+	/*background-color: #617129;*/
+	/*left: 3.5%;*/
+	/*text-indent: -9000px;*/
+	/*box-shadow: 0 3px 5px 1px rgba(0,0,0,0.5);*/
+	/*background: #cbbfae url(../images/nav.png) no-repeat top left;*/
+	/*border-radius: 50%;*/
+	/*box-shadow: 0 1px 1px rgba(255,255,255,0.8);*/
 	position: absolute;
-	top: 50%;
-	left: 2px;
-	text-indent: -9000px;
+	top: 0;
+	width: 50px;
+	height: 83.15%;
+	background-color: #617129;
+	border: 1px solid #808D53;
+	box-shadow: inset 0 0 5px 0 #3A4318, 0 3px 5px 0 rgba(0,0,0,0.5);
+	color: #FA8334;
+	text-shadow: -1px -1px 1px #FB9B5C, 1px 1px 1px #7D411A;
+	margin-top: 5.3%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 0;
 	cursor: pointer;
-	margin-top: -21px;
-	opacity: 0.9;
-	border-radius: 50%;
-	box-shadow: 0 1px 1px rgba(255,255,255,0.8);
+	font-size: 15em;
 }
 
-.nav-arrows a:first-child{
-	left: auto;
-	right: 2px;
-	background-position: top right;
+.arrow:active {
+	box-shadow: inset 0 0 5px 0 #3A4318, 0 1px 1px 0 rgba(0,0,0,0.5);
+	text-shadow: -1px -1px 1px #3A4318, 1px 1px 1px #808D53;
 }
 
-.nav-arrows a:hover {
-	opacity: 1;
+.arrow-left {
+	left: 3%;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	/*border-radius: 100% / 50%;*/
+	/*border-top-left-radius: 0;*/
+	/*border-bottom-left-radius: 0;*/
 }
 
+.arrow-right {
+	right: 3%;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	/*border-radius: 100% / 50%;*/
+	/*border-top-right-radius: 0;*/
+	/*border-bottom-right-radius: 0;*/
+}
 
 .nav-dots {
 	text-align: center;
@@ -65,17 +88,17 @@
 	height: 16px;
 	border-radius: 50%;
 	margin: 3px;
-	background: #cbbfae;
+	background: #617129;
 	cursor: pointer;
 	box-shadow: 
-		0 1px 1px rgba(255,255,255,0.6), 
-		inset 0 1px 1px rgba(0,0,0,0.1);
+		0 1px 1px rgba(241, 238, 196, 0.9),
+		inset 0 1px 1px rgba(0,0,0,0.5);
 }
 
 .nav-dots span.nav-dot-current {
 	box-shadow: 
-		0 1px 1px rgba(255,255,255,0.6), 
-		inset 0 1px 1px rgba(0,0,0,0.1), 
-		inset 0 0 0 3px #cbbfae,
-		inset 0 0 0 8px #fff;
+		0 1px 1px rgba(241, 238, 196, 0.9),
+		inset 0 1px 1px rgba(0,0,0,0.5),
+		inset 0 0 0 3px #617129,
+		inset 0 0 0 8px #FA8334;
 }

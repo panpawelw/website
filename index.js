@@ -32,7 +32,7 @@ $(document).ready(function () {
                     },
                     orientation : 'r',
                     cuboidsRandom : true,
-                    disperseFactor : 20,
+                    disperseFactor : 15,
                 }),
 
                 init = function() {
