@@ -6,6 +6,7 @@
   "scripts": {
     "test": "webpack --progress --mode=development",
     "watch": "webpack --progress --watch --mode=development",
+    "deploy": "webpack --progress --mode=production",
     "server": "webpack-dev-server --open"
   },
   "repository": {

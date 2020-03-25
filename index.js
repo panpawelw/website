@@ -40,14 +40,14 @@ $(document).ready(function () {
                     // add navigation events
                     $navArrows.children( ':first' ).on( 'click', function() {
 
-                        slicebox.next();
+                        slicebox.previous();
                         return false;
 
                     } );
 
                     $navArrows.children( ':last' ).on( 'click', function() {
 
-                        slicebox.previous();
+                        slicebox.next();
                         return false;
 
                     } );

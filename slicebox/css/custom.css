@@ -9,14 +9,31 @@
 	display: none;
 }
 
-.sb-description h3 {
-	font-size: 20px;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+.sb-description-title {
+	position: relative;
+	left: -20%;
+	color: #3A4318;
+	background-color: #FA8334;
+	font-family: 'Asar', serif;
+	font-size: 1.5rem;
+	float: left;
+	animation: slide-right 0.25s forwards;
 }
 
-.sb-description h3 a {
-	color: #4a3c27;
-	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+.sb-description-content {
+	position: relative;
+	left: -30%;
+	color: #E9E49D;
+	background-color: #3A4318;
+	font-size: 1rem;
+	margin-bottom: 0;
+	float: left;
+	clear: left;
+	animation: slide-right 0.25s forwards;
+}
+
+@keyframes slide-right {
+	100% { left:0; }
 }
 
 .nav-arrows {
