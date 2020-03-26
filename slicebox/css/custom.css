@@ -17,7 +17,10 @@
 	font-family: 'Asar', serif;
 	font-size: 1.5rem;
 	float: left;
-	animation: slide-right 0.25s forwards;
+	animation: slide-right 0.2s forwards;
+	padding: 0 1em;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .sb-description-content {
@@ -29,11 +32,29 @@
 	margin-bottom: 0;
 	float: left;
 	clear: left;
-	animation: slide-right 0.25s forwards;
+	animation: slide-right 0.2s forwards;
+	padding: 0 1em;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 @keyframes slide-right {
 	100% { left:0; }
+}
+
+.sb-description-btn {
+	position: relative;
+	right: -30%;
+	background-color: transparent;
+	margin-bottom: 0;
+	float: right;
+	clear: left;
+	animation: slide-left 0.25s forwards;
+	padding-right: 7em;
+}
+
+@keyframes slide-left {
+	100% { right:0; }
 }
 
 .nav-arrows {
