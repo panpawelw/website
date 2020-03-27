@@ -402,22 +402,20 @@ body.fade-out {
     float: left;
 }
 
-/* */
+/* ??? */
 .container {
     padding: 0;
 }
 
 /* jumbotron layout */
 .jumbotron {
-    /*margin-top: 15em;*/
-    /*margin-bottom: 3em;*/
-    /*padding: 0;*/
-    /*background-size: 100% 100%;*/
-    /*-moz-background-size: 100% 100%;*/
-    /*-webkit-background-size: 100% 100%;*/
-    /*-o-background-size: 100% 100%;*/
-    /*height: 33vh;*/
-    background: transparent;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-color: transparent;
+    height: 90vh;
+    padding: 0;
 }
 
 #jumbotron {

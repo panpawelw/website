@@ -117,7 +117,7 @@ $(document).ready(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 150 && navbar.classList.contains('embedded')) { //* 2
+        if (scrollPosition > 150 && navbar.classList.contains('embedded')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded'); //*
             navbar.classList.add('separated', 'fixed-top');
