@@ -18,7 +18,7 @@ $(document).ready(function () {
 
             let $navArrows = $( '#nav-arrows' ).hide(),
                 $navDots = $( '#nav-dots' ).hide(),
-                $nav = $navDots.children( 'span' ),
+                $nav = $navDots.children( 'span.dot' ),
                 $shadow = $( '#shadow' ).hide(),
                 slicebox = $( '#sb-slider' ).slicebox({
                     onReady : function() {
