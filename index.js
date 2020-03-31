@@ -12,68 +12,80 @@ import './slicebox/js/jquery.slicebox.js'
 $(document).ready(function () {
 
     /* Initialize Slicebox carousel */
-    $(function() {
+    $(function () {
 
-        let Page = (function() {
+        let Page = (function () {
 
-            let $navArrows = $( '#nav-arrows' ).hide(),
-                $navDots = $( '#nav-dots' ).hide(),
-                $nav = $navDots.children( 'span.dot' ),
-                $shadow = $( '#shadow' ).hide(),
-                slicebox = $( '#sb-slider' ).slicebox({
-                    onReady : function() {
+            let $navArrows = $('#nav-arrows').hide(),
+                $navDots = $('#nav-dots').hide(),
+                $nav = $navDots.children('span'),
+                $shadow = $('#shadow').hide(),
+                slicebox = $('#sb-slider').slicebox({
+                    onReady: function () {
                         $navArrows.show();
                         $navDots.show();
                         $shadow.show();
                     },
-                    onBeforeChange : function( pos ) {
-                        $nav.removeClass( 'nav-dot-current' );
-                        $nav.eq( pos ).addClass( 'nav-dot-current' );
+                    onBeforeChange: function (pos) {
+                        $nav.removeClass('nav-dot-current');
+                        $nav.eq(pos).addClass('nav-dot-current');
                     },
-                    orientation : 'r',
-                    cuboidsRandom : true,
-                    disperseFactor : 15,
+                    orientation: 'r',
+                    cuboidsRandom: true,
+                    disperseFactor: 15,
+                    autoplay: true,
+                    interval: 4000,
                 }),
 
-                init = function() {
+                init = function () {
+
+                    slicebox.isPlaying = true;
 
                     // add navigation events
-                    $navArrows.children( ':first' ).on( 'click', function() {
+                    $navArrows.children(':first').on('click', function () {
 
                         slicebox.previous();
                         return false;
 
-                    } );
+                    });
 
-                    $navArrows.children( ':last' ).on( 'click', function() {
+                    $navArrows.children(':last').on('click', function () {
 
                         slicebox.next();
                         return false;
 
-                    } );
+                    });
+
+                    $('#play').on('click', function () {
+                        slicebox.play();
+                    });
+
+                    $('#pause').on('click', function () {
+                        slicebox.pause();
+                    });
                 };
 
-            $nav.each( function( i ) {
+            $nav.each(function (i) {
 
-                $( this ).on( 'click', function( event ) {
+                $(this).on('click', function (event) {
 
-                    var $dot = $( this );
+                    var $dot = $(this);
 
-                    if( !slicebox.isActive() ) {
+                    if (!slicebox.isActive()) {
 
-                        $nav.removeClass( 'nav-dot-current' );
-                        $dot.addClass( 'nav-dot-current' );
+                        $nav.removeClass('nav-dot-current');
+                        $dot.addClass('nav-dot-current');
 
                     }
 
-                    slicebox.jump( i + 1 );
+                    slicebox.jump(i + 1);
                     return false;
 
-                } );
+                });
 
-            } );
+            });
 
-            return { init : init };
+            return {init: init};
 
         })();
 
@@ -92,22 +104,22 @@ $(document).ready(function () {
     const row = document.getElementById('row');
 
     /* Event listeners for carousel and side navigation links */
-    $('.anchor').on('click', function(){
+    $('.anchor').on('click', function () {
         scroll(this.getAttribute('href'));
     });
 
     /* Event listeners for thumbnails */
-    $('.screenshotThumbnail').on('click', function() {
+    $('.screenshotThumbnail').on('click', function () {
         zoomScreenshot(this);
     });
 
     /* Event listeners for elements that trigger overlay showing*/
-    $('.open-overlay').on('click', function(){
+    $('.open-overlay').on('click', function () {
         openOverlay(this.dataset.overlay);
     });
 
     /* Event listeners for elements that trigger overlay hiding*/
-    $('.close-overlay').on('click', function(){
+    $('.close-overlay').on('click', function () {
         closeOverlay(this.dataset.overlay);
     });
 
@@ -136,7 +148,7 @@ $(document).ready(function () {
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
     let offset = -90;
-    if(target==='#start-here') {
+    if (target === '#start-here') {
         offset = -40;
     }
     jump(target, {

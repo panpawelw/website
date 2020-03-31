@@ -627,7 +627,7 @@ import './modernizr.js';
             }
 
         },
-        // publicc methos: pauses the slideshow
+        // public method: pauses the slideshow
         pause : function() {
 
             if( this.isPlaying ) {

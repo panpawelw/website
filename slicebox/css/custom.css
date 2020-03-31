@@ -27,7 +27,7 @@
 	position: relative;
 	left: -30%;
 	color: #E9E49D;
-	background-color: #3A4318;
+	background-color: #617129;
 	font-size: 1rem;
 	margin-bottom: 0;
 	float: left;
@@ -92,29 +92,44 @@
 	text-align: center;
 	position: absolute;
 	bottom: -5px;
-	height: 30px;
+	height: 42px;
 	width: 100%;
 	left: 0;
 	display: none;
 }
 
-.nav-dots span.dot {
+.nav-dots span {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	border-radius: 50%;
 	margin: 3px;
 	background: #617129;
 	cursor: pointer;
-	box-shadow: 
+	box-shadow:
 		0 1px 1px rgba(241, 238, 196, 0.9),
-		inset 0 1px 1px rgba(0,0,0,0.5);
+		inset 0 1px 1px rgba(0,0,0,0.9);
+	border-radius: 50%;
 }
 
 .nav-dots span.nav-dot-current {
 	box-shadow: 
 		0 1px 1px rgba(241, 238, 196, 0.9),
-		inset 0 1px 1px rgba(0,0,0,0.5),
-		inset 0 0 0 3px #617129,
+		inset 0 1px 1px rgba(0,0,0,0.9),
+		inset 0 0 0 2px #617129,
 		inset 0 0 0 8px #FA8334;
+}
+
+#play, #pause {
+	display: inline-block;
+	font-size: 7.25em;
+	margin: 0 20px;
+}
+
+#play i, #pause i {
+	color: #FA8334;
+	text-shadow: -1px -1px 1px #FDCDAD, 1px 1px 1px #643414;
+}
+
+#play i:active, #pause i:active {
+	text-shadow: -1px -1px 1px #643414, 1px 1px 1px #FDCDAD;
 }
