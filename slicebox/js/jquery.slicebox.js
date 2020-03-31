@@ -285,6 +285,7 @@ import './modernizr.js';
 
                 if( self.options.autoplay ) {
 
+                    self.options.reverse = true;
                     self._startSlideshow();
 
                 }
