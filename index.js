@@ -57,7 +57,7 @@ $(document).ready(function () {
 
                 $( this ).on( 'click', function( event ) {
 
-                    var $dot = $( this );
+                    let $dot = $( this );
 
                     if( !slicebox.isActive() ) {
 
@@ -117,14 +117,14 @@ $(document).ready(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 150 && navbar.classList.contains('embedded')) {
+        if (scrollPosition > 900 && navbar.classList.contains('embedded')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded'); //*
             navbar.classList.add('separated', 'fixed-top');
             row.style.paddingTop = '60px';
 
         }
-        if (scrollPosition <= 150 && navbar.classList.contains('separated')) {
+        if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.add('embedded');
             navbar.classList.remove('separated', 'fixed-top');

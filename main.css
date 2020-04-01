@@ -31,6 +31,44 @@ body.fade-out {
     will-change: transform;
 }
 
+/* jumbotron layout */
+.jumbotron {
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-color: transparent;
+    height: 90vh;
+    padding: 0;
+}
+
+#jumbotron {
+    /*padding: 1em;*/
+    /*margin-right: 0;*/
+    /*background: #FA8334 url("images/jumboimg.jpg");*/
+    /*border-radius: 5px;*/
+}
+
+#skip-intro {
+    font-size: 5rem;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#skip-intro a {
+    font-size: 5rem;
+    color: black;
+}
+
+#skip-intro a:hover {
+    font-size: 5rem;
+    color: #FA8334;
+}
+
+
 /* Top navbar */
 #navbar {
     --navbarLong: 90%;
@@ -405,24 +443,6 @@ body.fade-out {
 /* ??? */
 .container {
     padding: 0;
-}
-
-/* jumbotron layout */
-.jumbotron {
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-color: transparent;
-    height: 90vh;
-    padding: 0;
-}
-
-#jumbotron {
-    /*padding: 1em;*/
-    /*margin-right: 0;*/
-    /*background: #FA8334 url("images/jumboimg.jpg");*/
-    /*border-radius: 5px;*/
 }
 
 /* main content and sidebar general*/
