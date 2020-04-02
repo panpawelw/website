@@ -42,20 +42,13 @@ body.fade-out {
     padding: 0;
 }
 
-#jumbotron {
-    /*padding: 1em;*/
-    /*margin-right: 0;*/
-    /*background: #FA8334 url("images/jumboimg.jpg");*/
-    /*border-radius: 5px;*/
-}
-
 #greeting {
     font-size: 10rem;
     font-family: 'Asar', sans-serif;
     color: #E9E49D;
     position: absolute;
     top: 25%;
-    left: 50%;
+    left: 33%;
     transform: translate(-50%, -50%);
     animation-name: pop-greeting;
     animation-timing-function: ease-in-out;
@@ -68,7 +61,10 @@ body.fade-out {
     0% {
         text-shadow: none;
     }
-    50% {
+    33% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+    }
+    66% {
         text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
         color: #E9E49D;
     }
@@ -78,9 +74,36 @@ body.fade-out {
     }
 }
 
+#slogan {
+    background: transparent;
+    color: #3A4318;
+    font-size: 1.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 35vw;
+    right: 15%;
+    min-height: 100vh;
+    perspective: 200px;
+    animation: perspective 2s cubic-bezier(.35, .06, .92, .03);
+    animation-fill-mode: forwards;
+}
+
+@keyframes perspective {
+    0% { perspective: 100px; transform: scale(.5); }
+    100% { perspective: 10000px; transform: scale(1); }
+}
+
+p {
+    transform-style: preserve-3d;
+}
+
+span {
+    display: inline-block;
+}
+
 #skip-intro {
-    font-size: 5rem;
-    color: black;
     position: absolute;
     bottom: 0;
     left: 50%;

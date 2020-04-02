@@ -11,132 +11,162 @@ import './slicebox/js/jquery.slicebox.js'
 
 $(document).ready(function () {
 
-    /* Initialize Slicebox carousel */
-    $(function() {
-
-        let Page = (function() {
-
-            let $navArrows = $( '#nav-arrows' ).hide(),
-                $navDots = $( '#nav-dots' ).hide(),
-                $nav = $navDots.children( 'span' ),
-                $shadow = $( '#shadow' ).hide(),
-                slicebox = $( '#sb-slider' ).slicebox({
-                    onReady : function() {
-                        $navArrows.show();
-                        $navDots.show();
-                        $shadow.show();
-                    },
-                    onBeforeChange : function( pos ) {
-                        $nav.removeClass( 'nav-dot-current' );
-                        $nav.eq( pos ).addClass( 'nav-dot-current' );
-                    },
-                    orientation : 'r',
-                    cuboidsRandom : true,
-                    disperseFactor : 15,
-                }),
-
-                init = function() {
-
-                    // add navigation events
-                    $navArrows.children( ':first' ).on( 'click', function() {
-
-                        slicebox.previous();
-                        return false;
-
-                    } );
-
-                    $navArrows.children( ':last' ).on( 'click', function() {
-
-                        slicebox.next();
-                        return false;
-
-                    } );
-                };
-
-            $nav.each( function( i ) {
-
-                $( this ).on( 'click', function( event ) {
-
-                    let $dot = $( this );
-
-                    if( !slicebox.isActive() ) {
-
-                        $nav.removeClass( 'nav-dot-current' );
-                        $dot.addClass( 'nav-dot-current' );
-
+    /* animate slogan */
+    let p = document.querySelector('#slogan-text');
+    p.innerHTML = p.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g,
+        '$1<span>$2</span>');
+    const spans = p.children;
+    let spanTranslateZ = new Array(spans.length);
+    for (let i = 0; i < spans.length; i++) {
+        let random = Math.floor(Math.random() * -1000);
+        spanTranslateZ[i] = random;
+        spans[i].style.transform = "translateZ(" + random + "px)";
+    }
+    document.querySelector('#slogan')
+        .addEventListener("animationend", function () {
+            [1, 2, 3, 4, 5].forEach(function (i) {
+                console.log(spanTranslateZ);
+                for (let i = 0; i < spans.length; i++) {
+                    let translateZ = spanTranslateZ[i];
+                    if (translateZ !== 0) {
+                        translateZ = Math.trunc(translateZ / 2);
+                        spanTranslateZ[i] = translateZ;
                     }
+                    spans[i].style.transform = "translateZ(" + translateZ + "px)";
+                }
+            });
+            for (const span of spans) {
+                span.style.transform = "translateZ(0)";
+            }
+        });
 
-                    slicebox.jump( i + 1 );
+/* initialize Slicebox carousel */
+$(function () {
+
+    let Page = (function () {
+
+        let $navArrows = $('#nav-arrows').hide(),
+            $navDots = $('#nav-dots').hide(),
+            $nav = $navDots.children('span'),
+            $shadow = $('#shadow').hide(),
+            slicebox = $('#sb-slider').slicebox({
+                onReady: function () {
+                    $navArrows.show();
+                    $navDots.show();
+                    $shadow.show();
+                },
+                onBeforeChange: function (pos) {
+                    $nav.removeClass('nav-dot-current');
+                    $nav.eq(pos).addClass('nav-dot-current');
+                },
+                orientation: 'r',
+                cuboidsRandom: true,
+                disperseFactor: 15,
+            }),
+
+            init = function () {
+
+                // add navigation events
+                $navArrows.children(':first').on('click', function () {
+
+                    slicebox.previous();
                     return false;
 
-                } );
+                });
 
-            } );
+                $navArrows.children(':last').on('click', function () {
 
-            return { init : init };
+                    slicebox.next();
+                    return false;
 
-        })();
+                });
+            };
 
-        Page.init();
+        $nav.each(function (i) {
 
-    });
+            $(this).on('click', function (event) {
 
-    /* Fade-in effect */
-    $('body').removeClass('fade-out');
+                let $dot = $(this);
 
-    /* Initial animations */
-    document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
+                if (!slicebox.isActive()) {
 
-    const win = $(window);
-    const navbar = document.getElementById('navbar');
-    const row = document.getElementById('row');
+                    $nav.removeClass('nav-dot-current');
+                    $dot.addClass('nav-dot-current');
 
-    /* Event listeners for carousel and side navigation links */
-    $('.anchor').on('click', function(){
-        scroll(this.getAttribute('href'));
-    });
+                }
 
-    /* Event listeners for thumbnails */
-    $('.screenshotThumbnail').on('click', function() {
-        zoomScreenshot(this);
-    });
+                slicebox.jump(i + 1);
+                return false;
 
-    /* Event listeners for elements that trigger overlay showing*/
-    $('.open-overlay').on('click', function(){
-        openOverlay(this.dataset.overlay);
-    });
+            });
 
-    /* Event listeners for elements that trigger overlay hiding*/
-    $('.close-overlay').on('click', function(){
-        closeOverlay(this.dataset.overlay);
-    });
+        });
 
-    /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
-    win.scroll(function () {
-        const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-        const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (scrollPosition / websiteHeight) * 100;
-        document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 900 && navbar.classList.contains('embedded')) {
-            navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.remove('embedded'); //*
-            navbar.classList.add('separated', 'fixed-top');
-            row.style.paddingTop = '60px';
+        return {init: init};
 
-        }
-        if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
-            navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.add('embedded');
-            navbar.classList.remove('separated', 'fixed-top');
-            row.style.paddingTop = '0';
-        }
-    });
+    })();
+
+    Page.init();
+
 });
+
+/* Fade-in effect */
+$('body').removeClass('fade-out');
+
+/* Initial animations */
+document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
+
+const win = $(window);
+const navbar = document.getElementById('navbar');
+const row = document.getElementById('row');
+
+/* Event listeners for carousel and side navigation links */
+$('.anchor').on('click', function () {
+    scroll(this.getAttribute('href'));
+});
+
+/* Event listeners for thumbnails */
+$('.screenshotThumbnail').on('click', function () {
+    zoomScreenshot(this);
+});
+
+/* Event listeners for elements that trigger overlay showing*/
+$('.open-overlay').on('click', function () {
+    openOverlay(this.dataset.overlay);
+});
+
+/* Event listeners for elements that trigger overlay hiding*/
+$('.close-overlay').on('click', function () {
+    closeOverlay(this.dataset.overlay);
+});
+
+/* detach navbar once user scrolls to main content, change it back when user scrolls back up */
+win.scroll(function () {
+    const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+    const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (scrollPosition / websiteHeight) * 100;
+    document.getElementById("my-bar").style.width = scrolled + "%";
+    if (scrollPosition > 900 && navbar.classList.contains('embedded')) {
+        navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
+        navbar.classList.remove('embedded'); //*
+        navbar.classList.add('separated', 'fixed-top');
+        row.style.paddingTop = '60px';
+
+    }
+    if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
+        navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
+        navbar.classList.add('embedded');
+        navbar.classList.remove('separated', 'fixed-top');
+        row.style.paddingTop = '0';
+    }
+});
+})
+;
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
     let offset = -90;
-    if(target==='#start-here') {
+    if (target === '#start-here') {
         offset = -40;
     }
     jump(target, {
