@@ -49,6 +49,35 @@ body.fade-out {
     /*border-radius: 5px;*/
 }
 
+#greeting {
+    font-size: 10rem;
+    font-family: 'Asar', sans-serif;
+    color: #E9E49D;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: pop-greeting;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+@keyframes pop-greeting {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+        color: #E9E49D;
+    }
+    100% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+        color: #FA8334;
+    }
+}
+
 #skip-intro {
     font-size: 5rem;
     color: black;
