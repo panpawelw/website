@@ -42,7 +42,7 @@ body.fade-out {
     padding: 0;
 }
 
-#greeting {
+#jumbotron-greeting {
     font-size: 10rem;
     font-family: 'Asar', sans-serif;
     color: #E9E49D;
@@ -50,14 +50,14 @@ body.fade-out {
     top: 25%;
     left: 33%;
     transform: translate(-50%, -50%);
-    animation-name: pop-greeting;
+    animation-name: pop-jumbotron-greeting;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
 }
 
-@keyframes pop-greeting {
+@keyframes pop-jumbotron-greeting {
     0% {
         text-shadow: none;
     }
@@ -74,7 +74,7 @@ body.fade-out {
     }
 }
 
-#slogan {
+#jumbotron-about-me {
     background: transparent;
     color: #3A4318;
     font-size: 1.5rem;
@@ -103,19 +103,34 @@ span {
     display: inline-block;
 }
 
-#skip-intro {
+#jumbotron-scroll-down-text {
+    font-size: 1.5rem;
+    font-family: 'Asar', sans-serif;
+    color: #3A4318;
+    position: absolute;
+    top: 80%;
+    left: -20%;
+    animation: text-slide-right 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-slide-right {
+    100% { left: 35%; }
+}
+
+#jumbotron-scroll-down-link {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#skip-intro a {
+#jumbotron-scroll-down-link a {
     font-size: 5rem;
     color: black;
 }
 
-#skip-intro a:hover {
+#jumbotron-scroll-down-link a:hover {
     font-size: 5rem;
     color: #FA8334;
 }

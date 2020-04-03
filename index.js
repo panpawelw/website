@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     /* ANIMATE SLOGAN */
     /* split slogan paragraph into spans (one word each) */
-    let p = document.querySelector('#slogan-text');
+    let p = document.querySelector('#jumbotron-about-me-text');
     p.innerHTML = p.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g,
         '$1<span>$2</span>');
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
     }
 
     /* at the end of animation gradually reduce translateZ values to 0 */
-    document.querySelector('#slogan')
+    document.querySelector('#jumbotron-about-me')
         .addEventListener("animationend", function () {
             for (let i = 1; i < 7; i++) {
                 setTimeout(function() {
@@ -141,9 +141,7 @@ $(document).ready(function () {
     });
 
     /* Event listeners for elements that trigger overlay hiding*/
-    $('.close-overlay').on('click', function () {
-        closeOverlay(this.dataset.overlay);
-    });
+    $('.close-overlay').on('click', function () {closeOverlay(this.dataset.overlay);});
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
     win.scroll(function () {
