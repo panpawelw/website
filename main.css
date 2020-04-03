@@ -86,7 +86,7 @@ body.fade-out {
     right: 15%;
     min-height: 100vh;
     perspective: 200px;
-    animation: perspective 2s cubic-bezier(.35, .06, .92, .03);
+    animation: perspective 2s ease-in;
     animation-fill-mode: forwards;
 }
 
