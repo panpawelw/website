@@ -115,7 +115,7 @@ span {
 }
 
 @keyframes text-slide-right {
-    100% { left: 35%; }
+    100% { left: 30%; }
 }
 
 #jumbotron-scroll-down-link {
