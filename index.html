@@ -22,30 +22,20 @@
 <!-- Jumbotron-->
 <div class="jumbotron">
     <div class="container">
-        <div id="jumbotron" class="my-shadow">
-            <div id="jumbotron-content">
-                <div id="magic-button-wrapper">
-                    <a class="magic-button shaky"
-                       href="javascript:openCurtain('aboutPageCurtain');">
-                        <h3>
-                            <span class="char-1 char">?</span>
-                            <span class="char-2 char">?</span>
-                            <span class="char-3 char">?</span>
-                            <span class="char-4 char">?</span>
-                            <span class="char-5 char">?</span>
-                            <span class="char-6 char">?</span>
-                            <span class="char-7 char">?</span>
-                            <span class="char-8 char">?</span>
-                            <span class="char-9 char">?</span>
-                            <span class="char-10 char">?</span>
-                            <span class="char-11 char">?</span>
-                            <span class="char-12 char">?</span>
-                        </h3>
-                    </a>
-                </div>
-                <span id="website-title">Hello!</span>
-            </div>
-            <p id="website-slogan">...welcome to my corner of the Internet!</p>
+        <div id="jumbotron-greeting">
+            <p>Welcome</p>
+        </div>
+        <div id="jumbotron-about-me">
+            <p id="jumbotron-about-me-text">My name is Paweł Wojtuń. I'm passionate about
+                programming. I've been learning mostly Java, Spring and front-end technologies in my
+                spare time. Now I'm looking for work experience. You can find examples of my
+                projects below.</p>
+        </div>
+        <div id="jumbotron-scroll-down-text">
+            <p>Please take a look...</p>
+        </div>
+        <div id="jumbotron-scroll-down-link">
+            <a class="anchor" href="#start-here"><i class="fa fa-angle-double-down"></i></a>
         </div>
     </div>
 </div>
@@ -365,9 +355,9 @@
                 <p>Basic calculators like general strength, maximum rep and it's percentages and
                     other (like Wilks score or powerlifting and weightlifting totals in the future)
                     are available right away. After logging in user can access the main
-                    logging functionality and will be able to create new workouts and edit or
-                    delete old ones. Later on I plan to include administrator panel for users
-                    with relevant privileges.</p>
+                    functionality and will be able to create new workouts and edit or delete old
+                    ones. Later on I plan to include administrator panel for users with relevant
+                    privileges.</p>
                 <ul>
                     <li>it's a Spring Boot application</li>
                     <li>is't been secured with Spring Security using custom login page</li>

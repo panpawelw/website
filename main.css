@@ -31,6 +31,111 @@ body.fade-out {
     will-change: transform;
 }
 
+/* jumbotron layout */
+.jumbotron {
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-color: transparent;
+    height: 90vh;
+    padding: 0;
+}
+
+#jumbotron-greeting {
+    font-size: 10rem;
+    font-family: 'Asar', sans-serif;
+    color: #E9E49D;
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    animation-name: pop-jumbotron-greeting;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+@keyframes pop-jumbotron-greeting {
+    0% {
+        text-shadow: none;
+    }
+    33% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+    }
+    66% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+        color: #E9E49D;
+    }
+    100% {
+        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
+        color: #FA8334;
+    }
+}
+
+#jumbotron-about-me {
+    background: transparent;
+    color: #3A4318;
+    font-size: 1.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 35vw;
+    right: 15%;
+    min-height: 100vh;
+    perspective: 200px;
+    animation: perspective 2s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes perspective {
+    0% { perspective: 100px; transform: scale(.5); }
+    100% { perspective: 10000px; transform: scale(1); }
+}
+
+p {
+    transform-style: preserve-3d;
+}
+
+span {
+    display: inline-block;
+}
+
+#jumbotron-scroll-down-text {
+    font-size: 1.5rem;
+    font-family: 'Asar', sans-serif;
+    color: #3A4318;
+    position: absolute;
+    top: 80%;
+    left: -20%;
+    animation: text-slide-right 2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-slide-right {
+    100% { left: 35%; }
+}
+
+#jumbotron-scroll-down-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#jumbotron-scroll-down-link a {
+    font-size: 5rem;
+    color: black;
+}
+
+#jumbotron-scroll-down-link a:hover {
+    font-size: 5rem;
+    color: #FA8334;
+}
+
+
 /* Top navbar */
 #navbar {
     --navbarLong: 90%;
@@ -402,168 +507,9 @@ body.fade-out {
     float: left;
 }
 
-/* */
+/* ??? */
 .container {
     padding: 0;
-}
-
-/* jumbotron layout */
-.jumbotron {
-    margin-top: 15em;
-    margin-bottom: 3em;
-    padding: 0;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    /*height: 33vh;*/
-    background: transparent;
-}
-
-#jumbotron {
-    padding: 1em;
-    margin-right: 0;
-    background: #FA8334 url("images/jumboimg.jpg");
-    border-radius: 5px;
-}
-
-#website-title {
-    float: left;
-    display: inline;
-    font-size: 12em;
-    vertical-align: middle;
-    font-family: 'Asar', serif;
-    font-weight: bold;
-    padding-left: 0.2em;
-    color: #2C3312;
-    position: relative;
-    top: -0.25em;
-    text-shadow: 0 1px 20px #000000;
-}
-
-#website-slogan {
-    font-size: 6em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-left: 0.5em;
-    margin-bottom: 0;
-    text-shadow: 0 1px 20px #000000;
-}
-
-#magic-button-wrapper {
-    padding: 2em;
-}
-
-#jumbotron-content {
-    overflow: hidden;
-}
-
-/* magic button layout */
-.magic-button {
-    float: left;
-    color: #E9E49D;
-    background: #E9E49D;
-    background-image: -webkit-linear-gradient(top, #E9E49D, #617129);
-    background-image: -moz-linear-gradient(top, #E9E49D, #617129);
-    background-image: -ms-linear-gradient(top, #E9E49D, #617129);
-    background-image: -o-linear-gradient(top, #E9E49D, #617129);
-    background-image: linear-gradient(to bottom, #E9E49D, #617129);
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    height: 60px;
-    /*line-height: 30px;*/
-    width: 60px;
-    padding: 0;
-    box-shadow: 0 1px 20px 0 #2C3312;
-    -webkit-box-shadow: 0 1px 20px 0 #2C3312;
-    -moz-box-shadow: 0 1px 20px 0 #2C3312;
-    text-shadow: 0 1px 10px #000000;
-    border: solid #E9E49D 1px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.magic-button:hover {
-    transition: 0.333s;
-    background: #617129;
-    background-image: -webkit-linear-gradient(top, #617129, #E9E49D);
-    background-image: -moz-linear-gradient(top, #617129, #E9E49D);
-    background-image: -ms-linear-gradient(top, #617129, #E9E49D);
-    background-image: -o-linear-gradient(top, #617129, #E9E49D);
-    background-image: linear-gradient(to bottom, #617129, #E9E49D);
-    text-decoration: none;
-    color: #617129 !important;
-}
-
-/* magic button pressed effect */
-.magic-button:active {
-    box-shadow: 0 1px 3px 0 #2C3312;
-    -webkit-box-shadow: 0 1px 3px 0 #2C3312;
-    -moz-box-shadow: 0 1px 3px 0 #2C3312;
-}
-
-.char {
-    font-size: 25px;
-    font-weight: 900;
-    height: 28px;
-    position: absolute;
-    width: 0;
-    transform-origin: bottom center;
-}
-
-.char-1 {
-    transform: rotate(180deg);
-}
-
-.char-1:hover {
-    color: #617129;
-}
-
-.char-2 {
-    transform: rotate(210deg);
-}
-
-.char-3 {
-    transform: rotate(240deg);
-}
-
-.char-4 {
-    transform: rotate(270deg);
-}
-
-.char-5 {
-    transform: rotate(300deg);
-}
-
-.char-6 {
-    transform: rotate(330deg);
-}
-
-.char-7 {
-    transform: rotate(360deg);
-}
-
-.char-8 {
-    transform: rotate(30deg);
-}
-
-.char-9 {
-    transform: rotate(60deg);
-}
-
-.char-10 {
-    transform: rotate(90deg);
-}
-
-.char-11 {
-    transform: rotate(120deg);
-}
-
-.char-12 {
-    transform: rotate(150deg);
 }
 
 /* main content and sidebar general*/

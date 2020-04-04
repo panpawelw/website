@@ -11,7 +11,41 @@ import './slicebox/js/jquery.slicebox.js'
 
 $(document).ready(function () {
 
-    /* Initialize Slicebox carousel */
+    /* ANIMATE SLOGAN */
+    /* split slogan paragraph into spans (one word each) */
+    let p = document.querySelector('#jumbotron-about-me-text');
+    p.innerHTML = p.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g,
+        '$1<span>$2</span>');
+
+    /* generate an array of translateZ values for each of spans */
+    const spans = p.children;
+    let spansTranslateZArray = new Array(spans.length);
+    for (let i = 0; i < spans.length; i++) {
+        let random = Math.floor(Math.random() * -1000);
+        spansTranslateZArray[i] = random;
+        spans[i].style.transform = "translateZ(" + random + "px)";
+    }
+
+    /* at the end of animation gradually reduce translateZ values to 0 */
+    document.querySelector('#jumbotron-about-me')
+        .addEventListener("animationend", function () {
+            for (let i = 1; i < 7; i++) {
+                setTimeout(function() {
+                    for (let j = 0; j < spansTranslateZArray.length; j++) {
+                        let translateZ = spansTranslateZArray[j];
+                        if (translateZ < -100) {
+                            translateZ = Math.trunc(translateZ / 2);
+                            spansTranslateZArray[j] = translateZ;
+                        } else {
+                            spansTranslateZArray[j] = 0;
+                        }
+                        spans[j].style.transform = "translateZ(" + translateZ + "px)";
+                    }
+                }, i * 100);
+            }
+        });
+
+    /* INITIALIZE SLICEBOX CAROUSEL */
     $(function () {
 
         let Page = (function () {
@@ -69,7 +103,7 @@ $(document).ready(function () {
 
                 $(this).on('click', function (event) {
 
-                    var $dot = $(this);
+                    let $dot = $(this);
 
                     if (!slicebox.isActive()) {
 
@@ -129,21 +163,22 @@ $(document).ready(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 150 && navbar.classList.contains('embedded')) { //* 2
+        if (scrollPosition > 900 && navbar.classList.contains('embedded')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.remove('embedded'); //*
             navbar.classList.add('separated', 'fixed-top');
             row.style.paddingTop = '60px';
 
         }
-        if (scrollPosition <= 150 && navbar.classList.contains('separated')) {
+        if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.add('embedded');
             navbar.classList.remove('separated', 'fixed-top');
             row.style.paddingTop = '0';
         }
     });
-});
+})
+;
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
