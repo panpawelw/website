@@ -155,7 +155,6 @@ $(function () {
     const navbar = document.getElementById('navbar');
     const row = document.getElementById('row');
     const dropdown = document.getElementById('dropdown-menu');
-    console.log(dropdown);
     win.on('scroll', function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -163,25 +162,31 @@ $(function () {
         document.getElementById("my-bar").style.width = scrolled + "%";
         if (scrollPosition > 900) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.remove('embedded');
-            navbar.classList.add('separated', 'fixed-top');
-            row.style.paddingTop = '60px';
-            if (dropdown.classList.contains('show')) {
-                console.log('daren dropdown!');
+            if (dropdown.classList.contains('show')
+                && !navbar.classList.contains('fixed-top')) {
+                dropdown.classList.add('dark-dropdown');
+                dropdown.addEventListener('animationend', function () {
+                    dropdown.classList.remove('dark-dropdown');
+                });
             }
+            navbar.classList.remove('embedded');
+            navbar.classList.add('fixed-top');
+            row.style.paddingTop = '60px';
         }
-        if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
+        if (scrollPosition <= 900 && navbar.classList.contains('fixed-top')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.add('embedded');
-            navbar.classList.remove('separated', 'fixed-top');
+            navbar.classList.remove('fixed-top');
             row.style.paddingTop = '0';
             if (dropdown.classList.contains('show')) {
-                console.log('lighten dropdown!');
+                dropdown.classList.add('light-dropdown');
+                dropdown.addEventListener('animationend', function() {
+                    dropdown.classList.remove('light-dropdown');
+                });
             }
         }
     });
-})
-;
+});
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
