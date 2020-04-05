@@ -1,7 +1,6 @@
 .sb-shadow {
 	width: 100%;
 	height: 168px;
-	position: relative;
 	margin-top: -110px;
 	background: transparent url(../images/shadow.png) no-repeat bottom center;
 	background-size: 100% 100%; /* stretches it */
@@ -59,6 +58,7 @@
 
 .nav-arrows {
 	display: none;
+	position: relative;
 }
 
 .arrow {
@@ -66,8 +66,7 @@
 	color: black;
 	font-family: 'Asar', serif;
 	text-shadow: 0 3px 5px #333;
-	margin-top: -5.3%;
-	top: 50%;
+	margin-top: -50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -81,16 +80,15 @@
 }
 
 .arrow-left {
-	left: 4%
+	left: -6%;
 }
 
 .arrow-right {
-	right: 4%;
+	right:-6%;
 }
 
 .nav-dots {
 	text-align: center;
-	position: absolute;
 	bottom: -5px;
 	height: 42px;
 	width: 100%;

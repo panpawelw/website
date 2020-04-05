@@ -9,7 +9,10 @@ import './slicebox/css/demo.css'
 import './slicebox/css/custom.css'
 import './slicebox/js/jquery.slicebox.js'
 
-$(document).ready(function () {
+$(function () {
+
+    /* FADE-IN EFFECT */
+    $('body').removeClass('fade-out');
 
     /* ANIMATE SLOGAN */
     /* split slogan paragraph into spans (one word each) */
@@ -101,7 +104,7 @@ $(document).ready(function () {
 
             $nav.each(function (i) {
 
-                $(this).on('click', function (event) {
+                $(this).on('click', function () {
 
                     let $dot = $(this);
 
@@ -127,17 +130,7 @@ $(document).ready(function () {
 
     });
 
-    /* Fade-in effect */
-    $('body').removeClass('fade-out');
-
-    /* Initial animations */
-    document.getElementById('theCarousel').classList.add('tilt-in-fwd-br');
-
-    const win = $(window);
-    const navbar = document.getElementById('navbar');
-    const row = document.getElementById('row');
-
-    /* Event listeners for carousel and side navigation links */
+        /* Event listeners for carousel and side navigation links */
     $('.anchor').on('click', function () {
         scroll(this.getAttribute('href'));
     });
@@ -158,23 +151,33 @@ $(document).ready(function () {
     });
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
-    win.scroll(function () {
+    const win = $(window);
+    const navbar = document.getElementById('navbar');
+    const row = document.getElementById('row');
+    const dropdown = document.getElementById('dropdown-menu');
+    console.log(dropdown);
+    win.on('scroll', function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 900 && navbar.classList.contains('embedded')) {
+        if (scrollPosition > 900) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.remove('embedded'); //*
+            navbar.classList.remove('embedded');
             navbar.classList.add('separated', 'fixed-top');
             row.style.paddingTop = '60px';
-
+            if (dropdown.classList.contains('show')) {
+                console.log('daren dropdown!');
+            }
         }
         if (scrollPosition <= 900 && navbar.classList.contains('separated')) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             navbar.classList.add('embedded');
             navbar.classList.remove('separated', 'fixed-top');
             row.style.paddingTop = '0';
+            if (dropdown.classList.contains('show')) {
+                console.log('lighten dropdown!');
+            }
         }
     });
 })
