@@ -243,6 +243,11 @@ span {
     font-size: 1em;
 }
 
+.dropdown-item:hover {
+    background-color: #617129;
+    color: #E9E49D;
+}
+
 .embedded .dropdown-item:hover {
     background-color: #617129;
     color: #E9E49D;
@@ -251,6 +256,11 @@ span {
 .fixed-top .dropdown-item:hover {
     background-color: #E9E49D;
     color: #000;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #F1EEC4;
+    box-shadow: 0 0 5px 0 #8B885E;
 }
 
 .embedded .dropdown-divider {

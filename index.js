@@ -130,22 +130,23 @@ $(function () {
 
     });
 
-        /* Event listeners for carousel and side navigation links */
+    /* EVENT LISTENERS */
+    /* for navigation links */
     $('.anchor').on('click', function () {
         scroll(this.getAttribute('href'));
     });
 
-    /* Event listeners for thumbnails */
+    /* for thumbnails */
     $('.screenshotThumbnail').on('click', function () {
         zoomScreenshot(this);
     });
 
-    /* Event listeners for elements that trigger overlay showing*/
+    /* for elements that trigger overlays*/
     $('.open-overlay').on('click', function () {
         openOverlay(this.dataset.overlay);
     });
 
-    /* Event listeners for elements that trigger overlay hiding*/
+    /* for elements that trigger closing overlays */
     $('.close-overlay').on('click', function () {
         closeOverlay(this.dataset.overlay);
     });
