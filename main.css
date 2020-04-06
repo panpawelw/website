@@ -103,11 +103,11 @@ body.fade-out {
     }
 }
 
-p {
+#jumbotron-about-me p {
     transform-style: preserve-3d;
 }
 
-span {
+#jumbotron-about-me span {
     display: inline-block;
 }
 
