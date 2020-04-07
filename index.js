@@ -5,8 +5,6 @@ import jump from 'jump.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import './slicebox/css/slicebox.css'
-import './slicebox/css/demo.css'
-import './slicebox/css/custom.css'
 import './slicebox/js/jquery.slicebox.js'
 
 $(function () {
@@ -33,7 +31,7 @@ $(function () {
     document.querySelector('#jumbotron-about-me')
         .addEventListener("animationend", function () {
             for (let i = 1; i < 7; i++) {
-                setTimeout(function() {
+                setTimeout(() => {
                     for (let j = 0; j < spansTranslateZArray.length; j++) {
                         let translateZ = spansTranslateZArray[j];
                         if (translateZ < -100) {
@@ -49,106 +47,87 @@ $(function () {
         });
 
     /* INITIALIZE SLICEBOX CAROUSEL */
-    $(function () {
+    let Page = (function () {
+        let $navArrows = $('#nav-arrows').hide(),
+            $navDots = $('#nav-dots').hide(),
+            $nav = $navDots.children('span'),
+            $shadow = $('#shadow').hide(),
+            slicebox = $('#sb-slider').slicebox({
+                onReady: function () {
+                    $navArrows.show();
+                    $navDots.show();
+                    $shadow.show();
+                },
+                onBeforeChange: function (pos) {
+                    $nav.removeClass('nav-dot-current');
+                    $nav.eq(pos).addClass('nav-dot-current');
+                },
+                orientation: 'r',
+                cuboidsRandom: true,
+                disperseFactor: 15,
+                autoplay: true,
+                interval: 4000,
+            }),
 
-        let Page = (function () {
-
-            let $navArrows = $('#nav-arrows').hide(),
-                $navDots = $('#nav-dots').hide(),
-                $nav = $navDots.children('span'),
-                $shadow = $('#shadow').hide(),
-                slicebox = $('#sb-slider').slicebox({
-                    onReady: function () {
-                        $navArrows.show();
-                        $navDots.show();
-                        $shadow.show();
-                    },
-                    onBeforeChange: function (pos) {
-                        $nav.removeClass('nav-dot-current');
-                        $nav.eq(pos).addClass('nav-dot-current');
-                    },
-                    orientation: 'r',
-                    cuboidsRandom: true,
-                    disperseFactor: 15,
-                    autoplay: true,
-                    interval: 4000,
-                }),
-
-                init = function () {
-
-                    slicebox.isPlaying = true;
-
-                    // add navigation events
-                    $navArrows.children(':first').on('click', function () {
-
-                        slicebox.previous();
-                        return false;
-
-                    });
-
-                    $navArrows.children(':last').on('click', function () {
-
-                        slicebox.next();
-                        return false;
-
-                    });
-
-                    $('#play').on('click', function () {
-                        slicebox.play();
-                    });
-
-                    $('#pause').on('click', function () {
-                        slicebox.pause();
-                    });
-                };
-
-            $nav.each(function (i) {
-
-                $(this).on('click', function () {
-
-                    let $dot = $(this);
-
-                    if (!slicebox.isActive()) {
-
-                        $nav.removeClass('nav-dot-current');
-                        $dot.addClass('nav-dot-current');
-
-                    }
-
-                    slicebox.jump(i + 1);
+            init = function () {
+                slicebox.isPlaying = true;
+                // add navigation events
+                $navArrows.children(':first').on('click', function () {
+                    slicebox.previous();
                     return false;
-
                 });
-
+                $navArrows.children(':last').on('click', function () {
+                    slicebox.next();
+                    return false;
+                });
+                $('#play').on('click', function () {
+                    slicebox.play();
+                });
+                $('#pause').on('click', function () {
+                    slicebox.pause();
+                });
+            };
+        // navigation dots events
+        $nav.each(function (i) {
+            $(this).on('click', function () {
+                let $dot = $(this);
+                if (!slicebox.isActive()) {
+                    $nav.removeClass('nav-dot-current');
+                    $dot.addClass('nav-dot-current');
+                }
+                slicebox.jump(i + 1);
+                return false;
             });
+        });
+        return {init: init};
+    })();
+    Page.init();
 
-            return {init: init};
 
-        })();
-
-        Page.init();
-
-    });
-
-    /* EVENT LISTENERS */
+    /* EVENT HANDLERS */
     /* for navigation links */
     $('.anchor').on('click', function () {
         scroll(this.getAttribute('href'));
     });
 
-    /* for thumbnails */
-    $('.screenshotThumbnail').on('click', function () {
-        zoomScreenshot(this);
-    });
-
     /* for elements that trigger overlays*/
     $('.open-overlay').on('click', function () {
-        openOverlay(this.dataset.overlay);
+        document.getElementById(this.dataset.overlay).style.height = "100%";
     });
 
     /* for elements that trigger closing overlays */
     $('.close-overlay').on('click', function () {
-        closeOverlay(this.dataset.overlay);
+        document.getElementById(this.dataset.overlay).style.height = "0%";
+    });
+
+    /* for thumbnails */
+    $('.screenshotThumbnail').on('click', function () {
+        const closestOverlay = this.closest(".overlay-content");
+        const closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
+        const expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
+        const imgText = closestScreenshotsContainer.getElementsByClassName("screenshots-imgtext")[0];
+        expandImg.src = this.src;
+        imgText.innerText = this.alt;
     });
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
@@ -156,7 +135,7 @@ $(function () {
     const navbar = document.getElementById('navbar');
     const row = document.getElementById('row');
     const dropdown = document.getElementById('dropdown-menu');
-    win.on('scroll', function () {
+    win.on('scroll', () => {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
@@ -181,7 +160,7 @@ $(function () {
             row.style.paddingTop = '0';
             if (dropdown.classList.contains('show')) {
                 dropdown.classList.add('light-dropdown');
-                dropdown.addEventListener('animationend', function() {
+                dropdown.addEventListener('animationend', function () {
                     dropdown.classList.remove('light-dropdown');
                 });
             }
@@ -211,23 +190,3 @@ const easeInOutQuad = (t, b, c, d) => {
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
 };
-
-/* Open overlay */
-function openOverlay(curtainId) {
-    document.getElementById(curtainId).style.height = "100%";
-}
-
-/* Close overlay */
-function closeOverlay(curtainId) {
-    document.getElementById(curtainId).style.height = "0%";
-}
-
-/* Zoom screenshot in overlay */
-function zoomScreenshot(screenshot) {
-    const closestOverlay = screenshot.closest(".overlay-content");
-    const closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
-    const expandImg = closestScreenshotsContainer.getElementsByTagName("img")[0];
-    const imgText = closestScreenshotsContainer.getElementsByClassName("screenshots-imgtext")[0];
-    expandImg.src = screenshot.src;
-    imgText.innerText = screenshot.alt;
-}
