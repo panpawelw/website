@@ -42,14 +42,6 @@ body.fade-out {
     padding: 0;
 }
 
-#jumbotron-test h1 {
-    font: bold 50px "Asar", sans-serif;
-    background-color: black;
-    color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-    -webkit-background-clip: text;
-}
-
 #jumbotron-greeting {
     font-size: 10rem;
     font-family: 'Asar', sans-serif;
@@ -111,11 +103,11 @@ body.fade-out {
     }
 }
 
-#jumbotron-about-me p {
+p {
     transform-style: preserve-3d;
 }
 
-#jumbotron-about-me span {
+span {
     display: inline-block;
 }
 
@@ -620,16 +612,11 @@ body.fade-out {
 
 .sidenav-text {
     padding: 0;
-    font: bold 20px "Asar", sans-serif;
-    background-color: black;
-    color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-    -webkit-background-clip: text;
-    /*font-family: 'Asar', serif;*/
-    /*text-decoration: none;*/
-    /*color: #000;*/
-    /*text-shadow: 0 3px 5px #666;*/
-    /*transition-duration: 0.333s;*/
+    font-family: 'Asar', serif;
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0 3px 5px #666;
+    transition-duration: 0.333s;
 }
 
 .sidenav-text:hover, .sidenav-text.hover {
@@ -722,11 +709,9 @@ hr.hr-shadow {
 }
 
 .text-section > h1 {
-    font: bold 50px "Asar", sans-serif;
-    background-color: #FF8B1E;
-    color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.4);
-    -webkit-background-clip: text;
+    font-family: 'Asar', sans-serif;
+    text-shadow: 0 0 3px #000;
+    color: #FA8334;
 }
 
 .left {

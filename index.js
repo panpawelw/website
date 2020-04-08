@@ -140,7 +140,8 @@ $(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        if (scrollPosition > 900) {
+        console.log(window.innerHeight + ' , ' + scrollPosition);
+        if (scrollPosition > (window.innerHeight * 0.85)) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             if (dropdown.classList.contains('show')
                 && !navbar.classList.contains('fixed-top')) {
@@ -152,20 +153,23 @@ $(function () {
             navbar.classList.remove('embedded');
             navbar.classList.add('fixed-top');
             row.style.paddingTop = '60px';
-        }
-        if (scrollPosition <= 900 && navbar.classList.contains('fixed-top')) {
-            navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
-            navbar.classList.add('embedded');
-            navbar.classList.remove('fixed-top');
-            row.style.paddingTop = '0';
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.add('light-dropdown');
-                dropdown.addEventListener('animationend', function () {
-                    dropdown.classList.remove('light-dropdown');
-                });
+        } else {
+            if (navbar.classList.contains('fixed-top')) {
+                navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
+                navbar.classList.add('embedded');
+                navbar.classList.remove('fixed-top');
+                row.style.paddingTop = '0';
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.add('light-dropdown');
+                    dropdown.addEventListener('animationend', function () {
+                        dropdown.classList.remove('light-dropdown');
+                    });
+                }
             }
         }
     });
+
+    window.onresize = () => navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
 });
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */
