@@ -7,6 +7,7 @@
 	list-style-type: none;
 	padding: 0;
 	z-index: 1;
+	will-change: contents;
 }
 
 .sb-slider li {
@@ -40,6 +41,7 @@
 	-o-transition: all 200ms;
 	-ms-transition: all 200ms;
 	transition: all 200ms;
+	will-change: contents;
 }
 
 .sb-slider li.sb-current .sb-description {

@@ -31,6 +31,10 @@ body.fade-out {
     will-change: transform;
 }
 
+.vignette:before {
+
+}
+
 /* jumbotron layout */
 .jumbotron {
     background-size: 100% 100%;
@@ -38,7 +42,7 @@ body.fade-out {
     -webkit-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-color: transparent;
-    height: 90vh;
+    height: 91.5vh;
     padding: 0;
 }
 
@@ -77,6 +81,7 @@ body.fade-out {
 }
 
 #jumbotron-about-me {
+    will-change: perspective, transform;
     background: transparent;
     color: #3A4318;
     font-size: 1.5rem;
@@ -162,6 +167,7 @@ body.fade-out {
 }
 
 .embedded {
+    will-change: width, background-color, box-shadow, border;
     animation-name: embed-navbar;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -192,11 +198,11 @@ body.fade-out {
 }
 
 .fixed-top {
+    will-change: width, background-color, box-shadow, border;
     animation-name: separate-navbar;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
-    will-change: transform;
 }
 
 @keyframes separate-navbar {

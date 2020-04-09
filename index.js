@@ -131,11 +131,10 @@ $(function () {
     });
 
     /* detach navbar once user scrolls to main content, change it back when user scrolls back up */
-    const win = $(window);
     const navbar = document.getElementById('navbar');
     const row = document.getElementById('row');
     const dropdown = document.getElementById('dropdown-menu');
-    win.on('scroll', () => {
+    window.onscroll = () => {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
@@ -166,7 +165,7 @@ $(function () {
                 }
             }
         }
-    });
+    }
 
     window.onresize = () => navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
 });
