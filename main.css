@@ -95,7 +95,7 @@ body.fade-out {
 @keyframes perspective {
     0% {
         perspective: 100px;
-        transform: scale(.5);
+        transform: scale(.25);
     }
     100% {
         perspective: 10000px;
@@ -103,11 +103,11 @@ body.fade-out {
     }
 }
 
-p {
+#jumbotron-about-me p {
     transform-style: preserve-3d;
 }
 
-span {
+#jumbotron-about-me span {
     display: inline-block;
 }
 
@@ -463,9 +463,7 @@ span {
 
 /* overlays */
 .overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
     height: 0;
     width: 100%;
     position: fixed; /* Stay in place */
@@ -475,18 +473,15 @@ span {
     background-color: rgb(0, 0, 0); /* Black fallback color */
     background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
     overflow: hidden; /* Disable scroll */
-    /*-webkit-transform: scaleX(1);*/
-    /*transform: scaleX(1);*/
     transition: 333ms ease-in-out;
     will-change: transform;
 }
 
 .overlay-content {
-    /*top: 5%; !* 5% from the top *!*/
     max-width: 90%; /* 90% width */
     max-height: 90%; /* 90% height */
     text-align: center; /* Centered text/links */
-    margin: 0 auto;
+    margin: auto;
 }
 
 .overlay-scrollable {
@@ -570,14 +565,6 @@ span {
 .dropup {
     display: inline;
 }
-
-/*.about-links {*/
-/*    margin-top: 3vw;*/
-/*}*/
-
-/*.about-links a {*/
-/*    margin: 0.5vw;*/
-/*}*/
 
 .photo {
     height: 20vh;

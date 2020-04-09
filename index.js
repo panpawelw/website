@@ -140,7 +140,6 @@ $(function () {
         const websiteHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (scrollPosition / websiteHeight) * 100;
         document.getElementById("my-bar").style.width = scrolled + "%";
-        console.log(window.innerHeight + ' , ' + scrollPosition);
         if (scrollPosition > (window.innerHeight * 0.85)) {
             navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
             if (dropdown.classList.contains('show')

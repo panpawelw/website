@@ -215,9 +215,9 @@
 
 #play i, #pause i {
 	color: #FA8334;
-	text-shadow: -1px -1px 1px #FDCDAD, 1px 1px 1px #643414;
+	text-shadow: -1px -1px 1px #FFF, 1px 1px 1px #000;
 }
 
 #play i:active, #pause i:active {
-	text-shadow: -1px -1px 1px #643414, 1px 1px 1px #FDCDAD;
+	text-shadow: -1px -1px 1px #000, 1px 1px 1px #FFF;
 }
