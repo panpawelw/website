@@ -4,8 +4,8 @@ import 'popper.js';
 import jump from 'jump.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
-import './slicebox/css/slicebox.css'
-import './slicebox/js/jquery.slicebox.js'
+import './slicebox/css/slicebox.css';
+import './slicebox/js/jquery.slicebox.js';
 
 $(function () {
 
