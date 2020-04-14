@@ -994,3 +994,11 @@ hr.hr-shadow {
         font-size: 1.25vw;
     }
 }
+
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    @media {
+        .vignette {
+            background: radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%);
+        }
+    }
+}
