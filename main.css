@@ -33,10 +33,6 @@ body.fade-out {
     will-change: transform;
 }
 
-.vignette:before {
-
-}
-
 /* jumbotron layout */
 .jumbotron {
     background-size: 100% 100%;
@@ -521,7 +517,7 @@ body.fade-out {
     text-decoration: none;
     color: #E9E49D;
     display: block; /* Display block instead of inline */
-    /*transition: 0.3s; !* Transition effects on hover (color) *!*/
+    transition: 0.3s; /* Transition effects on hover (color) */
 }
 
 .overlay a {
@@ -664,7 +660,6 @@ body.fade-out {
 }
 
 /* text sections */
-
 hr {
     margin-top: 0.5em;
     margin-bottom: 0;
@@ -970,16 +965,6 @@ hr.hr-shadow {
         font-size: 6vw;
     }
 }
-
-/*!* prevent main content shift when sidebar is not displayed *!*/
-/*@media screen and (min-width: 991px) {*/
-
-/*    .main {*/
-/*        margin: 0;*/
-/*        padding: 0 0 0 1em;*/
-/*        overflow: auto;*/
-/*    }*/
-/*}*/
 
 /* text sizing for large screens */
 @media screen and (min-width: 801px) and (max-width: 1200px) {

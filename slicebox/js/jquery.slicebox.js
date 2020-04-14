@@ -707,8 +707,8 @@ import './modernizr.js';
             this.animationStyles = {
                 side1 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px )' },
                 side2 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '89.95deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '89.95deg )' },
-                side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '180deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '180deg )' },
-                side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '270deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '270deg )' }
+                side3 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '179.95deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '179.95deg )' },
+                side4 : ( this.config.o === 'v' ) ? { 'transform' : 'translate3d( 0, 0, -' + ( this.size.height / 2 ) + 'px ) rotate3d( 1, 0, 0, ' + rotationDirection + '269.95deg )' } : { 'transform' : 'translate3d( 0, 0, -' + ( this.size.width / 2 ) + 'px ) rotate3d( 0, 1, 0, ' + rotationDirection + '269.95deg )' }
             };
 
             let measure = ( this.config.o === 'v' ) ? this.size.height : this.size.width;
@@ -724,7 +724,8 @@ import './modernizr.js';
                     width : this.size.width,
                     height : this.size.height,
                     backgroundColor : this.config.colorHiddenSides,
-                    transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '180deg ) translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( ' + oppositeRotationDirection + '180deg )'
+                    transform : 'rotate3d( 0, 1, 0, ' + oppositeRotationDirection + '179.95deg )' +
+                        ' translate3d( 0, 0, ' + ( measure / 2 ) + 'px ) rotateZ( ' + oppositeRotationDirection + '179.95deg )'
                 },
                 rightSideStyle : {
                     width : measure,
