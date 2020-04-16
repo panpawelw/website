@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'fa-custom';
   src: url('./fa-custom.eot?45524638');
-  src: url('./fa-custom.eot?45524638#iefix') format('embedded-opentype'),
+  src: url('/fa-custom.eot?45524638#iefix') format('embedded-opentype'),
        url('./fa-custom.woff2?45524638') format('woff2'),
        url('./fa-custom.woff?45524638') format('woff'),
        url('./fa-custom.ttf?45524638') format('truetype'),
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fa-custom';
-    src: url('../font/fa-custom.svg?45524638#fa-custom') format('svg');
+    src: url('../fonts/fa-custom/fa-custom.svg?45524638#fa-custom') format('svg');
   }
 }
 */

@@ -28,7 +28,7 @@ body.fade-out {
     width: 100vw;
     background: transparent fixed;
     background: -webkit-radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
-        url("./images/background.png") repeat;
+    url("./images/background.png") repeat;
     background: -ms-radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%);
     will-change: transform;
 }
@@ -977,13 +977,5 @@ hr.hr-shadow {
 @media screen and (min-width: 1201px) {
     .overlay p {
         font-size: 1.25vw;
-    }
-}
-
-@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-    @media {
-        .vignette {
-            background: radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%);
-        }
     }
 }
