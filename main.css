@@ -577,6 +577,18 @@ body.fade-out {
     float: left;
 }
 
+#contact-form {
+    font-size: 5em;
+}
+
+#contact-form label {
+    color: #FA8334;
+}
+
+#contact-form .btn {
+    margin-bottom: 1em;
+}
+
 /* ??? */
 .container {
     padding: 0;

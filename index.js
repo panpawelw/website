@@ -168,7 +168,28 @@ $(function () {
         }
     };
 
-    window.onresize = () => navbar.style.setProperty('--navbarShort', row.offsetWidth.toString() + 'px');
+    window.onresize = () => navbar.style.setProperty('--navbarShort',
+        row.offsetWidth.toString() + 'px');
+
+    $('#contact-form').on("submit", function(e) {
+        const name = document.getElementById('input-name');
+        const email = document.getElementById('input-email');
+        const message = document.getElementById('input-message');
+        if(!name.value || !email.value || !message.value) {
+            alert('Please check the form again');
+            e.preventDefault();
+        }else {
+            $.ajax({
+                    url: 'https://formspree.io/panpawelw@pm.me',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json'
+                }
+             ).then(r => alert('Message sent'), e =>alert('Error!'));
+            e.preventDefault();
+            $(this).get(0).reset();
+        }
+    })
 });
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */

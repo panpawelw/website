@@ -97,7 +97,26 @@
 
             <!-- Overlay content -->
             <div class="overlay-content overlay-scrollable">
-                <h2 class="overlay-title">Contact me:</h2>
+                <h2 class="overlay-title">Skontaktuj się ze mną:</h2>
+                <p>Skorzystaj z poniższego formularza...</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="input-name">Imię</label><br>
+                        <input type="text" placeholder="Imię..." id="input-name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-email">Email</label><br>
+                        <input type="text" placeholder="Email..." id="input-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-message">Wiadomość</label><br>
+                        <textarea id="input-message" placeholder="Twoja wiadomość..."
+                                  name="message" rows="3" cols="30"></textarea>
+                    </div>
+                    <input type="submit" class="btn" value="Wyślij">
+                </form>
+                <p>Albo po prostu wyślij mi maila...</p>
+                <a href="mailto:panpawelw@pm.me">panpawelw@pm.me</a>
 
             </div>
         </div>
