@@ -113,7 +113,10 @@
                         <textarea id="input-message" placeholder="Twoja wiadomość..."
                                   name="message" rows="3" cols="30"></textarea>
                     </div>
-                    <input type="submit" class="btn" value="Wyślij">
+                    <p id="form-status" data-error="Wypełnij wszystkie pola!"
+                       data-success="Wiadomość wysłana!"
+                       data-fail="Błąd! Wiadomość nie została wysłana!"></p>
+                    <input type="submit" class="btn" id="form-button" value="Wyślij">
                 </form>
                 <p>Albo po prostu wyślij mi maila...</p>
                 <a href="mailto:panpawelw@pm.me">panpawelw@pm.me</a>

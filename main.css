@@ -97,7 +97,7 @@ body.fade-out {
 
 @keyframes perspective {
     0% {
-        perspective: 100px;
+        perspective: 10px;
         transform: scale(.25);
     }
     100% {
@@ -585,8 +585,12 @@ body.fade-out {
     color: #FA8334;
 }
 
-#contact-form .btn {
+#form-button {
     margin-bottom: 1em;
+}
+
+#form-status {
+    color: red;
 }
 
 /* ??? */
@@ -980,14 +984,35 @@ hr.hr-shadow {
 
 /* text sizing for large screens */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
+
     .overlay p {
         font-size: 2vw;
     }
 }
 
 /* text sizing for extra large screens */
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1201px) and (max-width: 1680px) {
+
+    .jumbotron {
+        height: 87vh;
+    }
+
+    #jumbotron-about-me {
+        font-size: 1.25rem;
+        right: 10%;
+    }
+
+    #jumbotron-about-me-text {
+        margin-top: 25%;
+    }
+
     .overlay p {
         font-size: 1.25vw;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .overlay p {
+        font-size: 1.35vw;
     }
 }

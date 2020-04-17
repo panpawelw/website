@@ -121,7 +121,19 @@ $(function () {
         document.getElementById(this.dataset.overlay).style.height = "0%";
     });
 
-    /* for thumbnails */
+    /* ESC key closes overlays */
+    document.onkeyup = function (e) {
+        if (e.code === 'Escape') {
+            const overlays = document.getElementsByClassName('overlay');
+            for (let i = 0; i < overlays.length; i++) {
+                if (overlays[i].style.height === '100%') {
+                    overlays[i].style.height = '0%';
+                }
+            }
+        }
+    };
+
+    /* for screenshot thumbnails in overlays */
     $('.screenshotThumbnail').on('click', function () {
         const closestOverlay = this.closest(".overlay-content");
         const closestScreenshotsContainer = closestOverlay.getElementsByClassName("screenshots-container")[0];
@@ -168,43 +180,44 @@ $(function () {
         }
     };
 
-    /* ESC key closes overlays */
-    document.onkeyup = function (e) {
-        if(e.code==='Escape') {
-            const overlays = document.querySelectorAll('.overlay');
-            for(let i=0; i < overlays.length; i++) {
-                if(overlays[i].style.height === '100%') {
-                    overlays[i].style.height = '0%';
-                }
-            }
-        }
-    };
-
     /* correct navbar width on window resize */
     window.onresize = () => navbar.style.setProperty('--navbarShort',
         row.offsetWidth.toString() + 'px');
 
     /* send a message via "Contact me" form */
-    $('#contact-form').on("submit", function(e) {
+    $('#contact-form').on("submit", function (e) {
         const name = document.getElementById('input-name');
         const email = document.getElementById('input-email');
         const message = document.getElementById('input-message');
-        if(!name.value || !email.value || !message.value) {
-            alert('Please check the form again');
+        const status = document.getElementById('form-status');
+        const button = document.getElementById('form-button');
+        if (!name.value || !email.value || !message.value) {
             e.preventDefault();
-        }else {
+            status.innerHTML = status.dataset.error;
+        } else {
             $.ajax({
                     url: 'https://formspree.io/xnqbyzrp',
                     method: 'POST',
                     data: $(this).serialize(),
                     dataType: 'json'
                 }
-             ).then(() => alert('Message sent'), () =>alert('Error!'));
+            ).then(() => {
+                button.style.display = 'none';
+                status.innerHTML = status.dataset.success;
+                $(this).get(0).reset();
+            }, () => {
+                status.innerHTML = status.dataset.fail;
+            });
             e.preventDefault();
-            $(this).get(0).reset();
         }
+        setTimeout(() => {
+            status.innerHTML = '';
+            button.style.display = 'inline-block'
+        }, 5000);
     })
 });
+
+/* AUXILLIARY FUNCTIONS */
 
 /* Scroll the page to anchor adjusting for navbar height if necessary */
 function scroll(target) {
