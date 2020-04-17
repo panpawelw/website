@@ -168,9 +168,23 @@ $(function () {
         }
     };
 
+    /* ESC key closes overlays */
+    document.onkeyup = function (e) {
+        if(e.code==='Escape') {
+            const overlays = document.querySelectorAll('.overlay');
+            for(let i=0; i < overlays.length; i++) {
+                if(overlays[i].style.height === '100%') {
+                    overlays[i].style.height = '0%';
+                }
+            }
+        }
+    };
+
+    /* correct navbar width on window resize */
     window.onresize = () => navbar.style.setProperty('--navbarShort',
         row.offsetWidth.toString() + 'px');
 
+    /* send a message via "Contact me" form */
     $('#contact-form').on("submit", function(e) {
         const name = document.getElementById('input-name');
         const email = document.getElementById('input-email');
@@ -180,12 +194,12 @@ $(function () {
             e.preventDefault();
         }else {
             $.ajax({
-                    url: 'https://formspree.io/panpawelw@pm.me',
+                    url: 'https://formspree.io/xnqbyzrp',
                     method: 'POST',
                     data: $(this).serialize(),
                     dataType: 'json'
                 }
-             ).then(r => alert('Message sent'), e =>alert('Error!'));
+             ).then(() => alert('Message sent'), () =>alert('Error!'));
             e.preventDefault();
             $(this).get(0).reset();
         }
