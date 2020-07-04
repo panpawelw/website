@@ -141,11 +141,26 @@ body.fade-out {
 #jumbotron-scroll-down-link a {
     font-size: 5rem;
     color: black;
+    animation: blink 1s ease infinite;
+    animation-fill-mode: forwards;
 }
 
 #jumbotron-scroll-down-link a:hover {
     font-size: 5rem;
     color: #FA8334;
+    animation: none;
+}
+
+@keyframes blink {
+    0%{
+        color: #000000;
+    }
+    50% {
+        color: #FA8334;
+    }
+    100% {
+        color: #000000;
+    }
 }
 
 
