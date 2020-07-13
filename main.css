@@ -27,8 +27,8 @@ body.fade-out {
     height: 100vh;
     width: 100vw;
     background: transparent fixed;
-    background: -webkit-radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%),
-    url("./images/background.png") repeat;
+    background: -webkit-radial-gradient(circle, rgba(233, 228, 157, 1) 50%,
+        rgba(0, 0, 0, 0.35) 100%), url("./images/background.png") repeat;
     background: -ms-radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%);
     will-change: transform;
 }
@@ -47,41 +47,39 @@ body.fade-out {
 #jumbotron-greeting {
     font-size: 10rem;
     font-family: 'Asar', sans-serif;
-    color: transparent;
-    position: absolute;
     top: 25%;
     left: 33%;
     transform: translate(-50%, -50%);
-    animation-name: pop-jumbotron-greeting;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 1.5s;
-    animation-delay: 1.5s;
+    position: absolute;
 }
 
-@keyframes pop-jumbotron-greeting {
-    0% {
-        text-shadow: none;
-        color: transparent;
-    }
-    33% {
-        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
-        color: #E9E49D;
-    }
-    66% {
-        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
-        color: #E9E49D;
-    }
-    100% {
-        text-shadow: -5px -3px 8px #EDE9B0, 6px 2px 12px #74724E;
-        color: #FA8334;
-    }
+#jumbotron-greeting div {
+    will-change: filter, transform;
+    color: transparent;
+    animation: switch 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    overflow-y: hidden;
+}
+
+@keyframes switch {
+    0% { color: rgba(0,0,0,0); filter: blur(20px); transform:scale(11)}
+    10% { color: rgba(0,0,0,0.1); filter: blur(18px); transform:scale(10)}
+    20% { color: rgba(0,0,0,0.2); filter: blur(16px); transform:scale(9)}
+    30% { color: rgba(0,0,0,0.3); filter: blur(14px); transform:scale(8)}
+    30% { color: rgba(0,0,0,0.4); filter: blur(12px); transform:scale(7)}
+    50% { color: rgba(0,0,0,0.5); filter: blur(10px); transform:scale(6)}
+    60% { color: rgba(0,0,0,0.6); filter: blur(8px); transform:scale(5)}
+    70% { color: rgba(0,0,0,0.7); filter: blur(6px); transform:scale(4)}
+    80% { color: rgba(0,0,0,0.8); filter: blur(4px); transform:scale(3)}
+    90% { color: rgba(0,0,0,0.9); filter: blur(2px); transform:scale(2)}
+    100% { color: rgba(0,0,0,1); filter: blur(0); transform:scale(1)}
 }
 
 #jumbotron-about-me {
     will-change: perspective, transform;
     background: transparent;
-    color: #3A4318;
+    color: transparent;
     font-size: 1.5rem;
     position: absolute;
     display: flex;
@@ -93,14 +91,17 @@ body.fade-out {
     perspective: 200px;
     animation: perspective 2s ease-in;
     animation-fill-mode: forwards;
+    animation-delay: 1.25s;
 }
 
 @keyframes perspective {
     0% {
+        color: transparent;
         perspective: 10px;
         transform: scale(.25);
     }
     100% {
+        color: #3A4318;
         perspective: 10000px;
         transform: scale(1);
     }
@@ -112,6 +113,7 @@ body.fade-out {
 
 #jumbotron-about-me span {
     display: inline-block;
+    font-weight: bold;
 }
 
 #jumbotron-scroll-down-text {
@@ -123,6 +125,7 @@ body.fade-out {
     left: -20%;
     animation: text-slide-right 2s ease-out;
     animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 @keyframes text-slide-right {
