@@ -113,12 +113,27 @@ $(function () {
 
     /* for elements that trigger overlays*/
     $('.open-overlay').on('click', function () {
-        document.getElementById(this.dataset.overlay).style.height = "100%";
+        const overlay = document.getElementById(this.dataset.overlay);
+        const scrollableElement = overlay.querySelector('.overlay-scrollable');
+        if (scrollableElement !== null) {
+            console.log(scrollableElement);
+            scrollableElement.style.overflow = 'hidden';
+            window.setTimeout(function() {
+                scrollableElement.style.overflow = 'auto'}, 333)
+        }
+        overlay.style.height = '100%';
     });
 
     /* for elements that trigger closing overlays */
     $('.close-overlay').on('click', function () {
-        document.getElementById(this.dataset.overlay).style.height = "0%";
+        const overlay = document.getElementById(this.dataset.overlay);
+        const scrollableElement = overlay.querySelector('.overlay-scrollable');
+        if (scrollableElement !== null) {
+            scrollableElement.style.overflow = 'hidden';
+            window.setTimeout(function() {
+                scrollableElement.style.overflow = 'auto'}, 333)
+        }
+        overlay.style.height = '0%';
     });
 
     /* ESC key closes overlays */
