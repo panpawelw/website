@@ -23,7 +23,7 @@ $(function () {
     const spans = p.children;
     let spansTranslateZArray = new Array(spans.length);
     for (let i = 0; i < spans.length; i++) {
-        let random = Math.floor(Math.random() * -1000);
+        let random = Math.floor(Math.random() * -10000);
         spansTranslateZArray[i] = random;
         spans[i].style.transform = "translateZ(" + random + "px)";
     }
@@ -31,19 +31,19 @@ $(function () {
     /* at the end of animation gradually reduce translateZ values to 0 */
     document.querySelector('#jumbotron-about-me')
         .addEventListener("animationend", function () {
-            for (let i = 1; i < 7; i++) {
+            for (let i = 1; i < 15; i++) {
                 setTimeout(() => {
                     for (let j = 0; j < spansTranslateZArray.length; j++) {
                         let translateZ = spansTranslateZArray[j];
                         if (translateZ < -100) {
-                            translateZ = Math.trunc(translateZ / 2);
+                            translateZ = Math.trunc(translateZ / 1.5);
                             spansTranslateZArray[j] = translateZ;
                         } else {
                             spansTranslateZArray[j] = 0;
                         }
                         spans[j].style.transform = "translateZ(" + translateZ + "px)";
                     }
-                }, i * 100);
+                }, i * 50);
             }
         });
 
