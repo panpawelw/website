@@ -56,24 +56,34 @@ body.fade-out {
 #jumbotron-greeting div {
     will-change: filter, transform;
     color: transparent;
-    animation: switch 0.5s;
-    animation-delay: 1s;
+    animation: switch 0.75s;
+    animation-delay: 1.25s;
     animation-fill-mode: forwards;
     overflow-y: hidden;
+    padding: 0.75rem;
 }
 
 @keyframes switch {
-    0% { color: rgba(0,0,0,0); filter: blur(20px); transform:scale(11)}
-    10% { color: rgba(0,0,0,0.1); filter: blur(18px); transform:scale(10)}
-    20% { color: rgba(0,0,0,0.2); filter: blur(16px); transform:scale(9)}
-    30% { color: rgba(0,0,0,0.3); filter: blur(14px); transform:scale(8)}
-    30% { color: rgba(0,0,0,0.4); filter: blur(12px); transform:scale(7)}
-    50% { color: rgba(0,0,0,0.5); filter: blur(10px); transform:scale(6)}
-    60% { color: rgba(0,0,0,0.6); filter: blur(8px); transform:scale(5)}
-    70% { color: rgba(0,0,0,0.7); filter: blur(6px); transform:scale(4)}
-    80% { color: rgba(0,0,0,0.8); filter: blur(4px); transform:scale(3)}
-    90% { color: rgba(0,0,0,0.9); filter: blur(2px); transform:scale(2)}
-    100% { color: rgba(0,0,0,1); filter: blur(0); transform:scale(1)}
+    0% { color: rgba(250,131,52,0); filter: blur(20px); transform:scale(11)}
+    10% { color: rgba(250,131,52,0.1); filter: blur(18px); transform:scale(10)}
+    20% { color: rgba(250,131,52,0.2); filter: blur(16px); transform:scale(9)}
+    30% { color: rgba(250,131,52,0.3); filter: blur(14px); transform:scale(8)}
+    30% { color: rgba(250,131,52,0.4); filter: blur(12px); transform:scale(7)}
+    50% { color: rgba(250,131,52,0.5); filter: blur(10px); transform:scale(6)}
+    60% { color: rgba(250,131,52,0.6); filter: blur(8px); transform:scale(5)}
+    70% { color: rgba(250,131,52,0.7); filter: blur(6px); transform:scale(4)}
+    80% { color: rgba(250,131,52,0.8); filter: blur(4px); transform:scale(3)}
+    90% { color: rgba(250,131,52,0.9); filter: blur(2px); transform:scale(2)}
+    100% { color: rgba(250,131,52,1); filter: blur(0); transform:scale(1);
+        text-shadow:
+            2px -2px 0 #000,
+            0   -2px 0 #000,
+            2px -2px 0 #000,
+            2px  0   0 #000,
+            2px  2px 0 #000,
+            0    2px 0 #000,
+            -2px  2px 0 #000,
+            -2px  0   0 #000;}
 }
 
 #jumbotron-about-me {
@@ -89,9 +99,9 @@ body.fade-out {
     right: 15%;
     min-height: 100vh;
     perspective: 200px;
-    animation: perspective 2s ease-in;
+    animation: perspective 1.25s ease-in;
     animation-fill-mode: forwards;
-    animation-delay: 1.25s;
+    animation-delay: 1s;
 }
 
 @keyframes perspective {
