@@ -28,7 +28,7 @@ body.fade-out {
     width: 100vw;
     background: transparent fixed;
     background: -webkit-radial-gradient(circle, rgba(233, 228, 157, 1) 50%,
-        rgba(0, 0, 0, 0.35) 100%), url("./images/background.png") repeat;
+    rgba(0, 0, 0, 0.35) 100%), url("./images/background.png") repeat;
     background: -ms-radial-gradient(circle, rgba(233, 228, 157, 1) 50%, rgba(0, 0, 0, 0.35) 100%);
     will-change: transform;
 }
@@ -56,34 +56,70 @@ body.fade-out {
 #jumbotron-greeting div {
     will-change: filter, transform;
     color: transparent;
-    animation: switch 0.75s;
-    animation-delay: 1.25s;
-    animation-fill-mode: forwards;
+    animation: switch 0.75s ease-out 1.25s forwards;
+    -webkit-animation: switch 0.75s ease-out 1.25s forwards;
     overflow-y: hidden;
     padding: 0.75rem;
 }
 
 @keyframes switch {
-    0% { color: rgba(250,131,52,0); filter: blur(20px); transform:scale(11)}
-    10% { color: rgba(250,131,52,0.1); filter: blur(18px); transform:scale(10)}
-    20% { color: rgba(250,131,52,0.2); filter: blur(16px); transform:scale(9)}
-    30% { color: rgba(250,131,52,0.3); filter: blur(14px); transform:scale(8)}
-    30% { color: rgba(250,131,52,0.4); filter: blur(12px); transform:scale(7)}
-    50% { color: rgba(250,131,52,0.5); filter: blur(10px); transform:scale(6)}
-    60% { color: rgba(250,131,52,0.6); filter: blur(8px); transform:scale(5)}
-    70% { color: rgba(250,131,52,0.7); filter: blur(6px); transform:scale(4)}
-    80% { color: rgba(250,131,52,0.8); filter: blur(4px); transform:scale(3)}
-    90% { color: rgba(250,131,52,0.9); filter: blur(2px); transform:scale(2)}
-    100% { color: rgba(250,131,52,1); filter: blur(0); transform:scale(1);
-        text-shadow:
-            2px -2px 0 #000,
-            0   -2px 0 #000,
-            2px -2px 0 #000,
-            2px  0   0 #000,
-            2px  2px 0 #000,
-            0    2px 0 #000,
-            -2px  2px 0 #000,
-            -2px  0   0 #000;}
+    0% {
+        color: rgba(250, 131, 52, 0);
+        filter: blur(20px);
+        transform: scale(11)
+    }
+    10% {
+        color: rgba(250, 131, 52, 0.1);
+        filter: blur(18px);
+        transform: scale(10)
+    }
+    20% {
+        color: rgba(250, 131, 52, 0.2);
+        filter: blur(16px);
+        transform: scale(9)
+    }
+    30% {
+        color: rgba(250, 131, 52, 0.3);
+        filter: blur(14px);
+        transform: scale(8)
+    }
+    30% {
+        color: rgba(250, 131, 52, 0.4);
+        filter: blur(12px);
+        transform: scale(7)
+    }
+    50% {
+        color: rgba(250, 131, 52, 0.5);
+        filter: blur(10px);
+        transform: scale(6)
+    }
+    60% {
+        color: rgba(250, 131, 52, 0.6);
+        filter: blur(8px);
+        transform: scale(5)
+    }
+    70% {
+        color: rgba(250, 131, 52, 0.7);
+        filter: blur(6px);
+        transform: scale(4)
+    }
+    80% {
+        color: rgba(250, 131, 52, 0.8);
+        filter: blur(4px);
+        transform: scale(3)
+    }
+    90% {
+        color: rgba(250, 131, 52, 0.9);
+        filter: blur(2px);
+        transform: scale(2)
+    }
+    100% {
+        color: rgba(250, 131, 52, 1);
+        filter: blur(0);
+        transform: scale(1);
+        text-shadow: 2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, 2px 0 0 #000,
+            2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, -2px 0 0 #000;
+    }
 }
 
 #jumbotron-about-me {
@@ -99,9 +135,8 @@ body.fade-out {
     right: 15%;
     min-height: 100vh;
     perspective: 200px;
-    animation: perspective 1.25s ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation: perspective 1.25s ease-in 0.75s forwards;
+    -webkit-animation: perspective 1.25s ease-in 0.75s forwards;
 }
 
 @keyframes perspective {
@@ -133,9 +168,8 @@ body.fade-out {
     position: absolute;
     top: 80%;
     left: -20%;
-    animation: text-slide-right 2s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation: text-slide-right 2s ease-out 2s forwards;
+    -webkit-animation: text-slide-right 2s ease-out 2s forwards;
 }
 
 @keyframes text-slide-right {
@@ -149,33 +183,40 @@ body.fade-out {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: up-and-down 0.3s linear infinite both;
+    -webkit-animation: up-and-down 0.3s linear infinite both;
+}
+
+@keyframes up-and-down {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-50%, -55%);
+    }
+    50% {
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        transform: translate(-50%, -45%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+#jumbotron-scroll-down-link:hover {
+    animation: none;
+    -webkit-animation: none;
 }
 
 #jumbotron-scroll-down-link a {
     font-size: 5rem;
-    color: black;
-    animation: blink 1s ease infinite;
-    animation-fill-mode: forwards;
-}
-
-#jumbotron-scroll-down-link a:hover {
-    font-size: 5rem;
     color: #FA8334;
-    animation: none;
+    -webkit-animation: none;
+    text-shadow: 1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+        1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
-
-@keyframes blink {
-    0%{
-        color: #000000;
-    }
-    50% {
-        color: #FA8334;
-    }
-    100% {
-        color: #000000;
-    }
-}
-
 
 /* Top navbar */
 #navbar {
@@ -194,10 +235,8 @@ body.fade-out {
 
 .embedded {
     will-change: width, background-color, box-shadow, border;
-    animation-name: embed-navbar;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 0.5s;
+    animation: embed-navbar 0.5s ease-in-out forwards;
+    -webkit-animation: embed-navbar 0.5s ease-in-out forwards;
 }
 
 @keyframes embed-navbar {
@@ -225,10 +264,8 @@ body.fade-out {
 
 .fixed-top {
     will-change: width, background-color, box-shadow, border;
-    animation-name: separate-navbar;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
+    animation: separate-navbar 0.5s ease-in-out forwards;
+    -webkit-animation: separate-navbar 0.5s ease-in-out forwards;
 }
 
 @keyframes separate-navbar {
@@ -314,10 +351,8 @@ body.fade-out {
 }
 
 .dark-dropdown {
-    animation-name: darken-dropdown-menu;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
+    animation: darken-dropdown-menu 0.5s ease-in-out forwards;
+    -webkit-animation: darken-dropdown-menu 0.5s ease-in-out forwards;
     will-change: transform;
 }
 
@@ -347,10 +382,8 @@ body.fade-out {
 }
 
 .light-dropdown {
-    animation-name: lighten-dropdown-menu;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
+    animation: lighten-dropdown-menu 0.5s ease-in-out forwards;
+    -webkit-animation: lighten-dropdown-menu 0.5s ease-in-out forwards;
     will-change: transform;
 }
 
@@ -835,8 +868,8 @@ hr.hr-shadow {
 
 /* shake effect */
 .shaky:hover {
-    -webkit-animation: shake 0.3s linear infinite both;
     animation: shake 0.3s linear infinite both;
+    -webkit-animation: shake 0.3s linear infinite both;
 }
 
 .shaky:active {
