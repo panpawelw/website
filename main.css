@@ -135,8 +135,8 @@ body.fade-out {
     right: 15%;
     min-height: 100vh;
     perspective: 200px;
-    animation: perspective 1.25s ease-in 0.75s forwards;
-    -webkit-animation: perspective 1.25s ease-in 0.75s forwards;
+    animation: perspective 1.5s ease-in 0.75s forwards;
+    -webkit-animation: perspective 1.5s ease-in 0.75s forwards;
 }
 
 @keyframes perspective {
@@ -183,21 +183,57 @@ body.fade-out {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: up-and-down 0.3s linear infinite both;
-    -webkit-animation: up-and-down 0.3s linear infinite both;
+    animation: up-and-down 1.5s ease-in-out infinite both;
+    -webkit-animation: up-and-down 1.5s ease-in-out infinite both;
 }
 
 @keyframes up-and-down {
     0% {
         transform: translate(-50%, -50%);
     }
+    5% {
+        transform: translate(-50%, -55%);
+    }
+    10% {
+        transform: translate(-50%, -50%);
+    }
+    15% {
+        transform: translate(-50%, -45%);
+    }
+    20% {
+        transform: translate(-50%, -50%);
+    }
     25% {
+        transform: translate(-50%, -55%);
+    }
+    30% {
+        transform: translate(-50%, -50%);
+    }
+    35% {
+        transform: translate(-50%, -45%);
+    }
+    40% {
+        transform: translate(-50%, -50%);
+    }
+    45% {
         transform: translate(-50%, -55%);
     }
     50% {
         transform: translate(-50%, -50%);
     }
-    75% {
+    55% {
+        transform: translate(-50%, -45%);
+    }
+    60% {
+        transform: translate(-50%, -50%);
+    }
+    70% {
+        transform: translate(-50%, -55%);
+    }
+    80% {
+        transform: translate(-50%, -50%);
+    }
+    90% {
         transform: translate(-50%, -45%);
     }
     100% {
