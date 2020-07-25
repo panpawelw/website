@@ -131,6 +131,7 @@ body.fade-out {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     max-width: 35vw;
     right: 15%;
     min-height: 100vh;
@@ -158,24 +159,61 @@ body.fade-out {
 
 #jumbotron-about-me span {
     display: inline-block;
-    font-weight: bold;
 }
 
 #jumbotron-scroll-down-text {
     font-size: 1.5rem;
     font-family: 'Asar', sans-serif;
-    color: #3A4318;
     position: absolute;
+    text-align: center;
     top: 80%;
-    left: -20%;
-    animation: text-slide-right 2s ease-out 2s forwards;
-    -webkit-animation: text-slide-right 2s ease-out 2s forwards;
+    left: 35%;
+    width: 15vw;
 }
 
-@keyframes text-slide-right {
-    100% {
-        left: 30%;
-    }
+#jumbotron-scroll-down-text div {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+#jumbotron-scroll-down-text div:first-of-type {    /* For increasing performance
+                       ID/Class should've been used.
+                       For a small demo
+                       it's okaish for now */
+    animation: showup 7s infinite;
+}
+
+#jumbotron-scroll-down-text div:last-of-type {
+    width:0;
+    animation: reveal 7s infinite;
+}
+
+#jumbotron-scroll-down-text div:last-of-type span {
+    margin-left:-200px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-400px; }
+    20% { margin-left:-400px; }
+    35% { margin-left:0; }
+    100% { margin-left:0; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0;}
+    20% {opacity:1;width:0;}
+    30% {width:200px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:200px;}
 }
 
 #jumbotron-scroll-down-link {
