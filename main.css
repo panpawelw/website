@@ -170,7 +170,6 @@ body.fade-out {
     color: transparent;
     top: 80%;
     left: 35%;
-    width: 15vw;
 }
 
 #jumbotron-scroll-down-text div {
@@ -1141,6 +1140,21 @@ hr.hr-shadow {
 
     .overlay p {
         font-size: 1.25vw;
+    }
+
+    #jumbotron-scroll-down-text {
+        font-size: 1.5rem;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+        color: transparent;
+        top: 75%;
+        left: 30%;
+    }
+
+    #jumbotron-scroll-down-link {
+        bottom: -1.5rem;
     }
 }
 
