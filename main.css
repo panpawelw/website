@@ -1120,10 +1120,43 @@ hr.hr-shadow {
     .overlay p {
         font-size: 2vw;
     }
+
+    .jumbotron {
+        height: 82.5vh;
+    }
+
+    #jumbotron-greeting {
+        font-size: 8rem;
+        top: 20%;
+        left: 35%;
+    }
+
+    #jumbotron-about-me {
+        font-size: 1rem;
+        right: 10%;
+    }
+
+    #jumbotron-about-me-text {
+        margin-top: 25%;
+    }
+
+    #jumbotron-scroll-down-text {
+        font-size: 1.25rem;
+        top: 72.5%;
+        left: 25%;
+    }
+
+    #jumbotron-scroll-down-link {
+        bottom: -1.25rem;
+    }
 }
 
 /* text sizing for extra large screens */
 @media screen and (min-width: 1201px) and (max-width: 1680px) {
+
+    .overlay p {
+        font-size: 1.25vw;
+    }
 
     .jumbotron {
         height: 87vh;
@@ -1138,17 +1171,8 @@ hr.hr-shadow {
         margin-top: 25%;
     }
 
-    .overlay p {
-        font-size: 1.25vw;
-    }
-
     #jumbotron-scroll-down-text {
         font-size: 1.5rem;
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        font-weight: bold;
-        position: absolute;
-        text-align: center;
-        color: transparent;
         top: 75%;
         left: 30%;
     }
