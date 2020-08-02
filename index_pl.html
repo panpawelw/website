@@ -631,13 +631,13 @@
                     is są one kierowane do serwera poprzez zapytania AJAX używające medtod HTTP
                     - GET, POST, PUT i DELETE. Kontroler odbiera żądania a następnie wykonuje
                     odpowiednie operacje na bazie danych za pośrednictwem warstwy serwisowej.
-                    Odpowiedzi są przekazywane w formacie JSON. W tym przypadku bazę danych udaje
-                    hashlista obiektów klasy Book przechowywana w pamięci, jednak dzięki
-                    zastosowaniu interfejsu można w prosty sposób zaimplementować obsługę prawdziwej
+                    Odpowiedzi są przekazywane w formacie JSON. Pierwotnie bazę danych symulowała
+                    hashlista obiektów typu Book, później dodałem obsługę prawdziwej.
                     .</p>
                 <ul>
                     <li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>
                     <li>zależnościami zarządza Maven</li>
+                    <li>dostęp do bazy realizowany jest za pośrednictwem JdbcTemplate</li>
                 </ul>
             </div>
             <hr>

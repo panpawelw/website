@@ -606,13 +606,13 @@
                 <p>User is able to perform all basic CRUD operations, which are sent to the server
                     via AJAX calls using GET, POST, PUT and DELETE HTML methods. The controller
                     receives these calls and performs relevant database operations using service
-                    layer. Responses are sent in JSON format. In this particular case database is
-                    mocked by hashlist of book objects stored in memory but using real database
-                    real is just a matter of implementing the relevant interface.
+                    layer. Responses are back sent in JSON format. Initially the database was
+                    mocked by a hashlist of Book objects, later on I added real database support.
                 </p>
                 <ul>
                     <li>JSON format is implemented using Jackson library</li>
                     <li>dependencies are managed using Maven</li>
+                    <li>database is accessed using JdbcTemplate</li>
                 </ul>
             </div>
             <hr>
