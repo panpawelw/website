@@ -40,7 +40,8 @@ body.fade-out {
     -webkit-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-color: transparent;
-    height: 91.5vh;
+    margin-bottom: 0;
+    height: 94vh;
     padding: 0;
 }
 
@@ -168,7 +169,7 @@ body.fade-out {
     position: absolute;
     text-align: center;
     color: transparent;
-    top: 80%;
+    top: 85%;
     left: 35%;
 }
 
@@ -216,6 +217,7 @@ body.fade-out {
     position: absolute;
     bottom: 0;
     left: 50%;
+    line-height: normal;
     transform: translate(-50%, -50%);
     animation: up-and-down 1.5s ease-in-out infinite both;
     -webkit-animation: up-and-down 1.5s ease-in-out infinite both;
@@ -1113,10 +1115,6 @@ hr.hr-shadow {
         font-size: 6vw;
     }
 
-    .jumbotron {
-        height: 85vh;
-    }
-
     #jumbotron-greeting {
         font-size: 7rem;
         top: 20%;
@@ -1134,12 +1132,8 @@ hr.hr-shadow {
 
     #jumbotron-scroll-down-text {
         font-size: 1.1rem;
-        top: 72.5%;
+        top: 75%;
         left: 25%;
-    }
-
-    #jumbotron-scroll-down-link {
-        margin-bottom: 0.75rem;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1156,10 +1150,6 @@ hr.hr-shadow {
 
     .overlay p {
         font-size: 2vw;
-    }
-
-    .jumbotron {
-        height: 82.5vh;
     }
 
     #jumbotron-greeting {
@@ -1179,12 +1169,8 @@ hr.hr-shadow {
 
     #jumbotron-scroll-down-text {
         font-size: 1.25rem;
-        top: 72.5%;
+        top: 77.5%;
         left: 25%;
-    }
-
-    #jumbotron-scroll-down-link {
-        margin-bottom: 1rem;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1193,14 +1179,10 @@ hr.hr-shadow {
 }
 
 /* text sizing for extra large screens */
-@media screen and (min-width: 1201px) and (max-width: 1680px) {
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
 
     .overlay p {
         font-size: 1.25vw;
-    }
-
-    .jumbotron {
-        height: 87vh;
     }
 
     #jumbotron-about-me {
@@ -1214,12 +1196,8 @@ hr.hr-shadow {
 
     #jumbotron-scroll-down-text {
         font-size: 1.5rem;
-        top: 75%;
+        top: 80%;
         left: 30%;
-    }
-
-    #jumbotron-scroll-down-link {
-        margin-bottom: 1.25rem;
     }
 }
 
@@ -1227,4 +1205,12 @@ hr.hr-shadow {
     .overlay p {
         font-size: 1.35vw;
     }
+
+@media screen and (min-width: 1921px) {
+
+    .jumbotron {
+        height: 97vh;
+    }
+}
+
 }
