@@ -1103,6 +1103,43 @@ hr.hr-shadow {
     #section1photo {
         max-width: 30%;
     }
+
+    .jumbotron {
+        height: 93vh;
+    }
+
+    #jumbotron-greeting {
+        font-size: 5rem;
+        top: 20%;
+        left: 42.5%;
+    }
+
+    #jumbotron-about-me {
+        font-size: 0.85rem;
+        right: 10%;
+    }
+
+    #jumbotron-about-me-text {
+        margin-top: 25%;
+    }
+
+    #jumbotron-scroll-down-text {
+        font-size: 1.1rem;
+        top: 80%;
+        left: 25%;
+    }
+
+    #jumbotron-scroll-down-link {
+        margin-bottom: 3.5%;
+    }
+
+    #jumbotron-scroll-down-link a {
+        font-size: 4rem;
+    }
+
+    #navbar a {
+        font-size: 4em;
+    }
 }
 
 /* text sizing for medium screens */
@@ -1113,6 +1150,10 @@ hr.hr-shadow {
 
     .overlay .closebtn {
         font-size: 6vw;
+    }
+
+    .jumbotron {
+        height: 95vh;
     }
 
     #jumbotron-greeting {
