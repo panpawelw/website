@@ -1011,11 +1011,15 @@ hr.hr-shadow {
 @media screen and (max-width: 280px) {
 
     body {
-        font-size: 20%;
+        font-size: 15%;
     }
 
     h1 {
         font-size: 1.37em;
+    }
+
+    .btn {
+        font-size: 85%;
     }
 
     .overlay p {
@@ -1031,28 +1035,37 @@ hr.hr-shadow {
         font-size: 10vw;
     }
 
-    .carousel-caption.upper h2 {
-        font-size: 6em;
+    #sb-wrapper {
+        padding: 7em 7em 0 7em;
+    }
+
+    .nav-dots span {
+        margin: -3px 3px;
+    }
+
+    #play, #pause {
+        font-size: 6.75em;
         margin: 0;
     }
 
-    .carousel-caption.upper h5 {
-        font-size: 4em;
+    .arrow {
+        margin-top: -80%;
     }
 
-    .carousel-caption.lower {
-        bottom: 0;
-        padding: 0;
+    .arrow-left {
+        left: -9%;
     }
 
-    .carousel-caption.lower a {
-        margin: 0.1em;
-        padding: 0.3em;
-        font-size: 4em;
+    .arrow-right {
+        right: -9%;
     }
 
-    .carousel-indicators {
-        margin: 0;
+    .sb-description-title {
+        font-size: 0.6rem;
+    }
+
+    .sb-description-content {
+        font-size: 0.5rem;
     }
 
     #section1photo {

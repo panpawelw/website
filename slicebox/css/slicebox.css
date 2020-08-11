@@ -175,13 +175,11 @@
 }
 
 .arrow-right {
-	right:-6%;
+	right: -6%;
 }
 
 .nav-dots {
 	text-align: center;
-	bottom: -5px;
-	height: 42px;
 	width: 100%;
 	left: 0;
 	display: none;
