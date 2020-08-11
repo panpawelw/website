@@ -1008,8 +1008,8 @@ hr.hr-shadow {
 }
 
 
-/* font sizing, headings and carousel indicators for smallest screens */
-@media screen and (max-width: 400px) {
+/* layout for very small screens */
+@media screen and (min-width: 281px) and (max-width: 400px) {
 
     body {
         font-size: 20%;
@@ -1059,9 +1059,46 @@ hr.hr-shadow {
     #section1photo {
         max-width: 35%;
     }
+
+    .jumbotron {
+        height: 93vh;
+    }
+
+    #jumbotron-greeting {
+        font-size: 4rem;
+        top: 20%;
+        left: 42.5%;
+    }
+
+    #jumbotron-about-me {
+        font-size: 0.75rem;
+        right: 10%;
+    }
+
+    #jumbotron-about-me-text {
+        margin-top: 25%;
+    }
+
+    #jumbotron-scroll-down-text {
+        font-size: 1rem;
+        top: 80%;
+        left: 25%;
+    }
+
+    #jumbotron-scroll-down-link {
+        margin-bottom: 1.75%;
+    }
+
+    #jumbotron-scroll-down-link a {
+        font-size: 3rem;
+    }
+
+    #navbar a {
+        font-size: 4em;
+    }
 }
 
-/* text sizing for small screens */
+/* layout for small screens */
 @media screen and (min-width: 401px) and (max-width: 600px) {
 
     h1 {
@@ -1130,7 +1167,7 @@ hr.hr-shadow {
     }
 
     #jumbotron-scroll-down-link {
-        margin-bottom: 3.5%;
+        margin-bottom: 3%;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1142,7 +1179,7 @@ hr.hr-shadow {
     }
 }
 
-/* text sizing for medium screens */
+/* layout for medium screens */
 @media screen and (min-width: 601px) and (max-width: 800px) {
     .overlay p {
         font-size: 3.0vw;
@@ -1186,7 +1223,7 @@ hr.hr-shadow {
     }
 }
 
-/* text sizing for large screens */
+/* layout for large screens */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
 
     .overlay p {
@@ -1219,7 +1256,7 @@ hr.hr-shadow {
     }
 }
 
-/* text sizing for extra large screens */
+/* layout for extra large screens */
 @media screen and (min-width: 1201px) and (max-width: 1920px) {
 
     .overlay p {
@@ -1242,6 +1279,7 @@ hr.hr-shadow {
     }
 }
 
+/* miscellaneous */
 @media screen and (min-width: 1201px) {
     .overlay p {
         font-size: 1.35vw;
