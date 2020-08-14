@@ -133,7 +133,7 @@ body.fade-out {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    max-width: 35vw;
+    max-width: 45vw;
     right: 15%;
     min-height: 100vh;
     perspective: 200px;
@@ -1035,6 +1035,48 @@ hr.hr-shadow {
         font-size: 10vw;
     }
 
+    #section1photo {
+        max-width: 35%;
+    }
+
+    .jumbotron {
+        height: 90vh;
+    }
+
+    #jumbotron-greeting {
+        font-size: 3rem;
+        top: 20%;
+        left: 42.5%;
+    }
+
+    #jumbotron-about-me {
+        font-size: 0.55rem;
+        right: 5%;
+        max-width: 65vw;
+    }
+
+    #jumbotron-about-me-text {
+        margin-top: 25%;
+    }
+
+    #jumbotron-scroll-down-text {
+        font-size: 0.7rem;
+        top: 80%;
+        left: 15%;
+    }
+
+    #jumbotron-scroll-down-link {
+        margin-bottom: 3%;
+    }
+
+    #jumbotron-scroll-down-link a {
+        font-size: 1.5rem;
+    }
+
+    #navbar a {
+        font-size: 3em;
+    }
+
     #sb-wrapper {
         padding: 7em 7em 0 7em;
     }
@@ -1068,45 +1110,13 @@ hr.hr-shadow {
         font-size: 0.5rem;
     }
 
-    #section1photo {
-        max-width: 35%;
+    .sb-description-btn {
+        padding: 2em 2em 0 0;
     }
 
-    .jumbotron {
-        height: 90vh;
-    }
-
-    #jumbotron-greeting {
-        font-size: 3rem;
-        top: 20%;
-        left: 42.5%;
-    }
-
-    #jumbotron-about-me {
-        font-size: 0.55rem;
-        right: 10%;
-    }
-
-    #jumbotron-about-me-text {
-        margin-top: 25%;
-    }
-
-    #jumbotron-scroll-down-text {
-        font-size: 0.7rem;
-        top: 80%;
-        left: 25%;
-    }
-
-    #jumbotron-scroll-down-link {
-        margin-bottom: 3%;
-    }
-
-    #jumbotron-scroll-down-link a {
-        font-size: 1.5rem;
-    }
-
-    #navbar a {
-        font-size: 3em;
+    .sb-description-btn .btn {
+        font-size: 0.5rem;
+        padding: 0.2rem 0.5rem;
     }
 }
 
@@ -1134,30 +1144,6 @@ hr.hr-shadow {
         font-size: 10vw;
     }
 
-    .carousel-caption.upper h2 {
-        font-size: 6em;
-        margin: 0;
-    }
-
-    .carousel-caption.upper h5 {
-        font-size: 4em;
-    }
-
-    .carousel-caption.lower {
-        bottom: 0;
-        padding: 0;
-    }
-
-    .carousel-caption.lower a {
-        margin: 0.1em;
-        padding: 0.3em;
-        font-size: 4em;
-    }
-
-    .carousel-indicators {
-        margin: 0;
-    }
-
     #section1photo {
         max-width: 35%;
     }
@@ -1174,7 +1160,8 @@ hr.hr-shadow {
 
     #jumbotron-about-me {
         font-size: 0.75rem;
-        right: 10%;
+        right: 7.5%;
+        max-width: 60vw;
     }
 
     #jumbotron-about-me-text {
@@ -1184,7 +1171,7 @@ hr.hr-shadow {
     #jumbotron-scroll-down-text {
         font-size: 1rem;
         top: 77.5%;
-        left: 20%;
+        left: 15%;
     }
 
     #jumbotron-scroll-down-link {
@@ -1197,6 +1184,48 @@ hr.hr-shadow {
 
     #navbar a {
         font-size: 4em;
+    }
+
+    #sb-wrapper {
+        padding: 7em 7em 0 7em;
+    }
+
+    .nav-dots span {
+        margin: -3px 3px;
+    }
+
+    #play, #pause {
+        font-size: 6.75em;
+        margin: 0;
+    }
+
+    .arrow {
+        margin-top: -75%;
+    }
+
+    .arrow-left {
+        left: -9%;
+    }
+
+    .arrow-right {
+        right: -9%;
+    }
+
+    .sb-description-title {
+        font-size: 0.75rem;
+    }
+
+    .sb-description-content {
+        font-size: 0.6rem;
+    }
+
+    .sb-description-btn {
+        padding: 3em 2em 0 0;
+    }
+
+    .sb-description-btn .btn {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
     }
 }
 
