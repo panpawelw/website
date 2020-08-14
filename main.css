@@ -1066,7 +1066,7 @@ hr.hr-shadow {
     }
 
     #jumbotron-scroll-down-link {
-        margin-bottom: 3%;
+        bottom: 3vh;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1175,7 +1175,7 @@ hr.hr-shadow {
     }
 
     #jumbotron-scroll-down-link {
-        margin-bottom: 3%;
+        bottom: 2.5vh;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1244,30 +1244,6 @@ hr.hr-shadow {
         font-size: 7.5vw;
     }
 
-    .carousel-caption.upper h2 {
-        font-size: 7em;
-        margin: 0;
-    }
-
-    .carousel-caption.upper h5 {
-        font-size: 4em;
-    }
-
-    .carousel-caption.lower {
-        bottom: 0;
-        padding: 0;
-    }
-
-    .carousel-caption.lower a {
-        margin: 0.2em;
-        padding: 0.35em;
-        font-size: 4.5em;
-    }
-
-    .carousel-indicators {
-        margin: 0.5em;
-    }
-
     #section1photo {
         max-width: 30%;
     }
@@ -1287,9 +1263,9 @@ hr.hr-shadow {
         right: 10%;
     }
 
-    #jumbotron-about-me-text {
-        margin-top: 25%;
-    }
+    /*#jumbotron-about-me-text {*/
+    /*    margin-top: 5%;*/
+    /*}*/
 
     #jumbotron-scroll-down-text {
         font-size: 1.1rem;
@@ -1298,7 +1274,7 @@ hr.hr-shadow {
     }
 
     #jumbotron-scroll-down-link {
-        margin-bottom: 3%;
+        bottom: 3vh;
     }
 
     #jumbotron-scroll-down-link a {
@@ -1307,6 +1283,48 @@ hr.hr-shadow {
 
     #navbar a {
         font-size: 4em;
+    }
+
+    #sb-wrapper {
+        padding: 7em 7em 0 7em;
+    }
+
+    .nav-dots span {
+        margin: -3px 3px;
+    }
+
+    #play, #pause {
+        font-size: 6.75em;
+        margin: 0;
+    }
+
+    .arrow {
+        margin-top: -60%;
+    }
+
+    .arrow-left {
+        left: -6%;
+    }
+
+    .arrow-right {
+        right: -6%;
+    }
+
+    .sb-description-title {
+        font-size: 0.75rem;
+    }
+
+    .sb-description-content {
+        font-size: 0.6rem;
+    }
+
+    .sb-description-btn {
+        padding: 3em 2em 0 0;
+    }
+
+    .sb-description-btn .btn {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
     }
 }
 
