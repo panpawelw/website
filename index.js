@@ -116,7 +116,6 @@ $(function () {
         const overlay = document.getElementById(this.dataset.overlay);
         const scrollableElement = overlay.querySelector('.overlay-scrollable');
         if (scrollableElement !== null) {
-            console.log(scrollableElement);
             scrollableElement.style.overflow = 'hidden';
             window.setTimeout(function() {
                 scrollableElement.style.overflow = 'auto'}, 333)
