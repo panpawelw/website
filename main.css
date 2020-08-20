@@ -6,7 +6,7 @@ html {
 
 body {
     background-color: #E9E49D;
-    font-size: 25%;
+    font-size: 0.25em;
     font-family: 'Barlow Semi Condensed', sans-serif;
     height: 100%;
     opacity: 1;
@@ -189,7 +189,7 @@ body.fade-out {
 }
 
 #jumbotron-scroll-down-text-second span {
-    margin-left: -7.5rem;
+    margin-left: -5em;
     animation: slidein 5s 2.5s forwards;
 }
 
@@ -202,13 +202,13 @@ body.fade-out {
 @keyframes reveal {
     0% {color: transparent;width:0;}
     25% {color: black;width:0;}
-    35% {width: 7.5rem;}
-    100% {color: black;width: 7.5rem;}
+    35% {width: 5em;}
+    100% {color: black;width: 5em;}
 }
 
 @keyframes slidein {
-    0% { margin-left: -15rem; }
-    20% { margin-left: -15rem; }
+    0% { margin-left: -10em; }
+    20% { margin-left: -10em; }
     35% { margin-left:0; }
     100% { margin-left:0; }
 }
@@ -1262,10 +1262,6 @@ hr.hr-shadow {
         font-size: 0.85rem;
         right: 10%;
     }
-
-    /*#jumbotron-about-me-text {*/
-    /*    margin-top: 5%;*/
-    /*}*/
 
     #jumbotron-scroll-down-text {
         font-size: 1.1rem;
