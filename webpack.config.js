@@ -1,5 +1,5 @@
 const path = require("path");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer/lib/BundleAnalyzerPlugin");
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer/lib/BundleAnalyzerPlugin");
 
 module.exports = {
     mode: "development",
@@ -40,6 +40,6 @@ module.exports = {
         ignored: /fonts/
     },
     plugins: [
-        new BundleAnalyzerPlugin()
+        // new BundleAnalyzerPlugin()
     ]
 };
