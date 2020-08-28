@@ -2,13 +2,14 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: 5em;
+    height: 100%;
 }
 
 body {
     background-color: #E9E49D;
     font-size: 0.25em;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    min-height: available;
+    height: 100%;
     opacity: 1;
     transition: 2s opacity ease-in;
 }
@@ -24,8 +25,8 @@ body.fade-out {
     top: 0;
     left: 0;
     z-index: -100;
-    height: 100vh;
-    width: 100vw;
+    height: 150%; /* to avoid background glitches on mobile browsers */
+    width: 100%;
     background: transparent fixed;
     background: -webkit-radial-gradient(circle, rgba(233, 228, 157, 1) 50%,
     rgba(0, 0, 0, 0.35) 100%), url("./images/background.png") repeat;
@@ -34,14 +35,14 @@ body.fade-out {
 }
 
 /* jumbotron layout */
-.jumbotron {
+#jumbotron {
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-color: transparent;
     margin-bottom: 0;
-    height: 94vh;
+    height: 94%;
     padding: 0;
 }
 
@@ -119,7 +120,7 @@ body.fade-out {
         filter: blur(0);
         transform: scale(1);
         text-shadow: 2px -2px 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, 2px 0 0 #000,
-            2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, -2px 0 0 #000;
+        2px 2px 0 #000, 0 2px 0 #000, -2px 2px 0 #000, -2px 0 0 #000;
     }
 }
 
@@ -174,9 +175,9 @@ body.fade-out {
 }
 
 #jumbotron-scroll-down-text div {
-    display:inline-block;
-    overflow:hidden;
-    white-space:nowrap;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #jumbotron-scroll-down-text-first {
@@ -184,7 +185,7 @@ body.fade-out {
 }
 
 #jumbotron-scroll-down-text-second {
-    width:0;
+    width: 0;
     animation: reveal 5s 2.5s forwards;
 }
 
@@ -194,23 +195,48 @@ body.fade-out {
 }
 
 @keyframes showup {
-    0% {color: transparent;}
-    25% {color: black;}
-    100% {color: black;}
+    0% {
+        color: transparent;
+    }
+    25% {
+        color: black;
+    }
+    100% {
+        color: black;
+    }
 }
 
 @keyframes reveal {
-    0% {color: transparent;width:0;}
-    25% {color: black;width:0;}
-    35% {width: 5em;}
-    100% {color: black;width: 5em;}
+    0% {
+        color: transparent;
+        width: 0;
+    }
+    25% {
+        color: black;
+        width: 0;
+    }
+    35% {
+        width: 5em;
+    }
+    100% {
+        color: black;
+        width: 5em;
+    }
 }
 
 @keyframes slidein {
-    0% { margin-left: -10em; }
-    20% { margin-left: -10em; }
-    35% { margin-left:0; }
-    100% { margin-left:0; }
+    0% {
+        margin-left: -10em;
+    }
+    20% {
+        margin-left: -10em;
+    }
+    35% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
 }
 
 #jumbotron-scroll-down-link {
@@ -287,7 +313,7 @@ body.fade-out {
     color: #FA8334;
     -webkit-animation: none;
     text-shadow: 1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
-        1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
 
 /* Top navbar */
@@ -1039,8 +1065,8 @@ hr.hr-shadow {
         max-width: 35%;
     }
 
-    .jumbotron {
-        height: 90vh;
+    #jumbotron {
+        height: 90%;
     }
 
     #jumbotron-greeting {
@@ -1144,8 +1170,8 @@ hr.hr-shadow {
         max-width: 35%;
     }
 
-    .jumbotron {
-        height: 93vh;
+    #jumbotron {
+        height: 93%;
     }
 
     #jumbotron-greeting {
@@ -1236,8 +1262,8 @@ hr.hr-shadow {
         max-width: 30%;
     }
 
-    .jumbotron {
-        height: 93vh;
+    #jumbotron {
+        height: 93%;
     }
 
     #jumbotron-greeting {
@@ -1318,8 +1344,8 @@ hr.hr-shadow {
         font-size: 6vw;
     }
 
-    .jumbotron {
-        height: 95vh;
+    #jumbotron {
+        height: 95%;
     }
 
     #jumbotron-greeting {
@@ -1400,15 +1426,15 @@ hr.hr-shadow {
 
 /* miscellaneous */
 @media screen and (min-width: 1201px) {
+
     .overlay p {
         font-size: 1.35vw;
     }
+}
 
 @media screen and (min-width: 1921px) {
 
-    .jumbotron {
-        height: 97vh;
+    #jumbotron {
+        height: 97%;
     }
-}
-
 }
