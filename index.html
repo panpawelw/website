@@ -197,7 +197,7 @@
                                 <img src="images/2.png" alt="image2"/></a>
                             <div class="sb-description">
                                 <div class="sb-description-btn">
-                                    <a href="http://18.184.4.144:8080/Weightlifting_Log/"
+                                    <a href="http://3.127.81.40:8080/Weightlifting_Log/"
                                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                                 </div>
                                 <div class="sb-description-title">Workout Log</div>
@@ -211,7 +211,7 @@
                                 <img src="images/3.png" alt="image3"/></a>
                             <div class="sb-description">
                                 <div class="sb-description-btn">
-                                    <a href="http://18.184.4.144:8080/Social_Network/"
+                                    <a href="http://3.127.81.40:8080/Social_Network/"
                                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                                 </div>
                                 <div class="sb-description-title">Social Network</div>
@@ -223,7 +223,7 @@
                                 <img src="images/4.png" alt="image4"/></a>
                             <div class="sb-description">
                                 <div class="sb-description-btn">
-                                    <a href="http://18.184.4.144:8080/Crime_Empire/"
+                                    <a href="http://3.127.81.40:8080/Crime_Empire/"
                                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                                 </div>
                                 <div class="sb-description-title">Crime Empire</div>
@@ -235,7 +235,7 @@
                                 <img src="images/5.png" alt="image5"/></a>
                             <div class="sb-description">
                                 <div class="sb-description-btn">
-                                    <a href="http://18.184.4.144:8080/Book_Catalog/"
+                                    <a href="http://3.127.81.40:8080/Book_Catalog/"
                                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                                 </div>
                                 <div class="sb-description-title">Book Catalog</div>
@@ -248,7 +248,7 @@
                                 <img src="images/6.png" alt="image6"/></a>
                             <div class="sb-description">
                                 <div class="sb-description-btn">
-                                    <a href="http://18.184.4.144:8080/Programming_School/"
+                                    <a href="http://3.127.81.40:8080/Programming_School/"
                                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                                 </div>
                                 <div class="sb-description-title">Programming School</div>
@@ -378,32 +378,30 @@
                 <div class="thumbnail-and-button-left">
                     <img class="thumbnail shaky my-shadow open-overlay" alt="Workout Log"
                          data-overlay="section2Overlay" src="images/Weightlifting_log - 1.png">
-                    <a href="http://18.184.4.144:8080/Weightlifting_Log/"
+                    <a href="http://3.127.81.40:8080/Weightlifting_Log/"
                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                     <p>login: test, password: test</p>
                 </div>
                 <h1 class="left">Workout Log</h1>
                 <br>
-                <p>My most recent project is a workout log. A general idea behind this
-                    application was maximal possible flexibility of data structure. Workout
-                    consists of any number of exercises, each of these with any number of sets.
-                    In addition to this, user can attach any number of text notes or media files
-                    to every workout element. To achieve it I've decided to serialize workout
-                    objects to database and files are stored in AWS cloud.</p>
-                <p>Basic calculators like general strength, maximum rep and it's percentages and
-                    other (like Wilks score or powerlifting and weightlifting totals in the future)
-                    are available right away. After logging in user can access the main
-                    functionality and will be able to create new workouts and edit or delete old
-                    ones. Later on I plan to include administrator panel for users with relevant
-                    privileges.</p>
+                <p>This web app is a workout log. The aim was maximal possible flexibility of data
+                    structure. Workout consists of any number of exercises, each of these with any
+                    number of sets. Any number of text notes or media files can be attached to
+                    whe whole workout or it's elements. Workout objects are serialized to database
+                    and files are stored in cloud.</p>
+                <p>Basic calculators like general strength, maximum rep and it's percentages are
+                    available right away. After logging in new workouts can be created and
+                    existing ones can be edited or deleted. Later on I plan to extend existing
+                    admin panel stub and maybe add more calculators (Wilks score, powerlifiting
+                    and weightlifting totals etc.).</p>
                 <ul>
                     <li>it's a Spring Boot application</li>
-                    <li>is't been secured with Spring Security using custom login page</li>
-                    <li>Spring Cloud module is used to store media files in Amazon S3</li>
-                    <li>Spring Mail module is used to send activation emails to users who
-                        register
+                    <li>it's been secured with Spring Security using custom login page</li>
+                    <li>Spring Cloud module is used to store media files in Amazon S3 bucket</li>
+                    <li>optional activation emails are sent to users who register (via Spring Mail
+                        and Amazon SES service)
                     </li>
-                    <li>uses application events and listeners</li>
+                    <li>app uses Spring application events and listeners</li>
                     <li>view layer consists of Thymeleaf templates, JS, jQuery and Bootstrap 4</li>
                 </ul>
             </div>
@@ -462,7 +460,7 @@
                 <div class="thumbnail-and-button-right">
                     <img class="thumbnail shaky my-shadow open-overlay" alt="Social Network"
                          data-overlay="section3Overlay" src="images/Social_network - 2.png">
-                    <a href="http://18.184.4.144:8080/Social_Network/"
+                    <a href="http://3.127.81.40:8080/Social_Network/"
                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                     <p>login: test, password: test</p>
                 </div>
@@ -535,7 +533,7 @@
                 <div class="thumbnail-and-button-left">
                     <img class="thumbnail shaky my-shadow open-overlay" alt="Crime Empire"
                          data-overlay="section4Overlay" src="images/Crime_empire - 1.jpg">
-                    <a href="http://18.184.4.144:8080/Crime_Empire/"
+                    <a href="http://3.127.81.40:8080/Crime_Empire/"
                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                     <p>login: test, password: test</p>
                 </div>
@@ -612,7 +610,7 @@
                 <div class="thumbnail-and-button-right">
                     <img class="thumbnail shaky my-shadow open-overlay" alt="Book Catalog"
                          data-overlay="section5Overlay" src="images/Book_catalog - 1.png">
-                    <a href="http://18.184.4.144:8080/Book_Catalog/"
+                    <a href="http://3.127.81.40:8080/Book_Catalog/"
                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                 </div>
                 <h1>Book Catalog</h1>
@@ -684,7 +682,7 @@
                 <div class="thumbnail-and-button-left">
                     <img class="thumbnail shaky my-shadow open-overlay" alt="Programming School"
                          data-overlay="section6Overlay" src="images/Programming_school - 1.png">
-                    <a href="http://18.184.4.144:8080/Programming_School/"
+                    <a href="http://3.127.81.40:8080/Programming_School/"
                        target="_blank" class="btn btm-sm shaky my-shadow">Launch</a>
                 </div>
                 <h1 class="left">Programming School</h1>
