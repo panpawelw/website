@@ -166,3 +166,6 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
+
+# Custom
+node_modules
