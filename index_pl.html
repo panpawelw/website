@@ -402,7 +402,7 @@
           składające się z dowolnej liczby serii. Do treningu i każedego jego elementu
           można przypisać jakąkolwiek liczbę notatek tekstowych bądź plików medialnych.
           Treningi są serializowane do bazy danych, natomiast pliki przechowywane są w
-          chmurze.</p>
+          chmurze AWS.</p>
         <p>Podstawowe kalkulatory - ogólnej siły oraz maksymalnego powtórzenia i jego
           procentów są dostępne od razu. Po zalogowaniu można dodawać nowe treningi
           oraz edytować lub usuwać istniejące. Planuję w przyszłości rozszerzyć
@@ -417,7 +417,7 @@
             przy pomocy Spring Mail i usługi Amazon SES (oraz alternatywnie API Sendinblue)</li>
           <li>używa takich mechnizmów frameworku Spring jak application eventy/listenery,
             walidatory, schedulery oraz obsługa wyjątków</li>
-          <li>załączona jest większość testów jednostkowych</li>
+          <li>załączona są wszystkie testy jednostkowe</li>
           <li>w warstwie widoku zastosowałem szablony Thymeleaf, JS, jQuery oraz Bootstrap 4</li>
         </ul>
       </div>
@@ -492,8 +492,8 @@
           bazy MySQL, specyfikacji JPA i frameworku Hibernate jest użyta do
           przechowywania danych.</p>
         <ul>
-          <li>ten projekt jest skonfigurowany wyłącznie w oparciu o annotacje - nie
-            ma pliku web.xml
+          <li>ten projekt jest skonfigurowany wyłącznie w oparciu o annotacje - plik web.xml jest
+            szczątkowy
           </li>
         </ul>
       </div>
@@ -569,9 +569,7 @@
           pomysł innego kursanta - Szymona Mikołajczaka i jego projekt GEOS, który
           zaadaptowaliśmy do swoich potrzeb.
         <ul>
-          <li>do sprawdzania poprawności danych użytkownika wykorzystany został
-            walidator
-          </li>
+          <li>do sprawdzania poprawności danych użytkownika wykorzystany został walidator</li>
           <li>komunikacja z bazą MySQL realizowana jest za pośrednictwem frameworku
             Hibernate i jest zgodna ze specyfikacją JPA
           </li>
@@ -649,7 +647,7 @@
           <li>do obsługi formatu JSON wykorzystałem zewnętrzną bibliotekę Jackson</li>
           <li>zależnościami zarządza Maven</li>
           <li>dostęp do bazy realizowany jest za pośrednictwem JdbcTemplate</li>
-          <li>dołączone są wszystkie testy jednostkowe oraz integracji</li>
+          <li>dołączone są wszystkie testy jednostkowe oraz testy integracji</li>
         </ul>
       </div>
       <hr>
